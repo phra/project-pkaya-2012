@@ -95,6 +95,7 @@ void verhogen()
 	before->pc_epc += WORD_SIZE;
 	sem = getSemd(semkey);
 	suspend->p_s = *before;
+	inserisciprocessoready(suspend);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value += 1;
 	if (headBlocked(semkey) != NULL){ /* wake up someone! */
@@ -102,8 +103,7 @@ void verhogen()
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		inserisciprocessoready(next);
 		return scheduler();
-	}
-	else CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
+	} else CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 }
 
 void passeren()
