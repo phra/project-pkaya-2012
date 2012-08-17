@@ -123,6 +123,10 @@ static void initNewOldAreas(){
 	}
 }
 
+static inline void initPIDs(){
+	memset(PIDs,0,MAXPID*sizeof(pcb_t*));
+}
+
 devreg mytermstat(memaddr *stataddr) {
 	return((*stataddr) & STATUSMASK);
 }
@@ -205,13 +209,13 @@ int main(void)
 	while(1); */
 	
 	pcb_t* p1 = NULL;
-	memset(PIDs,0,MAXPID*sizeof(pcb_t*));
-
+	
 	/* Inizializzazione strutture dati */
 	initPcbs();		
 	initASL();
 	initSemaphoreASL(0);
 	initMutexSemaphore(0);
+	initPIDs();
 	initSchedQueue();
 	initCurrentProcs();
 
@@ -220,7 +224,7 @@ int main(void)
 
 	/*Instanziare il PCB e lo stato del processo test*/
 	p1 = allocaPcb(DEF_PRIORITY);		/* Allocare PCB */
-	newAreaKIT((memaddr)test,(memaddr)&p1->p_s);
+	newAreaKIT((memaddr)test,(state_t*)&p1->p_s);
 	p1->p_s.reg_sp = RAMTOP - FRAME_SIZE;			/* $SP = RAMPTOP - FRAMESIZE */
 	
 
