@@ -101,8 +101,9 @@ void verhogen()
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		inserisciprocessoready(next);
-		scheduler();
+		return scheduler();
 	}
+	else CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 }
 
 void passeren()
@@ -125,11 +126,11 @@ void passeren()
 	if (sem->s_value >= 0){ /* GO! */
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		inserisciprocessoready(suspend);
-		scheduler();
+		return scheduler();
 	} else { /* wait */
 		insertBlocked(semkey,suspend);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
-		scheduler();
+		return scheduler();
 	}
 }
 
