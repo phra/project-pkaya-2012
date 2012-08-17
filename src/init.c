@@ -29,6 +29,7 @@ pcb_t* PIDs[MAXPID];	/* un array di processi, 0 se e libero, altrimenti l'indiri
 semd_t	pseudo_clock;	/* Uno per lo pseudo-clock timer */
 semd_t 	device;		/* Uno per ogni device o sub-device */
 state_t* new_old_areas[MAXCPUs][8];
+state_t real_new_old_areas[MAXCPUs-1][8];
 
 uint32_t mutex_semaphore[MAXPROC];
 uint32_t mutex_scheduler = 0;
@@ -71,14 +72,19 @@ static inline void initSchedQueue(void){
 	INIT_LIST_HEAD(&expiredQueue);
 }
 
-void inline inserisciprocessoready(struct list_head* queue, pcb_t* pcb){
+inline void inserisciprocesso(struct list_head* queue, pcb_t* pcb){
 	insertProcQ(queue,pcb);
-	readyproc += 1;
 }
 
-static void newAreaKIT(memaddr pc, memaddr addr){
+inline void inserisciprocessoready(pcb_t* pcb){
+	while (!CAS(&mutex_scheduler,0,1));
+	insertProcQ(&readyQueue,pcb);
+	CAS(&mutex_scheduler,1,0);
+}
+
+static void newAreaKIT(memaddr pc, state_t* addr){
 	int status = getSTATUS();
-	state_t* state = (state_t*) addr;
+	state_t* state = addr;
 	memset(state,0,sizeof(state_t));
 	status |= STATUS_IEc;				/* Interrupt abilitato                 */
 	status &= ~STATUS_VMc;				/* Virtual Memory OFF                  */
@@ -90,20 +96,30 @@ static void newAreaKIT(memaddr pc, memaddr addr){
 }
 
 static void initNewOldAreas(){
-	int i=0;
-	new_old_areas[0][0] = (memaddr)INT_OLDAREA);
-	new_old_areas[0][1] = (memaddr)INT_NEWAREA);
-	new_old_areas[0][2] = (memaddr)TLB_OLDAREA);
-	new_old_areas[0][3] = (memaddr)TLB_NEWAREA);
-	new_old_areas[0][4] = (memaddr)PGMTRAP_OLDAREA);
-	new_old_areas[0][5] = (memaddr)PGMTRAP_NEWAREA);
-	new_old_areas[0][6] = (memaddr)SYSBK_OLDAREA);
-	new_old_areas[0][7] = (memaddr)SYSBK_NEWAREA);
-	for (;i<MAXCPUs;i++){
-		newAreaKIT((memaddr) int_handler, (memaddr)&new_old_areas[i][1]);
-		newAreaKIT((memaddr) tlb_handler, (memaddr)&new_old_areas[i][3]);
-		newAreaKIT((memaddr) pgmtrap_handler, (memaddr)&new_old_areas[i][5]);
-		newAreaKIT((memaddr) sysbk_handler, (memaddr)&new_old_areas[i][7]);
+	int i;
+	new_old_areas[0][0] = (state_t*)INT_OLDAREA);
+	new_old_areas[0][1] = (state_t*)INT_NEWAREA);
+	new_old_areas[0][2] = (state_t*)TLB_OLDAREA);
+	new_old_areas[0][3] = (state_t*)TLB_NEWAREA);
+	new_old_areas[0][4] = (state_t*)PGMTRAP_OLDAREA);
+	new_old_areas[0][5] = (state_t*)PGMTRAP_NEWAREA);
+	new_old_areas[0][6] = (state_t*)SYSBK_OLDAREA);
+	new_old_areas[0][7] = (state_t*)SYSBK_NEWAREA);
+	for (i=1;i<MAXCPUs;i++){
+		new_old_areas[i][0] = &real_new_old_areas[i-1][0];
+		new_old_areas[i][1] = &real_new_old_areas[i-1][1];
+		new_old_areas[i][2] = &real_new_old_areas[i-1][2];
+		new_old_areas[i][3] = &real_new_old_areas[i-1][3];
+		new_old_areas[i][4] = &real_new_old_areas[i-1][4];
+		new_old_areas[i][5] = &real_new_old_areas[i-1][5];
+		new_old_areas[i][6] = &real_new_old_areas[i-1][6];
+		new_old_areas[i][7] = &real_new_old_areas[i-1][7];
+	}
+	for (i=0;i<MAXCPUs;i++){
+		newAreaKIT((memaddr) int_handler, new_old_areas[i][1]);
+		newAreaKIT((memaddr) tlb_handler, new_old_areas[i][3]);
+		newAreaKIT((memaddr) pgmtrap_handler, new_old_areas[i][5]);
+		newAreaKIT((memaddr) sysbk_handler, new_old_areas[i][7]);
 	}
 }
 

@@ -86,7 +86,7 @@ pcb_t* removeBlocked(int key){
 
 
 /*
-(puntatore al processo) removeBlocked(puntatore al processo): restituisce il processo puntato da p RIMUOVENDOLO dalla lista dei processi bloccati da un semaforo.
+(puntatore al processo) outBlocked(puntatore al processo): restituisce il processo puntato da p RIMUOVENDOLO dalla lista dei processi bloccati da un semaforo.
 se il processo non viene trovato, restituisce NULL.
 */
 pcb_t* outBlocked(pcb_t *p){

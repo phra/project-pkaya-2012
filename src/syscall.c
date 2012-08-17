@@ -85,24 +85,24 @@ void verhogen()
 	/*
 		Quando invocata, la sys4 esegue una V sul semaforo con chiave semKey
 		Registro a1: chiave del semaforo su cui effettuare la V.
-	*
-
-	int	semKey;
-	pcb_t	*tmp_pcb;
-
-	getRegistro(semKey, (int*), s_a1); 
-	(*semKey)++; */
-	state_t now;
-	STST(&now);
-	int semkey = now.reg_a1;
-	semd_t* sem = getSemd(semkey);
-	
+	*/
+	int semkey;
+	semd_t* sem;
+	pcb_t* next;
+	pcb_t* suspend = currentproc[getPRID()];
+	state_t* before = (state_t*)new_old_areas[getPRID()][6];
+	semkey = before->reg_a1;
+	before->pc_epc += WORD_SIZE;
+	sem = getSemd(semkey);
+	suspend->p_s = *before;
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value += 1;
-	if (sem->s_value <= 0){ /* bisogna svegliare altri processi */
-		// #FIXME
+	if (headBlocked(semkey) != NULL){ /* wake up someone! */
+		next = removeBlocked(semkey);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
-	}					
+		inserisciprocessoready(next);
+		scheduler();
+	}
 }
 
 void passeren()
@@ -110,24 +110,26 @@ void passeren()
 	/*
 		Quando invocata, la sys5 esegue una P sul semaforo con chiave semKey.
 		Registro a1: chiave del semaforo su cui effettuare la P.
-	*
+	*/
 
-	int *semKey;
-
-	getRegistro(semKey, (int*), s_a1); 	
-	(*semKey)--;*/
-	state_t now;
-	STST(&now);
-	int semkey = now.reg_a1;
-	semd_t* sem = getSemd(semkey);
-	
+	int semkey;
+	semd_t* sem;
+	pcb_t* suspend = currentproc[getPRID()];
+	state_t* before = (state_t*)new_old_areas[getPRID()][6];
+	semkey = before->reg_a1;
+	before->pc_epc += WORD_SIZE;
+	sem = getSemd(semkey);
+	suspend->p_s = *before;
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value -= 1;
 	if (sem->s_value >= 0){ /* GO! */
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
+		inserisciprocessoready(suspend);
+		scheduler();
 	} else { /* wait */
-		// #FIXME
+		insertBlocked(semkey,suspend);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
+		scheduler();
 	}
 }
 

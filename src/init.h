@@ -10,8 +10,9 @@
 #include "lib/types11.h"
 
 void timerHandler();
-void inline initSemaphore(semd_t* sem, int value);
-void inserisciprocessoready(struct list_head* queue, pcb_t* pcb);
+inline void initSemaphore(semd_t* sem, int value);
+inline void inserisciprocessoready(pcb_t* pcb);
+inline void inserisciprocesso(struct list_head* queue, pcb_t* pcb);
 void print(char *label, char *value);
 devreg mytermstat(memaddr *stataddr);
 
