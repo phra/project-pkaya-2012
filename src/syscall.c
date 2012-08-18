@@ -14,6 +14,10 @@
 #include "scheduler.h"
 #include "exception.h"
 
+#define getRegistro(x,cast,y) x = cast(((state_t*)SYSBK_OLDAREA)->y)
+#define getRegistroMC(x,cast,y) x = cast(((state_t*)new_old_areas[getPRID()][6])->y)
+
+
 void create_process()
 {
 	/*
@@ -103,7 +107,10 @@ void verhogen()
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		inserisciprocessoready(next);
 		return scheduler();
-	} else CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
+	} else {
+		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
+		return scheduler();
+	}
 }
 
 void passeren()
