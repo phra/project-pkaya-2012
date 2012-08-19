@@ -32,7 +32,7 @@ unsigned int deviceHandler(unsigned int intline){
 
             if (terminalRcv == DEV_TRCV_S_CHARRECV) {
                 ((termreg_t*)device_requested)->recv_command = DEV_C_ACK;
-                returnValue=terminalRcv;device handler
+                returnValue=terminalRcv;
             }
 
         }
@@ -104,6 +104,10 @@ void prg_trap_handler(){
     //}
 }
 
+void breakpoint_handler(){
+	/**/
+}
+
 void syscall_bp_handler(){
 	//U32 sysValue;
 
@@ -125,44 +129,58 @@ void syscall_bp_handler(){
 //			terminateThread();
 //	}
 //	else{	/* SYSCALL IN KERNELMODE chiamo il gestore adeguato */
-//		switch (sysValue){
-			case CREATE_PROCESS:
-				create_process();
-				break;
-			case CREATE_BROTHER:
-				create_brother();
-				break;
-			case TERMINATE_PROCESS:
-				terminate_process();
-				break;
-			case VERHOGEN:
-				verhogen();
-				break;
-			case PASSEREN:
-				passeren();
-				break;
-			case GET_CPU_TIME:
-				get_cpu_time();
-				break;
-			case WAIT_FOR_CLOCK:
-				wait_for_clock();
-				break;
-			case WAIT_FOR_IO_DEVICE:
-				wait_for_io_device();
-				break;
-			case SPECIFY_PRG_STATE_VECTOR:
-				specify_prg_state_vector();
-				break;
-			case SPECIFY_TLB_STATE_VECTOR:
-				specify_tlb_state_vector();
-				break;
-			case SPECIFY_SYS_STATE_VECTOR:
-				specify_sys_state_vector();
+
+		state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
+		switch (CAUSE_EXCCODE_GET(getCAUSE())){
+			case 8: /*SYSCALL*/
+				if (before->status & STATUS_KUp){ /*#FIXME KUp or KUc?*/
+					/*SYSCALL invoked in user mode*/
+					//#FIXME
+					PANIC();
+					break;
+				} else switch (before->reg_a0){ /*SYSCALL invoked in kernel mode*/
+					case CREATE_PROCESS:
+						create_process();
+						break;
+					case CREATE_BROTHER:
+						create_brother();
+						break;
+					case TERMINATE_PROCESS:
+						terminate_process();
+						break;
+					case VERHOGEN:
+						verhogen();
+						break;
+					case PASSEREN:
+						passeren();
+						break;
+					case GET_CPU_TIME:
+						get_cpu_time();
+						break;
+					case WAIT_FOR_CLOCK:
+						wait_for_clock();
+						break;
+					case WAIT_FOR_IO_DEVICE:
+						wait_for_io_device();
+						break;
+					case SPECIFY_PRG_STATE_VECTOR:
+						specify_prg_state_vector();
+						break;
+					case SPECIFY_TLB_STATE_VECTOR:
+						specify_tlb_state_vector();
+						break;
+					case SPECIFY_SYS_STATE_VECTOR:
+						specify_sys_state_vector();
+						break;
+					default:
+						PANIC();
+				} break;
+			case 9:
+				/*BREAKPOINT*/
+				breakpoint_handler();
 				break;
 			default:
-//				otherSyscall();
-//				break;
-		}
-//		schedule();
+				PANIC();
 	}
+	//scheduler(); #FIXME
 }

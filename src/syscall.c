@@ -15,7 +15,7 @@
 #include "exception.h"
 
 #define getRegistro(x,cast,y) x = cast(((state_t*)SYSBK_OLDAREA)->y)
-#define getRegistroMC(x,cast,y) x = cast(((state_t*)new_old_areas[getPRID()][6])->y)
+#define getRegistroMC(x,cast,y) x = cast(((state_t*)new_old_areas[getPRID()][SYSBK_OLD])->y)
 
 
 void create_process()
