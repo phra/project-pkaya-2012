@@ -9,6 +9,22 @@
 #include "lib/listx.h"
 #include "lib/types11.h"
 
+#ifdef __INIT_CONST__
+#define MAXCPUs 1
+#define MAXPID 1024
+#define DEF_PRIORITY 5
+#define MAXPRINT 1024
+
+#define INT_OLD 0
+#define INT_NEW 1
+#define TLB_OLD 2
+#define TLB_NEW 3
+#define PGMTRAP_OLD 4
+#define PGMTRAP_NEW 5
+#define SYSBK_OLD 6
+#define SYSBK_NEW 7
+#endif
+
 void timerHandler();
 inline void initSemaphore(semd_t* sem, int value);
 inline void inserisciprocessoready(pcb_t* pcb);

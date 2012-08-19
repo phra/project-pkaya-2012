@@ -13,10 +13,21 @@
 #include "scheduler.h"
 #include "exception.h"
 
+#ifdef __INIT_CONST__
 #define MAXCPUs 1
 #define MAXPID 1024
 #define DEF_PRIORITY 5
 #define MAXPRINT 1024
+
+#define INT_OLD 0
+#define INT_NEW 1
+#define TLB_OLD 2
+#define TLB_NEW 3
+#define PGMTRAP_OLD 4
+#define PGMTRAP_NEW 5
+#define SYSBK_OLD 6
+#define SYSBK_NEW 7
+#endif
 
 /*Inizializzazione variabili del kernel*/
 int processCounter 	 = 0;	/* Contatore processi */
@@ -82,6 +93,8 @@ inline void inserisciprocessoready(pcb_t* pcb){
 	CAS(&mutex_scheduler,1,0);
 }
 
+/* INIZIALIZZAZIONE DI NEW AREA CON KU,IE e PLT SETTATI
+   inizializza una new area puntata da addr con pc_epc puntato da pc */
 static void newAreaKIT(memaddr pc, state_t* addr){
 	int status = getSTATUS();
 	state_t* state = addr;
@@ -89,7 +102,7 @@ static void newAreaKIT(memaddr pc, state_t* addr){
 	status |= STATUS_IEc;				/* Interrupt abilitato                 */
 	status &= ~STATUS_VMc;				/* Virtual Memory OFF                  */
 	status |= STATUS_PLTc				/* Processor local timer abilitato     */
-	//status |= STATUS_KUc;				/* Kernel-Mode ON #FIXME               */
+	//status &= ~STATUS_KUc;				/* Kernel-Mode ON #FIXME               */
 	state.status = status;
 	state.reg_sp = RAMTOP;
 	state.pc_epc = state.reg_t9 = pc;
@@ -97,29 +110,29 @@ static void newAreaKIT(memaddr pc, state_t* addr){
 
 static void initNewOldAreas(){
 	int i;
-	new_old_areas[0][0] = (state_t*)INT_OLDAREA);
-	new_old_areas[0][1] = (state_t*)INT_NEWAREA);
-	new_old_areas[0][2] = (state_t*)TLB_OLDAREA);
-	new_old_areas[0][3] = (state_t*)TLB_NEWAREA);
-	new_old_areas[0][4] = (state_t*)PGMTRAP_OLDAREA);
-	new_old_areas[0][5] = (state_t*)PGMTRAP_NEWAREA);
-	new_old_areas[0][6] = (state_t*)SYSBK_OLDAREA);
-	new_old_areas[0][7] = (state_t*)SYSBK_NEWAREA);
+	new_old_areas[0][INT_OLD] = (state_t*)INT_OLDAREA);
+	new_old_areas[0][INT_NEW] = (state_t*)INT_NEWAREA);
+	new_old_areas[0][TLB_OLD] = (state_t*)TLB_OLDAREA);
+	new_old_areas[0][TLB_NEW] = (state_t*)TLB_NEWAREA);
+	new_old_areas[0][PGMTRAP_OLD] = (state_t*)PGMTRAP_OLDAREA);
+	new_old_areas[0][PGMTRAP_NEW] = (state_t*)PGMTRAP_NEWAREA);
+	new_old_areas[0][SYSBK_OLD] = (state_t*)SYSBK_OLDAREA);
+	new_old_areas[0][SYSBK_NEW] = (state_t*)SYSBK_NEWAREA);
 	for (i=1;i<MAXCPUs;i++){
-		new_old_areas[i][0] = &real_new_old_areas[i-1][0];
-		new_old_areas[i][1] = &real_new_old_areas[i-1][1];
-		new_old_areas[i][2] = &real_new_old_areas[i-1][2];
-		new_old_areas[i][3] = &real_new_old_areas[i-1][3];
-		new_old_areas[i][4] = &real_new_old_areas[i-1][4];
-		new_old_areas[i][5] = &real_new_old_areas[i-1][5];
-		new_old_areas[i][6] = &real_new_old_areas[i-1][6];
-		new_old_areas[i][7] = &real_new_old_areas[i-1][7];
+		new_old_areas[i][INT_OLD] = &real_new_old_areas[i-1][INT_OLD];
+		new_old_areas[i][INT_NEW] = &real_new_old_areas[i-1][INT_NEW];
+		new_old_areas[i][TLB_OLD] = &real_new_old_areas[i-1][TLB_OLD];
+		new_old_areas[i][TLB_NEW] = &real_new_old_areas[i-1][TLB_NEW];
+		new_old_areas[i][PGMTRAP_OLD] = &real_new_old_areas[i-1][PGMTRAP_OLD];
+		new_old_areas[i][PGMTRAP_NEW] = &real_new_old_areas[i-1][PGMTRAP_NEW];
+		new_old_areas[i][SYSBK_OLD] = &real_new_old_areas[i-1][SYSBK_OLD];
+		new_old_areas[i][SYSBK_NEW] = &real_new_old_areas[i-1][SYSBK_NEW];
 	}
 	for (i=0;i<MAXCPUs;i++){
-		newAreaKIT((memaddr) int_handler, new_old_areas[i][1]);
-		newAreaKIT((memaddr) tlb_handler, new_old_areas[i][3]);
-		newAreaKIT((memaddr) pgmtrap_handler, new_old_areas[i][5]);
-		newAreaKIT((memaddr) sysbk_handler, new_old_areas[i][7]);
+		newAreaKIT((memaddr) int_handler, new_old_areas[i][INT_NEW]);
+		newAreaKIT((memaddr) tlb_handler, new_old_areas[i][TLB_NEW]);
+		newAreaKIT((memaddr) pgmtrap_handler, new_old_areas[i][PGMTRAP_NEW]);
+		newAreaKIT((memaddr) sysbk_handler, new_old_areas[i][SYSBK_NEW]);
 	}
 }
 
