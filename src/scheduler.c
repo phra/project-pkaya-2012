@@ -11,14 +11,11 @@
 
 #include "init.h"
 
-#define TIME_SLICE 5000000
+#define TIME_SLICE SCHED_TIME_SLICE
 
 struct list_head readyQueue;
 struct list_head expiredQueue;
 
-
-/* INIZIALIZZAZIONE DI NEW AREA CON KU,IE e PLT SETTATI
-   inizializza una new area puntata da addr con pc_epc puntato da pc */
 
 int pigliapid(void){
 	int i = usedpid;
@@ -41,11 +38,11 @@ pcb_t* allocaPcb(int priority){
 
 void scheduler(void){
 	while (!CAS(&mutex_scheduler,0,1));
-	setSTATUS((getSTATUS() & ~STATUS_IEc) | STATUS_KUc); /*disabilito interrupt, attivo kernel mode */
+	setSTATUS((getSTATUS() & ~(STATUS_IEc | STATUS_KUc)); /*disabilito interrupt, attivo kernel mode #FIXME */
 	if (!list_empty(&readyQueue)){
 		
 		pcb_t* next = removeProcQ(&readyQueue);
-		setTIMER(TIME_SLICE);
+		setTIMER(SCHED_TIME_SLICE);
 		currentproc[getprid()] = next;
 		CAS(&mutex_scheduler,1,0);
 		LDST(next->p_s);
@@ -62,7 +59,7 @@ void scheduler(void){
 	} else if ((processCounter > 0) && (softBlockCount > 0)) {
 		
 				CAS(&mutex_scheduler,1,0);
-				SET_TIMER(10*TIME_SLICE);
+				//SET_TIMER(10*SCHED_TIME_SLICE); #FIXME
 				WAIT();
 				
 	} else if ((processCounter > 0) && (softBlockCount == 0)) {
