@@ -79,8 +79,8 @@ void timerHandler(){
 }
 
 static inline void initSchedQueue(void){
-	INIT_LIST_HEAD(&readyQueue);
-	INIT_LIST_HEAD(&expiredQueue);
+	INIT_LIST_HEAD(readyQ);
+	INIT_LIST_HEAD(expiredQ);
 }
 
 inline void inserisciprocesso(struct list_head* queue, pcb_t* pcb){
@@ -89,23 +89,42 @@ inline void inserisciprocesso(struct list_head* queue, pcb_t* pcb){
 
 inline void inserisciprocessoready(pcb_t* pcb){
 	while (!CAS(&mutex_scheduler,0,1));
-	insertProcQ(&readyQueue,pcb);
+	insertProcQ(readyQ,pcb);
 	CAS(&mutex_scheduler,1,0);
 }
 
 /* INIZIALIZZAZIONE DI NEW AREA CON KU,IE e PLT SETTATI
    inizializza una new area puntata da addr con pc_epc puntato da pc */
-static void newAreaKIT(memaddr pc, state_t* addr){
+static void initNewArea(memaddr pc, state_t* addr){
+	int status = getSTATUS();
+	state_t* state = addr;
+	memset(state,0,sizeof(state_t));
+	status &= ~STATUS_IEc;				/* Interrupt non abilitato             */
+	status &= ~STATUS_IEp;				/* Set also previous bit for LDST()    */
+	status &= ~STATUS_VMc;				/* Virtual Memory OFF                  */
+	status &= ~STATUS_VMp;				/* Set also previous bit for LDST()    */
+	status |= STATUS_PLTc;				/* Processor local timer abilitato     */
+	status &= ~STATUS_KUc;				/* Kernel-Mode ON                      */
+	status &= ~STATUS_KUp;				/* Set also previous bit for LDST()    */
+	state.status = status;
+	state.reg_sp = RAMTOP;
+	state.pc_epc = state.reg_t9 = pc;
+}
+
+static void initTest(state_t* addr){
 	int status = getSTATUS();
 	state_t* state = addr;
 	memset(state,0,sizeof(state_t));
 	status |= STATUS_IEc;				/* Interrupt abilitato                 */
+	status |= STATUS_IEp;				/* Set also previous bit for LDST()    */
 	status &= ~STATUS_VMc;				/* Virtual Memory OFF                  */
-	status |= STATUS_PLTc				/* Processor local timer abilitato     */
-	//status &= ~STATUS_KUc;				/* Kernel-Mode ON #FIXME               */
+	status &= ~STATUS_VMp;				/* Set also previous bit for LDST()    */
+	status |= STATUS_PLTc;				/* Processor local timer abilitato     */
+	status &= ~STATUS_KUc;				/* Kernel-Mode ON                      */
+	status &= ~STATUS_KUp;				/* Set also previous bit for LDST()    */
 	state.status = status;
-	state.reg_sp = RAMTOP;
-	state.pc_epc = state.reg_t9 = pc;
+	state.reg_sp = RAMTOP - FRAME_SIZE;			/* $SP = RAMPTOP - FRAMESIZE */
+	state.pc_epc = state.reg_t9 = test;
 }
 
 static void initNewOldAreas(){
@@ -129,10 +148,10 @@ static void initNewOldAreas(){
 		new_old_areas[i][SYSBK_NEW] = &real_new_old_areas[i-1][SYSBK_NEW];
 	}
 	for (i=0;i<MAXCPUs;i++){
-		newAreaKIT((memaddr) int_handler, new_old_areas[i][INT_NEW]);
-		newAreaKIT((memaddr) tlb_handler, new_old_areas[i][TLB_NEW]);
-		newAreaKIT((memaddr) pgmtrap_handler, new_old_areas[i][PGMTRAP_NEW]);
-		newAreaKIT((memaddr) sysbk_handler, new_old_areas[i][SYSBK_NEW]);
+		initNewArea((memaddr) int_handler, new_old_areas[i][INT_NEW]);
+		initNewArea((memaddr) tlb_handler, new_old_areas[i][TLB_NEW]);
+		initNewArea((memaddr) pgmtrap_handler, new_old_areas[i][PGMTRAP_NEW]);
+		initNewArea((memaddr) sysbk_handler, new_old_areas[i][SYSBK_NEW]);
 	}
 }
 
@@ -237,12 +256,10 @@ int main(void)
 
 	/*Instanziare il PCB e lo stato del processo test*/
 	p1 = allocaPcb(DEF_PRIORITY);		/* Allocare PCB */
-	newAreaKIT((memaddr)test,(state_t*)&p1->p_s);
-	p1->p_s.reg_sp = RAMTOP - FRAME_SIZE;			/* $SP = RAMPTOP - FRAMESIZE */
+	initTest(&p1->p_s);
 	
-
 	/*Inserire il processo nella Ready Queue*/
-	inserisciprocessoready(&readyQueue, p1);
+	inserisciprocessoready(readyQ, p1);
 	scheduler();						/*Richiamo lo scheduler in modalita START*/
 
 	/*------------------DA FARE-------------------------------	
