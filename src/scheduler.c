@@ -11,10 +11,10 @@
 
 #include "init.h"
 
-#define TIME_SLICE SCHED_TIME_SLICE
-
 struct list_head readyQueue;
 struct list_head expiredQueue;
+struct list_head* readyQ = &readyQueue;
+struct list_head* expiredQ = &expiredQueue;
 
 
 int pigliapid(void){
@@ -38,21 +38,21 @@ pcb_t* allocaPcb(int priority){
 
 void scheduler(void){
 	while (!CAS(&mutex_scheduler,0,1));
-	setSTATUS((getSTATUS() & ~(STATUS_IEc | STATUS_KUc)); /*disabilito interrupt, attivo kernel mode #FIXME */
-	if (!list_empty(&readyQueue)){
-		
-		pcb_t* next = removeProcQ(&readyQueue);
+	//setSTATUS((getSTATUS() & ~(STATUS_IEc | STATUS_KUc)); /*disabilito interrupt, attivo kernel mode #FIXME */
+	if (!list_empty(readyQ)){
+
+		pcb_t* next = removeProcQ(readyQ);
 		setTIMER(SCHED_TIME_SLICE);
-		currentproc[getprid()] = next;
+		currentproc[getPRID()] = next;
 		CAS(&mutex_scheduler,1,0);
 		LDST(next->p_s);
 
-	} else if (!list_empty(&expiredQueue)){
+	} else if (!list_empty(expiredQ)){
 			
 		/*scambio le due liste per evitare starvation*/
-		struct list_head temp = expiredQueue;
-		expiredQueue = readyQueue;
-		readyQueue = temp;
+		struct list_head* temp = expiredQ;
+		expiredQ = readyQ;
+		readyQ = temp;
 		CAS(&mutex_scheduler,1,0);
 		return scheduler();
 		
@@ -68,6 +68,7 @@ void scheduler(void){
 				
 	} else if (processCounter == 0) {
 		
+				CAS(&mutex_scheduler,1,0);
 				HALT();
 				
 	}
