@@ -131,13 +131,16 @@ void syscall_bp_handler(){
 //	else{	/* SYSCALL IN KERNELMODE chiamo il gestore adeguato */
 
 		state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
+		pcb_t* suspend = currentproc[getPRID()];
+		before->pc_epc += WORD_SIZE;
+		suspend->p_s = *before;
 		switch (CAUSE_EXCCODE_GET(getCAUSE())){
-			case 8: /*SYSCALL*/
-				if (before->status & STATUS_KUp){ /*#FIXME KUp or KUc?*/
+			case 8:
+				/*SYSCALL*/
+				if (before->status & STATUS_KUp){ /* look at previous bit */
 					/*SYSCALL invoked in user mode*/
 					//#FIXME
 					PANIC();
-					break;
 				} else switch (before->reg_a0){ /*SYSCALL invoked in kernel mode*/
 					case CREATE_PROCESS:
 						create_process();
@@ -182,5 +185,5 @@ void syscall_bp_handler(){
 			default:
 				PANIC();
 	}
-	//scheduler(); #FIXME
+	//scheduler(); /*#FIXME call the scheduler or RFE?*/
 }

@@ -94,11 +94,9 @@ void verhogen()
 	semd_t* sem;
 	pcb_t* next;
 	pcb_t* suspend = currentproc[getPRID()];
-	state_t* before = (state_t*)new_old_areas[getPRID()][6];
+	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	semkey = before->reg_a1;
-	before->pc_epc += WORD_SIZE;
 	sem = getSemd(semkey);
-	suspend->p_s = *before;
 	inserisciprocessoready(suspend);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value += 1;
@@ -106,10 +104,8 @@ void verhogen()
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		inserisciprocessoready(next);
-		return scheduler();
 	} else {
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
-		return scheduler();
 	}
 }
 
@@ -123,21 +119,17 @@ void passeren()
 	int semkey;
 	semd_t* sem;
 	pcb_t* suspend = currentproc[getPRID()];
-	state_t* before = (state_t*)new_old_areas[getPRID()][6];
+	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	semkey = before->reg_a1;
-	before->pc_epc += WORD_SIZE;
 	sem = getSemd(semkey);
-	suspend->p_s = *before;
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value -= 1;
 	if (sem->s_value >= 0){ /* GO! */
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		inserisciprocessoready(suspend);
-		return scheduler();
 	} else { /* wait */
 		insertBlocked(semkey,suspend);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
-		return scheduler();
 	}
 }
 
