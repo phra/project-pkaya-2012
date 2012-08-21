@@ -16,8 +16,7 @@
 
 void kill(pcb_t* target){
 	pcb_t* temp;
-	int pid = target->pid;
-	PIDs[pid] = NULL;
+	PIDs[target->pid] = NULL;
 	while(temp = outChild(target)){
 		kill(temp);
 	}
@@ -69,36 +68,31 @@ unsigned int deviceHandler(unsigned int intline){
 
 
 /*Funzione di gestione degli interrupt, settata nel boot*/
-void intHandler(){
+void int_handler(){
     unsigned int devSts;
     /* si assegna inizialmente la linea di INT_TIMER perchè le linee 0 e 1 non sono utilizzabili*/
-    int intline=INT_TIMER;
+    int intline=INT_PLT;
+	
+    /* Su quale linea c'è stato l'interrupt */
+	while((intline<=INT_TERMINAL) && (!(CAUSE_IP_GET(new_old_areas[getPRID()][INT_OLD]->cause, intline)))){
+		intline++;          
+	}
 
-    /*Su quale linea c'è stato l'interrupt:*/
-    while(intline<=INT_TERMINAL){
-        if(CAUSE_IP_GET(((state_t *) INT_OLDAREA)->cause , intline)){break;}
-        intline++;          
-    }
+	if (intline == INT_PLT){/* in questo caso è scaduto il time slice */
+		if(currentproc[getPRID()] != NULL){
+			/* stop e inserimento in ReadyQueue */
+			state_t* before = (state_t*)new_old_areas[getPRID()][INT_OLD];
+			pcb_t* suspend = currentproc[getPRID()];
+			before->pc_epc += WORD_SIZE;
+			suspend->p_s = *before;
+			inserisciprocessoexpired(suspend);
+		}
+		return scheduler();
+	}
+	/*chiamo il gestore dei device, passandogli la linea su cui c'è stato l'interrupt*/
+	deviceHandler(intline);
+	LDST((state_t *)new_old_areas[getPRID()][INT_OLD]);
 
-    if(intline>INT_TERMINAL){/*in Questo caso nessun tipo di interrupt e' stato sollevato*/}
-    else{
-        if (intline == INT_TIMER){/* in questo caso è scaduto il time slice*/
-            if(currentThread!=NULL){
-                /*stop e inserimento in ReadyQueue*/
-                stopThread(1,(state_t *)INT_OLDAREA);
-            }
-            /*risetta da capo il time slice */      
-            else{SET_IT(SCHED_TIME_SLICE);}
-        }       
-        else{/*chiamo il gestore dei device, passandogli la linea su cui c'è stato l'interrupt*/
-            devSts=deviceHandler(intline);
-            /*invio al thread in attesa di IO il risultato della deviceHandler(uno state)*/
-            MsgSend(SEND,firstWaitio(&frozenList) ,devSts );
-            /*LDST del INT_OLDAREA per far ripartire il codice*/
-            LDST((state_t *)INT_OLDAREA);
-            /*nextThread(); */
-        }
-    }
 }
 
 void tlb_handler(){
@@ -160,10 +154,6 @@ void prg_trap_handler(){
     
 }
 
-void breakpoint_handler(){
-	/**/
-}
-
 void syscall_bp_handler(){
 	//U32 sysValue;
 
@@ -186,63 +176,67 @@ void syscall_bp_handler(){
 //	}
 //	else{	/* SYSCALL IN KERNELMODE chiamo il gestore adeguato */
 
-		state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
-		pcb_t* suspend = currentproc[getPRID()];
-		before->pc_epc += WORD_SIZE;
-		suspend->p_s = *before;
-		if (CAUSE_EXCCODE_GET(before->cause) == 8){
-				/*SYSCALL*/
-				if (before->status & STATUS_KUp){ /* look at previous bit */
-					/*SYSCALL invoked in user mode*/
-					if (suspend->handler[SYSBK]){
-						/*il processo ha definito un suo handler*/
-						LDST(suspend->handler[SYSBK]);
-					} else {
-						/*kill it with fire*/
-						kill(suspend);
-						currentproc[getPRID()] = NULL;
-						scheduler();
-					}
-				} else switch (before->reg_a0){ /*SYSCALL invoked in kernel mode*/
-					case CREATE_PROCESS:
-						create_process();
-						break;
-					case CREATE_BROTHER:
-						create_brother();
-						break;
-					case TERMINATE_PROCESS:
-						terminate_process();
-						break;
-					case VERHOGEN:
-						verhogen();
-						break;
-					case PASSEREN:
-						passeren();
-						break;
-					case GET_CPU_TIME:
-						get_cpu_time();
-						break;
-					case WAIT_FOR_CLOCK:
-						wait_for_clock();
-						break;
-					case WAIT_FOR_IO_DEVICE:
-						wait_for_io_device();
-						break;
-					case SPECIFY_PRG_STATE_VECTOR:
-						specify_prg_state_vector();
-						break;
-					case SPECIFY_TLB_STATE_VECTOR:
-						specify_tlb_state_vector();
-						break;
-					case SPECIFY_SYS_STATE_VECTOR:
-						specify_sys_state_vector();
-						break;
-					default:
-						PANIC();
+	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
+	pcb_t* suspend = currentproc[getPRID()];
+	before->pc_epc += WORD_SIZE;
+	suspend->p_s = *before;
+	if (CAUSE_EXCCODE_GET(before->cause) == 8){
+		/*SYSCALL*/
+		if (before->status & STATUS_KUp){ /* look at previous bit */
+			/*SYSCALL invoked in user mode*/
+			if (suspend->handler[PGMTRAP] != NULL){
+				/*il processo ha definito un suo handler*/
+				suspend->handler[PGMTRAP]->cause = CAUSE_EXCCODE_SET(suspend->handler[PGMTRAP]->cause, EXC_RESERVEDINSTR);
+				LDST(suspend->handler[PGMTRAP]);
+			} else {
+				/*kill it with fire*/
+				kill(suspend);
+				currentproc[getPRID()] = NULL;
+				scheduler();
 			}
-		} else if (CAUSE_EXCCODE_GET(before->cause) == 9){
-				/*BREAKPOINT*/
-				breakpoint_handler();
-		} else PANIC();
+		} else switch (before->reg_a0){ /*SYSCALL invoked in kernel mode*/
+			case CREATE_PROCESS:
+				create_process();
+				break;
+			case CREATE_BROTHER:
+				create_brother();
+				break;
+			case TERMINATE_PROCESS:
+				terminate_process();
+				break;
+			case VERHOGEN:
+				verhogen();
+				break;
+			case PASSEREN:
+				passeren();
+				break;
+			case GET_CPU_TIME:
+				get_cpu_time();
+				break;
+			case WAIT_FOR_CLOCK:
+				wait_for_clock();
+				break;
+			case WAIT_FOR_IO_DEVICE:
+				wait_for_io_device();
+				break;
+			case SPECIFY_PRG_STATE_VECTOR:
+				specify_prg_state_vector();
+				break;
+			case SPECIFY_TLB_STATE_VECTOR:
+				specify_tlb_state_vector();
+				break;
+			case SPECIFY_SYS_STATE_VECTOR:
+				specify_sys_state_vector();
+				break;
+			default:
+				PANIC();
+		}
+	} else if (CAUSE_EXCCODE_GET(before->cause) == 9){
+			/*BREAKPOINT #FIXME */
+			/*kill it with fire*/
+			kill(suspend);
+			currentproc[getPRID()] = NULL;
+			scheduler();
+	} else PANIC();
 	//scheduler(); /*#FIXME call the scheduler or RFE?*/
 }
