@@ -37,6 +37,7 @@ void memcpy(void* dest, void* src, int lenght){
 
 /*
  * strlen(puntatore a char): ritorna il numero di char in una stringa ASCII
+ * senza contare lo zero terminatore
  */
 int strlen(char* str){
 	int i = 0;
@@ -67,7 +68,7 @@ void strcpy(char* dest, char* src){
 	int i = 0;
 	char* s1 = dest;
 	char* s2 = src;
-	while(s1[i] != '\0'){
+	while(s2[i] != '\0'){
 		s1[i] = s2[i];
 		i++;
 	}
