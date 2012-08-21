@@ -72,6 +72,7 @@
 #define CLOCK_SEM (MAX_DEVICES - 1)
 
 /* Interrupt lines used by the devices */
+#define INT_PLT 1
 #define INT_TIMER 2    /* timer interrupt */
 #define INT_LOWEST 3   /* minimum interrupt number used by real devices */
 #define INT_DISK 3
