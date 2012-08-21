@@ -4,13 +4,20 @@
 #include "uMPStypes.h"
 #include "listx.h"
 
+#ifndef __HANDLERS_CONST__
+#define __HANDLERS_CONST__
+#define SYSBP 0
+#define PGMTRAP 1
+#define TLB 2
+#endif
+
 /* Process Control Block (PCB) data structure */
 typedef struct pcb_t {
 	/*process queue fields */
 	struct list_head	p_next;
 
 	/*process tree fields */
-	struct tcb_t		*p_parent;
+	struct pcb_t		*p_parent;
 	struct list_head	p_child,
 						p_sib;
 	
@@ -23,6 +30,11 @@ typedef struct pcb_t {
 	
 	/* key of the semaphore on which the process is eventually blocked */
 	int					p_semkey;
+
+
+	int pid;
+
+	state_t* handler[3];
 
 } pcb_t;
 
