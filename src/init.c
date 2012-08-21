@@ -83,8 +83,10 @@ static inline void initSchedQueue(void){
 	INIT_LIST_HEAD(expiredQ);
 }
 
-inline void inserisciprocesso(struct list_head* queue, pcb_t* pcb){
-	insertProcQ(queue,pcb);
+inline void inserisciprocessoexpired(pcb_t* pcb){
+	while (!CAS(&mutex_scheduler,0,1));
+	insertProcQ(expiredQ,pcb);
+	CAS(&mutex_scheduler,1,0);
 }
 
 inline void inserisciprocessoready(pcb_t* pcb){
@@ -101,12 +103,15 @@ static void initNewArea(memaddr pc, state_t* addr){
 	memset(state,0,sizeof(state_t));
 	status &= ~STATUS_IEc;				/* Interrupt non abilitati             */
 	status &= ~STATUS_IEp;				/* Set also previous bit for LDST()    */
+	status &= ~STATUS_IEo;
 	status &= ~STATUS_INT_UNMASKED;
 	status &= ~STATUS_VMc;				/* Virtual Memory OFF                  */
 	status &= ~STATUS_VMp;				/* Set also previous bit for LDST()    */
+	status &= ~STATUS_VMo;
 	status |= STATUS_PLTc;				/* Processor local timer abilitato     */
 	status &= ~STATUS_KUc;				/* Kernel-Mode ON                      */
 	status &= ~STATUS_KUp;				/* Set also previous bit for LDST()    */
+	status &= ~STATUS_KUo;
 	state.status = status;
 	state.reg_sp = RAMTOP;
 	state.pc_epc = state.reg_t9 = pc;
@@ -118,12 +123,15 @@ static void initTest(state_t* addr){
 	memset(state,0,sizeof(state_t));
 	status |= STATUS_IEc;				/* Interrupt abilitati                 */
 	status |= STATUS_IEp;				/* Set also previous bit for LDST()    */
+	status |= STATUS_IEo;
 	status |= STATUS_INT_UNMASKED;
 	status &= ~STATUS_VMc;				/* Virtual Memory OFF                  */
 	status &= ~STATUS_VMp;				/* Set also previous bit for LDST()    */
+	status &= ~STATUS_VMo;
 	status |= STATUS_PLTc;				/* Processor local timer abilitato     */
 	status &= ~STATUS_KUc;				/* Kernel-Mode ON                      */
 	status &= ~STATUS_KUp;				/* Set also previous bit for LDST()    */
+	status &= ~STATUS_KUo;
 	state.status = status;
 	state.reg_sp = RAMTOP - FRAME_SIZE;			/* $SP = RAMPTOP - FRAMESIZE */
 	state.pc_epc = state.reg_t9 = test;

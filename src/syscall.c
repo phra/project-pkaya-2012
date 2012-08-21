@@ -128,7 +128,7 @@ void passeren()
 	sem = getSemd(semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value -= 1;
-	if (sem->s_value >= 0){ /* GO! */
+	if (sem->s_value >= -1){ /* GO! */
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		inserisciprocessoready(suspend);
 	} else { /* wait */
