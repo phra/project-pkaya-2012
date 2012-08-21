@@ -1,3 +1,28 @@
+#include "lib/const11.h"
+#include "lib/const.h"
+#include "lib/base.h"
+#include "lib/uMPStypes.h"
+#include "lib/libumps.h"
+#include "lib/listx.h"
+#include "lib/types11.h"
+
+#include "phase1/pcb.h"
+#include "phase1/asl.h"
+#include "lib/utils.h"
+
+#include "init.h"
+#include "scheduler.h"
+#include "syscall.h"
+
+void kill(pcb_t* target){
+	pcb_t* temp;
+	int pid = target->pid;
+	PIDs[pid] = NULL;
+	while(temp = outChild(target)){
+		kill(temp);
+	}
+	freePcb(target);
+}
 
 /*Funzione per la gestione dei specifici device*/
 unsigned int deviceHandler(unsigned int intline){
@@ -88,6 +113,21 @@ void tlb_handler(){
     //	terminateThread();
     	//schedule();
   //  }
+  
+	state_t* before = (state_t*)new_old_areas[getPRID()][TLB_OLD];
+	pcb_t* suspend = currentproc[getPRID()];
+	before->pc_epc += WORD_SIZE;
+	suspend->p_s = *before;
+
+	if (suspend->handler[TLB]){
+		/*il processo ha definito un suo handler*/
+		LDST(suspend->handler[TLB]);
+	} else {
+		/*kill it with fire*/
+		kill(suspend);
+		currentproc[getPRID()] = NULL;
+		scheduler();
+	}
 }
 
 void prg_trap_handler(){
@@ -102,6 +142,22 @@ void prg_trap_handler(){
     //	terminateThread();
 	//	schedule();
     //}
+
+	state_t* before = (state_t*)new_old_areas[getPRID()][PGMTRAP_OLD];
+	pcb_t* suspend = currentproc[getPRID()];
+	before->pc_epc += WORD_SIZE;
+	suspend->p_s = *before;
+
+	if (suspend->handler[PGMTRAP]){
+		/*il processo ha definito un suo handler*/
+		LDST(suspend->handler[PGMTRAP]);
+	} else {
+		/*kill it with fire*/
+		kill(suspend);
+		currentproc[getPRID()] = NULL;
+		scheduler();
+	}
+    
 }
 
 void breakpoint_handler(){
@@ -134,13 +190,19 @@ void syscall_bp_handler(){
 		pcb_t* suspend = currentproc[getPRID()];
 		before->pc_epc += WORD_SIZE;
 		suspend->p_s = *before;
-		switch (CAUSE_EXCCODE_GET(getCAUSE())){
-			case 8:
+		if (CAUSE_EXCCODE_GET(before->cause) == 8){
 				/*SYSCALL*/
 				if (before->status & STATUS_KUp){ /* look at previous bit */
 					/*SYSCALL invoked in user mode*/
-					//#FIXME
-					PANIC();
+					if (suspend->handler[SYSBK]){
+						/*il processo ha definito un suo handler*/
+						LDST(suspend->handler[SYSBK]);
+					} else {
+						/*kill it with fire*/
+						kill(suspend);
+						currentproc[getPRID()] = NULL;
+						scheduler();
+					}
 				} else switch (before->reg_a0){ /*SYSCALL invoked in kernel mode*/
 					case CREATE_PROCESS:
 						create_process();
@@ -177,13 +239,10 @@ void syscall_bp_handler(){
 						break;
 					default:
 						PANIC();
-				} break;
-			case 9:
+			}
+		} else if (CAUSE_EXCCODE_GET(before->cause) == 9){
 				/*BREAKPOINT*/
 				breakpoint_handler();
-				break;
-			default:
-				PANIC();
-	}
+		} else PANIC();
 	//scheduler(); /*#FIXME call the scheduler or RFE?*/
 }
