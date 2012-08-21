@@ -29,6 +29,10 @@ void create_process()
 		- -1 nel caso di errore
 	*/
 
+
+
+	//#FIXME inizializzare handlers a NULL
+
 	pcb_t	*son_process;
 	int	 priority;
 	state_t	*indFisico;
@@ -174,7 +178,7 @@ void specifiy_prg_state_vector()
 void specify_tlb_state_vector()
 {
 	/*
-		Quando invocata, la sys10 consente di definire gestori di TLP Exception per il processo corrente.
+		Quando invocata, la sys10 consente di definire gestori di TLB Exception per il processo corrente.
 		Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente dle processore.
 		Registro a2: indirizzo della NEWArea del processore (da utilizzare nel caso si verifichi una TLB Exception)
 	*/

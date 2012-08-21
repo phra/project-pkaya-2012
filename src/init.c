@@ -99,8 +99,9 @@ static void initNewArea(memaddr pc, state_t* addr){
 	int status = getSTATUS();
 	state_t* state = addr;
 	memset(state,0,sizeof(state_t));
-	status &= ~STATUS_IEc;				/* Interrupt non abilitato             */
+	status &= ~STATUS_IEc;				/* Interrupt non abilitati             */
 	status &= ~STATUS_IEp;				/* Set also previous bit for LDST()    */
+	status &= ~STATUS_INT_UNMASKED;
 	status &= ~STATUS_VMc;				/* Virtual Memory OFF                  */
 	status &= ~STATUS_VMp;				/* Set also previous bit for LDST()    */
 	status |= STATUS_PLTc;				/* Processor local timer abilitato     */
@@ -115,8 +116,9 @@ static void initTest(state_t* addr){
 	int status = getSTATUS();
 	state_t* state = addr;
 	memset(state,0,sizeof(state_t));
-	status |= STATUS_IEc;				/* Interrupt abilitato                 */
+	status |= STATUS_IEc;				/* Interrupt abilitati                 */
 	status |= STATUS_IEp;				/* Set also previous bit for LDST()    */
+	status |= STATUS_INT_UNMASKED;
 	status &= ~STATUS_VMc;				/* Virtual Memory OFF                  */
 	status &= ~STATUS_VMp;				/* Set also previous bit for LDST()    */
 	status |= STATUS_PLTc;				/* Processor local timer abilitato     */
@@ -214,13 +216,27 @@ static unsigned int mytermprint(char * str, unsigned int term) {
 	return (!error);		
 }
 
-
-void print(char *str1, char *str2) {
+void print1(char *str1){
         static char output[MAXPRINT];
 
-        strcpy(output + 1, str1);
+        strcpy(output + 1, str1); //#FIXME
+        strcpy(output, "\n");
+
+        mytermprint(output,0);
+}
+
+
+void print2(char *str1, char *str2) {
+        static char output[MAXPRINT];
+
+       /* strcpy(output + 1, str1); //#FIXME
         strcpy(output + strlen(str1) + 1, " -> ");
         strcpy(output + strlen(str1) + 3, str2);
+        strcpy(output, "\n");*/
+
+        strcpy(output, str1);
+        strcpy(output + strlen(output), " -> ");
+        strcpy(output + strlen(output), str2);
         strcpy(output, "\n");
 
         mytermprint(output,0);

@@ -28,10 +28,10 @@ int pigliapid(void){
 /* alloca Pcb ed assegna il pid e la priorita' ai processi */  
 pcb_t* allocaPcb(int priority){
 	pcb_t* pcb = allocPcb();
-	int pid = pigliapid();
 	memset(pcb,0,sizeof(pcb));
 	pcb->priority = priority;
-	PIDs[pid] = pcb;
+	pcb->pid = pigliapid();
+	PIDs[pcb->pid] = pcb;
 	processCounter += 1;							/*Incrementiamo il contatore dei processi*/
 	return pcb;
 }
