@@ -31,10 +31,11 @@ typedef struct pcb_t {
 	/* key of the semaphore on which the process is eventually blocked */
 	int					p_semkey;
 
-
+	/* phase2 */
+	
 	int pid;
 
-	state_t* handler[3];
+	state_t* handler[6];
 
 } pcb_t;
 
