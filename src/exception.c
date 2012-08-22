@@ -20,13 +20,13 @@ void kill(pcb_t* target){
 	while(temp = outChild(target)){
 		kill(temp);
 	}
+	processCounter -= 1;
 	freePcb(target);
 }
 
 /*Funzione di gestione degli interrupt*/
 void int_handler(){
     unsigned int devSts;
-    /* si assegna inizialmente la linea di INT_TIMER perchè le linee 0 e 1 non sono utilizzabili*/
     int intline=INT_PLT;
 	
     /* Su quale linea c'è stato l'interrupt */
@@ -70,6 +70,7 @@ void tlb_handler(){
 
 	if (suspend->handler[TLB]){
 		/*il processo ha definito un suo handler*/
+		*(suspend->handler[TLB+3]) = *before; /* copy old area in user defined space by syscall*/
 		LDST(suspend->handler[TLB]);
 	} else {
 		/*kill it with fire*/
@@ -99,6 +100,7 @@ void prg_trap_handler(){
 
 	if (suspend->handler[PGMTRAP]){
 		/*il processo ha definito un suo handler*/
+		*(suspend->handler[PGMTRAP+3]) = *before; /* copy old area in user defined space */
 		LDST(suspend->handler[PGMTRAP]);
 	} else {
 		/*kill it with fire*/
@@ -106,7 +108,6 @@ void prg_trap_handler(){
 		currentproc[getPRID()] = NULL;
 		scheduler();
 	}
-    
 }
 
 void syscall_bp_handler(){
@@ -135,13 +136,19 @@ void syscall_bp_handler(){
 	pcb_t* suspend = currentproc[getPRID()];
 	before->pc_epc += WORD_SIZE;
 	suspend->p_s = *before;
-	if (CAUSE_EXCCODE_GET(before->cause) == 8){
+
+	if (suspend->handler[SYSBP]){
+		/*il processo ha definito un suo handler*/
+		*(suspend->handler[SYSBP+3]) = *before; /* copy old area in user defined space */
+		LDST(suspend->handler[SYSBP]);
+	} else if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
 		if (before->status & STATUS_KUp){ /* look at previous bit */
 			/*SYSCALL invoked in user mode*/
 			if (suspend->handler[PGMTRAP] != NULL){
 				/*il processo ha definito un suo handler*/
-				suspend->handler[PGMTRAP]->cause = CAUSE_EXCCODE_SET(suspend->handler[PGMTRAP]->cause, EXC_RESERVEDINSTR);
+				*(suspend->handler[PGMTRAP+3]) = *before;
+				suspend->handler[PGMTRAP+3]->cause = CAUSE_EXCCODE_SET(suspend->handler[PGMTRAP+3]->cause, EXC_RESERVEDINSTR);
 				LDST(suspend->handler[PGMTRAP]);
 			} else {
 				/*kill it with fire*/
@@ -193,5 +200,5 @@ void syscall_bp_handler(){
 			currentproc[getPRID()] = NULL;
 			scheduler();
 	} else PANIC();
-	//scheduler(); /*#FIXME call the scheduler or RFE?*/
+	LDST(suspend->p_s);
 }
