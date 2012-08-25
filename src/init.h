@@ -8,6 +8,15 @@
 #include "lib/libumps.h"
 #include "lib/listx.h"
 #include "lib/types11.h"
+#include "phase1/pcb.h"
+#include "phase1/asl.h"
+#include "lib/utils.h"
+
+
+#include "scheduler.h"
+#include "exception.h"
+#include "syscall.h"
+#include "interrupt.h"
 
 #ifdef __INIT_CONST__
 #define MAXCPUs 1
@@ -27,8 +36,6 @@
 
 void timerHandler();
 inline void initSemaphore(semd_t* sem, int value);
-inline void inserisciprocessoready(pcb_t* pcb);
-inline void inserisciprocesso(struct list_head* queue, pcb_t* pcb);
 void print(char *label, char *value);
 devreg mytermstat(memaddr *stataddr);
 

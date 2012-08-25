@@ -173,5 +173,3 @@ pcb_t* outChild(pcb_t* p){
 	list_del(&p->p_sib);
 	return p;
 }
-
-

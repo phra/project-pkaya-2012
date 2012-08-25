@@ -8,17 +8,16 @@
 #include "lib/libumps.h"
 #include "lib/listx.h"
 #include "lib/types11.h"
+#include "phase1/pcb.h"
+#include "phase1/asl.h"
+#include "lib/utils.h"
 
-void specify_sys_state_vector();
-void specify_tlb_state_vector();
-void wait_for_io_device();
-void wait_for_clock();
-void get_cpu_time();
-void passeren();
-void verhogen();
-void terminate_process();
-void create_brother();
-void create_process();
+
+#include "scheduler.h"
+#include "init.h"
+#include "syscall.h"
+#include "interrupt.h"
+
 void sysbk_handler();
 void pgmtrap_handler();
 void tlb_handler();

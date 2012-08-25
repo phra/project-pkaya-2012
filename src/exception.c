@@ -14,15 +14,7 @@
 #include "scheduler.h"
 #include "syscall.h"
 
-void kill(pcb_t* target){
-	pcb_t* temp;
-	PIDs[target->pid] = NULL;
-	while(temp = outChild(target)){
-		kill(temp);
-	}
-	processCounter -= 1;
-	freePcb(target);
-}
+
 
 /*Funzione di gestione degli interrupt*/
 void int_handler(){
@@ -42,6 +34,7 @@ void int_handler(){
 			before->pc_epc += WORD_SIZE;
 			suspend->p_s = *before;
 			inserisciprocessoexpired(suspend);
+			currentproc[getPRID()] == NULL;
 		}
 		return scheduler();
 	}
@@ -140,7 +133,7 @@ void syscall_bp_handler(){
 	if (suspend->handler[SYSBP]){
 		/*il processo ha definito un suo handler*/
 		*(suspend->handler[SYSBP+3]) = *before; /* copy old area in user defined space */
-		LDST(suspend->handler[SYSBP]);
+		return LDST(suspend->handler[SYSBP]);
 	} else if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
 		if (before->status & STATUS_KUp){ /* look at previous bit */
@@ -154,7 +147,7 @@ void syscall_bp_handler(){
 				/*kill it with fire*/
 				kill(suspend);
 				currentproc[getPRID()] = NULL;
-				scheduler();
+				return scheduler();
 			}
 		} else switch (before->reg_a0){ /*SYSCALL invoked in kernel mode*/
 			case CREATE_PROCESS:
@@ -198,7 +191,7 @@ void syscall_bp_handler(){
 			/*kill it with fire*/
 			kill(suspend);
 			currentproc[getPRID()] = NULL;
-			scheduler();
+			return scheduler();
 	} else PANIC();
 	LDST(suspend->p_s);
 }

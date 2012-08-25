@@ -12,6 +12,8 @@
 
 #include "scheduler.h"
 #include "exception.h"
+#include "syscall.h"
+#include "interrupt.h"
 
 #ifdef __INIT_CONST__
 #define MAXCPUs 1
@@ -28,6 +30,7 @@
 #define SYSBK_OLD 6
 #define SYSBK_NEW 7
 #endif
+
 
 /*Inizializzazione variabili del kernel*/
 int processCounter 	 = 0;	/* Contatore processi */
@@ -69,7 +72,7 @@ void initSemaphore(semd_t* sem, int value){
 	sem->s_value = value;
 }
 
-void timerHandler(){
+void timerHandler(void){
 	int cause = getCAUSE();
 	if (CAUSE_IP_GET(cause,INT_TIMER)) 
 		PROVA++;
@@ -83,21 +86,9 @@ static inline void initSchedQueue(void){
 	INIT_LIST_HEAD(expiredQ);
 }
 
-inline void inserisciprocessoexpired(pcb_t* pcb){
-	while (!CAS(&mutex_scheduler,0,1));
-	insertProcQ(expiredQ,pcb);
-	CAS(&mutex_scheduler,1,0);
-}
-
-inline void inserisciprocessoready(pcb_t* pcb){
-	while (!CAS(&mutex_scheduler,0,1));
-	insertProcQ(readyQ,pcb);
-	CAS(&mutex_scheduler,1,0);
-}
-
 /* INIZIALIZZAZIONE DI NEW AREA CON KU,IE e PLT SETTATI
    inizializza una new area puntata da addr con pc_epc puntato da pc */
-static void initNewArea(memaddr pc, state_t* addr){
+static void initNewArea(memaddr handler, state_t* addr){
 	int status = getSTATUS();
 	state_t* state = addr;
 	memset(state,0,sizeof(state_t));
@@ -114,7 +105,7 @@ static void initNewArea(memaddr pc, state_t* addr){
 	status &= ~STATUS_KUo;
 	state.status = status;
 	state.reg_sp = RAMTOP;
-	state.pc_epc = state.reg_t9 = pc;
+	state.pc_epc = state.reg_t9 = handler;
 }
 
 static void initTest(state_t* addr){
@@ -133,7 +124,7 @@ static void initTest(state_t* addr){
 	status &= ~STATUS_KUp;				/* Set also previous bit for LDST()    */
 	status &= ~STATUS_KUo;
 	state.status = status;
-	state.reg_sp = RAMTOP - FRAME_SIZE;			/* $SP = RAMPTOP - FRAMESIZE */
+	state.reg_sp = RAMTOP - 2*FRAME_SIZE;			/* $SP = RAMPTOP - FRAMESIZE */
 	state.pc_epc = state.reg_t9 = test;
 }
 
@@ -284,7 +275,7 @@ int main(void)
 	
 	/*Inserire il processo nella Ready Queue*/
 	inserisciprocessoready(readyQ, p1);
-	scheduler();						/*Richiamo lo scheduler in modalita START*/
+	scheduler();						/*Richiamo lo scheduler*/
 
 	/*------------------DA FARE-------------------------------	
 	//Inizializzare lo stato delle CPU
@@ -295,6 +286,6 @@ int main(void)
 	//Salva nella ROM l'indirizzo della New/Old Areas puntate da state-areas
 	//Carica lo stato del processore da start-state.
 	*/
-	
+
 	return 0;	
 }
