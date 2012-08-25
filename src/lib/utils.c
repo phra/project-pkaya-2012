@@ -40,10 +40,9 @@ void memcpy(void* dest, void* src, int lenght){
  * senza contare lo zero terminatore
  */
 int strlen(char* str){
-	int i = 0;
-	char* p = str;
-	while(*str != '\0') i++;
-	return i;
+	register char* p = str;
+	while(*p++ != '\0');
+	return p - str;
 }
 
 /*
@@ -51,12 +50,10 @@ int strlen(char* str){
  * ritorna 0 in caso di uguaglianza, -1 altrimenti
  */
 int strcmp(char* str1, char* str2){
-	int i = 0;
-	char* s1 = str1;
-	char* s2 = str2;
-	while(s1[i] == s2[i]){
-		if ((s1[i] == '\0') && (s2[i] == '\0')) return 0;
-		i++;
+	register char* s1 = str1;
+	register char* s2 = str2;
+	while(*s1 == *s2++){
+		if (*s1++ == '\0') return 0;
 	}
 	return -1;
 }
@@ -65,14 +62,13 @@ int strcmp(char* str1, char* str2){
  * strcpy(puntatore a char, puntatore a char): trascrive una stringa
  */
 void strcpy(char* dest, char* src){
-	int i = 0;
 	char* s1 = dest;
 	char* s2 = src;
-	while(s2[i] != '\0'){
-		s1[i] = s2[i];
-		i++;
-	}
-	s2[i] = '\0';
+	register char c;
+	do {
+        c = *s2++;
+        *s1++ = c;
+    } while ('\0' != c);
 }
 
 void strreverse(char* begin, char* end) {
