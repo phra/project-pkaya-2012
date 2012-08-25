@@ -8,6 +8,15 @@
 #include "lib/libumps.h"
 #include "lib/listx.h"
 #include "lib/types11.h"
+#include "phase1/pcb.h"
+#include "phase1/asl.h"
+#include "lib/utils.h"
+
+
+#include "scheduler.h"
+#include "exception.h"
+#include "init.h"
+#include "interrupt.h"
 
 void specify_sys_state_vector();
 void specify_tlb_state_vector();

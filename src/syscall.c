@@ -15,7 +15,7 @@
 #include "exception.h"
 
 #define getRegistro(x,cast,y) x = cast(((state_t*)SYSBK_OLDAREA)->y)
-#define getRegistroMC(x,cast,y) x = cast(((state_t*)new_old_areas[getPRID()][SYSBK_OLD])->y)
+#define getRegistroMP(x) (new_old_areas[getPRID()][SYSBK_OLD])->x
 
 
 void create_process()
@@ -28,28 +28,22 @@ void create_process()
 		- 0 nel caso di creazione corretta
 		- -1 nel caso di errore
 	*/
-
-
-
-	//#FIXME inizializzare handlers a NULL
-
-	pcb_t	*son_process;
-	int	 priority;
-	state_t	*indFisico;
-
-	son_process = allocPcb();		
 	
-	if (son_process != NULL)
-	{
-		getRegistro(indFisico, (state_t*), s_a1);
-		getRegistro(priority,  (int),      s_a2);
-
-		insertProcQ(&readyQueue, son_process);
-		processCount++;
-		currentProcess->proc_state.s_v0 = 0;
+	pcb_t* suspend = currentproc[getPRID()];
+	pcb_t* son;
+	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
+	
+	if (son = allocaPcb(before->reg_a2)){
+		son->p_s = *(before->reg_a1);
+		while (!CAS(&mutex_scheduler,0,1));
+		insertChild(suspend,son);
+		insertProcQ(readyQ,pcb);
+		processCounter += 1;
+		CAS(&mutex_scheduler,1,0);
+		before->reg_v0 = 0;
+	} else {
+		before->reg_v0 = -1;
 	}
-	else
-		currentProcess->proc_state.s_v0 = -1;
 }
 
 void create_brother()
@@ -62,30 +56,32 @@ void create_brother()
 		- 0 nel caso di creazione corretta
 		- -1 nel caso di errore.
 	*/
-
-	pcb_t	*brother_process;
-	int	 priority;
-	state_t	*indFisico;
-
-	brother_process = allocPcb();		
+		
+	pcb_t* suspend = currentproc[getPRID()];
+	pcb_t* father = suspend->p_parent;
+	pcb_t* son;
+	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	
-	if (brother_process != NULL)
-	{
-		getRegistro(indFisico, (state_t*), s_a1);
-		getRegistro(priority,  (int),      s_a2);
-
-		insertProcQ(&readyQueue, brother_process);
-		processCount++;
-		currentProcess->proc_state.s_v0 = 0;
+	if (son = allocaPcb(before->reg_a2)){
+		son->p_s = *(before->reg_a1);
+		while (!CAS(&mutex_scheduler,0,1));
+		insertChild(father,son);  //#FIXME
+		insertProcQ(readyQ,pcb);
+		processCounter += 1;
+		CAS(&mutex_scheduler,1,0);
+		before->reg_v0 = 0;
+	} else {
+		before->reg_v0 = -1;
 	}
-	else
-		currentProcess->proc_state.s_v0 = -1;
 }
 
 void terminate_process()
 {
 	// quando invocata, la sys3 termina il processo corrente e tutta la sua progenie.
-	freePcb(currentProcess);	// Liberare le risorse utilizzate da ogni processo che si intende terminare...
+	pcb_t* suspend = currentproc[getPRID()];
+	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
+	kill(suspend);
+	scheduler();
 }
 
 void verhogen()
@@ -94,6 +90,7 @@ void verhogen()
 		Quando invocata, la sys4 esegue una V sul semaforo con chiave semKey
 		Registro a1: chiave del semaforo su cui effettuare la V.
 	*/
+	
 	int semkey;
 	semd_t* sem;
 	pcb_t* next;
@@ -101,10 +98,10 @@ void verhogen()
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	semkey = before->reg_a1;
 	sem = getSemd(semkey);
-	inserisciprocessoready(suspend);
+	//inserisciprocessoready(suspend);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value += 1;
-	if (headBlocked(semkey) != NULL){ /* wake up someone! */
+	if (headBlocked(semkey)){ /* wake up someone! */
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		inserisciprocessoready(next);
@@ -128,9 +125,9 @@ void passeren()
 	sem = getSemd(semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value -= 1;
-	if (sem->s_value >= -1){ /* GO! */
+	if (sem->s_value >= 0){ /* GO! */
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
-		inserisciprocessoready(suspend);
+		//inserisciprocessoready(suspend);
 	} else { /* wait */
 		insertBlocked(semkey,suspend);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
