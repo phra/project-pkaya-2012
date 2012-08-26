@@ -81,7 +81,7 @@ void terminate_process()
 	pcb_t* suspend = currentproc[getPRID()];
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	kill(suspend);
-	scheduler();
+	return scheduler();
 }
 
 void verhogen()
@@ -91,14 +91,11 @@ void verhogen()
 		Registro a1: chiave del semaforo su cui effettuare la V.
 	*/
 	
-	int semkey;
-	semd_t* sem;
 	pcb_t* next;
 	pcb_t* suspend = currentproc[getPRID()];
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
-	semkey = before->reg_a1;
-	sem = getSemd(semkey);
-	//inserisciprocessoready(suspend);
+	int semkey = before->reg_a1;
+	semd_t* sem = getSemd(semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value += 1;
 	if (headBlocked(semkey)){ /* wake up someone! */
@@ -117,17 +114,14 @@ void passeren()
 		Registro a1: chiave del semaforo su cui effettuare la P.
 	*/
 
-	int semkey;
-	semd_t* sem;
 	pcb_t* suspend = currentproc[getPRID()];
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
-	semkey = before->reg_a1;
-	sem = getSemd(semkey);
+	int semkey = before->reg_a1;
+	semd_t* sem = getSemd(semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value -= 1;
 	if (sem->s_value >= 0){ /* GO! */
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
-		//inserisciprocessoready(suspend);
 	} else { /* wait */
 		insertBlocked(semkey,suspend);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
@@ -140,7 +134,11 @@ void get_cpu_time()
 		Quando invocata, la sys6 restituisce il tempo di CPU (in microsecondi) usato dal processo corrente.
 		Registro v0: valore di ritorno.
 	*/
-	currentProcess->proc_state.s_v0 = currentProcess->startCpuTime;
+
+	pcb_t* suspend = currentproc[getPRID()];
+	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
+	
+	before->reg_v0 = suspend->cpu_time;
 }
 
 void wait_for_clock()
@@ -158,34 +156,52 @@ void wait_for_io_device()
 		Quando invocata, la sys8 esegue una P sul semaforo associato al device identificato da intNo, dnume e waitForTermRead
 		Registro a1: linea di interrupt
 		Registro a2: device number
-		Registro a3: operazione di temrinal read/write
+		Registro a3: operazione di terminal read/write
 		Registro v0: status del device
 	*/
 }
 
-void specifiy_prg_state_vector()
+void specify_prg_state_vector()
 {
 	/*
 		Quando invocata, la sys9 consente di definire gestori di PgmTrap per il processo corrente.
 		Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente del processore.
 		Registro a2: indirizzo della NEWArea del processo (da utilizzare nel caso si verifichi un PgmTrap)
 	*/
+	
+	pcb_t* suspend = currentproc[getPRID()];
+	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
+	
+	suspend->handler[PGMTRAP+3] = (state_t*)before->reg_a1;
+	suspend->handler[PGMTRAP] = (state_t*)before->reg_a2;
 }
 
 void specify_tlb_state_vector()
 {
 	/*
 		Quando invocata, la sys10 consente di definire gestori di TLB Exception per il processo corrente.
-		Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente dle processore.
+		Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente del processore.
 		Registro a2: indirizzo della NEWArea del processore (da utilizzare nel caso si verifichi una TLB Exception)
 	*/
+
+	pcb_t* suspend = currentproc[getPRID()];
+	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
+	
+	suspend->handler[TLB+3] = (state_t*)before->reg_a1;
+	suspend->handler[TLB] = (state_t*)before->reg_a2;
 }
 
 void specify_sys_state_vector()
 {
 	/*
 		Quando invocata, la sys11 consente di definire gestori di SYS/BP Exception per il processo corrente.
-		Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente dle processore.
+		Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente del processore.
 		Registro a2: indirizzo della NEWArea del processore (da utilizzare nel caso si verifichi una SYS/BP Exception)
 	*/
+
+	pcb_t* suspend = currentproc[getPRID()];
+	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
+	
+	suspend->handler[SYSBK+3] = (state_t*)before->reg_a1;
+	suspend->handler[SYSBK] = (state_t*)before->reg_a2;
 }
