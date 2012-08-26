@@ -6,7 +6,7 @@
 
 #ifndef __HANDLERS_CONST__
 #define __HANDLERS_CONST__
-#define SYSBP 0
+#define SYSBK 0
 #define PGMTRAP 1
 #define TLB 2
 #endif
@@ -20,7 +20,6 @@ typedef struct pcb_t {
 	struct pcb_t		*p_parent;
 	struct list_head	p_child,
 						p_sib;
-	
 
 	/* processor state, etc */
 	state_t       		p_s;     
@@ -34,6 +33,10 @@ typedef struct pcb_t {
 	/* phase2 */
 	
 	int pid;
+
+	int last_sched_time;
+
+	int cpu_time;
 
 	state_t* handler[6];
 
