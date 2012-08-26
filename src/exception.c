@@ -13,7 +13,7 @@
 #include "init.h"
 #include "scheduler.h"
 #include "syscall.h"
-
+#include "interrupt.h"
 
 
 /*Funzione di gestione degli interrupt*/
@@ -31,6 +31,7 @@ void int_handler(){
 			/* stop e inserimento in ReadyQueue */
 			state_t* before = (state_t*)new_old_areas[getPRID()][INT_OLD];
 			pcb_t* suspend = currentproc[getPRID()];
+			suspend->cpu_time += GET_TODLOW - suspend->last_sched_time;
 			before->pc_epc += WORD_SIZE;
 			suspend->p_s = *before;
 			inserisciprocessoexpired(suspend);
@@ -44,17 +45,6 @@ void int_handler(){
 }
 
 void tlb_handler(){
-	/* verifico la presenza di un gestore dell'eccezione  */
-//    if ( currentProcess->specified_handler[TLBTRAP] != NULL ){
-  //      updateProcessStateFromOldArea(HMAX-TLBHAND);
-    //    currentProcess->proc_state.s_pc += 4;
-    	//copyProcState(&(currentProcess->proc_state), currentProcess->specified_handler[TLBTRAP+3]);
-  //  	LDST( currentProcess->specified_handler[TLBTRAP] );
-    //}
-   // else{	/* gestore non presente, processo terminato */
-    //	terminateThread();
-    	//schedule();
-  //  }
   
 	state_t* before = (state_t*)new_old_areas[getPRID()][TLB_OLD];
 	pcb_t* suspend = currentproc[getPRID()];
@@ -74,17 +64,6 @@ void tlb_handler(){
 }
 
 void prg_trap_handler(){
-	/* verifico la presenza di un gestore dell'eccezione  */
-  /*  if ( currentProcess->specified_handler[PROGTRAP] != NULL ){
-    	updateProcessStateFromOldArea(HMAX-PRGHAND);
-    	currentProcess->proc_state.s_pc += 4;
-    	copyProcState(&(currentProcess->proc_state), currentProcess->specified_handler[PROGTRAP+3]);
-    	LDST( currentProcess->specified_handler[PROGTRAP] );
-    }
-    else{*/	/* gestore non presente, processo terminato */
-    //	terminateThread();
-	//	schedule();
-    //}
 
 	state_t* before = (state_t*)new_old_areas[getPRID()][PGMTRAP_OLD];
 	pcb_t* suspend = currentproc[getPRID()];
@@ -104,36 +83,16 @@ void prg_trap_handler(){
 }
 
 void syscall_bp_handler(){
-	//U32 sysValue;
-
-	/* carica sul processo appena deschedulato il suo stato salvato al momento dell'interruzione */
-//	updateProcessStateFromOldArea(HMAX-SYSBPHAND);
-	/* incremento il programCounter del processo */
-//	currentProcess->proc_state.s_pc += 4;
-	/* prelevo il numero della SYSCALL */
-//	sysValue = (U32)(((state_t*)SYSBK_OLDAREA)->s_a0);
-
-	/* se il chiamante non è in kernel mode */
-//	if ( (currentProcess->proc_state.s_status & STATUS_KUp) != 0 ){
-		/* gestisci no kernel mode*/
-//		if ( currentProcess->specified_handler[PROGTRAP] != NULL ){	/* gestisco eccezione in usermode */
-//			copyProcState(&(currentProcess->proc_state), currentProcess->specified_handler[PROGTRAP+3]);
-//			currentProcess->specified_handler[PROGTRAP+3]->s_cause = CAUSERESVINSTR;
-//			LDST( currentProcess->specified_handler[PROGTRAP] );
-//		}else
-//			terminateThread();
-//	}
-//	else{	/* SYSCALL IN KERNELMODE chiamo il gestore adeguato */
 
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	pcb_t* suspend = currentproc[getPRID()];
 	before->pc_epc += WORD_SIZE;
 	suspend->p_s = *before;
 
-	if (suspend->handler[SYSBP]){
+	if (suspend->handler[SYSBK]){
 		/*il processo ha definito un suo handler*/
-		*(suspend->handler[SYSBP+3]) = *before; /* copy old area in user defined space */
-		return LDST(suspend->handler[SYSBP]);
+		*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space */
+		return LDST(suspend->handler[SYSBK]);
 	} else if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
 		if (before->status & STATUS_KUp){ /* look at previous bit */
@@ -142,7 +101,7 @@ void syscall_bp_handler(){
 				/*il processo ha definito un suo handler*/
 				*(suspend->handler[PGMTRAP+3]) = *before;
 				suspend->handler[PGMTRAP+3]->cause = CAUSE_EXCCODE_SET(suspend->handler[PGMTRAP+3]->cause, EXC_RESERVEDINSTR);
-				LDST(suspend->handler[PGMTRAP]);
+				return LDST(suspend->handler[PGMTRAP]);
 			} else {
 				/*kill it with fire*/
 				kill(suspend);
@@ -157,7 +116,7 @@ void syscall_bp_handler(){
 				create_brother();
 				break;
 			case TERMINATE_PROCESS:
-				terminate_process();
+				return terminate_process();
 				break;
 			case VERHOGEN:
 				verhogen();

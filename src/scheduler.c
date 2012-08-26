@@ -85,6 +85,7 @@ void scheduler(void){
 		pcb_t* next = removeProcQ(readyQ);
 		CAS(&mutex_scheduler,1,0);
 		currentproc[getPRID()] = next;
+		next->last_sched_time = GET_TODLOW;
 		setTIMER(SCHED_TIME_SLICE);
 		LDST(next->p_s);
 
