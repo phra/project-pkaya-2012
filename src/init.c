@@ -19,7 +19,7 @@
 #define MAXCPUs 1
 #define MAXPID 1024
 #define DEF_PRIORITY 5
-#define MAXPRINT 1024
+#define MAXPRINT 128
 
 #define INT_OLD 0
 #define INT_NEW 1
@@ -41,7 +41,7 @@ int usedpid = 0;
 pcb_t* currentproc[MAXCPUs];
 pcb_t* PIDs[MAXPID];	/* un array di processi, 0 se e libero, altrimenti l'indirizzo del pcb*/
 semd_t	pseudo_clock;	/* Uno per lo pseudo-clock timer */
-semd_t 	device;		/* Uno per ogni device o sub-device */
+semd_t 	device_semd[MAX_DEVICES];		/* Uno per ogni device o sub-device */
 state_t* new_old_areas[MAXCPUs][8];
 state_t real_new_old_areas[MAXCPUs-1][8];
 
@@ -224,7 +224,6 @@ void print1(char *str1){
         mytermprint(output,0);
 }
 
-
 void print2(char *str1, char *str2) {
         static char output[MAXPRINT];
 
@@ -254,9 +253,9 @@ int main(void)
 	setSTATUS(status);
 	SET_IT(5000000);
 	while(1); */
-	
+
 	pcb_t* p1 = NULL;
-	
+
 	/* Inizializzazione strutture dati */
 	initPcbs();		
 	initASL();
@@ -272,7 +271,7 @@ int main(void)
 	/*Instanziare il PCB e lo stato del processo test*/
 	p1 = allocaPcb(DEF_PRIORITY);		/* Allocare PCB */
 	initTest(&p1->p_s);
-	
+
 	/*Inserire il processo nella Ready Queue*/
 	inserisciprocessoready(readyQ, p1);
 	scheduler();						/*Richiamo lo scheduler*/
