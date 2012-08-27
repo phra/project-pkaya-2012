@@ -17,7 +17,7 @@
 
 
 /*Funzione di gestione degli interrupt*/
-void int_handler(){
+void int_handler(void){
     unsigned int devSts;
     int intline=INT_PLT;
 	
@@ -38,13 +38,26 @@ void int_handler(){
 			currentproc[getPRID()] == NULL;
 		}
 		return scheduler();
+	} else if (intline == INT_TIMER){
+		/*pseudoclock*/
+		int i=0;
+		while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
+		for(;i<MAXPROC;i++){
+			if (wait_clock[i]) {
+				inserisciprocessoready(wait_clock[i]);
+				wait_clock[i] == NULL;
+			}
+		}
+		CAS(&mutex_wait_clock,1,0);
+		SET_IT(SCHED_PSEUDO_CLOCK);
+	} else {
+		/*chiamo il gestore dei device, passandogli la linea su cui c'è stato l'interrupt*/
+		deviceHandler(intline);
+		LDST((state_t *)new_old_areas[getPRID()][INT_OLD]);
 	}
-	/*chiamo il gestore dei device, passandogli la linea su cui c'è stato l'interrupt*/
-	deviceHandler(intline);
-	LDST((state_t *)new_old_areas[getPRID()][INT_OLD]);
 }
 
-void tlb_handler(){
+void tlb_handler(void){
   
 	state_t* before = (state_t*)new_old_areas[getPRID()][TLB_OLD];
 	pcb_t* suspend = currentproc[getPRID()];
@@ -63,7 +76,7 @@ void tlb_handler(){
 	}
 }
 
-void prg_trap_handler(){
+void prg_trap_handler(void){
 
 	state_t* before = (state_t*)new_old_areas[getPRID()][PGMTRAP_OLD];
 	pcb_t* suspend = currentproc[getPRID()];
@@ -82,13 +95,13 @@ void prg_trap_handler(){
 	}
 }
 
-void syscall_bp_handler(){
+void syscall_bp_handler(void){
 
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	pcb_t* suspend = currentproc[getPRID()];
 	before->pc_epc += WORD_SIZE;
 	suspend->p_s = *before;
-
+	
 	if (suspend->handler[SYSBK]){
 		/*il processo ha definito un suo handler*/
 		*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space */
@@ -122,25 +135,25 @@ void syscall_bp_handler(){
 				verhogen();
 				break;
 			case PASSEREN:
-				passeren();
+				return passeren();
 				break;
 			case GET_CPU_TIME:
 				get_cpu_time();
 				break;
 			case WAIT_FOR_CLOCK:
-				wait_for_clock();
+				return wait_for_clock();
 				break;
 			case WAIT_FOR_IO_DEVICE:
-				wait_for_io_device();
+				return wait_for_io_device();
 				break;
 			case SPECIFY_PRG_STATE_VECTOR:
-				specify_prg_state_vector();
+				return specify_prg_state_vector();
 				break;
 			case SPECIFY_TLB_STATE_VECTOR:
-				specify_tlb_state_vector();
+				return specify_tlb_state_vector();
 				break;
 			case SPECIFY_SYS_STATE_VECTOR:
-				specify_sys_state_vector();
+				return specify_sys_state_vector();
 				break;
 			default:
 				PANIC();

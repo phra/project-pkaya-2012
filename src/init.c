@@ -17,7 +17,7 @@
 
 #ifdef __INIT_CONST__
 #define MAXCPUs 1
-#define MAXPID 1024
+#define MAXPID 128
 #define DEF_PRIORITY 5
 #define MAXPRINT 128
 
@@ -40,18 +40,24 @@ int PROVA = 0;
 int usedpid = 0;
 pcb_t* currentproc[MAXCPUs];
 pcb_t* PIDs[MAXPID];	/* un array di processi, 0 se e libero, altrimenti l'indirizzo del pcb*/
-semd_t	pseudo_clock;	/* Uno per lo pseudo-clock timer */
+pcb_t* wait_clock[MAXPROC];
+//semd_t	pseudo_clock;	/* Uno per lo pseudo-clock timer */
 semd_t 	device_semd[MAX_DEVICES];		/* Uno per ogni device o sub-device */
 state_t* new_old_areas[MAXCPUs][8];
 state_t real_new_old_areas[MAXCPUs-1][8];
 
 uint32_t mutex_semaphore[MAXPROC];
 uint32_t mutex_scheduler = 0;
+uint32_t mutex_wait_clock = 0;
 
 
 extern void test();
 
-static inline void initCurrentProcs(){
+static inline void initWaitClock(void){
+	memset(wait_clock,0,MAXPROC*sizeof(pcb_t*));
+}
+
+static inline void initCurrentProcs(void){
 	memset(currentproc,0,MAXCPUs*sizeof(pcb_t*));
 }
 
@@ -128,7 +134,7 @@ static void initTest(state_t* addr){
 	state.pc_epc = state.reg_t9 = test;
 }
 
-static void initNewOldAreas(){
+static void initNewOldAreas(void){
 	int i;
 	new_old_areas[0][INT_OLD] = (state_t*)INT_OLDAREA);
 	new_old_areas[0][INT_NEW] = (state_t*)INT_NEWAREA);
@@ -264,6 +270,7 @@ int main(void)
 	initPIDs();
 	initSchedQueue();
 	initCurrentProcs();
+	initWaitClock();
 
 	/* Inizializzazione per ogni new area */
 	initNewOldAreas();
@@ -274,6 +281,7 @@ int main(void)
 
 	/*Inserire il processo nella Ready Queue*/
 	inserisciprocessoready(readyQ, p1);
+	SET_IT(SCHED_PSEUDO_CLOCK);
 	scheduler();						/*Richiamo lo scheduler*/
 
 	/*------------------DA FARE-------------------------------	
