@@ -18,8 +18,8 @@
 #include "syscall.h"
 #include "interrupt.h"
 
-void scheduler();
-int pigliapid();
+void scheduler(void);
+int pigliapid(void);
 extern struct list_head expiredQueue;
 extern struct list_head readyQueue;
 extern struct list_head* readyQ = &readyQueue;

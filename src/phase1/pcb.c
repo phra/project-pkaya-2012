@@ -32,7 +32,7 @@ void freePcb(pcb_t* p){
 (puntatore a pcb_t) allocPcb(): rimuove il primo elemento dalla lista dei pcb liberi e inizializza tutti i campi a NULL e lo restituisce.
 in caso non ci siano pcb liberi, restituisce NULL.
 */
-pcb_t *allocPcb(){
+pcb_t *allocPcb(void){
 	pcb_t* pcb_return;
 	struct list_head* l_next = list_next(&pcbfree_h);
 	if(list_empty(&pcbfree_h))

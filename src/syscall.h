@@ -18,15 +18,15 @@
 #include "init.h"
 #include "interrupt.h"
 
-void specify_sys_state_vector();
-void specify_tlb_state_vector();
-void specifiy_prg_state_vector();
-void wait_for_io_device();
-void wait_for_clock();
-void get_cpu_time();
-void passeren();
-void verhogen();
-void terminate_process();
-void create_brother();
-void create_process();
+void specify_sys_state_vector(void);
+void specify_tlb_state_vector(void);
+void specifiy_prg_state_vector(void);
+void wait_for_io_device(void);
+void wait_for_clock(void);
+void get_cpu_time(void);
+void passeren(void);
+void verhogen(void);
+void terminate_process(void);
+void create_brother(void);
+void create_process(void);
 #endif

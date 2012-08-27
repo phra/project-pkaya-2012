@@ -19,7 +19,7 @@ pcb_t *headProcQ(struct list_head *head);
 void insertProcQ(struct list_head *head,pcb_t *p);
 int emptyProcQ(struct list_head *head);
 void mkEmptyProcQ(struct list_head *head);
-pcb_t *allocPcb();
+pcb_t *allocPcb(void);
 void freePcb(pcb_t *p);
 void initPcbs(void);
 extern pcb_t pcbFree_table[MAXPROC];

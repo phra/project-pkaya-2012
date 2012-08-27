@@ -18,8 +18,8 @@
 #include "syscall.h"
 #include "interrupt.h"
 
-void sysbk_handler();
-void pgmtrap_handler();
-void tlb_handler();
-void int_handler();
+void sysbk_handler(void);
+void pgmtrap_handler(void);
+void tlb_handler(void);
+void int_handler(void);
 #endif

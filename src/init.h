@@ -34,7 +34,7 @@
 #define SYSBK_NEW 7
 #endif
 
-void timerHandler();
+void timerHandler(void);
 inline void initSemaphore(semd_t* sem, int value);
 void print(char *label, char *value);
 devreg mytermstat(memaddr *stataddr);

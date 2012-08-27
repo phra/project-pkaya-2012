@@ -69,7 +69,7 @@ pcb_t* allocaPcb(int priority){
 	return pcb;
 }
 
-static int inactivecpu(){
+static int inactivecpu(void){
 	int i = 0;
 	for(;i<MAXCPUs;i++){
 		if (currentproc[i] != NULL) return 0;
