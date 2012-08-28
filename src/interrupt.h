@@ -20,6 +20,8 @@
 
 
 U32 devBaseAddrCalc(U8 line, U8 devNum);
-unsigned int deviceHandler(unsigned int intline);
+void deviceHandler(unsigned int intline);
+void _verhogen(int semkey);
+void _passeren(int semkey);
 
 #endif
