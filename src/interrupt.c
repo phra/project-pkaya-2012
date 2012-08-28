@@ -67,8 +67,8 @@ inline dtpreg_t* devBaseAddrCalc(U8 line, U8 devNum){
 
 /*Funzione per la gestione dei specifici device*/
 void deviceHandler(int intline){
-    U32 terminalRcv,terminalTra,i,rw,status;
-    dtpreg_t* device_requested;
+	dtpreg_t* device_requested;
+    U32 i,rw,status;
     U32 bitmap = *(   (int*)(PENDING_BITMAP_START + (intline - 3) * WORD_SIZE)  );
     status = rw = i = 0;
 	
@@ -86,18 +86,17 @@ void deviceHandler(int intline){
     if(intline != INT_TERMINAL){ /*non è sulla linea del terminale*/
         device_requested->command = DEV_C_ACK;
         status = device_requested->status;
-    }else{ 
-        terminalRcv = device_requested->recv_status;
-        terminalTra = device_requested->transm_status;
-        if (terminalTra == DEV_TTRS_S_CHARTRSM) {
-            device_requested->transm_command = DEV_C_ACK;
-            status=terminalTra;
-        } else if (terminalRcv == DEV_TRCV_S_CHARRECV) {
-			device_requested->recv_command = DEV_C_ACK;
+    } else {
+		termreg_t* terminal_requested = (termreg_t*)device_requested;
+		if (terminal_requested->transm_status == DEV_TTRS_S_CHARTRSM) {
+			terminal_requested->transm_command = DEV_C_ACK;
+			status = DEV_TTRS_S_CHARTRSM;
+		} else if (terminal_requested->recv_status == DEV_TRCV_S_CHARRECV) {
+			terminal_requested->recv_command = DEV_C_ACK;
+			status = DEV_TRCV_S_CHARRECV;
 			rw = 1;
-			status = terminalRcv;
-        }
-    }
+		}
+	}
 	devstatus[intline][i+rw] = status;
 	_verhogen((intline*i)+rw,&devstatus[intline][i+rw]);
 }
