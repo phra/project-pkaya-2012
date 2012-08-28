@@ -151,6 +151,7 @@ void wait_for_clock(void)
 	for(;i<MAXPROC;i++){
 		if (wait_clock[i] == NULL){
 			wait_clock[i] = suspend;
+			softBlockCounter += 1;
 			break;
 		}
 	}
@@ -166,6 +167,18 @@ void wait_for_io_device(void){
 		Registro a3: operazione di terminal read/write
 		Registro v0: status del device
 	*/
+
+	pcb_t* suspend = currentproc[getPRID()];
+	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
+	int line = before->reg_a1;
+	int devno = before->reg_a2;
+	int rw = before->reg_a3;
+
+	_passeren((line*devno)+rw);
+
+	before->reg_v0 = devstatus[line][devno+rw];
+	devstatus[line][devno+rw] = 0;
+	LDST(before);
 }
 
 void specify_prg_state_vector(void)
