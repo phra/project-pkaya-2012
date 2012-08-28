@@ -48,7 +48,7 @@ extern int softBlockCounter;
 extern int processCounter;
 extern int readyproc;
 extern pcb_t* currentproc;
-extern uint32_t mutex_semaphore[MAXPROC];
-extern uint32_t mutex_scheduler;
+extern U32 mutex_semaphore[MAXPROC];
+extern U32 mutex_scheduler;
 
 #endif

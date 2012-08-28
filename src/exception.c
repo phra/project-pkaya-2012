@@ -45,7 +45,8 @@ void int_handler(void){
 		for(;i<MAXPROC;i++){
 			if (wait_clock[i]) {
 				inserisciprocessoready(wait_clock[i]);
-				wait_clock[i] == NULL;
+				wait_clock[i] = NULL;
+				softBlockCounter -= 1;
 			}
 		}
 		CAS(&mutex_wait_clock,1,0);
@@ -101,16 +102,16 @@ void syscall_bp_handler(void){
 	pcb_t* suspend = currentproc[getPRID()];
 	before->pc_epc += WORD_SIZE;
 	suspend->p_s = *before;
-	
-	if (suspend->handler[SYSBK]){
-		/*il processo ha definito un suo handler*/
-		*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space */
-		return LDST(suspend->handler[SYSBK]);
-	} else if (CAUSE_EXCCODE_GET(before->cause) == 8){
+
+	if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
 		if (before->status & STATUS_KUp){ /* look at previous bit */
 			/*SYSCALL invoked in user mode*/
-			if (suspend->handler[PGMTRAP] != NULL){
+			if (suspend->handler[SYSBK]){
+				/*il processo ha definito un suo handler*/
+				*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space */
+				return LDST(suspend->handler[SYSBK]);
+			} else if (suspend->handler[PGMTRAP]){
 				/*il processo ha definito un suo handler*/
 				*(suspend->handler[PGMTRAP+3]) = *before;
 				suspend->handler[PGMTRAP+3]->cause = CAUSE_EXCCODE_SET(suspend->handler[PGMTRAP+3]->cause, EXC_RESERVEDINSTR);
@@ -159,11 +160,17 @@ void syscall_bp_handler(void){
 				PANIC();
 		}
 	} else if (CAUSE_EXCCODE_GET(before->cause) == 9){
-			/*BREAKPOINT #FIXME */
+		/*BREAKPOINT #FIXME */
+		if (suspend->handler[SYSBK]){
+			/*il processo ha definito un suo handler*/
+			*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space */
+			return LDST(suspend->handler[SYSBK]);
+		} else {
 			/*kill it with fire*/
 			kill(suspend);
 			currentproc[getPRID()] = NULL;
 			return scheduler();
+		}
 	} else PANIC();
 	LDST(suspend->p_s);
 }

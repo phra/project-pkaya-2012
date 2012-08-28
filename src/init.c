@@ -46,9 +46,9 @@ semd_t 	device_semd[MAX_DEVICES];		/* Uno per ogni device o sub-device */
 state_t* new_old_areas[MAXCPUs][8];
 state_t real_new_old_areas[MAXCPUs-1][8];
 
-uint32_t mutex_semaphore[MAXPROC];
-uint32_t mutex_scheduler = 0;
-uint32_t mutex_wait_clock = 0;
+U32 mutex_semaphore[MAXPROC];
+U32 mutex_scheduler = 0;
+U32 mutex_wait_clock = 0;
 
 
 extern void test();
@@ -72,6 +72,10 @@ static inline void initMutexSemaphore(int value){
 	int i = 0;
 	for (;i<MAXPROC;i++)
 		 mutex_semaphore[i] = value;
+}
+
+static inline void initDevStatus(void){
+	memset(devstatus,0,DEV_USED_INTS*DEV_PER_INT*sizeof(U32));
 }
 
 void initSemaphore(semd_t* sem, int value){
@@ -271,6 +275,7 @@ int main(void)
 	initSchedQueue();
 	initCurrentProcs();
 	initWaitClock();
+	initDevStatus();
 
 	/* Inizializzazione per ogni new area */
 	initNewOldAreas();
@@ -288,7 +293,7 @@ int main(void)
 	//Inizializzare lo stato delle CPU
 	//-All'avvio, uMPS2 avvia solo il processore 0
 	//-Per avviare le altre CPU è necessario farlo esplicitamente tramite la funzione:	
-	// initCpu(uint32_t cpuid, state_t *start_state, state_t *state_areas);
+	// initCpu(U32 cpuid, state_t *start_state, state_t *state_areas);
 	//Invia un comando RESET al processore cpuid
 	//Salva nella ROM l'indirizzo della New/Old Areas puntate da state-areas
 	//Carica lo stato del processore da start-state.
