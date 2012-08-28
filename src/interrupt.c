@@ -61,50 +61,43 @@ void _passeren(int semkey){
 }
 
 
-inline U32 devBaseAddrCalc(U8 line, U8 devNum){
-	return DEV_REGS_START + (line * 0x80) + (devNum * 0x10);
+inline dtpreg_t* devBaseAddrCalc(U8 line, U8 devNum){
+	return (dtpreg_t*)DEV_REGS_START + (line * 0x80) + (devNum * 0x10);
 }
 
 /*Funzione per la gestione dei specifici device*/
 void deviceHandler(int intline){
-    int devicesAdd,device_requested,terminalRcv,terminalTra ;
-    int returnValue=0;
-    int i=0;
-    int rw = 0;
-
-    devicesAdd= *(   (int*)(PENDING_BITMAP_START + (intline - 3)* WORD_SIZE)  );
+    U32 terminalRcv,terminalTra,i,rw,status;
+    dtpreg_t* device_requested;
+    U32 bitmap = *(   (int*)(PENDING_BITMAP_START + (intline - 3) * WORD_SIZE)  );
+    status = rw = i = 0;
+	
     /*cerco il numero del device che ha effetuato l'interrupt*/
-    while (i<= DEV_PER_INT && (devicesAdd%2 == 0)) {
-            devicesAdd >>= 1;
-            i++;
-    }
+
+    for(i = 0; i < DEV_PER_INT; i++) {		
+		if ((bitmap) & 0x1)
+			break;	
+		bitmap >>= 1;
+	}
     /*ricavo il registro del device richiesto*/
-    device_requested=devBaseAddrCalc((U8)intline,(U8)i);
-    
+    device_requested = devBaseAddrCalc((U8)intline,(U8)i);
+
     /*ACK*/
-    if(intline!=INT_TERMINAL){ /*non è sulla linea del terminale*/
-        ((dtpreg_t*)device_requested)->command = DEV_C_ACK;
-
-        returnValue= ( ((dtpreg_t*)device_requested)->status)& 0xFF;
+    if(intline != INT_TERMINAL){ /*non è sulla linea del terminale*/
+        device_requested->command = DEV_C_ACK;
+        status = device_requested->status;
     }else{ 
-
-        terminalRcv = ( ((termreg_t *)device_requested)->recv_status)& 0xFF  ;
-
-        terminalTra = ( ((termreg_t *)device_requested)->transm_status)& 0xFF ;
-
+        terminalRcv = device_requested->recv_status;
+        terminalTra = device_requested->transm_status;
         if (terminalTra == DEV_TTRS_S_CHARTRSM) {
-            ((termreg_t*)device_requested)->transm_command = DEV_C_ACK;
-            returnValue=terminalTra;
-        }else{
-
-            if (terminalRcv == DEV_TRCV_S_CHARRECV) {
-                ((termreg_t*)device_requested)->recv_command = DEV_C_ACK;
-                rw = 1;
-                returnValue=terminalRcv;
-            }
-
+            device_requested->transm_command = DEV_C_ACK;
+            status=terminalTra;
+        } else if (terminalRcv == DEV_TRCV_S_CHARRECV) {
+			device_requested->recv_command = DEV_C_ACK;
+			rw = 1;
+			status = terminalRcv;
         }
     }
-	devstatus[intline][i+rw] = returnValue;
+	devstatus[intline][i+rw] = status;
 	_verhogen((intline*i)+rw,&devstatus[intline][i+rw]);
 }
