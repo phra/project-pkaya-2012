@@ -15,6 +15,12 @@
 #include "exception.h"
 #include "syscall.h"
 
+#ifndef __INT_MACROS__
+#define __INT_MACROS__
+#define devBaseAddrCalc(line,devNum) (dtpreg_t*)DEV_REGS_START + (line * 0x80) + (devNum * 0x10)
+#define bitmapCalc(line) *((int*)(PENDING_BITMAP_START + (line - 3) * WORD_SIZE));
+#endif
+
 U32 devstatus[DEV_USED_INTS][DEV_PER_INT];
 
 void _verhogen(int semkey, int* status){
@@ -60,27 +66,21 @@ void _passeren(int semkey){
 	}
 }
 
-
-inline dtpreg_t* devBaseAddrCalc(U8 line, U8 devNum){
-	return (dtpreg_t*)DEV_REGS_START + (line * 0x80) + (devNum * 0x10);
-}
-
 /*Funzione per la gestione dei specifici device*/
 void deviceHandler(int intline){
 	dtpreg_t* device_requested;
     U32 i,rw,status;
-    U32 bitmap = *(   (int*)(PENDING_BITMAP_START + (intline - 3) * WORD_SIZE)  );
+    U32 bitmap = bitmapCalc(intline)
     status = rw = i = 0;
 	
     /*cerco il numero del device che ha effetuato l'interrupt*/
-
     for(i = 0; i < DEV_PER_INT; i++) {		
 		if ((bitmap) & 0x1)
 			break;	
 		bitmap >>= 1;
 	}
     /*ricavo il registro del device richiesto*/
-    device_requested = devBaseAddrCalc((U8)intline,(U8)i);
+    device_requested = devBaseAddrCalc(intline,i);
 
     /*ACK*/
     if(intline != INT_TERMINAL){ /*non è sulla linea del terminale*/
