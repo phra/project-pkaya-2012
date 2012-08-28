@@ -18,6 +18,11 @@
 #include "syscall.h"
 #include "init.h"
 
+#ifndef __INT_MACROS__
+#define __INT_MACROS__
+#define devBaseAddrCalc(line,devNum) (dtpreg_t*)DEV_REGS_START + (line * 0x80) + (devNum * 0x10)
+#define bitmapCalc(line) *((int*)(PENDING_BITMAP_START + (line - 3) * WORD_SIZE));
+#endif
 
 U32 devBaseAddrCalc(U8 line, U8 devNum);
 void deviceHandler(unsigned int intline);
