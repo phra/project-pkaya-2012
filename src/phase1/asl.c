@@ -4,7 +4,7 @@
 #include "types11.h"
 
 struct list_head semdFree_h;
-semd_t semd_table[MAXPROC];
+semd_t semd_table[MAXPROC+MAX_DEVICES];
 struct list_head semd_h;
 
 /*
@@ -19,7 +19,7 @@ void initASL(void){
 	int i;
 	INIT_LIST_HEAD(&semdFree_h);
 	INIT_LIST_HEAD(&semd_h);
-	for(i=0; i<MAXPROC;i++ )
+	for(i=0; i<MAXPROC+MAX_DEVICES;i++ )
 	        list_add(&semd_table[i].s_next,&semdFree_h);
 }
 /*

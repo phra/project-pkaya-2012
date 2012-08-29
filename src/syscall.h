@@ -20,7 +20,7 @@
 
 void specify_sys_state_vector(void);
 void specify_tlb_state_vector(void);
-void specifiy_prg_state_vector(void);
+void specify_prg_state_vector(void);
 void wait_for_io_device(void);
 void wait_for_clock(void);
 void get_cpu_time(void);

@@ -87,7 +87,7 @@ void scheduler(void){
 		currentproc[getPRID()] = next;
 		next->last_sched_time = GET_TODLOW;
 		setTIMER(SCHED_TIME_SLICE);
-		LDST(next->p_s);
+		LDST(&next->p_s);
 
 	} else if (!list_empty(expiredQ)){
 
@@ -98,7 +98,7 @@ void scheduler(void){
 		CAS(&mutex_scheduler,1,0);
 		return scheduler();
 
-	} else if ((processCounter > 0) && (softBlockCount == 0) && (inactivecpu())) {
+	} else if ((processCounter > 0) && (softBlockCounter == 0) && (inactivecpu())) {
 
 				PANIC();
 

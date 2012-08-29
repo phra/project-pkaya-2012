@@ -18,7 +18,6 @@
 
 /*Funzione di gestione degli interrupt*/
 void int_handler(void){
-    unsigned int devSts;
     int intline=INT_PLT;
 	
     /* Su quale linea c'è stato l'interrupt */
@@ -77,7 +76,7 @@ void tlb_handler(void){
 	}
 }
 
-void prg_trap_handler(void){
+void pgmtrap_handler(void){
 
 	state_t* before = (state_t*)new_old_areas[getPRID()][PGMTRAP_OLD];
 	pcb_t* suspend = currentproc[getPRID()];
@@ -96,7 +95,7 @@ void prg_trap_handler(void){
 	}
 }
 
-void syscall_bp_handler(void){
+void sysbk_handler(void){
 
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	pcb_t* suspend = currentproc[getPRID()];
@@ -110,26 +109,26 @@ void syscall_bp_handler(void){
 			if (suspend->handler[SYSBK]){
 				/*il processo ha definito un suo handler*/
 				*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space */
-				return LDST(suspend->handler[SYSBK]);
+				LDST(suspend->handler[SYSBK]);
 			} else if (suspend->handler[PGMTRAP]){
 				/*il processo ha definito un suo handler*/
 				*(suspend->handler[PGMTRAP+3]) = *before;
 				suspend->handler[PGMTRAP+3]->cause = CAUSE_EXCCODE_SET(suspend->handler[PGMTRAP+3]->cause, EXC_RESERVEDINSTR);
-				return LDST(suspend->handler[PGMTRAP]);
+				LDST(suspend->handler[PGMTRAP]);
 			} else {
 				/*kill it with fire*/
 				kill(suspend);
 				currentproc[getPRID()] = NULL;
-				return scheduler();
+				scheduler();
 			}
 		} else switch (before->reg_a0){ /*SYSCALL invoked in kernel mode*/
-			case CREATE_PROCESS:
+			case CREATEPROCESS:
 				create_process();
 				break;
-			case CREATE_BROTHER:
+			case CREATEBROTHER:
 				create_brother();
 				break;
-			case TERMINATE_PROCESS:
+			case TERMINATEPROCESS:
 				return terminate_process();
 				break;
 			case VERHOGEN:
@@ -138,23 +137,23 @@ void syscall_bp_handler(void){
 			case PASSEREN:
 				return passeren();
 				break;
-			case GET_CPU_TIME:
+			case GETCPUTIME:
 				get_cpu_time();
 				break;
-			case WAIT_FOR_CLOCK:
-				return wait_for_clock();
+			case WAITCLOCK:
+				wait_for_clock();
 				break;
-			case WAIT_FOR_IO_DEVICE:
-				return wait_for_io_device();
+			case WAITIO:
+				wait_for_io_device();
 				break;
-			case SPECIFY_PRG_STATE_VECTOR:
-				return specify_prg_state_vector();
+			case SPECPRGVEC:
+				specify_prg_state_vector();
 				break;
-			case SPECIFY_TLB_STATE_VECTOR:
-				return specify_tlb_state_vector();
+			case SPECTLBVEC:
+				specify_tlb_state_vector();
 				break;
-			case SPECIFY_SYS_STATE_VECTOR:
-				return specify_sys_state_vector();
+			case SPECSYSVEC:
+				specify_sys_state_vector();
 				break;
 			default:
 				PANIC();
@@ -164,13 +163,13 @@ void syscall_bp_handler(void){
 		if (suspend->handler[SYSBK]){
 			/*il processo ha definito un suo handler*/
 			*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space */
-			return LDST(suspend->handler[SYSBK]);
+			LDST(suspend->handler[SYSBK]);
 		} else {
 			/*kill it with fire*/
 			kill(suspend);
 			currentproc[getPRID()] = NULL;
-			return scheduler();
+			scheduler();
 		}
 	} else PANIC();
-	LDST(suspend->p_s);
+	LDST(&suspend->p_s);
 }

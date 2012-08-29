@@ -32,9 +32,9 @@
  *      Modified by Marco Di Felice 2012
  */
 
-#include "const.h"
-#include "types11.h"
-#include "libumps.h"
+#include "lib/const.h"
+#include "lib/types11.h"
+#include "lib/libumps.h"
 
 typedef unsigned int devregtr;
 

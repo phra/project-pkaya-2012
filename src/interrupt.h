@@ -24,9 +24,10 @@
 #define bitmapCalc(line) *((int*)(PENDING_BITMAP_START + (line - 3) * WORD_SIZE));
 #endif
 
-U32 devBaseAddrCalc(U8 line, U8 devNum);
-void deviceHandler(unsigned int intline);
-void _verhogen(int semkey);
+extern U32 devstatus[DEV_USED_INTS][DEV_PER_INT];
+
+void deviceHandler(U32 intline);
+void _verhogen(int semkey, int* status);
 void _passeren(int semkey);
 
 #endif

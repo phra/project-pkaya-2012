@@ -4,7 +4,8 @@ CC = $(ARCH_PREFIX)gcc
 CFLAGS = -Wall
 
 LD = $(ARCH_PREFIX)ld
-LDADD = -T /usr/local/share/umps2/elf32ltsmip.h.umpscore.x /usr/local/lib/umps2/crtso.o p1test_pkaya_v1.1.o asl.o pcb.o utils.o /usr/local/lib/umps2/libumps.o
+LDADD1 = -T /usr/local/share/umps2/elf32ltsmip.h.umpscore.x /usr/local/lib/umps2/crtso.o p1test_pkaya_v1.1.o asl.o pcb.o utils.o /usr/local/lib/umps2/libumps.o
+LDADD2 = -T /usr/local/share/umps2/elf32ltsmip.h.umpscore.x /usr/local/lib/umps2/crtso.o /usr/local/lib/umps2/libumps.o init.o exception.o syscall.o scheduler.o interrupt.o pcb.o asl.o utils.o p2test2012_v1.0.o
 
 INCLUDE = lib/const.h lib/uMPStypes.h lib/listx.h lib/types11.h phase1/pcb.h phase1/asl.h lib/utils.h lib/const.h lib/const11.h lib/base.h lib/libumps.h
 INCLUDE += scheduler.h init.h syscall.h interrupt.h exception.h
@@ -19,8 +20,8 @@ kernel.core.umps : kernelphase2
 	#rm -f *.o kernel
 
 kernelphase2 : p2test2012_v1.0.o init.o exception.o syscall.o scheduler.o interrupt.o pcb.o asl.o utils.o
-	$(LD) $(LDADD) -o kernelphase2
-	rm -f *.o
+	$(LD) $(LDADD2) -o kernelphase2
+	#rm -f *.o
 
 p2test2012_v1.0.o : p2test2012_v1.0.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c p2test2012_v1.0.c
@@ -43,7 +44,7 @@ scheduler.o : scheduler.c $(INCLUDE)
 #phase1
 
 kernelphase1 : p1test_pkaya_v1.1.o pcb.o asl.o utils.o
-	$(LD) $(LDADD) -o kernelphase1
+	$(LD) $(LDADD1) -o kernelphase1
 	rm -f *.o
 
 p1test_pkaya_v1.1.o : phase1/p1test_pkaya_v1.1.c lib/const.h lib/uMPStypes.h lib/listx.h lib/types11.h phase1/pcb.h phase1/asl.h lib/utils.h

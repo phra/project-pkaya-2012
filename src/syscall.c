@@ -14,9 +14,6 @@
 #include "scheduler.h"
 #include "exception.h"
 
-#define getRegistro(x,cast,y) x = cast(((state_t*)SYSBK_OLDAREA)->y)
-#define getRegistroMP(x) (new_old_areas[getPRID()][SYSBK_OLD])->x
-
 
 void create_process(void){
 	/*
@@ -33,10 +30,10 @@ void create_process(void){
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	
 	if (son = allocaPcb(before->reg_a2)){
-		son->p_s = *(before->reg_a1);
+		son->p_s = *((state_t*)before->reg_a1);
 		while (!CAS(&mutex_scheduler,0,1));
 		insertChild(suspend,son);
-		insertProcQ(readyQ,pcb);
+		insertProcQ(readyQ,son);
 		processCounter += 1;
 		CAS(&mutex_scheduler,1,0);
 		before->reg_v0 = 0;
@@ -57,14 +54,14 @@ void create_brother(void){
 		
 	pcb_t* suspend = currentproc[getPRID()];
 	pcb_t* father = suspend->p_parent;
-	pcb_t* son;
+	pcb_t* bro;
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	
-	if (son = allocaPcb(before->reg_a2)){
-		son->p_s = *(before->reg_a1);
+	if (bro = allocaPcb(before->reg_a2)){
+		bro->p_s = *((state_t*)before->reg_a1);
 		while (!CAS(&mutex_scheduler,0,1));
-		insertChild(father,son);  //#FIXME
-		insertProcQ(readyQ,pcb);
+		insertChild(father,bro);  //#FIXME
+		insertProcQ(readyQ,bro);
 		processCounter += 1;
 		CAS(&mutex_scheduler,1,0);
 		before->reg_v0 = 0;
@@ -76,7 +73,6 @@ void create_brother(void){
 void terminate_process(void){
 	// quando invocata, la sys3 termina il processo corrente e tutta la sua progenie.
 	pcb_t* suspend = currentproc[getPRID()];
-	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	kill(suspend);
 	return scheduler();
 }
@@ -88,7 +84,6 @@ void verhogen(void){
 	*/
 	
 	pcb_t* next;
-	pcb_t* suspend = currentproc[getPRID()];
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
 	semd_t* sem = getSemd(semkey);
@@ -117,7 +112,7 @@ void passeren(void){
 	sem->s_value -= 1;
 	if (sem->s_value >= 0){ /* GO! */
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
-		LDST(suspend->p_s);
+		LDST(&suspend->p_s);
 	} else { /* wait */
 		insertBlocked(semkey,suspend);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
@@ -146,7 +141,6 @@ void wait_for_clock(void)
 	*/
 	int i=0;
 	pcb_t* suspend = currentproc[getPRID()];
-	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
 	for(;i<MAXPROC;i++){
 		if (wait_clock[i] == NULL){
@@ -168,7 +162,6 @@ void wait_for_io_device(void){
 		Registro v0: status del device
 	*/
 
-	pcb_t* suspend = currentproc[getPRID()];
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int line = before->reg_a1;
 	int devno = before->reg_a2;
@@ -195,7 +188,7 @@ void specify_prg_state_vector(void)
 	if ((suspend->handler[PGMTRAP+3] == NULL) && (suspend->handler[PGMTRAP] == NULL)){
 		suspend->handler[PGMTRAP+3] = (state_t*)before->reg_a1;
 		suspend->handler[PGMTRAP] = (state_t*)before->reg_a2;
-		LDST(suspend->p_s);
+		LDST(&suspend->p_s);
 	} else kill(suspend);
 }
 
@@ -212,7 +205,7 @@ void specify_tlb_state_vector(void){
 	if ((suspend->handler[TLB+3] == NULL) && (suspend->handler[TLB] == NULL)){
 		suspend->handler[TLB+3] = (state_t*)before->reg_a1;
 		suspend->handler[TLB] = (state_t*)before->reg_a2;
-		LDST(suspend->p_s);
+		LDST(&suspend->p_s);
 	} else kill(suspend);
 }
 
@@ -229,6 +222,6 @@ void specify_sys_state_vector(void){
 	if ((suspend->handler[SYSBK+3] == NULL) && (suspend->handler[SYSBK] == NULL)){
 		suspend->handler[SYSBK+3] = (state_t*)before->reg_a1;
 		suspend->handler[SYSBK] = (state_t*)before->reg_a2;
-		LDST(suspend->p_s);
+		LDST(&suspend->p_s);
 	} else kill(suspend);
 }

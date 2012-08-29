@@ -9,7 +9,6 @@
 #include "phase1/asl.h"
 #include "lib/utils.h"
 
-
 #include "scheduler.h"
 #include "exception.h"
 #include "syscall.h"
@@ -31,6 +30,19 @@
 #define SYSBK_NEW 7
 #endif
 
+#define TRANSMITTED	5
+#define TRANSTATUS    2
+#define ACK	1
+#define PRINTCHR	2
+#define CHAROFFSET	8
+#define STATUSMASK	0xFF
+#define	TERM0ADDR	0x10000250
+#define DEVREGSIZE 16       
+#define READY     1
+#define DEVREGLEN   4
+#define TRANCOMMAND   3
+#define BUSY      3
+
 
 /*Inizializzazione variabili del kernel*/
 int processCounter 	 = 0;	/* Contatore processi */
@@ -41,8 +53,6 @@ int usedpid = 0;
 pcb_t* currentproc[MAXCPUs];
 pcb_t* PIDs[MAXPID];	/* un array di processi, 0 se e libero, altrimenti l'indirizzo del pcb*/
 pcb_t* wait_clock[MAXPROC];
-//semd_t	pseudo_clock;	/* Uno per lo pseudo-clock timer */
-semd_t 	device_semd[MAX_DEVICES];		/* Uno per ogni device o sub-device */
 state_t* new_old_areas[MAXCPUs][8];
 state_t real_new_old_areas[MAXCPUs-1][8];
 
@@ -109,13 +119,12 @@ static void initNewArea(memaddr handler, state_t* addr){
 	status &= ~STATUS_VMc;				/* Virtual Memory OFF                  */
 	status &= ~STATUS_VMp;				/* Set also previous bit for LDST()    */
 	status &= ~STATUS_VMo;
-	status |= STATUS_PLTc;				/* Processor local timer abilitato     */
 	status &= ~STATUS_KUc;				/* Kernel-Mode ON                      */
 	status &= ~STATUS_KUp;				/* Set also previous bit for LDST()    */
 	status &= ~STATUS_KUo;
-	state.status = status;
-	state.reg_sp = RAMTOP;
-	state.pc_epc = state.reg_t9 = handler;
+	state->status = status;
+	state->reg_sp = RAMTOP;
+	state->pc_epc = state->reg_t9 = handler;
 }
 
 static void initTest(state_t* addr){
@@ -129,25 +138,24 @@ static void initTest(state_t* addr){
 	status &= ~STATUS_VMc;				/* Virtual Memory OFF                  */
 	status &= ~STATUS_VMp;				/* Set also previous bit for LDST()    */
 	status &= ~STATUS_VMo;
-	status |= STATUS_PLTc;				/* Processor local timer abilitato     */
 	status &= ~STATUS_KUc;				/* Kernel-Mode ON                      */
 	status &= ~STATUS_KUp;				/* Set also previous bit for LDST()    */
 	status &= ~STATUS_KUo;
-	state.status = status;
-	state.reg_sp = RAMTOP - 2*FRAME_SIZE;			/* $SP = RAMPTOP - FRAMESIZE */
-	state.pc_epc = state.reg_t9 = test;
+	state->status = status;
+	state->reg_sp = RAMTOP - 2*FRAME_SIZE;			/* $SP = RAMPTOP - FRAMESIZE */
+	state->pc_epc = state->reg_t9 = (memaddr)test;
 }
 
 static void initNewOldAreas(void){
 	int i;
-	new_old_areas[0][INT_OLD] = (state_t*)INT_OLDAREA);
-	new_old_areas[0][INT_NEW] = (state_t*)INT_NEWAREA);
-	new_old_areas[0][TLB_OLD] = (state_t*)TLB_OLDAREA);
-	new_old_areas[0][TLB_NEW] = (state_t*)TLB_NEWAREA);
-	new_old_areas[0][PGMTRAP_OLD] = (state_t*)PGMTRAP_OLDAREA);
-	new_old_areas[0][PGMTRAP_NEW] = (state_t*)PGMTRAP_NEWAREA);
-	new_old_areas[0][SYSBK_OLD] = (state_t*)SYSBK_OLDAREA);
-	new_old_areas[0][SYSBK_NEW] = (state_t*)SYSBK_NEWAREA);
+	new_old_areas[0][INT_OLD] = (state_t*)INT_OLDAREA;
+	new_old_areas[0][INT_NEW] = (state_t*)INT_NEWAREA;
+	new_old_areas[0][TLB_OLD] = (state_t*)TLB_OLDAREA;
+	new_old_areas[0][TLB_NEW] = (state_t*)TLB_NEWAREA;
+	new_old_areas[0][PGMTRAP_OLD] = (state_t*)PGMTRAP_OLDAREA;
+	new_old_areas[0][PGMTRAP_NEW] = (state_t*)PGMTRAP_NEWAREA;
+	new_old_areas[0][SYSBK_OLD] = (state_t*)SYSBK_OLDAREA;
+	new_old_areas[0][SYSBK_NEW] = (state_t*)SYSBK_NEWAREA;
 	for (i=1;i<MAXCPUs;i++){
 		new_old_areas[i][INT_OLD] = &real_new_old_areas[i-1][INT_OLD];
 		new_old_areas[i][INT_NEW] = &real_new_old_areas[i-1][INT_NEW];
@@ -170,7 +178,7 @@ static inline void initPIDs(){
 	memset(PIDs,0,MAXPID*sizeof(pcb_t*));
 }
 
-devreg mytermstat(memaddr *stataddr) {
+U32 mytermstat(memaddr *stataddr) {
 	return((*stataddr) & STATUSMASK);
 }
 
@@ -181,16 +189,16 @@ static unsigned int mytermprint(char * str, unsigned int term) {
 	memaddr *statusp;
 	memaddr *commandp;
 	
-	devreg stat;
-	devreg cmd;
+	U32 stat;
+	U32 cmd;
 	
 	unsigned int error = FALSE;
 	
 	if (term < DEV_PER_INT) {
 		/* terminal is correct */
 		/* compute device register field addresses */
-		statusp = (devreg *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANSTATUS * DEVREGLEN));
-		commandp = (devreg *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANCOMMAND * DEVREGLEN));
+		statusp = (U32 *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANSTATUS * DEVREGLEN));
+		commandp = (U32 *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANCOMMAND * DEVREGLEN));
 		
 		/* test device status */
 		stat = mytermstat(statusp);
@@ -285,7 +293,7 @@ int main(void)
 	initTest(&p1->p_s);
 
 	/*Inserire il processo nella Ready Queue*/
-	inserisciprocessoready(readyQ, p1);
+	inserisciprocessoready(p1);
 	SET_IT(SCHED_PSEUDO_CLOCK);
 	scheduler();						/*Richiamo lo scheduler*/
 

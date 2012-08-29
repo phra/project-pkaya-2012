@@ -18,14 +18,16 @@
 #include "syscall.h"
 #include "interrupt.h"
 
-void scheduler(void);
-int pigliapid(void);
+
 extern struct list_head expiredQueue;
 extern struct list_head readyQueue;
-extern struct list_head* readyQ = &readyQueue;
-extern struct list_head* expiredQ = &expiredQueue;
+extern struct list_head* readyQ;
+extern struct list_head* expiredQ;
+
+void scheduler(void);
+int pigliapid(void);
 pcb_t* allocaPcb(int priority);
 void inserisciprocessoready(pcb_t* pcb);
-void inserisciprocesso(struct list_head* queue, pcb_t* pcb);
+void inserisciprocessoexpired(pcb_t* pcb);
 void kill(pcb_t* target);
 #endif

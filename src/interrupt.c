@@ -30,15 +30,13 @@ void _verhogen(int semkey, int* status){
 	*/
 	
 	pcb_t* next;
-	pcb_t* suspend = currentproc[getPRID()];
-	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	semd_t* sem = getSemd(semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value += 1;
 	if (headBlocked(semkey)){ /* wake up someone! */
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
-		next->reg_v0 = *status;
+		next->p_s.reg_v0 = *status;
 		*status = 0;
 		inserisciprocessoready(next);
 	} else {
@@ -53,7 +51,6 @@ void _passeren(int semkey){
 	*/
 
 	pcb_t* suspend = currentproc[getPRID()];
-	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	semd_t* sem = getSemd(semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value -= 1;
@@ -67,7 +64,7 @@ void _passeren(int semkey){
 }
 
 /*Funzione per la gestione dei specifici device*/
-void deviceHandler(int intline){
+void deviceHandler(U32 intline){
 	dtpreg_t* device_requested;
     U32 i,rw,status;
     U32 bitmap = bitmapCalc(intline)
