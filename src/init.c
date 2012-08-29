@@ -61,6 +61,10 @@ U32 mutex_scheduler = 0;
 U32 mutex_wait_clock = 0;
 
 
+/*DEBUG*/
+
+
+
 extern void test();
 
 static inline void initWaitClock(void){
@@ -184,7 +188,7 @@ U32 mytermstat(memaddr *stataddr) {
 
 /* This function prints a string on specified terminal and returns TRUE if 
  * print was successful, FALSE if not   */
-static unsigned int mytermprint(char * str, unsigned int term) {
+unsigned int mytermprint(char * str, unsigned int term) {
 
 	memaddr *statusp;
 	memaddr *commandp;
@@ -233,29 +237,26 @@ static unsigned int mytermprint(char * str, unsigned int term) {
 	return (!error);		
 }
 
-void print1(char *str1){
+void myprint(char *str1){
         static char output[MAXPRINT];
 
-        strcpy(output + 1, str1); //#FIXME
-        strcpy(output, "\n");
-
+        strcpy(output, str1);
         mytermprint(output,0);
 }
 
-void print2(char *str1, char *str2) {
-        static char output[MAXPRINT];
+void myprintint(char *str1, int numero){
+		static char intero[30];
 
        /* strcpy(output + 1, str1); //#FIXME
         strcpy(output + strlen(str1) + 1, " -> ");
         strcpy(output + strlen(str1) + 3, str2);
         strcpy(output, "\n");*/
 
-        strcpy(output, str1);
-        strcpy(output + strlen(output), " -> ");
-        strcpy(output + strlen(output), str2);
-        strcpy(output, "\n");
-
-        mytermprint(output,0);
+        myprint(str1);
+        myprint(" -> ");
+        itoa(numero,intero,10);
+        myprint(intero);
+        myprint("\n");
 }
 
 int main(void)
@@ -275,6 +276,7 @@ int main(void)
 	pcb_t* p1 = NULL;
 
 	/* Inizializzazione strutture dati */
+	//myprint("init\n");
 	initPcbs();		
 	initASL();
 	initSemaphoreASL(0);

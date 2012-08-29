@@ -24,6 +24,7 @@ void int_handler(void){
 	while((intline<=INT_TERMINAL) && (!(CAUSE_IP_GET(new_old_areas[getPRID()][INT_OLD]->cause, intline)))){
 		intline++;          
 	}
+	myprintint("INTERRUPT handler",intline);
 
 	if (intline == INT_PLT){/* in questo caso è scaduto il time slice */
 		if(currentproc[getPRID()] != NULL){
@@ -64,6 +65,8 @@ void tlb_handler(void){
 	before->pc_epc += WORD_SIZE;
 	suspend->p_s = *before;
 
+	myprint("TLB handler\n");
+
 	if (suspend->handler[TLB]){
 		/*il processo ha definito un suo handler*/
 		*(suspend->handler[TLB+3]) = *before; /* copy old area in user defined space by syscall*/
@@ -82,6 +85,8 @@ void pgmtrap_handler(void){
 	pcb_t* suspend = currentproc[getPRID()];
 	before->pc_epc += WORD_SIZE;
 	suspend->p_s = *before;
+
+	myprint("PGMTRAP handler\n");
 
 	if (suspend->handler[PGMTRAP]){
 		/*il processo ha definito un suo handler*/
@@ -104,6 +109,8 @@ void sysbk_handler(void){
 
 	if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
+		myprintint("SYSCALL handler",before->reg_a0);
+		myprintint("CP0 STATUS",getSTATUS());
 		if (before->status & STATUS_KUp){ /* look at previous bit */
 			/*SYSCALL invoked in user mode*/
 			if (suspend->handler[SYSBK]){
@@ -160,6 +167,7 @@ void sysbk_handler(void){
 		}
 	} else if (CAUSE_EXCCODE_GET(before->cause) == 9){
 		/*BREAKPOINT #FIXME */
+		myprint("BREAKPOINT handler\n");
 		if (suspend->handler[SYSBK]){
 			/*il processo ha definito un suo handler*/
 			*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space */

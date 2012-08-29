@@ -16,12 +16,10 @@ all : kernel.core.umps
 
 kernel.core.umps : kernelphase2
 	umps2-elf2umps -k $<
-	#dopo aver trasformato l'eseguibile lo eliminiamo insieme ai file oggetto
-	#rm -f *.o kernel
+	rm -f *.o kernelphase2
 
 kernelphase2 : p2test2012_v1.0.o init.o exception.o syscall.o scheduler.o interrupt.o pcb.o asl.o utils.o
 	$(LD) $(LDADD2) -o kernelphase2
-	#rm -f *.o
 
 p2test2012_v1.0.o : p2test2012_v1.0.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c p2test2012_v1.0.c
