@@ -20,6 +20,12 @@ struct list_head expiredQueue;
 struct list_head* readyQ = &readyQueue;
 struct list_head* expiredQ = &expiredQueue;
 
+void stampalista(struct list_head* head){
+	pcb_t* item;
+	list_for_each_entry(item,head,p_next){
+				myprintint("PROCESSO IN LISTA CON PID",item->pid);
+	}
+}
 
 int pigliapid(void){
 	int i = usedpid;
@@ -79,13 +85,19 @@ static int inactivecpu(void){
 
 void scheduler(void){
 	myprint("SCHEDULER!\n");
+	myprint("readyQ!\n");
+	stampalista(readyQ);
+	myprint("expiredQ!\n");
+	stampalista(expiredQ);
 	while (!CAS(&mutex_scheduler,0,1));
 	//setSTATUS((getSTATUS() & ~(STATUS_IEc | STATUS_KUc)); /*disabilito interrupt, attivo kernel mode #FIXME */
 	if (!list_empty(readyQ)){
-
+		
+		myprint("prendo da readyQ!\n");
 		pcb_t* next = removeProcQ(readyQ);
 		CAS(&mutex_scheduler,1,0);
 		currentproc[getPRID()] = next;
+		myprinthex("currentPROC",currentproc[getPRID()]);
 		next->last_sched_time = GET_TODLOW;
 		setTIMER(SCHED_TIME_SLICE);
 		myprintint("getTIMER()",getTIMER());
@@ -94,6 +106,7 @@ void scheduler(void){
 	} else if (!list_empty(expiredQ)){
 
 		/*scambio le due liste per evitare starvation*/
+		myprint("scambioleliste!\n");
 		struct list_head* temp = expiredQ;
 		expiredQ = readyQ;
 		readyQ = temp;
@@ -101,16 +114,17 @@ void scheduler(void){
 		return scheduler();
 
 	} else if ((processCounter > 0) && (softBlockCounter == 0) && (inactivecpu())) {
-
+				myprint("Panic!\n");
 				PANIC();
 
 	} else if (processCounter == 0) {
 
+				myprint("HAlt!\n");
 				CAS(&mutex_scheduler,1,0);
 				HALT();
 
 	} else {
-
+				myprint("WAIT\n");
 				CAS(&mutex_scheduler,1,0);
 				setTIMER(100*SCHED_TIME_SLICE);
 				WAIT();

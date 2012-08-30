@@ -80,11 +80,11 @@ void deviceHandler(U32 intline){
 			break;	
 		bitmap >>= 1;
 	}
-	myprintint("numero device",i);
+	//myprintint("numero device",i);
     /*ricavo il registro del device richiesto*/
     device_requested = devBaseAddrCalc(intline,i);
-    myprinthex("device_requested",device_requested);
-    myprinthex("indirizzo teorico term0",DEV_REGS_START + (intline * 0x80));
+    //myprinthex("device_requested",device_requested);
+    //myprinthex("indirizzo teorico term0",DEV_REGS_START + (intline * 0x80));
 
     /*ACK*/
     if(intline != INT_TERMINAL){ /*non è sulla linea del terminale*/
@@ -106,13 +106,13 @@ void deviceHandler(U32 intline){
 		}*/
 
 		termreg_t* terminal_requested = (termreg_t*)device_requested;
-		  myprintint("mytermstat(*sendstatus)",mytermstat(sendstatus));
+		  //myprintint("mytermstat(*sendstatus)",mytermstat(sendstatus));
 		if (mytermstat(sendstatus) == DEV_TTRS_S_CHARTRSM) {
-			myprint("CHARTRSM\n");
+			//myprint("CHARTRSM\n");
 			*sendcommand = DEV_C_ACK;
 			status = DEV_TTRS_S_CHARTRSM;
 		} else if (mytermstat(recvstatus) == DEV_TRCV_S_CHARRECV) {
-			myprint("CHARRECV\n");
+			//myprint("CHARRECV\n");
 			*recvcommand = DEV_C_ACK;
 			status = DEV_TRCV_S_CHARRECV;
 			rw = 1;

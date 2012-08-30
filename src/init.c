@@ -335,6 +335,8 @@ int main(void)
 
 	/*Inserire il processo nella Ready Queue*/
 	inserisciprocessoready(p1);
+	myprinthex("indirizzo PCB test",p1);
+	//inserisciprocessoexpired(p1);
 	SET_IT(SCHED_PSEUDO_CLOCK);
 	//myprintbin("CP0 STATUS",getSTATUS());
 	scheduler();						/*Richiamo lo scheduler*/

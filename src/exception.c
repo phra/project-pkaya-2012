@@ -26,8 +26,9 @@ void int_handler(void){
 		intline++;          
 	}
 	myprintint("INTERRUPT handler",intline);
-	myprintint("getTIMER()",getTIMER());
+	//myprintint("getTIMER()",getTIMER());
 	if (intline == INT_PLT){/* in questo caso è scaduto il time slice */
+		myprinthex("currentPROC",currentproc[getPRID()]);
 		if(currentproc[getPRID()] != NULL){
 			/* stop e inserimento in ReadyQueue */
 			state_t* before = (state_t*)new_old_areas[getPRID()][INT_OLD];
@@ -35,12 +36,13 @@ void int_handler(void){
 			suspend->cpu_time += GET_TODLOW - suspend->last_sched_time;
 			before->pc_epc += WORD_SIZE;
 			suspend->p_s = *before;
+			myprinthex("indirizzo PCB da sospendere",suspend);
 			inserisciprocessoexpired(suspend);
 			currentproc[getPRID()] == NULL;
 		}
 		return scheduler();
 	} else if (intline == INT_TIMER){
-		myprint("PSEUDOCLOCK!\n");
+		//myprint("PSEUDOCLOCK!\n");
 		/*pseudoclock*/
 		int i=0;
 		while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
