@@ -19,12 +19,14 @@
 /*Funzione di gestione degli interrupt*/
 void int_handler(void){
     int intline=INT_PLT;
+    state_t* before = (state_t*)new_old_areas[getPRID()][INT_OLD];
 	
     /* Su quale linea c'è stato l'interrupt */
 	while((intline<=INT_TERMINAL) && (!(CAUSE_IP_GET(new_old_areas[getPRID()][INT_OLD]->cause, intline)))){
 		intline++;          
 	}
 	myprintint("INTERRUPT handler",intline);
+	myprintint("getTIMER()",getTIMER());
 	if (intline == INT_PLT){/* in questo caso è scaduto il time slice */
 		if(currentproc[getPRID()] != NULL){
 			/* stop e inserimento in ReadyQueue */
@@ -38,6 +40,7 @@ void int_handler(void){
 		}
 		return scheduler();
 	} else if (intline == INT_TIMER){
+		myprint("PSEUDOCLOCK!\n");
 		/*pseudoclock*/
 		int i=0;
 		while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
@@ -53,7 +56,7 @@ void int_handler(void){
 	} else {
 		/*chiamo il gestore dei device, passandogli la linea su cui c'è stato l'interrupt*/
 		deviceHandler(intline);
-		LDST((state_t *)new_old_areas[getPRID()][INT_OLD]);
+		LDST(before);
 	}
 }
 

@@ -32,6 +32,22 @@
 #define PGMTRAP_NEW 5
 #define SYSBK_OLD 6
 #define SYSBK_NEW 7
+#define TRANSMITTED	5
+#define TRANSTATUS    2
+#define ACK	1
+#define PRINTCHR	2
+#define CHAROFFSET	8
+#define STATUSMASK	0xFF
+#define	TERM0ADDR	0x10000250
+#define DEVREGSIZE 16       
+#define READY     1
+#define DEVREGLEN   4
+#define BUSY      3
+
+#define RECVSTATUS 0
+#define RECVCOMMAND 1
+#define TRANSTATUS    2
+#define TRANCOMMAND   3
 
 
 

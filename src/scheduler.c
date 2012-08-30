@@ -78,6 +78,7 @@ static int inactivecpu(void){
 }
 
 void scheduler(void){
+	myprint("SCHEDULER!\n");
 	while (!CAS(&mutex_scheduler,0,1));
 	//setSTATUS((getSTATUS() & ~(STATUS_IEc | STATUS_KUc)); /*disabilito interrupt, attivo kernel mode #FIXME */
 	if (!list_empty(readyQ)){
@@ -87,6 +88,7 @@ void scheduler(void){
 		currentproc[getPRID()] = next;
 		next->last_sched_time = GET_TODLOW;
 		setTIMER(SCHED_TIME_SLICE);
+		myprintint("getTIMER()",getTIMER());
 		LDST(&next->p_s);
 
 	} else if (!list_empty(expiredQ)){

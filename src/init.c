@@ -28,10 +28,8 @@
 #define PGMTRAP_NEW 5
 #define SYSBK_OLD 6
 #define SYSBK_NEW 7
-#endif
-
 #define TRANSMITTED	5
-#define TRANSTATUS    2
+
 #define ACK	1
 #define PRINTCHR	2
 #define CHAROFFSET	8
@@ -40,8 +38,17 @@
 #define DEVREGSIZE 16       
 #define READY     1
 #define DEVREGLEN   4
-#define TRANCOMMAND   3
 #define BUSY      3
+
+#define RECVSTATUS 0
+#define RECVCOMMAND 1
+#define TRANSTATUS    2
+#define TRANCOMMAND   3
+
+
+#endif
+
+
 
 
 /*Inizializzazione variabili del kernel*/
@@ -146,6 +153,7 @@ static void initTest(state_t* addr){
 	status &= ~STATUS_KUc;				/* Kernel-Mode ON                      */
 	status &= ~STATUS_KUp;				/* Set also previous bit for LDST()    */
 	status &= ~STATUS_KUo;
+	status |= STATUS_PLT;
 	state->status = status;
 	state->reg_sp = RAMTOP - 2*FRAME_SIZE;			/* $SP = RAMPTOP - FRAMESIZE */
 	state->pc_epc = state->reg_t9 = (memaddr)test;
@@ -284,7 +292,7 @@ void myprinthex(char *str1, int numero){
         strcpy(output, "\n");*/
 
         myprint(str1);
-        myprint(" -> ");
+        myprint(" -> 0x");
         itoa(numero,intero,16);
         myprint(intero);
         myprint("\n");
