@@ -36,6 +36,27 @@ semd_t* getSemd(int key){
     }
     return NULL;
 }
+
+
+semd_t* mygetSemd(int key){
+	semd_t* item;
+	struct list_head* l_next;
+	list_for_each_entry(item,&semd_h,s_next){
+			if(item->s_key == key){
+				return item;
+			}
+    }
+    l_next = list_next(&semdFree_h);
+	list_del(l_next);
+	list_add(l_next,&semd_h);
+	item=container_of(l_next,semd_t,s_next);
+	item->s_key = key;
+	INIT_LIST_HEAD(&item->s_procQ);
+	return item;
+}
+
+
+
 /*
 (1 TRUE oppure 0 FALSE) insertBlocked(id del semaforo, puntatore al processo): inserisce
 il processo puntato da p nella coda dei processi bloccati dal semaforo con id=key.
