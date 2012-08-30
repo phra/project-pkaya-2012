@@ -160,6 +160,7 @@
 #define STATUS_VMc 0x01000000
 #define STATUS_VMp 0x02000000
 #define STATUS_VMo 0x04000000
+#define STATUS_PLT 0x08000000
 
 /* All interrupts unmasked */
 #define STATUS_INT_UNMASKED 0x0000ff00
