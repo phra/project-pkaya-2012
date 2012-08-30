@@ -25,7 +25,7 @@ void int_handler(void){
 	while((intline<=INT_TERMINAL) && (!(CAUSE_IP_GET(new_old_areas[getPRID()][INT_OLD]->cause, intline)))){
 		intline++;          
 	}
-	myprintint("INTERRUPT handler",intline);
+	//myprintint("INTERRUPT handler",intline);
 	//myprintint("getTIMER()",getTIMER());
 	if (intline == INT_PLT){/* in questo caso è scaduto il time slice */
 		myprinthex("currentPROC",currentproc[getPRID()]);

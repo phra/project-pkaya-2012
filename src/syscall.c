@@ -116,9 +116,10 @@ void passeren(void){
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
 	semd_t* sem = mygetSemd(semkey);
+	myprintint("P su semkey",semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value -= 1;
-	if (sem->s_value >= 0){ /* GO! */
+	if (sem->s_value >= -1){ /* GO! */
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		LDST(&suspend->p_s);
 	} else { /* wait */
