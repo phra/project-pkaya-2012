@@ -86,14 +86,22 @@ void verhogen(void){
 	pcb_t* next;
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
-	semd_t* sem = getSemd(semkey);
+	semd_t* sem = mygetSemd(semkey);
+	myprintint("V su semkey",semkey);
+	if(!sem) myprint("da phuk: sem == NULL\n");
+	myprint("prima CAS.\n");
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
+	myprint("dopo CAS.\n");
+	myprintint("s_value prima",sem->s_value);
 	sem->s_value += 1;
+	myprintint("s_value dopo",sem->s_value);
 	if (headBlocked(semkey)){ /* wake up someone! */
+		myprint("svegliamo qualcuno.\n");
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		inserisciprocessoready(next);
 	} else {
+		myprint("nessuno da svegliare.\n");
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 	}
 }

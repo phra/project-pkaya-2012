@@ -25,7 +25,6 @@ void int_handler(void){
 		intline++;          
 	}
 	myprintint("INTERRUPT handler",intline);
-
 	if (intline == INT_PLT){/* in questo caso è scaduto il time slice */
 		if(currentproc[getPRID()] != NULL){
 			/* stop e inserimento in ReadyQueue */
@@ -110,7 +109,7 @@ void sysbk_handler(void){
 	if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
 		myprintint("SYSCALL handler",before->reg_a0);
-		myprintint("CP0 STATUS",getSTATUS());
+		
 		if (before->status & STATUS_KUp){ /* look at previous bit */
 			/*SYSCALL invoked in user mode*/
 			if (suspend->handler[SYSBK]){
@@ -179,5 +178,5 @@ void sysbk_handler(void){
 			scheduler();
 		}
 	} else PANIC();
-	LDST(&suspend->p_s);
+	LDST(before);
 }

@@ -30,9 +30,9 @@ void _verhogen(int semkey, int* status){
 	*/
 	
 	pcb_t* next;
-	semd_t* sem = getSemd(semkey);
+	semd_t* sem = mygetSemd(semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
-	sem->s_value += 1;
+	sem->s_value = 1;
 	if (headBlocked(semkey)){ /* wake up someone! */
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */

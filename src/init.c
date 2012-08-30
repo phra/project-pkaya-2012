@@ -77,14 +77,15 @@ static inline void initCurrentProcs(void){
 
 static inline void initSemaphoreASL(int value){
 	int i = 0;
-	for (;i<MAXPROC;i++){
+	for (;i<MAXPROC+MAX_DEVICES;i++){
 		 semd_table[i].s_value = value;
 		 semd_table[i].s_key = i;
 	}
 }
+
 static inline void initMutexSemaphore(int value){
 	int i = 0;
-	for (;i<MAXPROC;i++)
+	for (;i<MAXPROC+MAX_DEVICES;i++)
 		 mutex_semaphore[i] = value;
 }
 
@@ -113,7 +114,7 @@ static inline void initSchedQueue(void){
 /* INIZIALIZZAZIONE DI NEW AREA CON KU,IE e PLT SETTATI
    inizializza una new area puntata da addr con pc_epc puntato da pc */
 static void initNewArea(memaddr handler, state_t* addr){
-	int status = getSTATUS();
+	int status = 0;
 	state_t* state = addr;
 	memset(state,0,sizeof(state_t));
 	status &= ~STATUS_IEc;				/* Interrupt non abilitati             */
@@ -132,7 +133,7 @@ static void initNewArea(memaddr handler, state_t* addr){
 }
 
 static void initTest(state_t* addr){
-	int status = getSTATUS();
+	int status = 0;
 	state_t* state = addr;
 	memset(state,0,sizeof(state_t));
 	status |= STATUS_IEc;				/* Interrupt abilitati                 */
@@ -259,6 +260,36 @@ void myprintint(char *str1, int numero){
         myprint("\n");
 }
 
+void myprintbin(char *str1, int numero){
+		static char intero[64];
+
+       /* strcpy(output + 1, str1); //#FIXME
+        strcpy(output + strlen(str1) + 1, " -> ");
+        strcpy(output + strlen(str1) + 3, str2);
+        strcpy(output, "\n");*/
+
+        myprint(str1);
+        myprint(" -> ");
+        itoa(numero,intero,2);
+        myprint(intero);
+        myprint("\n");
+}
+
+void myprinthex(char *str1, int numero){
+		static char intero[64];
+
+       /* strcpy(output + 1, str1); //#FIXME
+        strcpy(output + strlen(str1) + 1, " -> ");
+        strcpy(output + strlen(str1) + 3, str2);
+        strcpy(output, "\n");*/
+
+        myprint(str1);
+        myprint(" -> ");
+        itoa(numero,intero,16);
+        myprint(intero);
+        myprint("\n");
+}
+
 int main(void)
 {	
 	/*esempio incremento variabile 5 volte poi HALT dal slide di davoli
@@ -297,6 +328,7 @@ int main(void)
 	/*Inserire il processo nella Ready Queue*/
 	inserisciprocessoready(p1);
 	SET_IT(SCHED_PSEUDO_CLOCK);
+	//myprintbin("CP0 STATUS",getSTATUS());
 	scheduler();						/*Richiamo lo scheduler*/
 
 	/*------------------DA FARE-------------------------------	
