@@ -20,23 +20,26 @@
 void int_handler(void){
     int intline=INT_PLT;
     state_t* before = (state_t*)new_old_areas[getPRID()][INT_OLD];
+	pcb_t* suspend = currentproc[getPRID()];
 	
     /* Su quale linea c'è stato l'interrupt */
-	while((intline<=INT_TERMINAL) && (!(CAUSE_IP_GET(new_old_areas[getPRID()][INT_OLD]->cause, intline)))){
+	while((intline<=INT_TERMINAL) && (!(CAUSE_IP_GET(before->cause, intline)))){
 		intline++;          
 	}
-	//myprintint("INTERRUPT handler",intline);
+	myprint("readyQ\n");
+	stampalista(readyQ);
+	myprint("expiredQ\n");
+	stampalista(expiredQ);
+	myprintint("INTERRUPT handler",intline);
 	//myprintint("getTIMER()",getTIMER());
 	if (intline == INT_PLT){/* in questo caso è scaduto il time slice */
-		myprinthex("currentPROC",currentproc[getPRID()]);
-		if(currentproc[getPRID()] != NULL){
+		//myprinthex("currentPROC",currentproc[getPRID()]);
+		if(suspend){
 			/* stop e inserimento in ReadyQueue */
-			state_t* before = (state_t*)new_old_areas[getPRID()][INT_OLD];
-			pcb_t* suspend = currentproc[getPRID()];
-			suspend->cpu_time += GET_TODLOW - suspend->last_sched_time;
-			before->pc_epc += WORD_SIZE;
+			suspend->cpu_time += (GET_TODLOW - suspend->last_sched_time);
+			//before->pc_epc += WORD_SIZE;
 			suspend->p_s = *before;
-			myprinthex("indirizzo PCB da sospendere",suspend);
+			//myprinthex("indirizzo PCB da sospendere",suspend);
 			inserisciprocessoexpired(suspend);
 			currentproc[getPRID()] == NULL;
 		}
@@ -113,7 +116,7 @@ void sysbk_handler(void){
 
 	if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
-		myprintint("SYSCALL handler",before->reg_a0);
+		myprintint("\nSYSCALL handler",before->reg_a0);
 		
 		if (before->status & STATUS_KUp){ /* look at previous bit */
 			/*SYSCALL invoked in user mode*/

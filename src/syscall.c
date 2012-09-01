@@ -33,7 +33,14 @@ void create_process(void){
 		son->p_s = *((state_t*)before->reg_a1);
 		while (!CAS(&mutex_scheduler,0,1));
 		insertChild(suspend,son);
+		myprinthex("alloco processo figlio con indirizzo",son);
+		myprintint("con PID",son->pid);
+		myprint("prima dell'inserimento\n");
+		stampalista(readyQ);
 		insertProcQ(readyQ,son);
+		myprintint("con PID",son->pid);
+		myprint("dopo l'inserimento\n");
+		stampalista(readyQ);
 		processCounter += 1;
 		CAS(&mutex_scheduler,1,0);
 		before->reg_v0 = 0;
@@ -87,14 +94,16 @@ void verhogen(void){
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
 	semd_t* sem = mygetSemd(semkey);
+	myprint("verhogen: semafori allocati:\n");
+	stampasemafori(&semd_h);
 	myprintint("V su semkey",semkey);
+	myprinthex("che si trova all'indirizzo",sem);
 	if(!sem) myprint("da phuk: sem == NULL\n");
-	myprint("prima CAS.\n");
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
-	myprint("dopo CAS.\n");
 	myprintint("s_value prima",sem->s_value);
-	sem->s_value += 1;
+	sem->s_value++;
 	myprintint("s_value dopo",sem->s_value);
+	stampasemafori(&semd_h);
 	if (headBlocked(semkey)){ /* wake up someone! */
 		myprint("svegliamo qualcuno.\n");
 		next = removeBlocked(semkey);
@@ -116,10 +125,16 @@ void passeren(void){
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
 	semd_t* sem = mygetSemd(semkey);
+	myprint("passeren: semafori allocati:\n");
+	stampasemafori(&semd_h);
 	myprintint("P su semkey",semkey);
+	myprinthex("che si trova all'indirizzo",sem);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
-	sem->s_value -= 1;
-	if (sem->s_value >= -1){ /* GO! */
+	myprintint("s_value prima",sem->s_value);
+	sem->s_value--;
+	myprintint("s_value dopo",sem->s_value);
+	stampasemafori(&semd_h);
+	if (sem->s_value >= 0){ /* GO! */
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		LDST(&suspend->p_s);
 	} else { /* wait */
@@ -176,7 +191,7 @@ void wait_for_io_device(void){
 	int devno = before->reg_a2;
 	int rw = before->reg_a3;
 
-	_passeren((line*devno)+rw);
+	_passeren((line*(devno+1))+rw);
 
 	before->reg_v0 = devstatus[line][devno+rw];
 	devstatus[line][devno+rw] = 0;

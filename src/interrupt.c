@@ -119,5 +119,5 @@ void deviceHandler(U32 intline){
 		}
 	}
 	devstatus[intline][i+rw] = status;
-	_verhogen((intline*i)+rw,&devstatus[intline][i+rw]);
+	_verhogen((intline*(i+1))+rw,&devstatus[intline][i+rw]);
 }

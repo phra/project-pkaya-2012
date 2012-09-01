@@ -23,14 +23,14 @@ struct list_head* expiredQ = &expiredQueue;
 void stampalista(struct list_head* head){
 	pcb_t* item;
 	list_for_each_entry(item,head,p_next){
-				myprintint("PROCESSO IN LISTA CON PID",item->pid);
+		myprintint("PROCESSO IN LISTA CON PID",item->pid);
 	}
 }
 
 int pigliapid(void){
 	int i = usedpid;
-	while (PIDs[i++] != 0)
-		if (i == MAXPID) i = 0;
+	while (PIDs[i] != 0)
+		if (i++ == MAXPID) i = 0;
 	usedpid = i+1;
 	return i;
 }
@@ -63,9 +63,11 @@ void kill(pcb_t* target){
 pcb_t* allocaPcb(int priority){
 	while (!CAS(&mutex_scheduler,0,1));
 	pcb_t* pcb = allocPcb();
+	if (!pcb) {
+		myprint("finiti i pcb\n");
+		return NULL;
+	}
 	CAS(&mutex_scheduler,1,0);
-	if (pcb == NULL) return NULL;
-	//memset(pcb,0,sizeof(pcb)); /* dovrebbe già farlo la allocPcb() */
 	pcb->priority = priority;
 	while (!CAS(&mutex_scheduler,0,1));
 	pcb->pid = pigliapid();
@@ -90,7 +92,6 @@ void scheduler(void){
 	myprint("expiredQ!\n");
 	stampalista(expiredQ);
 	while (!CAS(&mutex_scheduler,0,1));
-	//setSTATUS((getSTATUS() & ~(STATUS_IEc | STATUS_KUc)); /*disabilito interrupt, attivo kernel mode #FIXME */
 	if (!list_empty(readyQ)){
 		
 		myprint("prendo da readyQ!\n");
@@ -100,7 +101,6 @@ void scheduler(void){
 		myprinthex("currentPROC",currentproc[getPRID()]);
 		next->last_sched_time = GET_TODLOW;
 		setTIMER(SCHED_TIME_SLICE);
-		myprintint("getTIMER()",getTIMER());
 		LDST(&next->p_s);
 
 	} else if (!list_empty(expiredQ)){
@@ -114,17 +114,17 @@ void scheduler(void){
 		return scheduler();
 
 	} else if ((processCounter > 0) && (softBlockCounter == 0) && (inactivecpu())) {
-				myprint("Panic!\n");
+				myprint("scheduler: PANIC!\n");
 				PANIC();
 
 	} else if (processCounter == 0) {
 
-				myprint("HAlt!\n");
+				myprint("scheduler: HALT!\n");
 				CAS(&mutex_scheduler,1,0);
 				HALT();
 
 	} else {
-				myprint("WAIT\n");
+				myprint("scheduler: WAIT\n");
 				CAS(&mutex_scheduler,1,0);
 				setTIMER(100*SCHED_TIME_SLICE);
 				WAIT();

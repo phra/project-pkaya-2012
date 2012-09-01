@@ -13,6 +13,24 @@
 
 /* Process Control Block (PCB) data structure */
 typedef struct pcb_t {
+	/* phase2 */
+	
+	int pid;
+
+	int last_sched_time;
+
+	int cpu_time;
+
+	state_t* handler[6];
+
+	/* phase1 */
+	
+	/* process priority */
+	int					priority;
+	
+	/* key of the semaphore on which the process is eventually blocked */
+	int					p_semkey;
+	
 	/*process queue fields */
 	struct list_head	p_next;
 
@@ -23,22 +41,6 @@ typedef struct pcb_t {
 
 	/* processor state, etc */
 	state_t       		p_s;     
-
-	/* process priority */
-	int					priority;
-	
-	/* key of the semaphore on which the process is eventually blocked */
-	int					p_semkey;
-
-	/* phase2 */
-	
-	int pid;
-
-	int last_sched_time;
-
-	int cpu_time;
-
-	state_t* handler[6];
 
 } pcb_t;
 

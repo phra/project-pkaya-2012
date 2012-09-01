@@ -70,6 +70,8 @@ inline void initSemaphore(semd_t* sem, int value);
 void print(char *label, char *value);
 U32 mytermstat(memaddr *stataddr);
 void myprintint(char *str1, int numero);
+void myprintbin(char *str1, int numero);
+void myprinthex(char *str1, int numero);
 void myprint(char *str1);
 
 #endif
