@@ -41,6 +41,7 @@ void create_process(void){
 		myprintint("con PID",son->pid);
 		myprint("dopo l'inserimento\n");
 		stampalista(readyQ);
+		stampareadyq();
 		processCounter += 1;
 		CAS(&mutex_scheduler,1,0);
 		before->reg_v0 = 0;

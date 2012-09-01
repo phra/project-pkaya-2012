@@ -27,6 +27,13 @@ void stampalista(struct list_head* head){
 	}
 }
 
+void stampareadyq(void){
+	pcb_t* item;
+	list_for_each_entry(item,readyQ,p_next){
+		myprintint("PROCESSO IN LISTA CON PID",item->pid);
+	}
+}
+
 int pigliapid(void){
 	int i = usedpid;
 	while (PIDs[i] != 0)

@@ -1,8 +1,135 @@
-#include "const.h"
-#include "uMPStypes.h"
-#include "listx.h"
-#include "types11.h"
+#include "../lib/const.h"
+#include "../lib/uMPStypes.h"
+#include "../lib/listx.h"
+#include "../lib/types11.h"
 #include "../lib/utils.h"
+
+
+#define TRANSMITTED	5
+#define ACK	1
+#define PRINTCHR	2
+#define CHAROFFSET	8
+#define STATUSMASK	0xFF
+#define	TERM0ADDR	0x10000250
+#define DEVREGSIZE 16       
+#define READY     1
+#define DEVREGLEN   4
+#define BUSY      3
+
+#define RECVSTATUS 0
+#define RECVCOMMAND 1
+#define TRANSTATUS    2
+#define TRANCOMMAND   3
+
+
+static U32 mytermstat(memaddr *stataddr) {
+	return((*stataddr) & STATUSMASK);
+}
+
+/* This function prints a string on specified terminal and returns TRUE if 
+ * print was successful, FALSE if not   */
+static unsigned int mytermprint(char * str, unsigned int term) {
+
+	memaddr *statusp;
+	memaddr *commandp;
+	
+	U32 stat;
+	U32 cmd;
+	
+	unsigned int error = FALSE;
+	
+	if (term < DEV_PER_INT) {
+		/* terminal is correct */
+		/* compute device register field addresses */
+		statusp = (U32 *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANSTATUS * DEVREGLEN));
+		commandp = (U32 *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANCOMMAND * DEVREGLEN));
+		
+		/* test device status */
+		stat = mytermstat(statusp);
+		if ((stat == READY) || (stat == TRANSMITTED)) {
+			/* device is available */
+			
+			/* print cycle */
+			while ((*str != '\0') && (!error)) {
+				cmd = (*str << CHAROFFSET) | PRINTCHR;
+				*commandp = cmd;
+
+				/* busy waiting */
+				while ((stat = mytermstat(statusp)) == BUSY);
+				
+				/* end of wait */
+				if (stat != TRANSMITTED) {
+					error = TRUE;
+				} else {
+					/* move to next char */
+					str++;
+				}
+			}
+		}	else {
+			/* device is not available */
+			error = TRUE;
+		}
+	}	else {
+		/* wrong terminal device number */
+		error = TRUE;
+	}
+
+	return (!error);		
+}
+
+static void pcbprint(char *str1){
+        static char output[128];
+
+        strcpy(output, str1);
+        mytermprint(output,0);
+}
+
+static void pcbprintint(char *str1, int numero){
+		static char intero[30];
+
+       /* strcpy(output + 1, str1); //#FIXME
+        strcpy(output + strlen(str1) + 1, " -> ");
+        strcpy(output + strlen(str1) + 3, str2);
+        strcpy(output, "\n");*/
+
+        pcbprint(str1);
+        pcbprint(" -> ");
+        itoa(numero,intero,10);
+        pcbprint(intero);
+        pcbprint("\n");
+}
+
+static void pcbprintbin(char *str1, int numero){
+		static char intero[64];
+
+       /* strcpy(output + 1, str1); //#FIXME
+        strcpy(output + strlen(str1) + 1, " -> ");
+        strcpy(output + strlen(str1) + 3, str2);
+        strcpy(output, "\n");*/
+
+        pcbprint(str1);
+        pcbprint(" -> ");
+        itoa(numero,intero,2);
+        pcbprint(intero);
+        pcbprint("\n");
+}
+
+static void pcbprinthex(char *str1, int numero){
+		static char intero[64];
+
+       /* strcpy(output + 1, str1); //#FIXME
+        strcpy(output + strlen(str1) + 1, " -> ");
+        strcpy(output + strlen(str1) + 3, str2);
+        strcpy(output, "\n");*/
+
+        pcbprint(str1);
+        pcbprint(" -> 0x");
+        itoa(numero,intero,16);
+        pcbprint(intero);
+        pcbprint("\n");
+}
+
+
 
 struct list_head pcbfree_h;
 pcb_t pcbFree_table[MAXPROC];
