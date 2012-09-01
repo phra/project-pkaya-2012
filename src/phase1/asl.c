@@ -1,8 +1,8 @@
-#include "../lib/const.h"
-#include "../lib/uMPStypes.h"
-#include "../lib/listx.h"
-#include "../lib/types11.h"
-#include "../lib/utils.h"
+#include "const.h"
+#include "uMPStypes.h"
+#include "listx.h"
+#include "types11.h"
+#include "utils.h"
 
 
 #define TRANSMITTED	5

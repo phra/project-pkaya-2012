@@ -7,7 +7,7 @@ LD = $(ARCH_PREFIX)ld
 LDADD1 = -T /usr/local/share/umps2/elf32ltsmip.h.umpscore.x /usr/local/lib/umps2/crtso.o p1test_pkaya_v1.1.o asl.o pcb.o utils.o /usr/local/lib/umps2/libumps.o
 LDADD2 = -T /usr/local/share/umps2/elf32ltsmip.h.umpscore.x /usr/local/lib/umps2/crtso.o /usr/local/lib/umps2/libumps.o init.o exception.o syscall.o scheduler.o interrupt.o pcb.o asl.o utils.o p2test2012_v1.0.o
 
-INCLUDE = lib/const.h lib/uMPStypes.h lib/listx.h lib/types11.h phase1/pcb.h phase1/asl.h lib/utils.h lib/const.h lib/const11.h lib/base.h lib/libumps.h
+INCLUDE = lib/const.h lib/uMPStypes.h lib/listx.h lib/types11.h lib/pcb.h lib/asl.h lib/utils.h lib/const.h lib/const11.h lib/base.h lib/libumps.h
 INCLUDE += scheduler.h init.h syscall.h interrupt.h exception.h
 
 #phase2
@@ -48,11 +48,11 @@ kernelphase1 : p1test_pkaya_v1.1.o pcb.o asl.o utils.o
 p1test_pkaya_v1.1.o : phase1/p1test_pkaya_v1.1.c lib/const.h lib/uMPStypes.h lib/listx.h lib/types11.h phase1/pcb.h phase1/asl.h lib/utils.h
 	$(CC) $(CFLAGS) -c phase1/p1test_pkaya_v1.1.c
 	
-pcb.o : phase1/pcb.c lib/const.h lib/listx.h lib/types11.h lib/utils.h
-	$(CC) $(CFLAGS) -c phase1/pcb.c
+pcb.o : lib/pcb.c lib/const.h lib/listx.h lib/types11.h lib/utils.h
+	$(CC) $(CFLAGS) -c lib/pcb.c
 	
-asl.o : phase1/asl.c lib/const.h lib/listx.h lib/types11.h lib/utils.h
-	$(CC) $(CFLAGS) -c phase1/asl.c
+asl.o : lib/asl.c lib/const.h lib/listx.h lib/types11.h lib/utils.h
+	$(CC) $(CFLAGS) -c lib/asl.c
 
 #misc
 

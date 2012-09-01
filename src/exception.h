@@ -8,8 +8,8 @@
 #include "lib/libumps.h"
 #include "lib/listx.h"
 #include "lib/types11.h"
-#include "phase1/pcb.h"
-#include "phase1/asl.h"
+#include "lib/pcb.h"
+#include "lib/asl.h"
 #include "lib/utils.h"
 
 

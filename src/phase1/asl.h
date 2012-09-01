@@ -1,13 +1,13 @@
 #ifndef __ASL__
 #define __ASL__
 
-#include "../lib/const11.h"
-#include "../lib/const.h"
-#include "../lib/base.h"
-#include "../lib/uMPStypes.h"
-#include "../lib/libumps.h"
-#include "../lib/listx.h"
-#include "../lib/types11.h"
+#include "const11.h"
+#include "const.h"
+#include "base.h"
+#include "uMPStypes.h"
+#include "libumps.h"
+#include "listx.h"
+#include "types11.h"
 
 void outChildBlocked(pcb_t *p);
 pcb_t *headBlocked(int key);
