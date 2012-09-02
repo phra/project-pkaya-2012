@@ -591,8 +591,12 @@ void p5sys() {
 
 /* p5 -- SYS5 test process */
 void p5() {
+		state_t test;
+	STST(&test);
 	print("p5 starts\n");
-
+	/*if(test.status & 0x00000002) print("p5USERMODE\n");
+	else print("p5KERNELMODE\n");
+	if(test.status & 0x08000000) print("p5PLT\n");
 	/* set up higher level TRAP handlers (new areas) */
 	STST(&pstat_n);  /* pgmtrap new area */
 	pstat_n.pc_epc = pstat_n.reg_t9 = (memaddr)p5prog; /* pgmtrap exceptions */
@@ -632,12 +636,17 @@ void p5a() {
 /* second part of p5 - should be entered in user mode */
 void p5b() {
 	cpu_t		time1, time2;
-
+	state_t test;
+	STST(&test);
+	if(test.status & 0x00000002) print("p5bUSERMODE\n");
+	else print("p5bKERNELMODE\n");
+	print("1\n");
 	SYSCALL(13, 0, 0, 0);
+	print("2\n");
 	/* the first time through, we are in user mode */
 	/* and the P should generate a program trap */
 	SYSCALL(PASSEREN, ENDP4, 0, 0);			/* P(endp4)*/
-
+	print("3\n");
 	/* do some delay to be reasonably sure p4 and its offspring are dead */
 	time1 = 0;
 	time2 = 0;

@@ -30,14 +30,14 @@ void int_handler(void){
 	//stampalista(readyQ);
 	//myprint("expiredQ\n");
 	//stampalista(expiredQ);
-	myprintint("INTERRUPT handler",intline);
+	//myprintint("INTERRUPT handler",intline);
 	//myprintint("getTIMER()",getTIMER());
 	if (intline == INT_PLT){/* in questo caso è scaduto il time slice */
 		//myprinthex("currentPROC",currentproc[getPRID()]);
 		if(suspend){
 			/* stop e inserimento in ReadyQueue */
 			suspend->cpu_time += (GET_TODLOW - suspend->last_sched_time);
-			myprintint("suspend->cpu_time",suspend->cpu_time);
+			//myprintint("suspend->cpu_time",suspend->cpu_time);
 			//before->pc_epc += WORD_SIZE;
 			suspend->p_s = *before;
 			//myprinthex("indirizzo PCB da sospendere",suspend);
@@ -46,7 +46,7 @@ void int_handler(void){
 		}
 		return scheduler();
 	} else if (intline == INT_TIMER){
-		myprint("PSEUDOCLOCK!\n");
+		//myprint("PSEUDOCLOCK!\n");
 		/*pseudoclock*/
 		int i=0;
 		/*
@@ -101,6 +101,8 @@ void pgmtrap_handler(void){
 	suspend->p_s = *before;
 
 	myprint("PGMTRAP handler\n");
+	myprintint("processocounter",processCounter);
+	myprintint("softBlockCounterr",softBlockCounter);
 
 	if (suspend->handler[PGMTRAP]){
 		/*il processo ha definito un suo handler*/
@@ -124,15 +126,12 @@ void sysbk_handler(void){
 
 	if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
-		myprintint("\nSYSCALL handler",before->reg_a0);
+		//myprintint("\nSYSCALL handler",before->reg_a0);
 		
 		if (before->status & STATUS_KUp){ /* look at previous bit */
 			/*SYSCALL invoked in user mode*/
-			if (suspend->handler[SYSBK]){
-				/*il processo ha definito un suo handler*/
-				*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space */
-				LDST(suspend->handler[SYSBK]);
-			} else if (suspend->handler[PGMTRAP]){
+			myprint("usermode\n");
+			if (suspend->handler[PGMTRAP]){
 				/*il processo ha definito un suo handler*/
 				*(suspend->handler[PGMTRAP+3]) = *before;
 				suspend->handler[PGMTRAP+3]->cause = CAUSE_EXCCODE_SET(suspend->handler[PGMTRAP+3]->cause, EXC_RESERVEDINSTR);
@@ -178,7 +177,12 @@ void sysbk_handler(void){
 				specify_sys_state_vector();
 				break;
 			default:
-				PANIC();
+				if (suspend->handler[SYSBK]){
+					/*il processo ha definito un suo handler*/
+					*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space */
+					LDST(suspend->handler[SYSBK]);
+				}
+				else kill(suspend);
 		}
 	} else if (CAUSE_EXCCODE_GET(before->cause) == 9){
 		/*BREAKPOINT #FIXME */

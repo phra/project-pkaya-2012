@@ -100,6 +100,7 @@ void scheduler(void){
 	stampalista(readyQ);
 	myprint("expiredQ!\n");
 	stampalista(expiredQ);*/
+	myprintint("processcounter",processCounter);
 	while (!CAS(&mutex_scheduler,0,1));
 	if (!list_empty(readyQ)){
 		
@@ -133,7 +134,7 @@ void scheduler(void){
 				HALT();
 
 	} else {
-				myprint("scheduler: WAIT\n");
+				//myprint("scheduler: WAIT\n");
 				CAS(&mutex_scheduler,1,0);
 				//setTIMER(100*SCHED_TIME_SLICE);
 				WAIT();

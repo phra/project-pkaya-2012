@@ -95,25 +95,25 @@ void verhogen(void){
 	semd_t* sem = mygetSemd(semkey);
 	//myprint("verhogen: semafori allocati:\n");
 	//stampasemafori(&semd_h);
-	myprintint("V su semkey",semkey);
+	//myprintint("V su semkey",semkey);
 	//myprinthex("che si trova all'indirizzo",sem);
 	if(!sem) myprint("da phuk: sem == NULL\n");
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
-	myprintint("s_value prima",sem->s_value);
+	//myprintint("s_value prima",sem->s_value);
 	sem->s_value++;
-	myprintint("s_value dopo",sem->s_value);
+	//myprintint("s_value dopo",sem->s_value);
 	//stampasemafori(&semd_h);
 	if (headBlocked(semkey)){ /* wake up someone! */
-		myprint("svegliamo qualcuno.\n");
+		//myprint("svegliamo qualcuno.\n");
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		inserisciprocessoready(next);
-		myprint("readyQ!\n");
-		stampalista(readyQ);
+		//myprint("readyQ!\n");
+		//stampalista(readyQ);
 	} else {
-		myprint("nessuno da svegliare.\n");
-		myprint("readyQ!\n");
-		stampalista(readyQ);
+		//myprint("nessuno da svegliare.\n");
+		//myprint("readyQ!\n");
+		//stampalista(readyQ);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 	}
 }
@@ -133,9 +133,9 @@ void passeren(void){
 	myprintint("P su semkey",semkey);
 	//myprinthex("che si trova all'indirizzo",sem);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
-	myprintint("s_value prima",sem->s_value);
+	//myprintint("s_value prima",sem->s_value);
 	sem->s_value--;
-	myprintint("s_value dopo",sem->s_value);
+	//myprintint("s_value dopo",sem->s_value);
 	//stampasemafori(&semd_h);
 	if (sem->s_value >= 0){ /* GO! */
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */

@@ -56,20 +56,20 @@ void _verhogenclock(int semkey){
 	
 	pcb_t* next;
 	semd_t* sem = mygetSemd(semkey);
-	myprintint("_verhogenclock su semkey",semkey);
-	myprinthex("all'indirizzo",sem);
+	//myprintint("_verhogenclock su semkey",semkey);
+	//myprinthex("all'indirizzo",sem);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
-	myprintint("s_value",sem->s_value);
+	//myprintint("s_value",sem->s_value);
 	while (headBlocked(semkey)){ /* wake up someone! */
 		next = removeBlocked(semkey);
-		myprinthex("sblocco processo",next);
+		//myprinthex("sblocco processo",next);
 		while (!CAS(&mutex_wait_clock,0,1));
 		softBlockCounter--;
 		CAS(&mutex_wait_clock,1,0);
 		sem->s_value++;
 		inserisciprocessoready(next);
 	}
-	myprintint("s_value",sem->s_value);
+	//myprintint("s_value",sem->s_value);
 	CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 }
 
@@ -101,9 +101,9 @@ void _passerenclock(int semkey){
 	pcb_t* suspend = currentproc[getPRID()];
 	semd_t* sem = mygetSemd(semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
-	myprintint("_passerenclock prima",sem->s_value);
+	//myprintint("_passerenclock prima",sem->s_value);
 	sem->s_value -= 1;
-	myprintint("_passerenclock dopo",sem->s_value);
+	//myprintint("_passerenclock dopo",sem->s_value);
 	insertBlocked(semkey,suspend);
 	currentproc[getPRID()] = NULL;
 	CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
