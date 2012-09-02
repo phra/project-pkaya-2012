@@ -26,10 +26,10 @@ void int_handler(void){
 	while((intline<=INT_TERMINAL) && (!(CAUSE_IP_GET(before->cause, intline)))){
 		intline++;          
 	}
-	myprint("readyQ\n");
-	stampalista(readyQ);
-	myprint("expiredQ\n");
-	stampalista(expiredQ);
+	//myprint("readyQ\n");
+	//stampalista(readyQ);
+	//myprint("expiredQ\n");
+	//stampalista(expiredQ);
 	myprintint("INTERRUPT handler",intline);
 	//myprintint("getTIMER()",getTIMER());
 	if (intline == INT_PLT){/* in questo caso è scaduto il time slice */
@@ -37,32 +37,39 @@ void int_handler(void){
 		if(suspend){
 			/* stop e inserimento in ReadyQueue */
 			suspend->cpu_time += (GET_TODLOW - suspend->last_sched_time);
+			myprintint("suspend->cpu_time",suspend->cpu_time);
 			//before->pc_epc += WORD_SIZE;
 			suspend->p_s = *before;
 			//myprinthex("indirizzo PCB da sospendere",suspend);
 			inserisciprocessoexpired(suspend);
-			currentproc[getPRID()] == NULL;
+			currentproc[getPRID()] = NULL;
 		}
 		return scheduler();
 	} else if (intline == INT_TIMER){
-		//myprint("PSEUDOCLOCK!\n");
+		myprint("PSEUDOCLOCK!\n");
 		/*pseudoclock*/
 		int i=0;
-		while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
+		/*
+		while (!CAS(&mutex_wait_clock,0,1));
 		for(;i<MAXPROC;i++){
+			myprintint("wait_clock[i]",wait_clock[i]);
 			if (wait_clock[i]) {
 				inserisciprocessoready(wait_clock[i]);
 				wait_clock[i] = NULL;
-				softBlockCounter -= 1;
+				softBlockCounter--;
 			}
 		}
-		CAS(&mutex_wait_clock,1,0);
+		CAS(&mutex_wait_clock,1,0);*/
+
+		_verhogenclock(MAXPROC+MAX_DEVICES);
 		SET_IT(SCHED_PSEUDO_CLOCK);
+		if (!currentproc[getPRID()]) scheduler();
 	} else {
 		/*chiamo il gestore dei device, passandogli la linea su cui c'è stato l'interrupt*/
 		deviceHandler(intline);
-		LDST(before);
 	}
+	if (currentproc[getPRID()]) LDST(before);
+	else scheduler();
 }
 
 void tlb_handler(void){
@@ -113,6 +120,7 @@ void sysbk_handler(void){
 	pcb_t* suspend = currentproc[getPRID()];
 	before->pc_epc += WORD_SIZE;
 	suspend->p_s = *before;
+	suspend->cpu_time += (GET_TODLOW - suspend->last_sched_time);
 
 	if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/

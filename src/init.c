@@ -169,7 +169,7 @@ pcb_t* wait_clock[MAXPROC];
 state_t* new_old_areas[MAXCPUs][8];
 state_t real_new_old_areas[MAXCPUs-1][8];
 
-U32 mutex_semaphore[MAXPROC];
+U32 mutex_semaphore[MAXPROC+MAX_DEVICES+1];
 U32 mutex_scheduler = 0;
 U32 mutex_wait_clock = 0;
 
@@ -336,7 +336,7 @@ int main(void)
 	inserisciprocessoready(p1);
 	myprinthex("indirizzo PCB test",p1);
 	//inserisciprocessoexpired(p1);
-	//SET_IT(SCHED_PSEUDO_CLOCK);
+	SET_IT(SCHED_PSEUDO_CLOCK);
 	//myprintbin("CP0 STATUS",getSTATUS());
 	scheduler();						/*Richiamo lo scheduler*/
 

@@ -56,7 +56,9 @@ void inserisciprocessoready(pcb_t* pcb){
 
 void kill(pcb_t* target){
 	pcb_t* temp;
+	myprintint("killo processo con PID",target->pid);
 	PIDs[target->pid] = NULL;
+	currentproc[getPRID()] = NULL;
 	while(temp = removeChild(target)){
 		kill(temp);
 	}
@@ -94,10 +96,10 @@ static int inactivecpu(void){
 
 void scheduler(void){
 	myprint("SCHEDULER!\n");
-	myprint("readyQ!\n");
+	/*myprint("readyQ!\n");
 	stampalista(readyQ);
 	myprint("expiredQ!\n");
-	stampalista(expiredQ);
+	stampalista(expiredQ);*/
 	while (!CAS(&mutex_scheduler,0,1));
 	if (!list_empty(readyQ)){
 		
@@ -133,7 +135,7 @@ void scheduler(void){
 	} else {
 				myprint("scheduler: WAIT\n");
 				CAS(&mutex_scheduler,1,0);
-				setTIMER(100*SCHED_TIME_SLICE);
+				//setTIMER(100*SCHED_TIME_SLICE);
 				WAIT();
 
 	}

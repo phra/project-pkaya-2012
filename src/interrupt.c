@@ -32,16 +32,45 @@ void _verhogen(int semkey, int* status){
 	pcb_t* next;
 	semd_t* sem = mygetSemd(semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
-	sem->s_value = 0;
+	sem->s_value += 1;
 	if (headBlocked(semkey)){ /* wake up someone! */
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		next->p_s.reg_v0 = *status;
 		*status = 0;
+		while (!CAS(&mutex_wait_clock,0,1));
+		softBlockCounter--;
+		CAS(&mutex_wait_clock,1,0);
 		inserisciprocessoready(next);
 	} else {
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 	}
+}
+
+
+void _verhogenclock(int semkey){
+	/*
+		Quando invocata, la sys4 esegue una V sul semaforo con chiave semKey
+		Registro a1: chiave del semaforo su cui effettuare la V.
+	*/
+	
+	pcb_t* next;
+	semd_t* sem = mygetSemd(semkey);
+	myprintint("_verhogenclock su semkey",semkey);
+	myprinthex("all'indirizzo",sem);
+	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
+	myprintint("s_value",sem->s_value);
+	while (headBlocked(semkey)){ /* wake up someone! */
+		next = removeBlocked(semkey);
+		myprinthex("sblocco processo",next);
+		while (!CAS(&mutex_wait_clock,0,1));
+		softBlockCounter--;
+		CAS(&mutex_wait_clock,1,0);
+		sem->s_value++;
+		inserisciprocessoready(next);
+	}
+	myprintint("s_value",sem->s_value);
+	CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 }
 
 void _passeren(int semkey){
@@ -61,6 +90,23 @@ void _passeren(int semkey){
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		scheduler();
 	}
+}
+
+void _passerenclock(int semkey){
+	/*
+		Quando invocata, la sys5 esegue una P sul semaforo con chiave semKey.
+		Registro a1: chiave del semaforo su cui effettuare la P.
+	*/
+
+	pcb_t* suspend = currentproc[getPRID()];
+	semd_t* sem = mygetSemd(semkey);
+	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
+	myprintint("_passerenclock prima",sem->s_value);
+	sem->s_value -= 1;
+	myprintint("_passerenclock dopo",sem->s_value);
+	insertBlocked(semkey,suspend);
+	currentproc[getPRID()] = NULL;
+	CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 }
 
 /*Funzione per la gestione dei specifici device*/

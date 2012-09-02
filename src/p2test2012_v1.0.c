@@ -459,9 +459,9 @@ void p3() {
 	   time correctly */
 	cpu_t1 = SYSCALL(GETCPUTIME, 0, 0, 0);
 
-	for (i = 0; i < CLOCKLOOP; i++)
+	for (i = 0; i < CLOCKLOOP; i++){
 		SYSCALL(WAITCLOCK, 0, 0, 0);
-	
+	}
 	cpu_t2 = SYSCALL(GETCPUTIME, 0, 0, 0);
 
 	if ((cpu_t2 - cpu_t1) < (MINCLOCKLOOP / (* ((cpu_t *) BUS_TIMESCALE))))

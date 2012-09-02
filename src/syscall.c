@@ -38,10 +38,8 @@ void create_process(void){
 		myprint("prima dell'inserimento\n");
 		stampalista(readyQ);
 		insertProcQ(readyQ,son);
-		myprintint("con PID",son->pid);
 		myprint("dopo l'inserimento\n");
 		stampalista(readyQ);
-		stampareadyq();
 		processCounter += 1;
 		CAS(&mutex_scheduler,1,0);
 		before->reg_v0 = 0;
@@ -110,8 +108,12 @@ void verhogen(void){
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		inserisciprocessoready(next);
+		myprint("readyQ!\n");
+		stampalista(readyQ);
 	} else {
 		myprint("nessuno da svegliare.\n");
+		myprint("readyQ!\n");
+		stampalista(readyQ);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 	}
 }
@@ -166,7 +168,8 @@ void wait_for_clock(void)
 	*/
 	int i=0;
 	pcb_t* suspend = currentproc[getPRID()];
-	while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
+	//while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
+	/*
 	for(;i<MAXPROC;i++){
 		if (wait_clock[i] == NULL){
 			wait_clock[i] = suspend;
@@ -174,7 +177,12 @@ void wait_for_clock(void)
 			break;
 		}
 	}
-	CAS(&mutex_wait_clock,1,0);
+	* */
+	
+	//CAS(&mutex_wait_clock,1,0);
+	softBlockCounter++;
+	_passerenclock(MAXPROC+MAX_DEVICES);
+	
 	return scheduler();
 }
 
@@ -191,6 +199,10 @@ void wait_for_io_device(void){
 	int line = before->reg_a1;
 	int devno = before->reg_a2;
 	int rw = before->reg_a3;
+
+	while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
+	softBlockCounter += 1;
+	CAS(&mutex_wait_clock,1,0);
 
 	_passeren((line*(devno+1))+rw);
 

@@ -61,7 +61,7 @@ extern pcb_t* PIDs[MAXPID];
 extern pcb_t* wait_clock[MAXPROC];
 extern state_t* new_old_areas[MAXCPUs][8];
 extern state_t real_new_old_areas[MAXCPUs-1][8];
-extern U32 mutex_semaphore[MAXPROC];
+extern U32 mutex_semaphore[MAXPROC+MAX_DEVICES+1];
 extern U32 mutex_scheduler;
 extern U32 mutex_wait_clock;
 
