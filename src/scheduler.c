@@ -29,6 +29,7 @@ void stampalista(struct list_head* head){
 
 void stampareadyq(void){
 	pcb_t* item;
+	myprint("READYQ:\n");
 	list_for_each_entry(item,readyQ,p_next){
 		myprintint("PROCESSO IN LISTA CON PID",item->pid);
 	}
@@ -59,13 +60,16 @@ void kill(pcb_t* target){
 	myprintint("killo processo con PID",target->pid);
 	PIDs[target->pid] = NULL;
 	currentproc[getPRID()] = NULL;
+	if ((--processCounter == 0) && (softBlockCounter == 0)) scheduler();
 	while(temp = removeChild(target)){
 		kill(temp);
 	}
 	while (!CAS(&mutex_scheduler,0,1));
-	processCounter -= 1;
+	outProcQ(readyQ,target);
+	outProcQ(expiredQ,target);
 	freePcb(target);
 	CAS(&mutex_scheduler,1,0);
+	
 }
 
 /* alloca Pcb ed assegna il pid e la priorita' ai processi */  
@@ -95,20 +99,20 @@ static int inactivecpu(void){
 }
 
 void scheduler(void){
-	myprint("SCHEDULER!\n");
+	//myprint("SCHEDULER!\n");
 	/*myprint("readyQ!\n");
 	stampalista(readyQ);
 	myprint("expiredQ!\n");
-	stampalista(expiredQ);*/
-	myprintint("processcounter",processCounter);
+	stampalista(expiredQ);
+	myprintint("processcounter",processCounter);*/
 	while (!CAS(&mutex_scheduler,0,1));
 	if (!list_empty(readyQ)){
 		
-		myprint("prendo da readyQ!\n");
+		//myprint("prendo da readyQ!\n");
 		pcb_t* next = removeProcQ(readyQ);
 		CAS(&mutex_scheduler,1,0);
 		currentproc[getPRID()] = next;
-		myprinthex("currentPROC",currentproc[getPRID()]);
+		//myprinthex("currentPROC",currentproc[getPRID()]);
 		next->last_sched_time = GET_TODLOW;
 		setTIMER(SCHED_TIME_SLICE);
 		LDST(&next->p_s);
@@ -116,7 +120,7 @@ void scheduler(void){
 	} else if (!list_empty(expiredQ)){
 
 		/*scambio le due liste per evitare starvation*/
-		myprint("scambioleliste!\n");
+		//myprint("scambioleliste!\n");
 		struct list_head* temp = expiredQ;
 		expiredQ = readyQ;
 		readyQ = temp;

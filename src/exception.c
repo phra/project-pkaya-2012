@@ -102,7 +102,8 @@ void pgmtrap_handler(void){
 
 	myprint("PGMTRAP handler\n");
 	myprintint("processocounter",processCounter);
-	myprintint("softBlockCounterr",softBlockCounter);
+	myprintint("softBlockCounter",softBlockCounter);
+	stampareadyq();
 
 	if (suspend->handler[PGMTRAP]){
 		/*il processo ha definito un suo handler*/
@@ -130,7 +131,6 @@ void sysbk_handler(void){
 		
 		if (before->status & STATUS_KUp){ /* look at previous bit */
 			/*SYSCALL invoked in user mode*/
-			myprint("usermode\n");
 			if (suspend->handler[PGMTRAP]){
 				/*il processo ha definito un suo handler*/
 				*(suspend->handler[PGMTRAP+3]) = *before;

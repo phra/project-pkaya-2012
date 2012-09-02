@@ -31,6 +31,7 @@ void _verhogen(int semkey, int* status){
 	
 	pcb_t* next;
 	semd_t* sem = mygetSemd(semkey);
+	//myprintint("_verhogen su key",semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value += 1;
 	if (headBlocked(semkey)){ /* wake up someone! */
@@ -60,12 +61,12 @@ void _verhogenclock(int semkey){
 	//myprinthex("all'indirizzo",sem);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	//myprintint("s_value",sem->s_value);
+	while (!CAS(&mutex_wait_clock,0,1));
+	if (softBlockCounter > 0) softBlockCounter--;
+	CAS(&mutex_wait_clock,1,0);
 	while (headBlocked(semkey)){ /* wake up someone! */
 		next = removeBlocked(semkey);
 		//myprinthex("sblocco processo",next);
-		while (!CAS(&mutex_wait_clock,0,1));
-		softBlockCounter--;
-		CAS(&mutex_wait_clock,1,0);
 		sem->s_value++;
 		inserisciprocessoready(next);
 	}
@@ -81,11 +82,13 @@ void _passeren(int semkey){
 
 	pcb_t* suspend = currentproc[getPRID()];
 	semd_t* sem = mygetSemd(semkey);
+	//myprintint("_passeren su key",semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value -= 1;
 	if (sem->s_value >= -1){ /* GO! */
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 	} else { /* wait */
+		softBlockCounter += 1;
 		insertBlocked(semkey,suspend);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		scheduler();
@@ -165,5 +168,5 @@ void deviceHandler(U32 intline){
 		}
 	}
 	devstatus[intline][i+rw] = status;
-	_verhogen((intline*(i+1))+rw,&devstatus[intline][i+rw]);
+	_verhogen((intline*(i+1)+20)+rw,&devstatus[intline][i+rw]);
 }

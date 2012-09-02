@@ -371,7 +371,7 @@ void test() {
 	print("p1 knows p5 ended\n");
 
 	/* now for a more rigorous check of process termination */
-	for (p8inc = 0; p8inc < 4; p8inc++) {
+	for (p8inc = 0; p8inc < 2; p8inc++) {
 		creation = SYSCALL(CREATEPROCESS, (int)&p8rootstate, DEFAULT_PRIORITY, 0);
 
 		if (creation == CREATENOGOOD) {
@@ -636,17 +636,10 @@ void p5a() {
 /* second part of p5 - should be entered in user mode */
 void p5b() {
 	cpu_t		time1, time2;
-	state_t test;
-	STST(&test);
-	if(test.status & 0x00000002) print("p5bUSERMODE\n");
-	else print("p5bKERNELMODE\n");
-	print("1\n");
 	SYSCALL(13, 0, 0, 0);
-	print("2\n");
 	/* the first time through, we are in user mode */
 	/* and the P should generate a program trap */
 	SYSCALL(PASSEREN, ENDP4, 0, 0);			/* P(endp4)*/
-	print("3\n");
 	/* do some delay to be reasonably sure p4 and its offspring are dead */
 	time1 = 0;
 	time2 = 0;
@@ -706,6 +699,7 @@ void p8root() {
 	SYSCALL(CREATEPROCESS, (int)&child2state, DEFAULT_PRIORITY, 0);
 
 	for (grandchild=0; grandchild < NOLEAVES; grandchild++) {
+		print("P8_PASSEREN LOOP\n");
 		SYSCALL(PASSEREN, ENDCREATE, 0, 0);
 	}
 	

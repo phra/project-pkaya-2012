@@ -40,7 +40,6 @@ void create_process(void){
 		insertProcQ(readyQ,son);
 		myprint("dopo l'inserimento\n");
 		stampalista(readyQ);
-		processCounter += 1;
 		CAS(&mutex_scheduler,1,0);
 		before->reg_v0 = 0;
 	} else {
@@ -68,7 +67,6 @@ void create_brother(void){
 		while (!CAS(&mutex_scheduler,0,1));
 		insertChild(father,bro);  //#FIXME
 		insertProcQ(readyQ,bro);
-		processCounter += 1;
 		CAS(&mutex_scheduler,1,0);
 		before->reg_v0 = 0;
 	} else {
@@ -95,7 +93,7 @@ void verhogen(void){
 	semd_t* sem = mygetSemd(semkey);
 	//myprint("verhogen: semafori allocati:\n");
 	//stampasemafori(&semd_h);
-	//myprintint("V su semkey",semkey);
+	myprintint("V su semkey",semkey);
 	//myprinthex("che si trova all'indirizzo",sem);
 	if(!sem) myprint("da phuk: sem == NULL\n");
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
@@ -201,10 +199,10 @@ void wait_for_io_device(void){
 	int rw = before->reg_a3;
 
 	while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
-	softBlockCounter += 1;
+	
 	CAS(&mutex_wait_clock,1,0);
 
-	_passeren((line*(devno+1))+rw);
+	_passeren((line*(devno+1)+20)+rw);
 
 	before->reg_v0 = devstatus[line][devno+rw];
 	devstatus[line][devno+rw] = 0;
