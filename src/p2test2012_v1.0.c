@@ -371,7 +371,7 @@ void test() {
 	print("p1 knows p5 ended\n");
 
 	/* now for a more rigorous check of process termination */
-	for (p8inc = 0; p8inc < 2; p8inc++) {
+	for (p8inc = 0; p8inc < 4; p8inc++) {
 		creation = SYSCALL(CREATEPROCESS, (int)&p8rootstate, DEFAULT_PRIORITY, 0);
 
 		if (creation == CREATENOGOOD) {
@@ -591,7 +591,7 @@ void p5sys() {
 
 /* p5 -- SYS5 test process */
 void p5() {
-		state_t test;
+	state_t test;
 	STST(&test);
 	print("p5 starts\n");
 	/*if(test.status & 0x00000002) print("p5USERMODE\n");

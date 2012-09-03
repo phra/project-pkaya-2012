@@ -3,6 +3,7 @@
 #include "listx.h"
 #include "types11.h"
 #include "utils.h"
+#include "const11.h"
 
 
 #define TRANSMITTED	5
@@ -128,8 +129,6 @@ static void pcbprinthex(char *str1, int numero){
         pcbprint(intero);
         pcbprint("\n");
 }
-
-
 
 struct list_head pcbfree_h;
 pcb_t pcbFree_table[MAXPROC];

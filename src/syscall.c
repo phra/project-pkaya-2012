@@ -28,18 +28,21 @@ void create_process(void){
 	pcb_t* suspend = currentproc[getPRID()];
 	pcb_t* son;
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
+
+	
 	
 	if (son = allocaPcb(before->reg_a2)){
 		son->p_s = *((state_t*)before->reg_a1);
 		while (!CAS(&mutex_scheduler,0,1));
 		insertChild(suspend,son);
+		/*
 		myprinthex("alloco processo figlio con indirizzo",son);
 		myprintint("con PID",son->pid);
 		myprint("prima dell'inserimento\n");
-		stampalista(readyQ);
+		stampalista(readyQ);*/
 		insertProcQ(readyQ,son);
-		myprint("dopo l'inserimento\n");
-		stampalista(readyQ);
+		//myprint("dopo l'inserimento\n");
+		//stampalista(readyQ);
 		CAS(&mutex_scheduler,1,0);
 		before->reg_v0 = 0;
 	} else {
@@ -93,7 +96,7 @@ void verhogen(void){
 	semd_t* sem = mygetSemd(semkey);
 	//myprint("verhogen: semafori allocati:\n");
 	//stampasemafori(&semd_h);
-	myprintint("V su semkey",semkey);
+	//myprintint("V su semkey",semkey);
 	//myprinthex("che si trova all'indirizzo",sem);
 	if(!sem) myprint("da phuk: sem == NULL\n");
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
@@ -126,9 +129,13 @@ void passeren(void){
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
 	semd_t* sem = mygetSemd(semkey);
-	//myprint("passeren: semafori allocati:\n");
-	//stampasemafori(&semd_h);
-	myprintint("P su semkey",semkey);
+	//if(semkey == 9){
+		//myprint("passeren: semafori allocati:\n");
+		//stampasemafori(&semd_h);
+		//myprintint("P su semkey",semkey);
+		//myprint("prima della P\n");
+		//stampalista(readyQ);
+	//}
 	//myprinthex("che si trova all'indirizzo",sem);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	//myprintint("s_value prima",sem->s_value);

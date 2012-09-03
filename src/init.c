@@ -45,9 +45,9 @@
 #define RECVCOMMAND 1
 #define TRANSTATUS    2
 #define TRANCOMMAND   3
-
-
 #endif
+
+/*DEBUG*/
 
 U32 mytermstat(memaddr *stataddr) {
 	return((*stataddr) & STATUSMASK);
@@ -174,10 +174,6 @@ U32 mutex_scheduler = 0;
 U32 mutex_wait_clock = 0;
 
 
-/*DEBUG*/
-
-
-
 extern void test();
 
 static inline void initWaitClock(void){
@@ -206,10 +202,6 @@ static inline void initDevStatus(void){
 	memset(devstatus,0,DEV_USED_INTS*DEV_PER_INT*sizeof(U32));
 }
 
-void initSemaphore(semd_t* sem, int value){
-	sem->s_value = value;
-}
-
 void timerHandler(void){
 	int cause = getCAUSE();
 	if (CAUSE_IP_GET(cause,INT_TIMER)) 
@@ -222,6 +214,10 @@ void timerHandler(void){
 static inline void initSchedQueue(void){
 	INIT_LIST_HEAD(readyQ);
 	INIT_LIST_HEAD(expiredQ);
+}
+
+static inline void initPIDs(){
+	memset(PIDs,0,MAXPID*sizeof(pcb_t*));
 }
 
 /* INIZIALIZZAZIONE DI NEW AREA CON KU,IE e PLT SETTATI
@@ -291,10 +287,6 @@ static void initNewOldAreas(void){
 		initNewArea((memaddr) pgmtrap_handler, new_old_areas[i][PGMTRAP_NEW]);
 		initNewArea((memaddr) sysbk_handler, new_old_areas[i][SYSBK_NEW]);
 	}
-}
-
-static inline void initPIDs(){
-	memset(PIDs,0,MAXPID*sizeof(pcb_t*));
 }
 
 int main(void)

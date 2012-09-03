@@ -32,6 +32,7 @@ void int_handler(void){
 	//stampalista(expiredQ);
 	//myprintint("INTERRUPT handler",intline);
 	//myprintint("getTIMER()",getTIMER());
+	//myprint("");
 	if (intline == INT_PLT){/* in questo caso è scaduto il time slice */
 		//myprinthex("currentPROC",currentproc[getPRID()]);
 		if(suspend){
@@ -101,9 +102,9 @@ void pgmtrap_handler(void){
 	suspend->p_s = *before;
 
 	myprint("PGMTRAP handler\n");
-	myprintint("processocounter",processCounter);
+	/*myprintint("processocounter",processCounter);
 	myprintint("softBlockCounter",softBlockCounter);
-	stampareadyq();
+	stampareadyq();*/
 
 	if (suspend->handler[PGMTRAP]){
 		/*il processo ha definito un suo handler*/
@@ -127,8 +128,7 @@ void sysbk_handler(void){
 
 	if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
-		//myprintint("\nSYSCALL handler",before->reg_a0);
-		
+		myprintint("\n",before->reg_a0); /*#PANIC #FIXME*/
 		if (before->status & STATUS_KUp){ /* look at previous bit */
 			/*SYSCALL invoked in user mode*/
 			if (suspend->handler[PGMTRAP]){

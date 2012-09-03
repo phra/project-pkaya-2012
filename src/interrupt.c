@@ -33,7 +33,7 @@ void _verhogen(int semkey, int* status){
 	semd_t* sem = mygetSemd(semkey);
 	//myprintint("_verhogen su key",semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
-	sem->s_value += 1;
+	sem->s_value = 1;
 	if (headBlocked(semkey)){ /* wake up someone! */
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
@@ -85,9 +85,11 @@ void _passeren(int semkey){
 	//myprintint("_passeren su key",semkey);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	sem->s_value -= 1;
-	if (sem->s_value >= -1){ /* GO! */
+	if (sem->s_value >= 0){ /* GO! */
+		//myprint("WAITIO non BLOCCANTE\n");
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 	} else { /* wait */
+		//myprint("WAITIOBLOCCANTE\n");
 		softBlockCounter += 1;
 		insertBlocked(semkey,suspend);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */

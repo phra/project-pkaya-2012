@@ -48,13 +48,13 @@ typedef struct pcb_t {
 
 /* Semaphore Descriptor (SEMD) data structure */
 typedef struct semd_t {
-	struct list_head	s_next;
-	
 	/* Semaphore value */
 	int					s_value;
 	
 	/* Semaphore key */
 	int					s_key;
+
+	struct list_head	s_next;
 	
 	/* Queue of PCBs blocked on the semaphore */
 	struct list_head	s_procQ;
