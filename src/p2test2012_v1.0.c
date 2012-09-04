@@ -215,8 +215,10 @@ void print(char *msg) {
 		/* Wait for I/O completion (SYS8) */
 		status = SYSCALL(WAITIO, INT_TERMINAL, 0, FALSE);
 		
-		if ((status & TERMSTATMASK) != TRANSM)
+		if ((status & TERMSTATMASK) != TRANSM){
+			myprint("PRINTPANIC!");
 			PANIC();
+		}
 
 		s++;	
 	}
@@ -699,7 +701,6 @@ void p8root() {
 	SYSCALL(CREATEPROCESS, (int)&child2state, DEFAULT_PRIORITY, 0);
 
 	for (grandchild=0; grandchild < NOLEAVES; grandchild++) {
-		print("P8_PASSEREN LOOP\n");
 		SYSCALL(PASSEREN, ENDCREATE, 0, 0);
 	}
 	

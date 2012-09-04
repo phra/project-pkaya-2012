@@ -1,4 +1,3 @@
-#include "lib/const11.h"
 #include "lib/const.h"
 #include "lib/base.h"
 #include "lib/uMPStypes.h"
@@ -107,7 +106,7 @@ static int inactivecpu(void){
 }
 
 void scheduler(void){
-	myprint("SCHEDULER!\n"); /*#PANIC #FIXME*/
+	//myprint("SCHEDULER!\n");
 	/*myprint("readyQ!\n");
 	stampalista(readyQ);
 	myprint("expiredQ!\n");

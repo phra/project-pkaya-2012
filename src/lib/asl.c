@@ -1,5 +1,4 @@
 #include "const.h"
-#include "const11.h"
 #include "uMPStypes.h"
 #include "listx.h"
 #include "types11.h"
@@ -191,6 +190,7 @@ semd_t* mygetSemd(int key){
 	list_add(l_next,&semd_h);
 	item=container_of(l_next,semd_t,s_next);
 	item->s_key = key;
+	item->s_value = 0;
 	INIT_LIST_HEAD(&item->s_procQ);
 	return item;
 }

@@ -3,7 +3,6 @@
 #include "listx.h"
 #include "types11.h"
 #include "utils.h"
-#include "const11.h"
 
 
 #define TRANSMITTED	5

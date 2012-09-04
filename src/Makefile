@@ -7,7 +7,7 @@ LD = $(ARCH_PREFIX)ld
 LDADD1 = -T /usr/local/share/umps2/elf32ltsmip.h.umpscore.x /usr/local/lib/umps2/crtso.o p1test_pkaya_v1.1.o asl.o pcb.o utils.o /usr/local/lib/umps2/libumps.o
 LDADD2 = -T /usr/local/share/umps2/elf32ltsmip.h.umpscore.x /usr/local/lib/umps2/crtso.o /usr/local/lib/umps2/libumps.o init.o exception.o syscall.o scheduler.o interrupt.o pcb.o asl.o utils.o p2test2012_v1.0.o
 
-INCLUDE = lib/const.h lib/uMPStypes.h lib/listx.h lib/types11.h lib/pcb.h lib/asl.h lib/utils.h lib/const.h lib/const11.h lib/base.h lib/libumps.h
+INCLUDE = lib/const.h lib/uMPStypes.h lib/listx.h lib/types11.h lib/pcb.h lib/asl.h lib/utils.h lib/const.h lib/base.h lib/libumps.h
 INCLUDE += scheduler.h init.h syscall.h interrupt.h exception.h
 
 #phase2

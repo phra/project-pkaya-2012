@@ -1,4 +1,3 @@
-#include "lib/const11.h"
 #include "lib/const.h"
 #include "lib/base.h"
 #include "lib/uMPStypes.h"
@@ -128,7 +127,7 @@ void sysbk_handler(void){
 
 	if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
-		myprintint("\n",before->reg_a0); /*#PANIC #FIXME*/
+		myprintint("SYS",before->reg_a0); /*#PANIC #FIXME*/
 		if (before->status & STATUS_KUp){ /* look at previous bit */
 			/*SYSCALL invoked in user mode*/
 			if (suspend->handler[PGMTRAP]){

@@ -1,4 +1,3 @@
-#include "lib/const11.h"
 #include "lib/const.h"
 #include "lib/base.h"
 #include "lib/uMPStypes.h"
@@ -94,10 +93,13 @@ void verhogen(void){
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
 	semd_t* sem = mygetSemd(semkey);
-	//myprint("verhogen: semafori allocati:\n");
-	//stampasemafori(&semd_h);
-	//myprintint("V su semkey",semkey);
-	//myprinthex("che si trova all'indirizzo",sem);
+	/*if((semkey == 8) || (semkey == 7) || (semkey == 9)){
+		myprint("verhogen: semafori allocati:\n");
+		stampasemafori(&semd_h);
+		myprintint("V su semkey",semkey);
+		//myprint("prima della P\n");
+		//stampalista(readyQ);
+	}*/
 	if(!sem) myprint("da phuk: sem == NULL\n");
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	//myprintint("s_value prima",sem->s_value);
@@ -129,13 +131,13 @@ void passeren(void){
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
 	semd_t* sem = mygetSemd(semkey);
-	//if(semkey == 9){
-		//myprint("passeren: semafori allocati:\n");
-		//stampasemafori(&semd_h);
-		//myprintint("P su semkey",semkey);
+	/*if((semkey == 8) || (semkey == 7) || (semkey == 9)){
+		myprint("passeren: semafori allocati:\n");
+		stampasemafori(&semd_h);
+		myprintint("P su semkey",semkey);
 		//myprint("prima della P\n");
 		//stampalista(readyQ);
-	//}
+	}*/
 	//myprinthex("che si trova all'indirizzo",sem);
 	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
 	//myprintint("s_value prima",sem->s_value);

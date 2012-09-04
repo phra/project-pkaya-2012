@@ -1,4 +1,3 @@
-#include "lib/const11.h"
 #include "lib/const.h"
 #include "lib/base.h"
 #include "lib/uMPStypes.h"
@@ -13,39 +12,6 @@
 #include "exception.h"
 #include "syscall.h"
 #include "interrupt.h"
-
-#ifdef __INIT_CONST__
-#define MAXCPUs 1
-#define MAXPID 128
-#define DEF_PRIORITY 5
-#define MAXPRINT 128
-
-#define INT_OLD 0
-#define INT_NEW 1
-#define TLB_OLD 2
-#define TLB_NEW 3
-#define PGMTRAP_OLD 4
-#define PGMTRAP_NEW 5
-#define SYSBK_OLD 6
-#define SYSBK_NEW 7
-
-
-#define TRANSMITTED	5
-#define ACK	1
-#define PRINTCHR	2
-#define CHAROFFSET	8
-#define STATUSMASK	0xFF
-#define	TERM0ADDR	0x10000250
-#define DEVREGSIZE 16       
-#define READY     1
-#define DEVREGLEN   4
-#define BUSY      3
-
-#define RECVSTATUS 0
-#define RECVCOMMAND 1
-#define TRANSTATUS    2
-#define TRANCOMMAND   3
-#endif
 
 /*DEBUG*/
 
@@ -257,7 +223,7 @@ static void initTest(state_t* addr){
 	status &= ~STATUS_KUo;
 	status |= STATUS_PLT;
 	state->status = status;
-	state->reg_sp = RAMTOP - 10*FRAME_SIZE;			/* $SP = RAMPTOP - FRAMESIZE */
+	state->reg_sp = RAMTOP - (MAXCPUs+1)*FRAME_SIZE;			/* $SP = RAMPTOP - FRAMESIZE */
 	state->pc_epc = state->reg_t9 = (memaddr)test;
 }
 
@@ -289,20 +255,37 @@ static void initNewOldAreas(void){
 	}
 }
 
+static void initCpuStates(state_t* addr, int i){
+	int status = 0;
+	state_t* state = addr;
+	memset(state,0,sizeof(state_t));
+	status &= ~STATUS_IEc;				/* Interrupt non abilitati             */
+	status &= ~STATUS_IEp;				/* Set also previous bit for LDST()    */
+	status &= ~STATUS_IEo;
+	status &= ~STATUS_INT_UNMASKED;
+	status &= ~STATUS_VMc;				/* Virtual Memory OFF                  */
+	status &= ~STATUS_VMp;				/* Set also previous bit for LDST()    */
+	status &= ~STATUS_VMo;
+	status &= ~STATUS_KUc;				/* Kernel-Mode ON                      */
+	status &= ~STATUS_KUp;				/* Set also previous bit for LDST()    */
+	status &= ~STATUS_KUo;
+	state->status = status;
+	state->reg_sp = RAMTOP - i*FRAME_SIZE;
+	state->pc_epc = state->reg_t9 = scheduler;
+}
+
+static void initCPUs(void){
+	state_t now;
+	int i;
+	for(i=1;i<MAXCPUs;i++){
+		myprintint("inizializzo cpu",i);
+		initCpuStates(&now,i);
+		INITCPU(i,&now,new_old_areas[i]);
+	}
+}
+
 int main(void)
 {	
-	/*esempio incremento variabile 5 volte poi HALT dal slide di davoli
-	state_t* new_area = (state_t*) INT_NEWAREA;
-	// Interrupt disabilitati, kernel mode e memoria virtuale spenta
-	new_area->pc_epc = new_area->reg_t9 = (memaddr)timerHandler;
-	new_area->status &= ~(STATUS_IEc | STATUS_KUc | STATUS_VMc);
-	new_area->reg_sp = RAMTOP;
-	int status = 0;
-	status |= (STATUS_IEc | STATUS_INT_UNMASKED);
-	setSTATUS(status);
-	SET_IT(5000000);
-	while(1); */
-
 	pcb_t* p1 = NULL;
 
 	/* Inizializzazione strutture dati */
@@ -327,20 +310,9 @@ int main(void)
 	/*Inserire il processo nella Ready Queue*/
 	inserisciprocessoready(p1);
 	myprinthex("indirizzo PCB test",p1);
-	//inserisciprocessoexpired(p1);
 	SET_IT(SCHED_PSEUDO_CLOCK);
-	//myprintbin("CP0 STATUS",getSTATUS());
+	initCPUs();
 	scheduler();						/*Richiamo lo scheduler*/
-
-	/*------------------DA FARE-------------------------------	
-	//Inizializzare lo stato delle CPU
-	//-All'avvio, uMPS2 avvia solo il processore 0
-	//-Per avviare le altre CPU è necessario farlo esplicitamente tramite la funzione:	
-	// initCpu(U32 cpuid, state_t *start_state, state_t *state_areas);
-	//Invia un comando RESET al processore cpuid
-	//Salva nella ROM l'indirizzo della New/Old Areas puntate da state-areas
-	//Carica lo stato del processore da start-state.
-	*/
 
 	return 0;	
 }

@@ -1,7 +1,6 @@
 #ifndef __INIT__
 #define __INIT__
 
-#include "lib/const11.h"
 #include "lib/const.h"
 #include "lib/base.h"
 #include "lib/uMPStypes.h"
@@ -22,7 +21,7 @@
 #define MAXCPUs 1
 #define MAXPID 128
 #define DEF_PRIORITY 5
-#define MAXPRINT 1024
+#define MAXPRINT 128
 
 #define INT_OLD 0
 #define INT_NEW 1

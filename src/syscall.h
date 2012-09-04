@@ -1,7 +1,6 @@
 #ifndef __SYSCALL__
 #define __SYSCALL__
 
-#include "lib/const11.h"
 #include "lib/const.h"
 #include "lib/base.h"
 #include "lib/uMPStypes.h"
