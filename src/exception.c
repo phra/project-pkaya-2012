@@ -124,7 +124,7 @@ void sysbk_handler(void){
 	before->pc_epc += WORD_SIZE;
 	suspend->p_s = *before;
 	suspend->cpu_time += (GET_TODLOW - suspend->last_sched_time);
-
+	suspend->last_sched_time = GET_TODLOW;
 	if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
 		myprintint("SYS",before->reg_a0); /*#PANIC #FIXME*/

@@ -122,6 +122,15 @@ void myprinthex(char *str1, int numero){
         myprint("\n");
 }
 
+void sleep(int count){
+	int i = 0;
+	for(;i<count;i++);
+}
+
+
+
+
+/*END DEBUG*/
 
 /*Inizializzazione variabili del kernel*/
 int processCounter 	 = 0;	/* Contatore processi */
@@ -166,15 +175,6 @@ static inline void initMutexSemaphore(int value){
 
 static inline void initDevStatus(void){
 	memset(devstatus,0,DEV_USED_INTS*DEV_PER_INT*sizeof(U32));
-}
-
-void timerHandler(void){
-	int cause = getCAUSE();
-	if (CAUSE_IP_GET(cause,INT_TIMER)) 
-		PROVA++;
-	if (PROVA == 5) 
-		HALT();
-	SET_IT(5000000);
 }
 
 static inline void initSchedQueue(void){
@@ -312,6 +312,7 @@ int main(void)
 	myprinthex("indirizzo PCB test",p1);
 	SET_IT(SCHED_PSEUDO_CLOCK);
 	initCPUs();
+	//sleep(10000);
 	scheduler();						/*Richiamo lo scheduler*/
 
 	return 0;	

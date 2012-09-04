@@ -106,13 +106,13 @@ static int inactivecpu(void){
 }
 
 void scheduler(void){
-	//myprint("SCHEDULER!\n");
 	/*myprint("readyQ!\n");
 	stampalista(readyQ);
 	myprint("expiredQ!\n");
 	stampalista(expiredQ);
 	myprintint("processcounter",processCounter);*/
 	while (!CAS(&mutex_scheduler,0,1));
+	//myprintint("SCHEDULER!",getPRID());
 	if (processCounter == 0) {
 				//stampasemafori(&semd_h);
 				myprint("scheduler: HALT!\n");
@@ -148,7 +148,7 @@ void scheduler(void){
 	} else {
 				//myprint("scheduler: WAIT\n");
 				CAS(&mutex_scheduler,1,0);
-				//setTIMER(100*SCHED_TIME_SLICE);
+				setTIMER(100*SCHED_TIME_SLICE);
 				WAIT();
 
 	}

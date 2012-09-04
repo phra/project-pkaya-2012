@@ -23,14 +23,16 @@
 #define DEF_PRIORITY 5
 #define MAXPRINT 128
 
-#define INT_OLD 0
-#define INT_NEW 1
-#define TLB_OLD 2
-#define TLB_NEW 3
-#define PGMTRAP_OLD 4
-#define PGMTRAP_NEW 5
-#define SYSBK_OLD 6
-#define SYSBK_NEW 7
+#define INT_OLD 7
+#define INT_NEW 6
+#define TLB_OLD 5
+#define TLB_NEW 4
+#define PGMTRAP_OLD 3
+#define PGMTRAP_NEW 2
+#define SYSBK_OLD 1
+#define SYSBK_NEW 0
+
+
 #define TRANSMITTED	5
 #define TRANSTATUS    2
 #define ACK	1
@@ -64,7 +66,8 @@ extern U32 mutex_semaphore[MAXPROC+MAX_DEVICES+1];
 extern U32 mutex_scheduler;
 extern U32 mutex_wait_clock;
 
-void timerHandler(void);
+/*DEBUG*/
+void sleep(int count);
 inline void initSemaphore(semd_t* sem, int value);
 void print(char *label, char *value);
 U32 mytermstat(memaddr *stataddr);
@@ -72,5 +75,6 @@ void myprintint(char *str1, int numero);
 void myprintbin(char *str1, int numero);
 void myprinthex(char *str1, int numero);
 void myprint(char *str1);
+/*END DEBUG*/
 
 #endif
