@@ -63,7 +63,7 @@ void int_handler(void){
 
 		_verhogenclock(MAXPROC+MAX_DEVICES);
 		SET_IT(SCHED_PSEUDO_CLOCK);
-		if (!currentproc[getPRID()]) scheduler();
+		//if (!currentproc[getPRID()]) scheduler();
 	} else {
 		/*chiamo il gestore dei device, passandogli la linea su cui c'è stato l'interrupt*/
 		deviceHandler(intline);
@@ -127,7 +127,7 @@ void sysbk_handler(void){
 	suspend->last_sched_time = GET_TODLOW;
 	if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
-		myprintint("SYS",before->reg_a0); /*#PANIC #FIXME*/
+		//myprintint("SYS",before->reg_a0); /*#PANIC #FIXME*/
 		if (before->status & STATUS_KUp){ /* look at previous bit */
 			/*SYSCALL invoked in user mode*/
 			if (suspend->handler[PGMTRAP]){

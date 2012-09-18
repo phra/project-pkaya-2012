@@ -117,87 +117,6 @@ void	p2(),p3(),p4(),p4bis(), p5(),p5a(),p5b(),p6(),p7(),p7a(),p5prog(),p5mm();
 void	p5sys(),p8root(),child1(),child2(),p8leaf();
 
 
-/* DA PHASE1 */
-
-#include "lib/utils.h"
-#define TRANSMITTED	5
-#define TRANSTATUS    2
-#define ACK	1
-#define PRINTCHR	2
-#define CHAROFFSET	8
-#define STATUSMASK	0xFF
-#define	TERM0ADDR	0x10000250
-#define DEVREGSIZE 16       
-#define READY     1
-#define DEVREGLEN   4
-#define TRANCOMMAND   3
-#define BUSY      3
-
-static U32 mytermstat(memaddr *stataddr) {
-	return((*stataddr) & STATUSMASK);
-}
-
-/* This function prints a string on specified terminal and returns TRUE if 
- * print was successful, FALSE if not   */
-static unsigned int mytermprint(char * str, unsigned int term) {
-
-	memaddr *statusp;
-	memaddr *commandp;
-	
-	U32 stat;
-	U32 cmd;
-	
-	unsigned int error = FALSE;
-	
-	if (term < DEV_PER_INT) {
-		/* terminal is correct */
-		/* compute device register field addresses */
-		statusp = (U32 *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANSTATUS * DEVREGLEN));
-		commandp = (U32 *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANCOMMAND * DEVREGLEN));
-		
-		/* test device status */
-		stat = mytermstat(statusp);
-		if ((stat == READY) || (stat == TRANSMITTED)) {
-			/* device is available */
-			
-			/* print cycle */
-			while ((*str != '\0') && (!error)) {
-				cmd = (*str << CHAROFFSET) | PRINTCHR;
-				*commandp = cmd;
-
-				/* busy waiting */
-				while ((stat = mytermstat(statusp)) == BUSY);
-				
-				/* end of wait */
-				if (stat != TRANSMITTED) {
-					error = TRUE;
-				} else {
-					/* move to next char */
-					str++;
-				}
-			}
-		}	else {
-			/* device is not available */
-			error = TRUE;
-		}
-	}	else {
-		/* wrong terminal device number */
-		error = TRUE;
-	}
-
-	return (!error);		
-}
-
-static void myprint(char *str1){
-        static char output[128];
-
-        strcpy(output, str1);
-        mytermprint(output,0);
-}
-
-/* END PHASE1 */
-
-
 /* a procedure to print on terminal 0 */
 void print(char *msg) {
 
@@ -215,10 +134,8 @@ void print(char *msg) {
 		/* Wait for I/O completion (SYS8) */
 		status = SYSCALL(WAITIO, INT_TERMINAL, 0, FALSE);
 		
-		if ((status & TERMSTATMASK) != TRANSM){
-			myprint("PRINTPANIC!");
+		if ((status & TERMSTATMASK) != TRANSM)
 			PANIC();
-		}
 
 		s++;	
 	}
@@ -230,7 +147,7 @@ void print(char *msg) {
 /*                                                                   */
 /*                 p1 -- the root process                            */
 /*                                                                   */
-void test() {
+void test() {	
 
 	SYSCALL(VERHOGEN, TESTSEM, 0, 0);					/* V(testsem)   */
 	SYSCALL(VERHOGEN, TERM_MUT, 0, 0);	
@@ -450,6 +367,7 @@ void p3() {
 
 	/* loop until we are delayed at least half of clock V interval */
 	while ((time2 - time1) < (CLOCKINTERVAL >> 1) )  {
+		//print("p3 - LOOP\n");
 		time1 = GET_TODLOW;			/* time of day     */
 		SYSCALL(WAITCLOCK, 0, 0, 0);
 		time2 = GET_TODLOW;			/* new time of day */
@@ -461,9 +379,9 @@ void p3() {
 	   time correctly */
 	cpu_t1 = SYSCALL(GETCPUTIME, 0, 0, 0);
 
-	for (i = 0; i < CLOCKLOOP; i++){
+	for (i = 0; i < CLOCKLOOP; i++)
 		SYSCALL(WAITCLOCK, 0, 0, 0);
-	}
+	
 	cpu_t2 = SYSCALL(GETCPUTIME, 0, 0, 0);
 
 	if ((cpu_t2 - cpu_t1) < (MINCLOCKLOOP / (* ((cpu_t *) BUS_TIMESCALE))))
@@ -593,12 +511,8 @@ void p5sys() {
 
 /* p5 -- SYS5 test process */
 void p5() {
-	state_t test;
-	STST(&test);
 	print("p5 starts\n");
-	/*if(test.status & 0x00000002) print("p5USERMODE\n");
-	else print("p5KERNELMODE\n");
-	if(test.status & 0x08000000) print("p5PLT\n");
+
 	/* set up higher level TRAP handlers (new areas) */
 	STST(&pstat_n);  /* pgmtrap new area */
 	pstat_n.pc_epc = pstat_n.reg_t9 = (memaddr)p5prog; /* pgmtrap exceptions */
@@ -638,10 +552,12 @@ void p5a() {
 /* second part of p5 - should be entered in user mode */
 void p5b() {
 	cpu_t		time1, time2;
+
 	SYSCALL(13, 0, 0, 0);
 	/* the first time through, we are in user mode */
 	/* and the P should generate a program trap */
 	SYSCALL(PASSEREN, ENDP4, 0, 0);			/* P(endp4)*/
+
 	/* do some delay to be reasonably sure p4 and its offspring are dead */
 	time1 = 0;
 	time2 = 0;

@@ -175,7 +175,7 @@ void wait_for_clock(void)
 	*/
 	int i=0;
 	pcb_t* suspend = currentproc[getPRID()];
-	//while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
+	
 	/*
 	for(;i<MAXPROC;i++){
 		if (wait_clock[i] == NULL){
@@ -185,9 +185,10 @@ void wait_for_clock(void)
 		}
 	}
 	* */
+	while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
 	
-	//CAS(&mutex_wait_clock,1,0);
 	softBlockCounter++;
+	CAS(&mutex_wait_clock,1,0);
 	_passerenclock(MAXPROC+MAX_DEVICES);
 	
 	return scheduler();

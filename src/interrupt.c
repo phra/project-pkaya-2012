@@ -89,7 +89,9 @@ void _passeren(int semkey){
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 	} else { /* wait */
 		//myprint("WAITIOBLOCCANTE\n");
+		while (!CAS(&mutex_wait_clock,0,1));
 		softBlockCounter += 1;
+		CAS(&mutex_wait_clock,0,1);
 		insertBlocked(semkey,suspend);
 		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
 		scheduler();

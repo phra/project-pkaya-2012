@@ -56,7 +56,7 @@ void inserisciprocessoready(pcb_t* pcb){
 
 void kill(pcb_t* target){
 	pcb_t* temp;
-	//myprintint("killo processo con PID",target->pid);
+	myprintint("killo processo con PID",target->pid);
 	PIDs[target->pid] = NULL;
 	currentproc[getPRID()] = NULL;
 	//myprintint("proccounter prima",processCounter);
@@ -109,20 +109,20 @@ void scheduler(void){
 	/*myprint("readyQ!\n");
 	stampalista(readyQ);
 	myprint("expiredQ!\n");
-	stampalista(expiredQ);
-	myprintint("processcounter",processCounter);*/
+	stampalista(expiredQ);*/
 	while (!CAS(&mutex_scheduler,0,1));
+	//myprintint("processcounter",processCounter);
 	//myprintint("SCHEDULER!",getPRID());
 	if (processCounter == 0) {
 				//stampasemafori(&semd_h);
-				myprint("scheduler: HALT!\n");
+				myprintint("scheduler: HALT!",getPRID());
 				CAS(&mutex_scheduler,1,0);
 				HALT();
 
 	}
 	if (!list_empty(readyQ)){
 		
-		//myprint("prendo da readyQ!\n");
+		//myprintint("prendo da readyQ!",getPRID());
 		pcb_t* next = removeProcQ(readyQ);
 		CAS(&mutex_scheduler,1,0);
 		currentproc[getPRID()] = next;
@@ -142,13 +142,20 @@ void scheduler(void){
 		return scheduler();
 
 	} else if ((processCounter > 0) && (softBlockCounter == 0) && (inactivecpu())) {
-				myprint("scheduler: PANIC!\n");
+				myprintint("scheduler: PANIC!",getPRID());
 				PANIC();
 
 	} else {
-				//myprint("scheduler: WAIT\n");
+				unsigned int status;
+				//myprintint("scheduler: WAIT",getPRID());
 				CAS(&mutex_scheduler,1,0);
-				setTIMER(100*SCHED_TIME_SLICE);
+				status = getSTATUS();
+				status |= STATUS_IEc;				/* Interrupt abilitati                 */
+				status |= STATUS_IEp;				/* Set also previous bit for LDST()    */
+				status |= STATUS_IEo;
+				status |= STATUS_INT_UNMASKED;
+				setSTATUS(status);
+				setTIMER(10*SCHED_TIME_SLICE);
 				WAIT();
 
 	}

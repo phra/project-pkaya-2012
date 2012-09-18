@@ -140,7 +140,7 @@ int PROVA = 0;
 int usedpid = 0;
 pcb_t* currentproc[MAXCPUs];
 pcb_t* PIDs[MAXPID];	/* un array di processi, 0 se e libero, altrimenti l'indirizzo del pcb*/
-pcb_t* wait_clock[MAXPROC];
+
 state_t* new_old_areas[MAXCPUs][8];
 state_t real_new_old_areas[MAXCPUs-1][8];
 
@@ -151,9 +151,14 @@ U32 mutex_wait_clock = 0;
 
 extern void test();
 
+/**waitclock
+pcb_t* wait_clock[MAXPROC];
 static inline void initWaitClock(void){
 	memset(wait_clock,0,MAXPROC*sizeof(pcb_t*));
 }
+*/
+
+
 
 static inline void initCurrentProcs(void){
 	memset(currentproc,0,MAXCPUs*sizeof(pcb_t*));
@@ -297,7 +302,7 @@ int main(void)
 	initPIDs();
 	initSchedQueue();
 	initCurrentProcs();
-	initWaitClock();
+	//initWaitClock();
 	initDevStatus();
 
 	/* Inizializzazione per ogni new area */
