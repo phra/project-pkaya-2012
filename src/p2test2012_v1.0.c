@@ -568,7 +568,6 @@ void p5b() {
 		time2 = GET_TODLOW;
 	}
 
-	print("p5 verhogen\n");
 	SYSCALL(VERHOGEN, ENDP5, 0, 0);			/* V(endp5) */
 
 	/* should cause a termination       */
