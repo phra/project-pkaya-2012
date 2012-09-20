@@ -285,7 +285,7 @@ void test() {
 
 	SYSCALL(CREATEPROCESS, (int)&p7state, DEFAULT_PRIORITY, 0);		/* start p7		*/
 
-	SYSCALL(PASSEREN, ENDP5, 0, 0);				  	/* P(endp5)		*/ 
+	SYSCALL(PASSEREN, ENDP5, 0, 0);				  	/* P(endp5)		*/
 
 	print("p1 knows p5 ended\n");
 
@@ -364,7 +364,7 @@ void p3() {
 
 	time1 = 0;
 	time2 = 0;
-
+	print("p3 starts\n");
 	/* loop until we are delayed at least half of clock V interval */
 	while ((time2 - time1) < (CLOCKINTERVAL >> 1) )  {
 		//print("p3 - LOOP\n");
@@ -412,6 +412,7 @@ void p4() {
   	SYSCALL(PASSEREN, SYNP4, 0, 0);				/* wait for it       */
   
 	print("p4 is OK\n");
+
 
 	SYSCALL(VERHOGEN, ENDP4, 0, 0);				/* V(endp4)          */
 
@@ -567,7 +568,7 @@ void p5b() {
 		time2 = GET_TODLOW;
 	}
 
-
+	print("p5 verhogen\n");
 	SYSCALL(VERHOGEN, ENDP5, 0, 0);			/* V(endp5) */
 
 	/* should cause a termination       */
@@ -584,7 +585,7 @@ void p5b() {
 /*p6 -- high level syscall without initializing trap vector*/
 void p6() {
 	print("p6 starts\n");
-
+	//SYSCALL(15,0,0,0);
 	SYSCALL(13, 0, 0, 0);		/* should cause termination because p6 has no 
 			  trap vector */
 
@@ -596,7 +597,7 @@ void p6() {
 /*p7 -- program trap without initializing passup vector*/
 void p7() {
 	print("p7 starts\n");
-
+	//SYSCALL(16,0,0,0);
 	* ((memaddr *) BADADDR) = 0;
 		
 	print("error: p7 alive after program trap with no trap vector\n");

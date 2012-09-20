@@ -117,6 +117,8 @@ void pgmtrap_handler(void){
 	}
 }
 
+void BREAK(void){};
+
 void sysbk_handler(void){
 
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
@@ -125,9 +127,24 @@ void sysbk_handler(void){
 	suspend->p_s = *before;
 	suspend->cpu_time += (GET_TODLOW - suspend->last_sched_time);
 	suspend->last_sched_time = GET_TODLOW;
+
+	
+
+	
 	if (CAUSE_EXCCODE_GET(before->cause) == 8){
 		/*SYSCALL*/
 		//myprintint("SYS",before->reg_a0); /*#PANIC #FIXME*/
+		if(before->reg_a0 > 12) {
+			if (suspend->handler[SYSBK]){
+				/*il processo ha definito un suo handler*/
+				*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space */
+				LDST(suspend->handler[SYSBK]);
+			} else {
+				//if (before->reg_a0 == 13) myprintint("syscall",before->reg_a0);
+				kill(suspend);
+				return scheduler();
+			}
+		}
 		if (before->status & STATUS_KUp){ /* look at previous bit */
 			/*SYSCALL invoked in user mode*/
 			if (suspend->handler[PGMTRAP]){
@@ -175,13 +192,39 @@ void sysbk_handler(void){
 			case SPECSYSVEC:
 				specify_sys_state_vector();
 				break;
+			case 14:
+				stampasemafori(&semd_h);
+				break;
+			case 15:
+				BREAK();
+				break;
+			case 16:
+				stampareadyq();
+				break;
+				/*
+			case 14:
+				stampasemafori(&semd_h);
+				break;
+			case 15:
+				BREAK();
+				break;
+			case 16:
+				stampareadyq();
+				break;
 			default:
+				
 				if (suspend->handler[SYSBK]){
-					/*il processo ha definito un suo handler*/
-					*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space */
+					/*il processo ha definito un suo handler
+					*(suspend->handler[SYSBK+3]) = *before; /* copy old area in user defined space 
 					LDST(suspend->handler[SYSBK]);
 				}
-				else kill(suspend);
+				else {
+					//if (before->reg_a0 == 13) myprintint("syscall",before->reg_a0);
+					kill(suspend);
+					return scheduler();}*/
+			default:
+				myprintint("SYSPANIC\n",before->reg_a0);
+				PANIC();
 		}
 	} else if (CAUSE_EXCCODE_GET(before->cause) == 9){
 		/*BREAKPOINT #FIXME */

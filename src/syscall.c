@@ -92,32 +92,33 @@ void verhogen(void){
 	pcb_t* next;
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
-	semd_t* sem = mygetSemd(semkey);
-	/*if((semkey == 8) || (semkey == 7) || (semkey == 9)){
+	semd_t* sem;
+	/*if((semkey == 6) || (semkey == 6)){
 		myprint("verhogen: semafori allocati:\n");
 		stampasemafori(&semd_h);
 		myprintint("V su semkey",semkey);
-		//myprint("prima della P\n");
-		//stampalista(readyQ);
-	}*/
+		myprint("prima della P\n");
+		stampareadyq();
+	}*7
 	if(!sem) myprint("da phuk: sem == NULL\n");
-	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
+	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
+	sem = mygetSemd(semkey);
 	//myprintint("s_value prima",sem->s_value);
 	sem->s_value++;
 	//myprintint("s_value dopo",sem->s_value);
 	//stampasemafori(&semd_h);
 	if (headBlocked(semkey)){ /* wake up someone! */
-		//myprint("svegliamo qualcuno.\n");
+		//if(semkey == 6) myprint("svegliamo qualcuno.ASDASDASDA\n");
 		next = removeBlocked(semkey);
-		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
+		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		inserisciprocessoready(next);
-		//myprint("readyQ!\n");
-		//stampalista(readyQ);
+		/*myprint("readyQ!\n");
+		stampareadyq();*/
 	} else {
 		//myprint("nessuno da svegliare.\n");
 		//myprint("readyQ!\n");
 		//stampalista(readyQ);
-		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
+		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 	}
 }
 
@@ -130,26 +131,27 @@ void passeren(void){
 	pcb_t* suspend = currentproc[getPRID()];
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
-	semd_t* sem = mygetSemd(semkey);
-	/*if((semkey == 8) || (semkey == 7) || (semkey == 9)){
+	semd_t* sem;
+	if((semkey == 27) || (semkey == 27)){
 		myprint("passeren: semafori allocati:\n");
 		stampasemafori(&semd_h);
 		myprintint("P su semkey",semkey);
 		//myprint("prima della P\n");
 		//stampalista(readyQ);
-	}*/
+	}
 	//myprinthex("che si trova all'indirizzo",sem);
-	while (!CAS(&mutex_semaphore[semkey],0,1)); /* critical section */
+	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
+	sem = mygetSemd(semkey);
 	//myprintint("s_value prima",sem->s_value);
 	sem->s_value--;
 	//myprintint("s_value dopo",sem->s_value);
 	//stampasemafori(&semd_h);
 	if (sem->s_value >= 0){ /* GO! */
-		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
+		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		LDST(&suspend->p_s);
 	} else { /* wait */
 		insertBlocked(semkey,suspend);
-		CAS(&mutex_semaphore[semkey],1,0); /* release mutex */
+		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		scheduler();
 	}
 }
@@ -234,7 +236,10 @@ void specify_prg_state_vector(void)
 		suspend->handler[PGMTRAP+3] = (state_t*)before->reg_a1;
 		suspend->handler[PGMTRAP] = (state_t*)before->reg_a2;
 		LDST(&suspend->p_s);
-	} else kill(suspend);
+	} else {
+		kill(suspend);
+		scheduler();
+	}
 }
 
 void specify_tlb_state_vector(void){
@@ -251,7 +256,10 @@ void specify_tlb_state_vector(void){
 		suspend->handler[TLB+3] = (state_t*)before->reg_a1;
 		suspend->handler[TLB] = (state_t*)before->reg_a2;
 		LDST(&suspend->p_s);
-	} else kill(suspend);
+	} else {
+		kill(suspend);
+		scheduler();
+	}
 }
 
 void specify_sys_state_vector(void){
@@ -268,5 +276,8 @@ void specify_sys_state_vector(void){
 		suspend->handler[SYSBK+3] = (state_t*)before->reg_a1;
 		suspend->handler[SYSBK] = (state_t*)before->reg_a2;
 		LDST(&suspend->p_s);
-	} else kill(suspend);
+	} else {
+		kill(suspend);
+		scheduler();
+	}
 }

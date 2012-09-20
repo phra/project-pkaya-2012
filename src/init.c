@@ -145,6 +145,7 @@ state_t* new_old_areas[MAXCPUs][8];
 state_t real_new_old_areas[MAXCPUs-1][8];
 
 U32 mutex_semaphore[MAXPROC+MAX_DEVICES+1];
+U32 mutex_semaphoreprova = 0;
 U32 mutex_scheduler = 0;
 U32 mutex_wait_clock = 0;
 

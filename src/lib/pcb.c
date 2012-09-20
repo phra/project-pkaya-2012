@@ -170,6 +170,7 @@ pcb_t *allocPcb(void){
 	/*inizializziamo le liste del processo*/
 	INIT_LIST_HEAD(&pcb_return->p_child);
 	INIT_LIST_HEAD(&pcb_return->p_sib);
+	pcb_return->p_semkey = -1;
 	return pcb_return;
 }
 

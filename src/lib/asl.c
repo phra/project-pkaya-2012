@@ -185,6 +185,7 @@ semd_t* mygetSemd(int key){
 			}
     }
 	//aslprintint("mygetsemd: alloco semaforo con key",key);
+	//if(key == 27) myprint("alloco sem 27\n");
     l_next = list_next(&semdFree_h);
 	list_del(l_next);
 	list_add(l_next,&semd_h);
@@ -241,6 +242,7 @@ pcb_t* removeBlocked(int key){
 		list_del(&semd_found->s_next);
 		list_add(&semd_found->s_next,&semdFree_h);
 	}
+	first_pcb->p_semkey = -1;
 	return first_pcb;
 }
 
@@ -255,9 +257,11 @@ pcb_t* outBlocked(pcb_t *p){
 	list_for_each_entry(item,&semd_found->s_procQ,p_next){
 		if(p == item){
 			list_del(&item->p_next);
+			item->p_semkey = -1;
 			return item;
 		}
 	}
+	p->p_semkey = -1;
 	return NULL;
 }
 /*
