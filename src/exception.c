@@ -100,7 +100,9 @@ void pgmtrap_handler(void){
 	before->pc_epc += WORD_SIZE;
 	suspend->p_s = *before;
 
-	myprint("PGMTRAP handler\n");
+	while (!CAS(&mutex_scheduler,0,1));
+	myprintint("PGMTRAP handler",getPRID());
+	CAS(&mutex_scheduler,1,0);
 	/*myprintint("processocounter",processCounter);
 	myprintint("softBlockCounter",softBlockCounter);
 	stampareadyq();*/

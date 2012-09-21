@@ -1,12 +1,13 @@
 /*
 memset(puntatore a void, valore da assegnare, quantità dei byte da scrivere): setta il valore val da *ptr a *ptr + len.
 */
-void memset(void *ptr, int val, unsigned int len){
-	int i;
+void inline memset(void *ptr, int val, unsigned int len){
+	register int i;
+	register int value = val;
 	/*puntatore a carattere perché ha 1 byte, quindi scrive val in ogni byte fino a p+len-1*/
-	char* p = (char*)ptr;
+	register char* p = (char*)ptr;
 	for (i = 0; i<len; i++) {
-		p[i]=(char)val;
+		p[i]=(char)value;
 	}
 }
 
@@ -27,10 +28,10 @@ int memcmp(void* ptr1, void* ptr2, int lenght){
 /*
  * memcpy(puntatore a void, puntatore a void, lunghezza da copiare): copia il contenuto binario di src in dest
  */
-void memcpy(void* dest, void* src, int lenght){
-	char* p1 = (char*)dest;
-	char* p2 = (char*)src;
-	int i = 0;
+void inline memcpy(void* dest, void* src, int lenght){
+	register char* p1 = (char*)dest;
+	register char* p2 = (char*)src;
+	register int i = 0;
 	for(;i<lenght;i++)
 		p1[i] = p2[i];
 }
@@ -74,9 +75,7 @@ void strcpy(char* dest, char* src){
 void strreverse(char* begin, char* end) {
 	
 	char aux;
-	
 	while(end>begin)
-	
 		aux=*end, *end--=*begin, *begin++=aux;
 	
 }
@@ -84,37 +83,20 @@ void strreverse(char* begin, char* end) {
 void itoa(int value, char* str, int base) {
 	
 	static char num[] = "0123456789abcdefghijklmnopqrstuvwxyz";
-	
 	char* wstr=str;
-	
 	int sign;
 	
-
-	
 	// Validate base
-	
 	if (base<2 || base>35){ *wstr='\0'; return; }
 	
-
-	
 	// Take care of sign
-	
 	if ((sign=value) < 0) value = -value;
-	
 
-	
 	// Conversion. Number is reversed.
-	
 	do *wstr++ = num[value%base]; while(value/=base);
-	
 	if(sign<0) *wstr++='-';
-	
 	*wstr='\0';
 	
-
-	
 	// Reverse string
-	
 	strreverse(str,wstr-1);
-	
 }
