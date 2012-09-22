@@ -21,8 +21,8 @@ void int_handler(void){
     state_t* before = (state_t*)new_old_areas[getPRID()][INT_OLD];
 	pcb_t* suspend = currentproc[getPRID()];
 
-	if (getPRID()) BREAK();
-	
+	//if (getPRID()) BREAK();
+
     /* Su quale linea c'è stato l'interrupt */
 	while((intline<=INT_TERMINAL) && (!(CAUSE_IP_GET(before->cause, intline)))){
 		intline++;          
@@ -31,7 +31,7 @@ void int_handler(void){
 	//stampalista(readyQ);
 	//myprint("expiredQ\n");
 	//stampalista(expiredQ);
-	//myprintint("INTERRUPT handler",intline);
+	myprintint("INTERRUPT handler",intline);
 	//myprintint("getTIMER()",getTIMER());
 	//myprint("");
 	if (intline == INT_PLT){/* in questo caso è scaduto il time slice */
@@ -62,7 +62,6 @@ void int_handler(void){
 			}
 		}
 		CAS(&mutex_wait_clock,1,0);*/
-
 		_verhogenclock(MAXPROC+MAX_DEVICES);
 		SET_IT(SCHED_PSEUDO_CLOCK);
 		//if (!currentproc[getPRID()]) scheduler();
@@ -70,8 +69,14 @@ void int_handler(void){
 		/*chiamo il gestore dei device, passandogli la linea su cui c'è stato l'interrupt*/
 		deviceHandler(intline);
 	}
-	if (currentproc[getPRID()]) LDST(before);
-	else scheduler();
+	if (currentproc[getPRID()]) {
+		myprint("interrupt handler: ldst\n");
+		LDST(before);
+	}
+	else {
+		myprint("interrupt handler: scheduler\n");
+		scheduler();
+	}
 }
 
 void tlb_handler(void){

@@ -216,7 +216,7 @@ void wait_for_io_device(void){
 
 	_passeren((line*(devno+1)+20)+rw);
 
-	before->reg_v0 = devstatus[line][devno+rw];
+	before->reg_v0 = devstatus[line-3][devno+rw];
 	devstatus[line][devno+rw] = 0;
 	LDST(before);
 }

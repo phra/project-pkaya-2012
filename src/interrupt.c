@@ -22,7 +22,7 @@
 
 U32 devstatus[DEV_USED_INTS][DEV_PER_INT];
 
-void _verhogen(int semkey, int* status){
+void _verhogen(int semkey, unsigned int* status){
 	/*
 		Quando invocata, la sys4 esegue una V sul semaforo con chiave semKey
 		Registro a1: chiave del semaforo su cui effettuare la V.
@@ -30,21 +30,29 @@ void _verhogen(int semkey, int* status){
 	
 	pcb_t* next;
 	semd_t* sem;
-	//myprintint("_verhogen su key",semkey);
+	myprintint("_verhogen su key",semkey);
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	//if (semkey == 27) myprint("_verhogen\n");
 	sem = mygetSemd(semkey);
 	
 	if (headBlocked(semkey)){ /* wake up someone! */
 		sem->s_value++; //FIXME
+		
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		next->p_s.reg_v0 = *status;
+		//myprintint("svegliamo qualcuno, sem->s_value",sem->s_value);
 		*status = 0;
+		//myprintint("svegliamo qualcuno, sem->s_value",sem->s_value);
+		myprintint("softBlockCounter",softBlockCounter);
 		while (!CAS(&mutex_wait_clock,0,1));
 		softBlockCounter--;
+		myprintint("softBlockCounter",softBlockCounter);
 		CAS(&mutex_wait_clock,1,0);
+		stampareadyq();
 		inserisciprocessoready(next);
+		
+		stampareadyq();
 	} else {
 		sem->s_value = 1;
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
@@ -68,7 +76,7 @@ void _passeren(int semkey){
 		//myprintint("WAITIO non BLOCCANTE SU SEMKEY",semkey);
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 	} else { /* wait */
-		//myprintint("WAITIOBLOCCANTE SU SEMKEY",semkey);
+		myprintint("WAITIOBLOCCANTE SU SEMKEY",semkey);
 		stampareadyq();
 		insertBlocked(semkey,suspend);
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
@@ -168,7 +176,7 @@ void deviceHandler(U32 intline){
 		termreg_t* terminal_requested = (termreg_t*)device_requested;
 		  //myprintint("mytermstat(*sendstatus)",mytermstat(sendstatus));
 		if (mytermstat(sendstatus) == DEV_TTRS_S_CHARTRSM) {
-			//myprint("CHARTRSM\n");
+			myprint("CHARTRSM\n");
 			*sendcommand = DEV_C_ACK;
 			status = DEV_TTRS_S_CHARTRSM;
 		} else if (mytermstat(recvstatus) == DEV_TRCV_S_CHARRECV) {
@@ -179,5 +187,5 @@ void deviceHandler(U32 intline){
 		}
 	}
 	devstatus[intline][i+rw] = status;
-	_verhogen((intline*(i+1)+20)+rw,&devstatus[intline][i+rw]);
+	_verhogen((intline*(i+1)+20)+rw,&devstatus[intline-3][i+rw]);
 }

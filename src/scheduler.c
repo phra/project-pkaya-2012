@@ -154,7 +154,7 @@ void scheduler(void){
 				CAS(&mutex_scheduler,1,0);
 				setTIMER(10*SCHED_TIME_SLICE);
 				status = getSTATUS();
-				//status |= STATUS_IEc;				/* Interrupt abilitati                 */
+				status |= STATUS_IEc;				/* Interrupt abilitati                 */
 				status |= STATUS_IEp;				/* Set also previous bit for LDST()    */
 				status |= STATUS_IEo;
 				status |= STATUS_INT_UNMASKED;

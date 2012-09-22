@@ -26,7 +26,7 @@
 extern U32 devstatus[DEV_USED_INTS][DEV_PER_INT];
 
 void deviceHandler(U32 intline);
-void _verhogen(int semkey, int* status);
+void _verhogen(int semkey, unsigned int* status);
 void _passeren(int semkey);
 void _verhogenclock(int semkey);
 void _passerenclock(int semkey);
