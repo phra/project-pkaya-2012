@@ -50,18 +50,6 @@ void int_handler(void){
 	} else if (intline == INT_TIMER){
 		//myprint("PSEUDOCLOCK!\n");
 		/*pseudoclock*/
-		int i=0;
-		/*
-		while (!CAS(&mutex_wait_clock,0,1));
-		for(;i<MAXPROC;i++){
-			myprintint("wait_clock[i]",wait_clock[i]);
-			if (wait_clock[i]) {
-				inserisciprocessoready(wait_clock[i]);
-				wait_clock[i] = NULL;
-				softBlockCounter--;
-			}
-		}
-		CAS(&mutex_wait_clock,1,0);*/
 		_verhogenclock(MAXPROC+MAX_DEVICES);
 		SET_IT(SCHED_PSEUDO_CLOCK);
 		//if (!currentproc[getPRID()]) scheduler();

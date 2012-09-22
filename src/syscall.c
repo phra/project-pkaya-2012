@@ -210,10 +210,9 @@ void wait_for_io_device(void){
 	int devno = before->reg_a2;
 	int rw = before->reg_a3;
 
-	while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
+	//while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
 	
-	CAS(&mutex_wait_clock,1,0);
-
+	//CAS(&mutex_wait_clock,1,0);
 	_passeren((line*(devno+1)+20)+rw);
 
 	before->reg_v0 = devstatus[line-3][devno+rw];

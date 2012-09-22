@@ -45,14 +45,12 @@ void _verhogen(int semkey, unsigned int* status){
 		*status = 0;
 		//myprintint("svegliamo qualcuno, sem->s_value",sem->s_value);
 		//myprintint("softBlockCounter",softBlockCounter);
+		BREAK();
 		while (!CAS(&mutex_wait_clock,0,1));
 		softBlockCounter--;
-		//myprintint("softBlockCounter",softBlockCounter);
 		CAS(&mutex_wait_clock,1,0);
 		//stampareadyq();
 		inserisciprocessoready(next);
-		
-		stampareadyq();
 	} else {
 		sem->s_value = 1;
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
@@ -82,7 +80,7 @@ void _passeren(int semkey){
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		while (!CAS(&mutex_wait_clock,0,1));
 		softBlockCounter += 1;
-		CAS(&mutex_wait_clock,0,1);
+		CAS(&mutex_wait_clock,1,0);
 		scheduler();
 	}
 }
@@ -115,20 +113,22 @@ void _verhogenclock(int semkey){
 	//if (semkey == 27) myprint("_verhogenclock\n");
 	//myprintint("_verhogenclock su semkey",semkey);
 	//myprinthex("all'indirizzo",sem);
+	int i = 0;
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	semd_t* sem = mygetSemd(semkey);
 	//myprintint("s_value",sem->s_value);
 	while (headBlocked(semkey)){ /* wake up someone! */
-		next = removeBlocked(semkey);
+		i++;
+		if ((next = removeBlocked(semkey)) == NULL) myprint("next == NULL");
 		//myprinthex("sblocco processo",next);
 		sem->s_value++;
-		while (!CAS(&mutex_wait_clock,0,1));
-		softBlockCounter--;
-		CAS(&mutex_wait_clock,1,0);
 		inserisciprocessoready(next);
 	}
 	//myprintint("s_value",sem->s_value);
 	CAS(&mutex_semaphoreprova,1,0); /* release mutex */
+	while (!CAS(&mutex_wait_clock,0,1));
+		softBlockCounter -= i;
+	CAS(&mutex_wait_clock,1,0);
 }
 
 /*Funzione per la gestione dei specifici device*/
