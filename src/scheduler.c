@@ -111,6 +111,8 @@ void scheduler(void){
 	stampalista(readyQ);
 	myprint("expiredQ!\n");
 	stampalista(expiredQ);*/
+	currentproc[getPRID()] = NULL;
+	//BREAK();
 	while (!CAS(&mutex_scheduler,0,1));
 	//myprintint("processcounter",processCounter);
 	//myprintint("SCHEDULER!",getPRID());
@@ -127,7 +129,7 @@ void scheduler(void){
 		pcb_t* next = removeProcQ(readyQ);
 		CAS(&mutex_scheduler,1,0);
 		currentproc[getPRID()] = next;
-		//myprinthex("currentPROC",currentproc[getPRID()]);
+		//myprintint("currentPROC",currentproc[getPRID()]->pid);
 		next->last_sched_time = GET_TODLOW;
 		setTIMER(SCHED_TIME_SLICE);
 		LDST(&next->p_s);
@@ -150,13 +152,14 @@ void scheduler(void){
 				unsigned int status;
 				//myprintint("scheduler: WAIT",getPRID());
 				CAS(&mutex_scheduler,1,0);
+				setTIMER(10*SCHED_TIME_SLICE);
 				status = getSTATUS();
-				status |= STATUS_IEc;				/* Interrupt abilitati                 */
+				//status |= STATUS_IEc;				/* Interrupt abilitati                 */
 				status |= STATUS_IEp;				/* Set also previous bit for LDST()    */
 				status |= STATUS_IEo;
 				status |= STATUS_INT_UNMASKED;
+				status |= STATUS_PLT;
 				setSTATUS(status);
-				setTIMER(10*SCHED_TIME_SLICE);
 				WAIT();
 
 	}

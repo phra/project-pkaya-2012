@@ -18,19 +18,19 @@
 #include "interrupt.h"
 
 
-#define MAXCPUs 1
+#define MAXCPUs 2
 #define MAXPID 128
 #define DEF_PRIORITY 5
 #define MAXPRINT 128
 
-#define INT_OLD 7
-#define INT_NEW 6
-#define TLB_OLD 5
-#define TLB_NEW 4
-#define PGMTRAP_OLD 3
-#define PGMTRAP_NEW 2
-#define SYSBK_OLD 1
-#define SYSBK_NEW 0
+#define INT_OLD 0
+#define INT_NEW 1
+#define TLB_OLD 2
+#define TLB_NEW 3
+#define PGMTRAP_OLD 4
+#define PGMTRAP_NEW 5
+#define SYSBK_OLD 6
+#define SYSBK_NEW 7
 
 
 #define TRANSMITTED	5

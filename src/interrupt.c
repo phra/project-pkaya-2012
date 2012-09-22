@@ -36,7 +36,7 @@ void _verhogen(int semkey, int* status){
 	sem = mygetSemd(semkey);
 	
 	if (headBlocked(semkey)){ /* wake up someone! */
-		sem->s_value = 0;
+		sem->s_value++; //FIXME
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		next->p_s.reg_v0 = *status;
@@ -49,33 +49,6 @@ void _verhogen(int semkey, int* status){
 		sem->s_value = 1;
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 	}
-}
-
-
-void _verhogenclock(int semkey){
-	/*
-		Quando invocata, la sys4 esegue una V sul semaforo con chiave semKey
-		Registro a1: chiave del semaforo su cui effettuare la V.
-	*/
-	
-	pcb_t* next;
-	if (semkey == 27) myprint("_verhogenclock\n");
-	//myprintint("_verhogenclock su semkey",semkey);
-	//myprinthex("all'indirizzo",sem);
-	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
-	semd_t* sem = mygetSemd(semkey);
-	//myprintint("s_value",sem->s_value);
-	while (!CAS(&mutex_wait_clock,0,1));
-	if (softBlockCounter > 0) softBlockCounter--;
-	CAS(&mutex_wait_clock,1,0);
-	while (headBlocked(semkey)){ /* wake up someone! */
-		next = removeBlocked(semkey);
-		//myprinthex("sblocco processo",next);
-		sem->s_value++;
-		inserisciprocessoready(next);
-	}
-	//myprintint("s_value",sem->s_value);
-	CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 }
 
 void _passeren(int semkey){
@@ -92,15 +65,16 @@ void _passeren(int semkey){
 	sem = mygetSemd(semkey);
 	sem->s_value -= 1;
 	if (sem->s_value >= 0){ /* GO! */
-		//myprint("WAITIO non BLOCCANTE\n");
+		//myprintint("WAITIO non BLOCCANTE SU SEMKEY",semkey);
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 	} else { /* wait */
-		//myprint("WAITIOBLOCCANTE\n");
+		//myprintint("WAITIOBLOCCANTE SU SEMKEY",semkey);
+		stampareadyq();
+		insertBlocked(semkey,suspend);
+		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		while (!CAS(&mutex_wait_clock,0,1));
 		softBlockCounter += 1;
 		CAS(&mutex_wait_clock,0,1);
-		insertBlocked(semkey,suspend);
-		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		scheduler();
 	}
 }
@@ -112,7 +86,7 @@ void _passerenclock(int semkey){
 	*/
 
 	pcb_t* suspend = currentproc[getPRID()];
-	if (semkey == 27) myprint("_passerenclock\n");
+	//if (semkey == 27) myprint("_passerenclock\n");
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	semd_t* sem = mygetSemd(semkey);
 	//myprintint("_passerenclock prima",sem->s_value);
@@ -120,6 +94,32 @@ void _passerenclock(int semkey){
 	//myprintint("_passerenclock dopo",sem->s_value);
 	insertBlocked(semkey,suspend);
 	currentproc[getPRID()] = NULL;
+	CAS(&mutex_semaphoreprova,1,0); /* release mutex */
+}
+
+void _verhogenclock(int semkey){
+	/*
+		Quando invocata, la sys4 esegue una V sul semaforo con chiave semKey
+		Registro a1: chiave del semaforo su cui effettuare la V.
+	*/
+	
+	pcb_t* next;
+	//if (semkey == 27) myprint("_verhogenclock\n");
+	//myprintint("_verhogenclock su semkey",semkey);
+	//myprinthex("all'indirizzo",sem);
+	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
+	semd_t* sem = mygetSemd(semkey);
+	//myprintint("s_value",sem->s_value);
+	while (!CAS(&mutex_wait_clock,0,1));
+	if (softBlockCounter > 0) softBlockCounter--;
+	CAS(&mutex_wait_clock,1,0);
+	while (headBlocked(semkey)){ /* wake up someone! */
+		next = removeBlocked(semkey);
+		//myprinthex("sblocco processo",next);
+		sem->s_value++;
+		inserisciprocessoready(next);
+	}
+	//myprintint("s_value",sem->s_value);
 	CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 }
 

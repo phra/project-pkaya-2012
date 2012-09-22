@@ -194,7 +194,7 @@ static inline void initPIDs(){
 
 /* INIZIALIZZAZIONE DI NEW AREA CON KU,IE e PLT SETTATI
    inizializza una new area puntata da addr con pc_epc puntato da pc */
-static void initNewArea(memaddr handler, state_t* addr){
+static void initNewArea(memaddr handler, state_t* addr, int numcpu){
 	int status = 0;
 	state_t* state = addr;
 	memset(state,0,sizeof(state_t));
@@ -209,7 +209,7 @@ static void initNewArea(memaddr handler, state_t* addr){
 	status &= ~STATUS_KUp;				/* Set also previous bit for LDST()    */
 	status &= ~STATUS_KUo;
 	state->status = status;
-	state->reg_sp = RAMTOP;
+	state->reg_sp = RAMTOP - numcpu*PAGE_SIZE;
 	state->pc_epc = state->reg_t9 = handler;
 }
 
@@ -254,10 +254,10 @@ static void initNewOldAreas(void){
 		new_old_areas[i][SYSBK_NEW] = &real_new_old_areas[i-1][SYSBK_NEW];
 	}
 	for (i=0;i<MAXCPUs;i++){
-		initNewArea((memaddr) int_handler, new_old_areas[i][INT_NEW]);
-		initNewArea((memaddr) tlb_handler, new_old_areas[i][TLB_NEW]);
-		initNewArea((memaddr) pgmtrap_handler, new_old_areas[i][PGMTRAP_NEW]);
-		initNewArea((memaddr) sysbk_handler, new_old_areas[i][SYSBK_NEW]);
+		initNewArea((memaddr) int_handler, new_old_areas[i][INT_NEW],i);
+		initNewArea((memaddr) tlb_handler, new_old_areas[i][TLB_NEW],i);
+		initNewArea((memaddr) pgmtrap_handler, new_old_areas[i][PGMTRAP_NEW],i);
+		initNewArea((memaddr) sysbk_handler, new_old_areas[i][SYSBK_NEW],i);
 	}
 }
 
@@ -265,17 +265,18 @@ static void initCpuStates(state_t* addr, int i){
 	int status = 0;
 	state_t* state = addr;
 	memset(state,0,sizeof(state_t));
-	status &= ~STATUS_IEc;				/* Interrupt non abilitati             */
-	status &= ~STATUS_IEp;				/* Set also previous bit for LDST()    */
+	/*status &= ~STATUS_IEc;				
+	status &= ~STATUS_IEp;				
 	status &= ~STATUS_IEo;
 	status &= ~STATUS_INT_UNMASKED;
-	status &= ~STATUS_VMc;				/* Virtual Memory OFF                  */
-	status &= ~STATUS_VMp;				/* Set also previous bit for LDST()    */
+	status &= ~STATUS_VMc;				
+	status &= ~STATUS_VMp;				
 	status &= ~STATUS_VMo;
-	status &= ~STATUS_KUc;				/* Kernel-Mode ON                      */
-	status &= ~STATUS_KUp;				/* Set also previous bit for LDST()    */
+	status &= ~STATUS_KUc;				
+	status &= ~STATUS_KUp;				
 	status &= ~STATUS_KUo;
-	state->status = status;
+	state->status = status;*/
+	state->status = getSTATUS();
 	state->reg_sp = RAMTOP - i*FRAME_SIZE;
 	state->pc_epc = state->reg_t9 = scheduler;
 }
@@ -286,7 +287,7 @@ static void initCPUs(void){
 	for(i=1;i<MAXCPUs;i++){
 		myprintint("inizializzo cpu",i);
 		initCpuStates(&now,i);
-		INITCPU(i,&now,new_old_areas[i]);
+		INITCPU(i,&now,new_old_areas[i][0]);
 	}
 }
 

@@ -1,7 +1,7 @@
 ARCH_PREFIX = mipsel-linux-
 
 CC = $(ARCH_PREFIX)gcc
-CFLAGS = -Wall -O1
+CFLAGS = -Wall
 
 LD = $(ARCH_PREFIX)ld
 LDADD1 = -T /usr/local/share/umps2/elf32ltsmip.h.umpscore.x /usr/local/lib/umps2/crtso.o p1test_pkaya_v1.1.o asl.o pcb.o utils.o /usr/local/lib/umps2/libumps.o
@@ -39,6 +39,9 @@ kernelphase2lab : p2test2012_v1.0.o init.o exception.o syscall.o scheduler.o int
 
 p2test2012_v1.0.o : p2test2012_v1.0.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c p2test2012_v1.0.c
+
+p2test2012_scalability_v1.0.o : p2test2012_scalability_v1.0.c $(INCLUDE)
+	$(CC) $(CFLAGS) -c p2test2012_scalability_v1.0.c
 
 init.o : init.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c init.c

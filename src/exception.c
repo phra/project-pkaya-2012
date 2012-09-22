@@ -20,6 +20,8 @@ void int_handler(void){
     int intline=INT_PLT;
     state_t* before = (state_t*)new_old_areas[getPRID()][INT_OLD];
 	pcb_t* suspend = currentproc[getPRID()];
+
+	if (getPRID()) BREAK();
 	
     /* Su quale linea c'è stato l'interrupt */
 	while((intline<=INT_TERMINAL) && (!(CAUSE_IP_GET(before->cause, intline)))){
