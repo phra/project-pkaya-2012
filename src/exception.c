@@ -31,7 +31,7 @@ void int_handler(void){
 	//stampalista(readyQ);
 	//myprint("expiredQ\n");
 	//stampalista(expiredQ);
-	myprintint("INTERRUPT handler",intline);
+	//myprintint("INTERRUPT handler",intline);
 	//myprintint("getTIMER()",getTIMER());
 	//myprint("");
 	if (intline == INT_PLT){/* in questo caso è scaduto il time slice */
@@ -70,11 +70,11 @@ void int_handler(void){
 		deviceHandler(intline);
 	}
 	if (currentproc[getPRID()]) {
-		myprint("interrupt handler: ldst\n");
+		//myprint("interrupt handler: ldst\n");
 		LDST(before);
 	}
 	else {
-		myprint("interrupt handler: scheduler\n");
+		//myprint("interrupt handler: scheduler\n");
 		scheduler();
 	}
 }

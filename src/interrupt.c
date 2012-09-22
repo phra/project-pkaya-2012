@@ -30,7 +30,7 @@ void _verhogen(int semkey, unsigned int* status){
 	
 	pcb_t* next;
 	semd_t* sem;
-	myprintint("_verhogen su key",semkey);
+	//myprintint("_verhogen su key",semkey);
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	//if (semkey == 27) myprint("_verhogen\n");
 	sem = mygetSemd(semkey);
@@ -44,12 +44,12 @@ void _verhogen(int semkey, unsigned int* status){
 		//myprintint("svegliamo qualcuno, sem->s_value",sem->s_value);
 		*status = 0;
 		//myprintint("svegliamo qualcuno, sem->s_value",sem->s_value);
-		myprintint("softBlockCounter",softBlockCounter);
+		//myprintint("softBlockCounter",softBlockCounter);
 		while (!CAS(&mutex_wait_clock,0,1));
 		softBlockCounter--;
-		myprintint("softBlockCounter",softBlockCounter);
+		//myprintint("softBlockCounter",softBlockCounter);
 		CAS(&mutex_wait_clock,1,0);
-		stampareadyq();
+		//stampareadyq();
 		inserisciprocessoready(next);
 		
 		stampareadyq();
@@ -76,8 +76,8 @@ void _passeren(int semkey){
 		//myprintint("WAITIO non BLOCCANTE SU SEMKEY",semkey);
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 	} else { /* wait */
-		myprintint("WAITIOBLOCCANTE SU SEMKEY",semkey);
-		stampareadyq();
+		//myprintint("WAITIOBLOCCANTE SU SEMKEY",semkey);
+		//stampareadyq();
 		insertBlocked(semkey,suspend);
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		while (!CAS(&mutex_wait_clock,0,1));
@@ -118,13 +118,13 @@ void _verhogenclock(int semkey){
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	semd_t* sem = mygetSemd(semkey);
 	//myprintint("s_value",sem->s_value);
-	while (!CAS(&mutex_wait_clock,0,1));
-	if (softBlockCounter > 0) softBlockCounter--;
-	CAS(&mutex_wait_clock,1,0);
 	while (headBlocked(semkey)){ /* wake up someone! */
 		next = removeBlocked(semkey);
 		//myprinthex("sblocco processo",next);
 		sem->s_value++;
+		while (!CAS(&mutex_wait_clock,0,1));
+		softBlockCounter--;
+		CAS(&mutex_wait_clock,1,0);
 		inserisciprocessoready(next);
 	}
 	//myprintint("s_value",sem->s_value);
@@ -176,16 +176,16 @@ void deviceHandler(U32 intline){
 		termreg_t* terminal_requested = (termreg_t*)device_requested;
 		  //myprintint("mytermstat(*sendstatus)",mytermstat(sendstatus));
 		if (mytermstat(sendstatus) == DEV_TTRS_S_CHARTRSM) {
-			myprint("CHARTRSM\n");
+			//myprint("CHARTRSM\n");
+			status = *sendstatus;
 			*sendcommand = DEV_C_ACK;
-			status = DEV_TTRS_S_CHARTRSM;
 		} else if (mytermstat(recvstatus) == DEV_TRCV_S_CHARRECV) {
 			//myprint("CHARRECV\n");
+			status = *recvstatus;
 			*recvcommand = DEV_C_ACK;
-			status = DEV_TRCV_S_CHARRECV;
 			rw = 1;
 		}
 	}
-	devstatus[intline][i+rw] = status;
+	devstatus[intline-3][i+rw] = status;
 	_verhogen((intline*(i+1)+20)+rw,&devstatus[intline-3][i+rw]);
 }
