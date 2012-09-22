@@ -100,6 +100,7 @@ pcb_t* allocaPcb(int priority){
 
 static int inactivecpu(void){
 	int i = 0;
+	return 0;
 	for(;i<MAXCPUs;i++){
 		if (currentproc[i] != NULL) return 0;
 	}
@@ -145,7 +146,8 @@ void scheduler(void){
 		return scheduler();
 
 	} else if ((processCounter > 0) && (softBlockCounter == 0) && (inactivecpu())) {
-				myprintint("scheduler: PANIC!",getPRID());
+				//CAS(&mutex_scheduler,1,0);
+				myprintint("\nscheduler: PANIC!",getPRID());
 				PANIC();
 
 	} else {

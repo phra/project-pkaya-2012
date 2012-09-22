@@ -318,7 +318,7 @@ int main(void)
 	inserisciprocessoready(p1);
 	myprinthex("indirizzo PCB test",p1);
 	initCPUs();
-	//sleep(5000);
+	sleep(5000);
 	SET_IT(SCHED_PSEUDO_CLOCK);
 	scheduler();						/*Richiamo lo scheduler*/
 
