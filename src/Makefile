@@ -1,7 +1,7 @@
 ARCH_PREFIX = mipsel-linux-
 
 CC = $(ARCH_PREFIX)gcc
-CFLAGS = -O2 -fno-builtin
+CFLAGS = -fno-builtin
 
 LD = $(ARCH_PREFIX)ld
 LDADD1 = -T /usr/local/share/umps2/elf32ltsmip.h.umpscore.x /usr/local/lib/umps2/crtso.o p1test_pkaya_v1.1.o asl.o pcb.o utils.o /usr/local/lib/umps2/libumps.o
