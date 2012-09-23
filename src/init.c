@@ -115,30 +115,86 @@ void sleep(int count){
 /*END DEBUG*/
 
 /*Inizializzazione variabili del kernel*/
-int processCounter 	 = 0;	/* Contatore processi */
+/**
+ * \var processCounter
+ * \brief contatore dei processi
+ */
+int processCounter = 0;	/* Contatore processi */
+
+/**
+ * \var softBlockCounter 
+ * \brief Contatore processi bloccati per I/O
+ */
 int softBlockCounter = 0;	/* Contatore processi bloccati per I/O */
-int readyproc = 0;
-int PROVA = 0;
+
+/**
+ * \var usedpid 	
+ * \brief Per tenere conto dei pid assegnati
+ */
 int usedpid = 0;
+
+/**
+ * \var currentproc
+ * \brief Puntatori ai processi attualmente in esecuzione
+ */
 pcb_t* currentproc[MAXCPUs];
+
+/**
+ * \var PIDs
+ * \brief un array per tenere conto dei pid assegnati, null se è libero, altrimenti l'indirizzo del pcb
+ */
 pcb_t* PIDs[MAXPID];	/* un array di processi, 0 se e libero, altrimenti l'indirizzo del pcb*/
 
+/**
+ * \var new_old_areas
+ * \brief Tabella generale per le new/old areas, in modo da avere un'unica tabella per tutti i processori.
+ */
 state_t* new_old_areas[MAXCPUs][8];
+
+/**
+ * \var real_new_old_areas
+ * \brief new/old area reali dei processori 1..n che le hanno sullo stack 
+ */
 state_t real_new_old_areas[MAXCPUs-1][8];
 
+/**
+ * \var mutex_semaphore
+ * \brief  interi per la Test&Set dei semafori e dei device
+ */
 U32 mutex_semaphore[MAXPROC+MAX_DEVICES+1];
+
+/**
+ * \var mutex_semaphoreprova
+ * \brief  
+ */
 U32 mutex_semaphoreprova = 0;
+
+/**
+* \var mutex_scheduler
+* \brief
+*/
 U32 mutex_scheduler = 0;
+
+/**
+* \var mutex_wait_clock
+* \brief
+*/
 U32 mutex_wait_clock = 0;
 
 
 extern void test();
 
-
+/**
+ * funzione per inizializzare l'array dei processi correnti
+ */
 static inline void initCurrentProcs(void){
 	memset(currentproc,0,MAXCPUs*sizeof(pcb_t*));
 }
 
+/**
+ * funzione per inizializzare i semafori dell'ASL
+ * \param value valore a cui inizializzare i semafori
+ */
 static inline void initSemaphoreASL(int value){
 	int i = 0;
 	for (;i<MAXPROC+MAX_DEVICES;i++){
@@ -147,27 +203,44 @@ static inline void initSemaphoreASL(int value){
 	}
 }
 
+/**
+ * funzione per inizializzare i semafori per la mutua esclusione
+ * \param value valore a cui inizializzare i semafori
+ */
 static inline void initMutexSemaphore(int value){
 	int i = 0;
 	for (;i<MAXPROC+MAX_DEVICES;i++)
 		 mutex_semaphore[i] = value;
 }
 
+/**
+ * funzione per inizializzare la tabella per gestire gli interrupt
+ */
 static inline void initDevStatus(void){
 	memset(devstatus,0,DEV_USED_INTS*DEV_PER_INT*sizeof(U32));
 }
 
+/**
+ * funzione per inizializzare le code dello scheduler
+ */
 static inline void initSchedQueue(void){
 	INIT_LIST_HEAD(readyQ);
 	INIT_LIST_HEAD(expiredQ);
 }
 
+/**
+ * funzione per inizializzare i pid
+ */
 static inline void initPIDs(){
 	memset(PIDs,0,MAXPID*sizeof(pcb_t*));
 }
 
-/* INIZIALIZZAZIONE DI NEW AREA CON KU,IE e PLT SETTATI
-   inizializza una new area puntata da addr con pc_epc puntato da pc */
+/**
+ * funzione per inizializzare le new areas
+ * \param handler indirizzo della funzione da eseguire
+ * \param addr indirizzo della new area
+ * Bisogna settare i bit precedenti IE/KU/VM nella new area, poiché la LDST fa una pop su questi bit
+ */
 static void initNewArea(memaddr handler, state_t* addr, int numcpu){
 	int status = 0;
 	state_t* state = addr;
@@ -187,6 +260,10 @@ static void initNewArea(memaddr handler, state_t* addr, int numcpu){
 	state->pc_epc = state->reg_t9 = handler;
 }
 
+/**
+ * funzione per inizializzare lo stato del Test
+ * \param addr indirizzo dello state del test
+ */
 static void initTest(state_t* addr){
 	int status = 0;
 	state_t* state = addr;
@@ -207,6 +284,9 @@ static void initTest(state_t* addr){
 	state->pc_epc = state->reg_t9 = (memaddr)test;
 }
 
+/**
+ * funzione per inizializzare le new/old areas
+ */
 static void initNewOldAreas(void){
 	int i;
 	new_old_areas[0][INT_OLD] = (state_t*)INT_OLDAREA;
@@ -235,6 +315,11 @@ static void initNewOldAreas(void){
 	}
 }
 
+/**
+ * funzione per inizializzare lo stato della CPU
+ * \param addr indirizzo dello stato da inizializzare
+ * \param i numero del processore
+ */
 static void initCpuStates(state_t* addr, int i){
 	int status = 0;
 	state_t* state = addr;
@@ -244,6 +329,9 @@ static void initCpuStates(state_t* addr, int i){
 	state->pc_epc = state->reg_t9 = (memaddr)scheduler;
 }
 
+/**
+ * funzione per inizializzare le CPU
+ */
 static void initCPUs(void){
 	state_t now;
 	int i;
@@ -253,6 +341,10 @@ static void initCPUs(void){
 	}
 }
 
+/**
+ * Entry point dal Kernel
+ * \return 0
+ */
 int main(void)
 {	
 	pcb_t* p1 = NULL;

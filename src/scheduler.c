@@ -14,11 +14,34 @@
 #include "exception.h"
 #include "syscall.h"
 
+/**
+ * \var readyQueue;
+ * sentinella della ready queue
+ */
 struct list_head readyQueue;
+
+/**
+ * \var readyQueue;
+ * sentinella della ready queue
+ */
 struct list_head expiredQueue;
+
+/**
+ * \var readyQ;
+ * puntatore alla sentinella della ready queue
+ */
 struct list_head* readyQ = &readyQueue;
+
+/**
+ * \var expiredQ;
+ * puntatore alla sentinella della expired queue
+ */
 struct list_head* expiredQ = &expiredQueue;
 
+/**
+ * funzione per assegnare il pid
+ * \return un intero che rappresenta il pid
+ */
 int pigliapid(void){
 	int i = usedpid;
 	while (PIDs[i] != 0)
@@ -27,18 +50,30 @@ int pigliapid(void){
 	return i;
 }
 
+/**
+ * funzione per inserire un processo nella lista expired
+ * \param pcb indirizzo del processo
+ */
 void inserisciprocessoexpired(pcb_t* pcb){
 	while (!CAS(&mutex_scheduler,0,1));
 	insertProcQ(expiredQ,pcb);
 	CAS(&mutex_scheduler,1,0);
 }
 
+/**
+ * funzione per inserire un processo nella lista ready
+ * \param pcb indirizzo del processo
+ */
 void inserisciprocessoready(pcb_t* pcb){
 	while (!CAS(&mutex_scheduler,0,1));
 	insertProcQ(readyQ,pcb);
 	CAS(&mutex_scheduler,1,0);
 }
 
+/**
+ * funzione per uccidere un processo e tutti i figli e li rimuove da eventuali semafori
+ * \param target indirizzo del processo
+ */
 void kill(pcb_t* target){
 	pcb_t* temp;
 	PIDs[target->pid] = NULL;
@@ -74,7 +109,11 @@ void kill(pcb_t* target){
 	}
 }
 
-/* alloca Pcb ed assegna il pid e la priorita' ai processi */  
+/**
+ * funzione per alloca Pcb ed assegna il pid e la priorita' ai processi
+ * \param priority priorità del processo
+ * \return l'indirizzo del pcb allocato oppure Null
+ */ 
 pcb_t* allocaPcb(int priority){
 	while (!CAS(&mutex_scheduler,0,1));
 	pcb_t* pcb = allocPcb();
@@ -92,6 +131,10 @@ pcb_t* allocaPcb(int priority){
 	return pcb;
 }
 
+/**
+ * funzione per verificare se tutte le CPU sono inattive
+ * \return 0 se almeno una CPU è attiva, altrimenti 1.
+ */
 static int inactivecpu(void){
 	int i = 0;
 	return 0;
@@ -101,6 +144,9 @@ static int inactivecpu(void){
 	return 1;
 }
 
+/**
+ * the scheduler
+ */
 void scheduler(void){
 	while (!CAS(&mutex_scheduler,0,1));
 	currentproc[getPRID()] = NULL;
