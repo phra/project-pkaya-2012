@@ -584,7 +584,6 @@ void p5b() {
 /*p6 -- high level syscall without initializing trap vector*/
 void p6() {
 	print("p6 starts\n");
-	//SYSCALL(15,0,0,0);
 	SYSCALL(13, 0, 0, 0);		/* should cause termination because p6 has no 
 			  trap vector */
 
@@ -596,7 +595,6 @@ void p6() {
 /*p7 -- program trap without initializing passup vector*/
 void p7() {
 	print("p7 starts\n");
-	//SYSCALL(16,0,0,0);
 	* ((memaddr *) BADADDR) = 0;
 		
 	print("error: p7 alive after program trap with no trap vector\n");

@@ -205,7 +205,6 @@ void test() {
 	for (i=0; i<NUMPROC; i++){
 
 		// Wait the termination of all the processes
-		//print(" test1 LOOP \n");
 		SYSCALL(PASSEREN, ENDCPU, 0, 0);
 	}
 	time_test1end=GET_TODLOW;
