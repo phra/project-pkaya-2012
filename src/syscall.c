@@ -100,7 +100,6 @@ void verhogen(void){
 		myprint("prima della P\n");
 		stampareadyq();
 	}*/
-	if(!sem) myprint("da phuk: sem == NULL\n");*/
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	sem = mygetSemd(semkey);
 	//myprintint("s_value prima",sem->s_value);
