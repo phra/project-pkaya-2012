@@ -56,11 +56,8 @@ void inserisciprocessoready(pcb_t* pcb){
 
 void kill(pcb_t* target){
 	pcb_t* temp;
-	//myprintint("killo processo con PID",target->pid);
 	PIDs[target->pid] = NULL;
 	currentproc[getPRID()] = NULL;
-	//myprintint("proccounter prima",processCounter);
-	//myprintint("proccounter dopo",processCounter);
 	while(temp = removeChild(target)){
 		kill(temp);
 	}
@@ -81,7 +78,6 @@ void kill(pcb_t* target){
 		
 		if (target->p_semkey != -1){
 			semd_t* block;
-			//myprintint("processo da killare su semkey",target->p_semkey);
 			while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 			if (block = getSemd(target->p_semkey)){
 				block->s_value++;
@@ -121,29 +117,15 @@ static int inactivecpu(void){
 }
 
 void scheduler(void){
-	/*myprint("readyQ!\n");
-	stampalista(readyQ);
-	myprint("expiredQ!\n");
-	stampalista(expiredQ);*/
-	//BREAK();
 	while (!CAS(&mutex_scheduler,0,1));
 	currentproc[getPRID()] = NULL;
-	//myprintint("processcounter",processCounter);
-	//myprintint("SCHEDULER!",getPRID());
 	if (processCounter == 0) {
-				//stampasemafori(&semd_h);
-				//myprintint("scheduler: HALT!",getPRID());
-				//CAS(&mutex_scheduler,1,0);
 				HALT();
-
 	}
 	if (!list_empty(readyQ)){
-		
-		//myprintint("prendo da readyQ!",getPRID());
 		pcb_t* next = removeProcQ(readyQ);
 		CAS(&mutex_scheduler,1,0);
 		currentproc[getPRID()] = next;
-		//myprintint("currentPROC",currentproc[getPRID()]->pid);
 		next->last_sched_time = GET_TODLOW;
 		setTIMER(SCHED_TIME_SLICE);
 		LDST(&next->p_s);
@@ -151,7 +133,6 @@ void scheduler(void){
 	} else if (!list_empty(expiredQ)){
 
 		/*scambio le due liste per evitare starvation*/
-		//myprint("scambioleliste!\n");
 		struct list_head* temp = expiredQ;
 		expiredQ = readyQ;
 		readyQ = temp;
@@ -159,13 +140,11 @@ void scheduler(void){
 		return scheduler();
 
 	} else if ((processCounter > 0) && (softBlockCounter == 0) && (inactivecpu())) {
-				//CAS(&mutex_scheduler,1,0);
 				myprintint("\nscheduler: PANIC!",getPRID());
 				PANIC();
 
 	} else {
 				unsigned int status;
-				//myprintint("scheduler: WAIT",getPRID());
 				CAS(&mutex_scheduler,1,0);
 				setTIMER(10*SCHED_TIME_SLICE);
 				status = getSTATUS();

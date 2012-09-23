@@ -19,5 +19,4 @@ void initASL(void);
 extern struct list_head semd_h;
 extern semd_t semd_table[MAXPROC];
 extern struct list_head semdFree_h;
-void stampasemafori(struct list_head* head);
 #endif

@@ -21,125 +21,6 @@
 #define TRANSTATUS    2
 #define TRANCOMMAND   3
 
-
-static U32 mytermstat(memaddr *stataddr) {
-	return((*stataddr) & STATUSMASK);
-}
-
-/* This function prints a string on specified terminal and returns TRUE if 
- * print was successful, FALSE if not   */
-static unsigned int mytermprint(char * str, unsigned int term) {
-
-	memaddr *statusp;
-	memaddr *commandp;
-	
-	U32 stat;
-	U32 cmd;
-	
-	unsigned int error = FALSE;
-	
-	if (term < DEV_PER_INT) {
-		/* terminal is correct */
-		/* compute device register field addresses */
-		statusp = (U32 *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANSTATUS * DEVREGLEN));
-		commandp = (U32 *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANCOMMAND * DEVREGLEN));
-		
-		/* test device status */
-		stat = mytermstat(statusp);
-		if ((stat == READY) || (stat == TRANSMITTED)) {
-			/* device is available */
-			
-			/* print cycle */
-			while ((*str != '\0') && (!error)) {
-				cmd = (*str << CHAROFFSET) | PRINTCHR;
-				*commandp = cmd;
-
-				/* busy waiting */
-				while ((stat = mytermstat(statusp)) == BUSY);
-				
-				/* end of wait */
-				if (stat != TRANSMITTED) {
-					error = TRUE;
-				} else {
-					/* move to next char */
-					str++;
-				}
-			}
-		}	else {
-			/* device is not available */
-			error = TRUE;
-		}
-	}	else {
-		/* wrong terminal device number */
-		error = TRUE;
-	}
-
-	return (!error);		
-}
-
-static void aslprint(char *str1){
-        static char output[128];
-
-        strcpy(output, str1);
-        mytermprint(output,0);
-}
-
-static void aslprintint(char *str1, int numero){
-		static char intero[30];
-
-       /* strcpy(output + 1, str1); //#FIXME
-        strcpy(output + strlen(str1) + 1, " -> ");
-        strcpy(output + strlen(str1) + 3, str2);
-        strcpy(output, "\n");*/
-
-        aslprint(str1);
-        aslprint(" -> ");
-        itoa(numero,intero,10);
-        aslprint(intero);
-        aslprint("\n");
-}
-
-static void aslprintbin(char *str1, int numero){
-		static char intero[64];
-
-       /* strcpy(output + 1, str1); //#FIXME
-        strcpy(output + strlen(str1) + 1, " -> ");
-        strcpy(output + strlen(str1) + 3, str2);
-        strcpy(output, "\n");*/
-
-        aslprint(str1);
-        aslprint(" -> ");
-        itoa(numero,intero,2);
-        aslprint(intero);
-        aslprint("\n");
-}
-
-static void aslprinthex(char *str1, int numero){
-		static char intero[64];
-
-       /* strcpy(output + 1, str1); //#FIXME
-        strcpy(output + strlen(str1) + 1, " -> ");
-        strcpy(output + strlen(str1) + 3, str2);
-        strcpy(output, "\n");*/
-
-        aslprint(str1);
-        aslprint(" -> 0x");
-        itoa(numero,intero,16);
-        aslprint(intero);
-        aslprint("\n");
-}
-
-void stampasemafori(struct list_head* head){
-	semd_t* item;
-	aslprint("semafori allocati:\n");
-	list_for_each_entry(item,head,s_next){
-		aslprintint("semaforo attivo con key",item->s_key);
-		aslprintint("con s_value",item->s_value);
-		aslprinthex("che si trova all'indirizzo",item);
-    }
-}
-
-
 semd_t semd_table[MAXPROC+MAX_DEVICES+1];
 struct list_head semdFree_h;
 struct list_head semd_h;
@@ -180,12 +61,9 @@ semd_t* mygetSemd(int key){
 	struct list_head* l_next;
 	list_for_each_entry(item,&semd_h,s_next){
 			if(item->s_key == key){
-				//aslprintint("mygetsemd: trovato semaforo attivo con key",key);
 				return item;
 			}
     }
-	//aslprintint("mygetsemd: alloco semaforo con key",key);
-	//if(key == 27) myprint("alloco sem 27\n");
     l_next = list_next(&semdFree_h);
 	list_del(l_next);
 	list_add(l_next,&semd_h);

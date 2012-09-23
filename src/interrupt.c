@@ -30,26 +30,20 @@ void _verhogen(int semkey, unsigned int* status){
 	
 	pcb_t* next;
 	semd_t* sem;
-	//myprintint("_verhogen su key",semkey);
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
-	//if (semkey == 27) myprint("_verhogen\n");
 	sem = mygetSemd(semkey);
 	
 	if (headBlocked(semkey)){ /* wake up someone! */
-		sem->s_value++; //FIXME
+		sem->s_value++;
 		
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		next->p_s.reg_v0 = *status;
-		//myprintint("svegliamo qualcuno, sem->s_value",sem->s_value);
 		*status = 0;
-		//myprintint("svegliamo qualcuno, sem->s_value",sem->s_value);
-		//myprintint("softBlockCounter",softBlockCounter);
 		BREAK();
 		while (!CAS(&mutex_wait_clock,0,1));
 		softBlockCounter--;
 		CAS(&mutex_wait_clock,1,0);
-		//stampareadyq();
 		inserisciprocessoready(next);
 	} else {
 		sem->s_value = 1;
@@ -65,17 +59,12 @@ void _passeren(int semkey){
 
 	pcb_t* suspend = currentproc[getPRID()];
 	semd_t* sem;
-	//if (semkey == 27) myprint("_passeren\n");
-	//myprintint("_passeren su key",semkey);
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	sem = mygetSemd(semkey);
 	sem->s_value -= 1;
 	if (sem->s_value >= 0){ /* GO! */
-		//myprintint("WAITIO non BLOCCANTE SU SEMKEY",semkey);
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 	} else { /* wait */
-		//myprintint("WAITIOBLOCCANTE SU SEMKEY",semkey);
-		//stampareadyq();
 		insertBlocked(semkey,suspend);
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		while (!CAS(&mutex_wait_clock,0,1));
@@ -92,14 +81,10 @@ void _passerenclock(int semkey){
 	*/
 
 	pcb_t* suspend = currentproc[getPRID()];
-	//if (semkey == 27) myprint("_passerenclock\n");
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	semd_t* sem = mygetSemd(semkey);
-	//myprintint("_passerenclock prima",sem->s_value);
 	sem->s_value -= 1;
-	//myprintint("_passerenclock dopo",sem->s_value);
 	insertBlocked(semkey,suspend);
-	//currentproc[getPRID()] = NULL;
 	CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 	suspend->p_semkey = semkey;
 	while (!CAS(&mutex_wait_clock,0,1));
@@ -114,21 +99,15 @@ void _verhogenclock(int semkey){
 	*/
 	
 	pcb_t* next;
-	//if (semkey == 27) myprint("_verhogenclock\n");
-	//myprintint("_verhogenclock su semkey",semkey);
-	//myprinthex("all'indirizzo",sem);
 	int i = 0;
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	semd_t* sem = mygetSemd(semkey);
-	//myprintint("s_value",sem->s_value);
 	while (headBlocked(semkey)){ /* wake up someone! */
 		i++;
 		if ((next = removeBlocked(semkey)) == NULL) myprint("next == NULL");
-		//myprinthex("sblocco processo",next);
 		sem->s_value++;
 		inserisciprocessoready(next);
 	}
-	//myprintint("s_value",sem->s_value);
 	CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 	while (!CAS(&mutex_wait_clock,0,1));
 		softBlockCounter -= i;
@@ -152,39 +131,19 @@ void deviceHandler(U32 intline){
 			break;	
 		bitmap >>= 1;
 	}
-	//myprintint("numero device",i);
-    /*ricavo il registro del device richiesto*/
     device_requested = devBaseAddrCalc(intline,i);
-    //myprinthex("device_requested",device_requested);
-    //myprinthex("indirizzo teorico term0",DEV_REGS_START + (intline * 0x80));
 
     /*ACK*/
     if(intline != INT_TERMINAL){ /*non è sulla linea del terminale*/
         device_requested->command = DEV_C_ACK;
         status = device_requested->status;
     } else {
-	/*
-		termreg_t* terminal_requested = (termreg_t*)device_requested;
-		
-		if (terminal_requested->transm_status == DEV_TTRS_S_CHARTRSM) {
-			myprint("CHARTRSM\n");
-			terminal_requested->transm_command = DEV_C_ACK;
-			status = DEV_TTRS_S_CHARTRSM;
-		} else if (terminal_requested->recv_status == DEV_TRCV_S_CHARRECV) {
-			myprint("CHARRECV\n");
-			terminal_requested->recv_command = DEV_C_ACK;
-			status = DEV_TRCV_S_CHARRECV;
-			rw = 1;
-		}*/
 
 		termreg_t* terminal_requested = (termreg_t*)device_requested;
-		  //myprintint("mytermstat(*sendstatus)",mytermstat(sendstatus));
 		if (mytermstat(sendstatus) == DEV_TTRS_S_CHARTRSM) {
-			//myprint("CHARTRSM\n");
 			status = *sendstatus;
 			*sendcommand = DEV_C_ACK;
 		} else if (mytermstat(recvstatus) == DEV_TRCV_S_CHARRECV) {
-			//myprint("CHARRECV\n");
 			status = *recvstatus;
 			*recvcommand = DEV_C_ACK;
 			rw = 1;

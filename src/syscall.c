@@ -34,14 +34,7 @@ void create_process(void){
 		son->p_s = *((state_t*)before->reg_a1);
 		while (!CAS(&mutex_scheduler,0,1));
 		insertChild(suspend,son);
-		/*
-		myprinthex("alloco processo figlio con indirizzo",son);
-		myprintint("con PID",son->pid);
-		myprint("prima dell'inserimento\n");
-		stampalista(readyQ);*/
 		insertProcQ(readyQ,son);
-		//myprint("dopo l'inserimento\n");
-		//stampalista(readyQ);
 		CAS(&mutex_scheduler,1,0);
 		before->reg_v0 = 0;
 	} else {
@@ -67,7 +60,7 @@ void create_brother(void){
 	if (bro = allocaPcb(before->reg_a2)){
 		bro->p_s = *((state_t*)before->reg_a1);
 		while (!CAS(&mutex_scheduler,0,1));
-		insertChild(father,bro);  //#FIXME
+		insertChild(father,bro);
 		insertProcQ(readyQ,bro);
 		CAS(&mutex_scheduler,1,0);
 		before->reg_v0 = 0;
@@ -93,30 +86,14 @@ void verhogen(void){
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
 	semd_t* sem;
-	/*if((semkey == 6) || (semkey == 6)){
-		myprint("verhogen: semafori allocati:\n");
-		stampasemafori(&semd_h);
-		myprintint("V su semkey",semkey);
-		myprint("prima della P\n");
-		stampareadyq();
-	}*/
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	sem = mygetSemd(semkey);
-	//myprintint("s_value prima",sem->s_value);
 	sem->s_value++;
-	//myprintint("s_value dopo",sem->s_value);
-	//stampasemafori(&semd_h);
 	if (headBlocked(semkey)){ /* wake up someone! */
-		//if(semkey == 6) myprint("svegliamo qualcuno.ASDASDASDA\n");
 		next = removeBlocked(semkey);
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		inserisciprocessoready(next);
-		/*myprint("readyQ!\n");
-		stampareadyq();*/
 	} else {
-		//myprint("nessuno da svegliare.\n");
-		//myprint("readyQ!\n");
-		//stampalista(readyQ);
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 	}
 }
@@ -131,20 +108,9 @@ void passeren(void){
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
 	semd_t* sem;
-	/*if((semkey == 27) || (semkey == 27)){
-		myprint("passeren: semafori allocati:\n");
-		stampasemafori(&semd_h);
-		myprintint("P su semkey",semkey);
-		//myprint("prima della P\n");
-		//stampalista(readyQ);
-	}*/
-	//myprinthex("che si trova all'indirizzo",sem);
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	sem = mygetSemd(semkey);
-	//myprintint("s_value prima",sem->s_value);
 	sem->s_value--;
-	//myprintint("s_value dopo",sem->s_value);
-	//stampasemafori(&semd_h);
 	if (sem->s_value >= 0){ /* GO! */
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		LDST(&suspend->p_s);
@@ -176,16 +142,7 @@ void wait_for_clock(void)
 	*/
 	int i=0;
 	pcb_t* suspend = currentproc[getPRID()];
-	
-	/*
-	for(;i<MAXPROC;i++){
-		if (wait_clock[i] == NULL){
-			wait_clock[i] = suspend;
-			softBlockCounter += 1;
-			break;
-		}
-	}
-	* */
+
 	while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
 	
 	softBlockCounter++;
@@ -209,9 +166,6 @@ void wait_for_io_device(void){
 	int devno = before->reg_a2;
 	int rw = before->reg_a3;
 
-	//while (!CAS(&mutex_wait_clock,0,1)); /* critical section */
-	
-	//CAS(&mutex_wait_clock,1,0);
 	_passeren((line*(devno+1)+20)+rw);
 
 	before->reg_v0 = devstatus[line-3][devno+rw];

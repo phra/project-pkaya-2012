@@ -80,11 +80,6 @@ void myprint(char *str1){
 void myprintint(char *str1, int numero){
 		static char intero[30];
 
-       /* strcpy(output + 1, str1); //#FIXME
-        strcpy(output + strlen(str1) + 1, " -> ");
-        strcpy(output + strlen(str1) + 3, str2);
-        strcpy(output, "\n");*/
-
         myprint(str1);
         myprint(" -> ");
         itoa(numero,intero,10);
@@ -95,11 +90,6 @@ void myprintint(char *str1, int numero){
 void myprintbin(char *str1, int numero){
 		static char intero[64];
 
-       /* strcpy(output + 1, str1); //#FIXME
-        strcpy(output + strlen(str1) + 1, " -> ");
-        strcpy(output + strlen(str1) + 3, str2);
-        strcpy(output, "\n");*/
-
         myprint(str1);
         myprint(" -> ");
         itoa(numero,intero,2);
@@ -109,11 +99,6 @@ void myprintbin(char *str1, int numero){
 
 void myprinthex(char *str1, int numero){
 		static char intero[64];
-
-       /* strcpy(output + 1, str1); //#FIXME
-        strcpy(output + strlen(str1) + 1, " -> ");
-        strcpy(output + strlen(str1) + 3, str2);
-        strcpy(output, "\n");*/
 
         myprint(str1);
         myprint(" -> 0x");
@@ -126,9 +111,6 @@ void sleep(int count){
 	int i = 0;
 	for(;i<count;i++);
 }
-
-
-
 
 /*END DEBUG*/
 
@@ -151,14 +133,6 @@ U32 mutex_wait_clock = 0;
 
 
 extern void test();
-
-/**waitclock
-pcb_t* wait_clock[MAXPROC];
-static inline void initWaitClock(void){
-	memset(wait_clock,0,MAXPROC*sizeof(pcb_t*));
-}
-*/
-
 
 
 static inline void initCurrentProcs(void){
@@ -265,20 +239,9 @@ static void initCpuStates(state_t* addr, int i){
 	int status = 0;
 	state_t* state = addr;
 	memset(state,0,sizeof(state_t));
-	/*status &= ~STATUS_IEc;				
-	status &= ~STATUS_IEp;				
-	status &= ~STATUS_IEo;
-	status &= ~STATUS_INT_UNMASKED;
-	status &= ~STATUS_VMc;				
-	status &= ~STATUS_VMp;				
-	status &= ~STATUS_VMo;
-	status &= ~STATUS_KUc;				
-	status &= ~STATUS_KUp;				
-	status &= ~STATUS_KUo;
-	state->status = status;*/
 	state->status = getSTATUS();
 	state->reg_sp = RAMTOP - i*FRAME_SIZE;
-	state->pc_epc = state->reg_t9 = scheduler;
+	state->pc_epc = state->reg_t9 = (memaddr)scheduler;
 }
 
 static void initCPUs(void){
@@ -296,7 +259,6 @@ int main(void)
 	pcb_t* p1 = NULL;
 
 	/* Inizializzazione strutture dati */
-	//myprint("init\n");
 	initPcbs();		
 	initASL();
 	initSemaphoreASL(0);
@@ -318,7 +280,6 @@ int main(void)
 	inserisciprocessoready(p1);
 	//myprinthex("indirizzo PCB test",p1);
 	initCPUs();
-	//sleep(5000);
 	SET_IT(SCHED_PSEUDO_CLOCK);
 	scheduler();						/*Richiamo lo scheduler*/
 
