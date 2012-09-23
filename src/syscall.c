@@ -99,7 +99,7 @@ void verhogen(void){
 		myprintint("V su semkey",semkey);
 		myprint("prima della P\n");
 		stampareadyq();
-	}*7
+	}*/
 	if(!sem) myprint("da phuk: sem == NULL\n");*/
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	sem = mygetSemd(semkey);
