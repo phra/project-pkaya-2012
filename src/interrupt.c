@@ -20,13 +20,16 @@
 #define bitmapCalc(line) *((int*)(PENDING_BITMAP_START + (line - 3) * WORD_SIZE))
 #endif
 
+/**
+ * \var devstatus
+ * \brief matrice per la gestione degli interrupt
+ */
 U32 devstatus[DEV_USED_INTS][DEV_PER_INT];
 
+/**
+ * verhogen per gli interrupt
+ */
 void _verhogen(int semkey, unsigned int* status){
-	/*
-		Quando invocata, la sys4 esegue una V sul semaforo con chiave semKey
-		Registro a1: chiave del semaforo su cui effettuare la V.
-	*/
 	
 	pcb_t* next;
 	semd_t* sem;
@@ -40,7 +43,6 @@ void _verhogen(int semkey, unsigned int* status){
 		CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		next->p_s.reg_v0 = *status;
 		*status = 0;
-		BREAK();
 		while (!CAS(&mutex_wait_clock,0,1));
 		softBlockCounter--;
 		CAS(&mutex_wait_clock,1,0);
@@ -51,11 +53,10 @@ void _verhogen(int semkey, unsigned int* status){
 	}
 }
 
+/**
+ * passeren per gli interrupt dei devices
+ */
 void _passeren(int semkey){
-	/*
-		Quando invocata, la sys5 esegue una P sul semaforo con chiave semKey.
-		Registro a1: chiave del semaforo su cui effettuare la P.
-	*/
 
 	pcb_t* suspend = currentproc[getPRID()];
 	semd_t* sem;
@@ -74,11 +75,10 @@ void _passeren(int semkey){
 	}
 }
 
+/**
+ * passeren per il clock
+ */
 void _passerenclock(int semkey){
-	/*
-		Quando invocata, la sys5 esegue una P sul semaforo con chiave semKey.
-		Registro a1: chiave del semaforo su cui effettuare la P.
-	*/
 
 	pcb_t* suspend = currentproc[getPRID()];
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
@@ -92,12 +92,11 @@ void _passerenclock(int semkey){
 	CAS(&mutex_wait_clock,1,0);
 }
 
+/**
+ * verhogen per il clock
+ */
 void _verhogenclock(int semkey){
-	/*
-		Quando invocata, la sys4 esegue una V sul semaforo con chiave semKey
-		Registro a1: chiave del semaforo su cui effettuare la V.
-	*/
-	
+
 	pcb_t* next;
 	int i = 0;
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
@@ -114,7 +113,9 @@ void _verhogenclock(int semkey){
 	CAS(&mutex_wait_clock,1,0);
 }
 
-/*Funzione per la gestione dei specifici device*/
+/**
+ * funzione per la gestione degli interrupt
+ */
 void deviceHandler(U32 intline){
 	dtpreg_t* device_requested;
     U32 i,rw,status;

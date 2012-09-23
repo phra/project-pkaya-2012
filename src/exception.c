@@ -15,7 +15,9 @@
 #include "interrupt.h"
 
 
-/*Funzione di gestione degli interrupt*/
+/**
+ * handler degli interrupt
+ */
 void int_handler(void){
     int intline=INT_PLT;
     state_t* before = (state_t*)new_old_areas[getPRID()][INT_OLD];
@@ -46,6 +48,9 @@ void int_handler(void){
 	else scheduler();
 }
 
+/**
+ * handler delle tlb exception
+ */
 void tlb_handler(void){
   
 	state_t* before = (state_t*)new_old_areas[getPRID()][TLB_OLD];
@@ -65,6 +70,9 @@ void tlb_handler(void){
 	}
 }
 
+/**
+ * handler dei program trap
+ */
 void pgmtrap_handler(void){
 
 	state_t* before = (state_t*)new_old_areas[getPRID()][PGMTRAP_OLD];
@@ -84,8 +92,9 @@ void pgmtrap_handler(void){
 	}
 }
 
-void BREAK(void){};
-
+/**
+ * handler delle system calls
+ */
 void sysbk_handler(void){
 
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];

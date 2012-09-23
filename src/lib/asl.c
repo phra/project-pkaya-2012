@@ -30,7 +30,7 @@ struct list_head semd_h;
  #########  Funzioni per la gestione della ASL  #########
  ########################################################
  */
-/*
+/**
 initASL():inizializza le due liste necessarie per la gestione dei semafori.
 */
 void initASL(void){
@@ -40,10 +40,12 @@ void initASL(void){
 	for(i=0; i<MAXPROC+MAX_DEVICES;i++ )
 	        list_add(&semd_table[i].s_next,&semdFree_h);
 }
-/*
+/**
 (puntatore a semaforo) getSemd(id del semaforo): restituisce il puntatore al semaforo
 avente id=key della lista dei semafori attivi. se non esiste nessun elemento con tale id,
 restituisce NULL.
+* \param key chiave del semaforo
+* \return puntatore al semaforo se attivo oppure NULL
 */
 semd_t* getSemd(int key){
 	semd_t* item;
@@ -55,7 +57,13 @@ semd_t* getSemd(int key){
     return NULL;
 }
 
-
+/**
+(puntatore a semaforo) mygetSemd(id del semaforo): restituisce il puntatore al semaforo
+avente id=key della lista dei semafori attivi. se non esiste nessun elemento con tale id,
+restituisce NULL.
+* \param key chiave del semaforo
+* \return puntatore al semaforo, se non attivo lo alloca
+*/
 semd_t* mygetSemd(int key){
 	semd_t* item;
 	struct list_head* l_next;
@@ -75,11 +83,14 @@ semd_t* mygetSemd(int key){
 }
 
 
-/*
+/**
 (1 TRUE oppure 0 FALSE) insertBlocked(id del semaforo, puntatore al processo): inserisce
 il processo puntato da p nella coda dei processi bloccati dal semaforo con id=key.
 se il semaforo non è presente, allora viene allocato un nuovo semaforo.
 in caso di errore restituisce 1, altrimenti 0.
+* \param key chiave del semaforo
+* \param p puntatore al processo da inserire
+* \return 1 in caso di errore, 0 altrimenti
 */
 int insertBlocked(int key, pcb_t *p){
 	semd_t* semd_found = mygetSemd(key);
@@ -102,11 +113,12 @@ int insertBlocked(int key, pcb_t *p){
 	return FALSE;
 }
 
-/*
+/**
 (puntatore al processo) removeBlocked(id del semaforo): ritorna il primo processo della coda associata al semaforo con id=key.
 se questo semaforo non esiste, restituisce NULL. se non ci sono più processi bloccati, sposta il semaforo nella lista dei semafori liberi
+* \param key chiave del semaforo
+* \return puntatore al processo sbloccato
 */
-
 pcb_t* removeBlocked(int key){
 	semd_t* semd_found = getSemd(key);
 	pcb_t* first_pcb;
@@ -125,9 +137,11 @@ pcb_t* removeBlocked(int key){
 }
 
 
-/*
+/**
 (puntatore al processo) outBlocked(puntatore al processo): restituisce il processo puntato da p RIMUOVENDOLO dalla lista dei processi bloccati da un semaforo.
 se il processo non viene trovato, restituisce NULL.
+* \param p puntatore al processo
+* \return puntatore al processo
 */
 pcb_t* outBlocked(pcb_t *p){
 	semd_t* semd_found = getSemd(p->p_semkey);
@@ -142,9 +156,11 @@ pcb_t* outBlocked(pcb_t *p){
 	p->p_semkey = -1;
 	return NULL;
 }
-/*
+/**
 (puntatore al processo) headBlocked(id del semaforo): restituisce il processo in testa SENZA RIMUOVERLO dalla lista dei processi bloccati dal semaforo con id=key.
 se il semaforo non viene trovato oppure se non ha processi in attesa, restituisce NULL.
+* \param key chiave del semaforo
+* \return puntatore al processo
 */
 pcb_t* headBlocked(int key){
 	semd_t* semd_found = getSemd(key);
@@ -155,8 +171,10 @@ pcb_t* headBlocked(int key){
 	l_next = list_next(&semd_found->s_procQ);
 	return container_of(l_next,pcb_t,p_next);
 }
-/*
+
+/**
 outChildBlocked(puntatore al processo): elimina il processo puntato da p dalla coda del semaforo associato, rimuovendo anche i processi discendenti.
+* \param p puntatore al processo
 */
 void outChildBlocked(pcb_t *p){
 	pcb_t* item;

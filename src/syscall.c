@@ -13,16 +13,15 @@
 #include "scheduler.h"
 #include "exception.h"
 
-
+/**
+	Quando invocata, la sys1 determina la creazione di un processo figlio del processo chiamante.
+	Registro a1: indirizzo fisico dello state_t del nuovo processo.
+	Registro a2: priorità del nuovo processo.
+	Valori di ritorno nel registro v0:
+	- 0 nel caso di creazione corretta
+	- -1 nel caso di errore
+*/
 void create_process(void){
-	/*
-		Quando invocata, la sys1 determina la creazione di un processo figlio del processo chiamante.
-		Registro a1: indirizzo fisico dello state_t del nuovo processo.
-		Registro a2: priorità del nuovo processo.
-		Valori di ritorno nel registro v0:
-		- 0 nel caso di creazione corretta
-		- -1 nel caso di errore
-	*/
 	
 	pcb_t* suspend = currentproc[getPRID()];
 	pcb_t* son;
@@ -42,16 +41,16 @@ void create_process(void){
 	}
 }
 
+/**
+	Quando invocata, la sys2 determina la creazione di un processo fratello del processo chiamante.
+	Registro a1: indirizzo fisico dello state_t del nuovo processo.
+	Registro a2: priorità del nuovo processo.
+	Valori di ritorno nel registro v0:
+	- 0 nel caso di creazione corretta
+	- -1 nel caso di errore.
+*/
 void create_brother(void){
-	/*
-		Quando invocata, la sys2 determina la creazione di un processo fratello del processo chiamante.
-		Registro a1: indirizzo fisico dello state_t del nuovo processo.
-		Registro a2: priorità del nuovo processo.
-		Valori di ritorno nel registro v0:
-		- 0 nel caso di creazione corretta
-		- -1 nel caso di errore.
-	*/
-		
+
 	pcb_t* suspend = currentproc[getPRID()];
 	pcb_t* father = suspend->p_parent;
 	pcb_t* bro;
@@ -69,18 +68,21 @@ void create_brother(void){
 	}
 }
 
+/**
+ * quando invocata la sys3 termina il processo corrente e tutta la sua progenia.
+ */
 void terminate_process(void){
-	// quando invocata, la sys3 termina il processo corrente e tutta la sua progenie.
 	pcb_t* suspend = currentproc[getPRID()];
 	kill(suspend);
 	return scheduler();
 }
 
+/**
+	Quando invocata, la sys4 esegue una V sul semaforo con chiave semKey
+	Registro a1: chiave del semaforo su cui effettuare la V.
+*/
 void verhogen(void){
-	/*
-		Quando invocata, la sys4 esegue una V sul semaforo con chiave semKey
-		Registro a1: chiave del semaforo su cui effettuare la V.
-	*/
+
 	
 	pcb_t* next;
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
@@ -98,11 +100,11 @@ void verhogen(void){
 	}
 }
 
+/**
+	Quando invocata, la sys5 esegue una P sul semaforo con chiave semKey.
+	Registro a1: chiave del semaforo su cui effettuare la P.
+*/
 void passeren(void){
-	/*
-		Quando invocata, la sys5 esegue una P sul semaforo con chiave semKey.
-		Registro a1: chiave del semaforo su cui effettuare la P.
-	*/
 
 	pcb_t* suspend = currentproc[getPRID()];
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
@@ -121,11 +123,11 @@ void passeren(void){
 	}
 }
 
+/**
+	Quando invocata, la sys6 restituisce il tempo di CPU (in microsecondi) usato dal processo corrente.
+	Registro v0: valore di ritorno.
+*/
 void get_cpu_time(void){
-	/*
-		Quando invocata, la sys6 restituisce il tempo di CPU (in microsecondi) usato dal processo corrente.
-		Registro v0: valore di ritorno.
-	*/
 
 	pcb_t* suspend = currentproc[getPRID()];
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
@@ -133,13 +135,13 @@ void get_cpu_time(void){
 	before->reg_v0 = suspend->cpu_time;
 }
 
-void wait_for_clock(void)
-{
-	/*
-		Quando invocata, la sys7 esegue una P sul semaforo associato allo pseudo-clock timer. 
-		La V su tale semaforo deve essere eseguito dal nucleo ogni 100 millisecondi (tutti i processi in coda su tale 	
-		semaforo devono essere sbloccati).
-	*/
+/**
+	Quando invocata, la sys7 esegue una P sul semaforo associato allo pseudo-clock timer. 
+	La V su tale semaforo deve essere eseguito dal nucleo ogni 100 millisecondi (tutti i processi in coda su tale 	
+	semaforo devono essere sbloccati).
+*/
+void wait_for_clock(void){
+
 	int i=0;
 	pcb_t* suspend = currentproc[getPRID()];
 
@@ -152,14 +154,14 @@ void wait_for_clock(void)
 	return scheduler();
 }
 
+/**
+	Quando invocata, la sys8 esegue una P sul semaforo associato al device identificato da intNo, dnume e waitForTermRead
+	Registro a1: linea di interrupt
+	Registro a2: device number
+	Registro a3: operazione di terminal read/write
+	Registro v0: status del device
+*/
 void wait_for_io_device(void){
-	/*
-		Quando invocata, la sys8 esegue una P sul semaforo associato al device identificato da intNo, dnume e waitForTermRead
-		Registro a1: linea di interrupt
-		Registro a2: device number
-		Registro a3: operazione di terminal read/write
-		Registro v0: status del device
-	*/
 
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int line = before->reg_a1;
@@ -173,13 +175,13 @@ void wait_for_io_device(void){
 	LDST(before);
 }
 
-void specify_prg_state_vector(void)
-{
-	/*
-		Quando invocata, la sys9 consente di definire gestori di PgmTrap per il processo corrente.
-		Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente del processore.
-		Registro a2: indirizzo della NEWArea del processo (da utilizzare nel caso si verifichi un PgmTrap)
-	*/
+/**
+	Quando invocata, la sys9 consente di definire gestori di PgmTrap per il processo corrente.
+	Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente del processore.
+	Registro a2: indirizzo della NEWArea del processo (da utilizzare nel caso si verifichi un PgmTrap)
+*/
+void specify_prg_state_vector(void){
+
 	
 	pcb_t* suspend = currentproc[getPRID()];
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
@@ -194,12 +196,13 @@ void specify_prg_state_vector(void)
 	}
 }
 
+/**
+	Quando invocata, la sys10 consente di definire gestori di TLB Exception per il processo corrente.
+	Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente del processore.
+	Registro a2: indirizzo della NEWArea del processore (da utilizzare nel caso si verifichi una TLB Exception)
+*/
 void specify_tlb_state_vector(void){
-	/*
-		Quando invocata, la sys10 consente di definire gestori di TLB Exception per il processo corrente.
-		Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente del processore.
-		Registro a2: indirizzo della NEWArea del processore (da utilizzare nel caso si verifichi una TLB Exception)
-	*/
+
 
 	pcb_t* suspend = currentproc[getPRID()];
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
@@ -214,12 +217,13 @@ void specify_tlb_state_vector(void){
 	}
 }
 
+/**
+	Quando invocata, la sys11 consente di definire gestori di SYS/BP Exception per il processo corrente.
+	Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente del processore.
+	Registro a2: indirizzo della NEWArea del processore (da utilizzare nel caso si verifichi una SYS/BP Exception)
+*/
 void specify_sys_state_vector(void){
-	/*
-		Quando invocata, la sys11 consente di definire gestori di SYS/BP Exception per il processo corrente.
-		Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente del processore.
-		Registro a2: indirizzo della NEWArea del processore (da utilizzare nel caso si verifichi una SYS/BP Exception)
-	*/
+
 
 	pcb_t* suspend = currentproc[getPRID()];
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];

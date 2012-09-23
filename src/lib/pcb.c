@@ -16,118 +16,6 @@
 #define DEVREGLEN   4
 #define BUSY      3
 
-#define RECVSTATUS 0
-#define RECVCOMMAND 1
-#define TRANSTATUS    2
-#define TRANCOMMAND   3
-
-
-static U32 mytermstat(memaddr *stataddr) {
-	return((*stataddr) & STATUSMASK);
-}
-
-/* This function prints a string on specified terminal and returns TRUE if 
- * print was successful, FALSE if not   */
-static unsigned int mytermprint(char * str, unsigned int term) {
-
-	memaddr *statusp;
-	memaddr *commandp;
-	
-	U32 stat;
-	U32 cmd;
-	
-	unsigned int error = FALSE;
-	
-	if (term < DEV_PER_INT) {
-		/* terminal is correct */
-		/* compute device register field addresses */
-		statusp = (U32 *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANSTATUS * DEVREGLEN));
-		commandp = (U32 *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANCOMMAND * DEVREGLEN));
-		
-		/* test device status */
-		stat = mytermstat(statusp);
-		if ((stat == READY) || (stat == TRANSMITTED)) {
-			/* device is available */
-			
-			/* print cycle */
-			while ((*str != '\0') && (!error)) {
-				cmd = (*str << CHAROFFSET) | PRINTCHR;
-				*commandp = cmd;
-
-				/* busy waiting */
-				while ((stat = mytermstat(statusp)) == BUSY);
-				
-				/* end of wait */
-				if (stat != TRANSMITTED) {
-					error = TRUE;
-				} else {
-					/* move to next char */
-					str++;
-				}
-			}
-		}	else {
-			/* device is not available */
-			error = TRUE;
-		}
-	}	else {
-		/* wrong terminal device number */
-		error = TRUE;
-	}
-
-	return (!error);		
-}
-
-static void pcbprint(char *str1){
-        static char output[128];
-
-        strcpy(output, str1);
-        mytermprint(output,0);
-}
-
-static void pcbprintint(char *str1, int numero){
-		static char intero[30];
-
-       /* strcpy(output + 1, str1); //#FIXME
-        strcpy(output + strlen(str1) + 1, " -> ");
-        strcpy(output + strlen(str1) + 3, str2);
-        strcpy(output, "\n");*/
-
-        pcbprint(str1);
-        pcbprint(" -> ");
-        itoa(numero,intero,10);
-        pcbprint(intero);
-        pcbprint("\n");
-}
-
-static void pcbprintbin(char *str1, int numero){
-		static char intero[64];
-
-       /* strcpy(output + 1, str1); //#FIXME
-        strcpy(output + strlen(str1) + 1, " -> ");
-        strcpy(output + strlen(str1) + 3, str2);
-        strcpy(output, "\n");*/
-
-        pcbprint(str1);
-        pcbprint(" -> ");
-        itoa(numero,intero,2);
-        pcbprint(intero);
-        pcbprint("\n");
-}
-
-static void pcbprinthex(char *str1, int numero){
-		static char intero[64];
-
-       /* strcpy(output + 1, str1); //#FIXME
-        strcpy(output + strlen(str1) + 1, " -> ");
-        strcpy(output + strlen(str1) + 3, str2);
-        strcpy(output, "\n");*/
-
-        pcbprint(str1);
-        pcbprint(" -> 0x");
-        itoa(numero,intero,16);
-        pcbprint(intero);
-        pcbprint("\n");
-}
 
 struct list_head pcbfree_h;
 pcb_t pcbFree_table[MAXPROC];
@@ -138,7 +26,7 @@ pcb_t pcbFree_table[MAXPROC];
  ########################################################
  */
 
-/*
+/**
 initPbcs(): inizializza la lista pcbFree in modo da contenere tutti gli elementi di pcbFree_table.
 */
 void initPcbs(void){
@@ -147,15 +35,17 @@ void initPcbs(void){
 	for(i=0; i<MAXPROC;i++ )
 	        list_add(&pcbFree_table[i].p_next,&pcbfree_h);
 }
-/*
+/**
 freePcb(puntatore a pcb_t): inserisce il processo puntato da p nella lista dei pcb liberi.
+* \param p puntatore al processo
 */
 void freePcb(pcb_t* p){
 	list_add(&p->p_next,&pcbfree_h);
 }
-/*
+/**
 (puntatore a pcb_t) allocPcb(): rimuove il primo elemento dalla lista dei pcb liberi e inizializza tutti i campi a NULL e lo restituisce.
 in caso non ci siano pcb liberi, restituisce NULL.
+* \return indirizzo del pcb allocato, NULL altrimenti
 */
 pcb_t *allocPcb(void){
 	pcb_t* pcb_return;
@@ -180,21 +70,26 @@ pcb_t *allocPcb(void){
    ########################################################
  */
 
-/*
+/**
 mkEmptyProcQ(puntatore a list_head): inizializza la sentinella.
+* \param head puntatore alla sentinella
 */
 void mkEmptyProcQ(struct list_head* head){
 	INIT_LIST_HEAD(head);
 }
-/*
+/**
 (1 TRUE oppure 0 FALSE) emptyProcQ(puntatore alla sentinella della lista): restituisce 1 se la lista è vuota altrimenti restituisce 0.
+* \param head puntatore alla sentinella
+* \return 1 se la lista è vuota, 0 altrimenti
 */
 int emptyProcQ(struct list_head* head){
 	return list_empty(head);
 }
-/*
+/**
 insertProcQ(puntatore alla sentinella, puntatore ad un processo): inserisce il processo nella lista a cui punta la sentinella,
 tenendo conto della priorità dei processi.
+* \param head puntatore alla sentinella
+* \param p puntatore al processo
 */
 void insertProcQ(struct list_head* head, pcb_t *p){
 	pcb_t* item;
@@ -222,8 +117,9 @@ void insertProcQ(struct list_head* head, pcb_t *p){
 			list_add(&p->p_next,iter_head);
 	}
 }
-/*
+/**
 (puntatore al processo) headProcQ(puntatore alla sentinella):restituisce l'elemento in testa della coda SENZA RIMUOVERLO. se la coda è vuota, restituisce NULL.
+* \param head puntatore alla sentinella
 */
 pcb_t *headProcQ(struct list_head* head){
 	if(emptyProcQ(head))
@@ -232,8 +128,10 @@ pcb_t *headProcQ(struct list_head* head){
 	return container_of(first_el,pcb_t,p_next);
 }
 
-/*
+/**
 (puntatore al processo) removeProcQ(puntatore alla sentinella): restiuisce l'elemento in testa della coda RIMUOVENDOLO. se la coda è vuota, restituisce NULL.
+* \param head puntatore alla sentinella
+* \return puntatore al processo rimosso
 */
 pcb_t* removeProcQ(struct list_head* head){
 	struct list_head* first_head;
@@ -263,15 +161,19 @@ pcb_t* outProcQ(struct list_head* head, pcb_t *p){
   ## Funzioni per la gestione degli alberi di processi  ##
   ########################################################
  */
-/*
+/**
 (1 TRUE oppure 0 FALSE) emptyChild(puntatore al processo): restituisce 1 se il processo puntato da p non ha figli, altrimenti 0.
+* \param p puntatore al processo
+* \return 1 se non ha figli, 0 altrimenti
 */
 int emptyChild(pcb_t *p){
 	return list_empty(&p->p_child);
 }
 
-/*
+/**
 insertChild(puntatore al processo, puntatore al processo): inserisce il processo p come figlio di prnt.
+* \param prnt puntatore al padre
+* \param p puntatore al figlio
 */
 void insertChild(pcb_t *prnt, pcb_t *p){
 	/*imposta p figlio di prnt*/
@@ -279,8 +181,10 @@ void insertChild(pcb_t *prnt, pcb_t *p){
 	/*imposta prnt padre di p*/
 	p->p_parent = prnt;
 }
-/*
+/**
 (puntatore al processo) removeChild(puntatore al processo): restituisce il primo figlio del processo puntato da p RIMUOVENDOLO. se p non ha figli, restituisce NULL.
+* \param p puntatore al processo
+* \return indirizzo del figlio rimosso
 */
 pcb_t* removeChild(pcb_t *p){
 	struct list_head* first_head;
@@ -290,8 +194,10 @@ pcb_t* removeChild(pcb_t *p){
 	list_del(first_head);
 	return container_of(first_head,pcb_t,p_sib);
 }
-/*
+/**
 (puntatore al processo) outChild(puntatore al processo):restituisce il processo puntato da p RIMUOVENDOLO dalla lista dei figli del padre. se il processo p non ha un padre, restituisce NULL.
+* \param p puntatore al processo da rimuovere
+* \return puntatore al processo rimosso
 */
 pcb_t* outChild(pcb_t* p){
 	if(emptyChild(p->p_parent))
