@@ -28,13 +28,26 @@ int memcmp(void* ptr1, void* ptr2, int lenght){
 /*
  * memcpy(puntatore a void, puntatore a void, lunghezza da copiare): copia il contenuto binario di src in dest
  */
-void inline memcpy(void* dest, void* src, int lenght){
-	register char* p1 = (char*)dest;
-	register char* p2 = (char*)src;
-	register int i = 0;
-	for(;i<lenght;i++)
-		p1[i] = p2[i];
+
+void inline *memcpy(void* dest, const void* src, unsigned int count) {
+	register char* dst8 = (char*)dest;
+	register char* src8 = (char*)src;
+        
+	if (count & 1) {
+		dst8[0] = src8[0];
+		dst8 += 1;
+		src8 += 1;
+	}
+	count /= 2;
+	while (count--) {
+		dst8[0] = src8[0];
+		dst8[1] = src8[1];
+		dst8 += 2;
+		src8 += 2;
+	}
+	return dest;
 }
+
 
 /*
  * strlen(puntatore a char): ritorna il numero di char in una stringa ASCII
