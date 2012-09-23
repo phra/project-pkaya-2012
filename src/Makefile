@@ -38,7 +38,7 @@ kernelphase2lab : p2test2012_v1.0.o init.o exception.o syscall.o scheduler.o int
 	$(LD) $(LDADD2LAB) -o kernelphase2
 
 p2test2012_v1.0.o : p2test2012_v1.0.c $(INCLUDE)
-	$(CC) -O2 -c p2test2012_v1.0.c
+	$(CC) -O1 -c p2test2012_v1.0.c
 
 p2test2012_scalability_v1.0.o : p2test2012_scalability_v1.0.c $(INCLUDE)
 	$(CC) -O2 -c p2test2012_scalability_v1.0.c

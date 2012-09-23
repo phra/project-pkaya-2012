@@ -247,8 +247,7 @@ static void initCpuStates(state_t* addr, int i){
 static void initCPUs(void){
 	state_t now;
 	int i;
-	for(i=1;i<MAXCPUs;i++){
-		//myprintint("inizializzo cpu",i);
+	for(i=1;i<*(int*)0x10000500;i++){
 		initCpuStates(&now,i);
 		INITCPU(i,&now,new_old_areas[i][0]);
 	}
