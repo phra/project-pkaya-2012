@@ -99,8 +99,12 @@ void _passerenclock(int semkey){
 	sem->s_value -= 1;
 	//myprintint("_passerenclock dopo",sem->s_value);
 	insertBlocked(semkey,suspend);
-	currentproc[getPRID()] = NULL;
+	//currentproc[getPRID()] = NULL;
 	CAS(&mutex_semaphoreprova,1,0); /* release mutex */
+	suspend->p_semkey = semkey;
+	while (!CAS(&mutex_wait_clock,0,1));
+	softBlockCounter++;
+	CAS(&mutex_wait_clock,1,0);
 }
 
 void _verhogenclock(int semkey){

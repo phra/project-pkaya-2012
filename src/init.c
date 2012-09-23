@@ -285,7 +285,7 @@ static void initCPUs(void){
 	state_t now;
 	int i;
 	for(i=1;i<MAXCPUs;i++){
-		myprintint("inizializzo cpu",i);
+		//myprintint("inizializzo cpu",i);
 		initCpuStates(&now,i);
 		INITCPU(i,&now,new_old_areas[i][0]);
 	}
@@ -316,9 +316,9 @@ int main(void)
 
 	/*Inserire il processo nella Ready Queue*/
 	inserisciprocessoready(p1);
-	myprinthex("indirizzo PCB test",p1);
+	//myprinthex("indirizzo PCB test",p1);
 	initCPUs();
-	sleep(5000);
+	//sleep(5000);
 	SET_IT(SCHED_PSEUDO_CLOCK);
 	scheduler();						/*Richiamo lo scheduler*/
 

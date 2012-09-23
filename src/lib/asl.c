@@ -204,7 +204,7 @@ se il semaforo non è presente, allora viene allocato un nuovo semaforo.
 in caso di errore restituisce 1, altrimenti 0.
 */
 int insertBlocked(int key, pcb_t *p){
-	semd_t* semd_found = getSemd(key);
+	semd_t* semd_found = mygetSemd(key);
 	struct list_head* l_next;
 	if(semd_found){
 		p->p_semkey = key;

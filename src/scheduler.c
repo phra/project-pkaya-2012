@@ -60,24 +60,37 @@ void kill(pcb_t* target){
 	PIDs[target->pid] = NULL;
 	currentproc[getPRID()] = NULL;
 	//myprintint("proccounter prima",processCounter);
-	if ((--processCounter == 0) && (softBlockCounter == 0)) scheduler();
 	//myprintint("proccounter dopo",processCounter);
 	while(temp = removeChild(target)){
 		kill(temp);
 	}
+
+	while (!CAS(&mutex_wait_clock,0,1));
+	processCounter--;
+	CAS(&mutex_wait_clock,1,0);
+
+	
 	while (!CAS(&mutex_scheduler,0,1));
-	outProcQ(readyQ,target);
-	outProcQ(expiredQ,target);
-	if (target->p_semkey != -1){
-		semd_t* block;
-		//myprintint("processo da killare su semkey",target->p_semkey);
-		if (block = getSemd(target->p_semkey)){
-			block->s_value++;
-			outBlocked(target);
+	if (processCounter == 0) {
+		CAS(&mutex_scheduler,1,0);
+		scheduler();
+	} else {
+		outProcQ(readyQ,target);
+		outProcQ(expiredQ,target);
+		CAS(&mutex_scheduler,1,0);
+		
+		if (target->p_semkey != -1){
+			semd_t* block;
+			//myprintint("processo da killare su semkey",target->p_semkey);
+			while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
+			if (block = getSemd(target->p_semkey)){
+				block->s_value++;
+				outBlocked(target);
+			}
+			CAS(&mutex_semaphoreprova,1,0); /* release mutex */
 		}
-	}
 	freePcb(target);
-	CAS(&mutex_scheduler,1,0);
+	}
 }
 
 /* alloca Pcb ed assegna il pid e la priorita' ai processi */  
@@ -112,14 +125,14 @@ void scheduler(void){
 	stampalista(readyQ);
 	myprint("expiredQ!\n");
 	stampalista(expiredQ);*/
-	currentproc[getPRID()] = NULL;
 	//BREAK();
 	while (!CAS(&mutex_scheduler,0,1));
+	currentproc[getPRID()] = NULL;
 	//myprintint("processcounter",processCounter);
 	//myprintint("SCHEDULER!",getPRID());
 	if (processCounter == 0) {
 				//stampasemafori(&semd_h);
-				myprintint("scheduler: HALT!",getPRID());
+				//myprintint("scheduler: HALT!",getPRID());
 				CAS(&mutex_scheduler,1,0);
 				HALT();
 

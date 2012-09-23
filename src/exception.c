@@ -74,7 +74,7 @@ void tlb_handler(void){
 	before->pc_epc += WORD_SIZE;
 	suspend->p_s = *before;
 
-	myprint("TLB handler\n");
+	//myprint("TLB handler\n");
 
 	if (suspend->handler[TLB]){
 		/*il processo ha definito un suo handler*/
@@ -94,10 +94,11 @@ void pgmtrap_handler(void){
 	pcb_t* suspend = currentproc[getPRID()];
 	before->pc_epc += WORD_SIZE;
 	suspend->p_s = *before;
-
-	while (!CAS(&mutex_scheduler,0,1));
-	myprintint("PGMTRAP handler",getPRID());
-	CAS(&mutex_scheduler,1,0);
+	//myprintint("PGMTRAP handler",getPRID());
+	//myprintint("PGMTRAP handler pid",suspend->pid);
+	/*while (!CAS(&mutex_scheduler,0,1));
+	
+	CAS(&mutex_scheduler,1,0);*/
 	/*myprintint("processocounter",processCounter);
 	myprintint("softBlockCounter",softBlockCounter);
 	stampareadyq();*/

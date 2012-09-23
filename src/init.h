@@ -18,7 +18,7 @@
 #include "interrupt.h"
 
 
-#define MAXCPUs 2
+#define MAXCPUs 16
 #define MAXPID 128
 #define DEF_PRIORITY 5
 #define MAXPRINT 128
