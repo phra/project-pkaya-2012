@@ -35,7 +35,9 @@ scalabilitylab : init.o exception.o syscall.o scheduler.o interrupt.o pcb.o asl.
 	rm -f *.o kernelphase2
 
 kernelphase2lab : p2test2012_v1.0.o init.o exception.o syscall.o scheduler.o interrupt.o pcb.o asl.o utils.o
-	$(LD) $(LDADD2LAB) -o kernelphase2
+	$(LD) $(LDADDLAB) -o kernelphase2
+	umps2-elf2umps -k kernelphase2
+	rm -f *.o kernelphase2
 
 p2test2012_v1.0.o : p2test2012_v1.0.c $(INCLUDE)
 	$(CC) -O1 -c p2test2012_v1.0.c
