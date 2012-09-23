@@ -100,7 +100,7 @@ void verhogen(void){
 		myprint("prima della P\n");
 		stampareadyq();
 	}*7
-	if(!sem) myprint("da phuk: sem == NULL\n");
+	if(!sem) myprint("da phuk: sem == NULL\n");*/
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	sem = mygetSemd(semkey);
 	//myprintint("s_value prima",sem->s_value);
@@ -132,13 +132,13 @@ void passeren(void){
 	state_t* before = (state_t*)new_old_areas[getPRID()][SYSBK_OLD];
 	int semkey = before->reg_a1;
 	semd_t* sem;
-	if((semkey == 27) || (semkey == 27)){
+	/*if((semkey == 27) || (semkey == 27)){
 		myprint("passeren: semafori allocati:\n");
 		stampasemafori(&semd_h);
 		myprintint("P su semkey",semkey);
 		//myprint("prima della P\n");
 		//stampalista(readyQ);
-	}
+	}*/
 	//myprinthex("che si trova all'indirizzo",sem);
 	while (!CAS(&mutex_semaphoreprova,0,1)); /* critical section */
 	sem = mygetSemd(semkey);

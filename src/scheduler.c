@@ -133,7 +133,7 @@ void scheduler(void){
 	if (processCounter == 0) {
 				//stampasemafori(&semd_h);
 				//myprintint("scheduler: HALT!",getPRID());
-				CAS(&mutex_scheduler,1,0);
+				//CAS(&mutex_scheduler,1,0);
 				HALT();
 
 	}

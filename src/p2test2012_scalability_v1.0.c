@@ -202,11 +202,12 @@ void test() {
 		// Start the processes
 		SYSCALL(VERHOGEN, STARTCPU, 0, 0);
 
-	for (i=0; i<NUMPROC; i++)
+	for (i=0; i<NUMPROC; i++){
 
 		// Wait the termination of all the processes
+		//print(" test1 LOOP \n");
 		SYSCALL(PASSEREN, ENDCPU, 0, 0);
-
+	}
 	time_test1end=GET_TODLOW;
 
 	// Compute the TEST1 execution time
@@ -273,11 +274,12 @@ void test() {
 		// Start the processes
 		SYSCALL(VERHOGEN, STARTCPU, 0, 0);
 
-	for (i=0; i<NUMPROC; i++)
+	for (i=0; i<NUMPROC; i++){
 
 		// Wait the termination of all the processes
 		SYSCALL(PASSEREN, ENDCPU, 0, 0);
 
+	}
 	time_test2end=GET_TODLOW;
 
 	// Compute the TEST2 execution time
