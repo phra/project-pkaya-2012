@@ -82,3 +82,6 @@ utils.o :
 		
 clean :
 	rm -f kernel*.*.umps *.o kernelphase* phase1/*.o
+
+docs :
+	firefox ../docs/html/index.html

@@ -1,1 +1,8 @@
-test for using github.
+per compilare il sorgente, spostarsi in ./src ed eseguire:
+-make clean && make kernelphase2lab per compilare il test in laboratorio
+-make clean && make per compilare il test a casa
+-make clean && make scalabilitylab per compilare il test di scalabilità in laboratorio
+-make clean && make scalability per compilare il test di scalabilità a casa
+
+per visualizzare la documentazione generata da doxygen eseguire:
+-make docs
