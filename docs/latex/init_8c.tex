@@ -17,7 +17,7 @@
 \subsection*{Funzioni}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_a6a0c937f22f4f8e2d7c8223fd92f1e0c}{mytermstat} (\hyperlink{lib_2base_8h_a8dfc83cbb8a200048ed977af78885aa1}{memaddr} $\ast$stataddr)
+\hyperlink{base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_a6a0c937f22f4f8e2d7c8223fd92f1e0c}{mytermstat} (\hyperlink{base_8h_a8dfc83cbb8a200048ed977af78885aa1}{memaddr} $\ast$stataddr)
 \item 
 unsigned int \hyperlink{init_8c_a4bfe35af00daa0de1d426f484ab4f533}{mytermprint} (char $\ast$str, unsigned int term)
 \item 
@@ -52,14 +52,12 @@ int \hyperlink{init_8c_ad0b360b54c065def8f306dd38587add6}{usedpid} = 0
 \begin{DoxyCompactList}\small\item\em Tabella generale per le new/old areas, in modo da avere un'unica tabella per tutti i processori. \end{DoxyCompactList}\item 
 \hyperlink{structstate__t}{state\-\_\-t} \hyperlink{init_8c_a0ee87a1f66854fadca96c35ba49a43cd}{real\-\_\-new\-\_\-old\-\_\-areas} \mbox{[}\hyperlink{init_8h_abc16f63a572f5b4de9617288fc7c9559}{M\-A\-X\-C\-P\-Us}-\/1\mbox{]}\mbox{[}8\mbox{]}
 \begin{DoxyCompactList}\small\item\em new/old area reali dei processori 1..n che le hanno sullo stack \end{DoxyCompactList}\item 
-\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_a75a4c6cacc11bfa00977873e53249823}{mutex\-\_\-semaphore} \mbox{[}\hyperlink{phase1_2const_8h_abe4567498db286a3185a522c6dae3cbc}{M\-A\-X\-P\-R\-O\-C}+\hyperlink{phase1_2const_8h_a4e132cfaa78353e3af1474a86b2dd535}{M\-A\-X\-\_\-\-D\-E\-V\-I\-C\-E\-S}+1\mbox{]}
-\begin{DoxyCompactList}\small\item\em interi per la Test\&Set dei semafori e dei device \end{DoxyCompactList}\item 
-\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_a8327c9ced3c94e6a4747295c57b5ca6e}{mutex\-\_\-semaphoreprova} = 0
-\item 
-\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_a5a26a9c5982056efa1de6e7e834a753b}{mutex\-\_\-scheduler} = 0
-\item 
-\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_adb069d27d0e8108916723b0efbfdd791}{mutex\-\_\-wait\-\_\-clock} = 0
-\end{DoxyCompactItemize}
+\hyperlink{base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_a8327c9ced3c94e6a4747295c57b5ca6e}{mutex\-\_\-semaphoreprova} = 0
+\begin{DoxyCompactList}\small\item\em mutex per accedere ai semafori \end{DoxyCompactList}\item 
+\hyperlink{base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_a5a26a9c5982056efa1de6e7e834a753b}{mutex\-\_\-scheduler} = 0
+\begin{DoxyCompactList}\small\item\em mutex per accedere allo scheduler, process counter e code dei processi \end{DoxyCompactList}\item 
+\hyperlink{base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_adb069d27d0e8108916723b0efbfdd791}{mutex\-\_\-wait\-\_\-clock} = 0
+\begin{DoxyCompactList}\small\item\em mutex per accedere al soft\-Block\-Counter \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Documentazione delle funzioni}
@@ -146,19 +144,24 @@ Puntatori ai processi attualmente in esecuzione.
 \hypertarget{init_8c_a5a26a9c5982056efa1de6e7e834a753b}{\index{init.\-c@{init.\-c}!mutex\-\_\-scheduler@{mutex\-\_\-scheduler}}
 \index{mutex\-\_\-scheduler@{mutex\-\_\-scheduler}!init.c@{init.\-c}}
 \subsubsection[{mutex\-\_\-scheduler}]{\setlength{\rightskip}{0pt plus 5cm}mutex\-\_\-scheduler = 0}}\label{init_8c_a5a26a9c5982056efa1de6e7e834a753b}
-\hypertarget{init_8c_a75a4c6cacc11bfa00977873e53249823}{\index{init.\-c@{init.\-c}!mutex\-\_\-semaphore@{mutex\-\_\-semaphore}}
-\index{mutex\-\_\-semaphore@{mutex\-\_\-semaphore}!init.c@{init.\-c}}
-\subsubsection[{mutex\-\_\-semaphore}]{\setlength{\rightskip}{0pt plus 5cm}mutex\-\_\-semaphore}}\label{init_8c_a75a4c6cacc11bfa00977873e53249823}
 
 
-interi per la Test\&Set dei semafori e dei device 
+mutex per accedere allo scheduler, process counter e code dei processi 
 
 \hypertarget{init_8c_a8327c9ced3c94e6a4747295c57b5ca6e}{\index{init.\-c@{init.\-c}!mutex\-\_\-semaphoreprova@{mutex\-\_\-semaphoreprova}}
 \index{mutex\-\_\-semaphoreprova@{mutex\-\_\-semaphoreprova}!init.c@{init.\-c}}
 \subsubsection[{mutex\-\_\-semaphoreprova}]{\setlength{\rightskip}{0pt plus 5cm}mutex\-\_\-semaphoreprova = 0}}\label{init_8c_a8327c9ced3c94e6a4747295c57b5ca6e}
+
+
+mutex per accedere ai semafori 
+
 \hypertarget{init_8c_adb069d27d0e8108916723b0efbfdd791}{\index{init.\-c@{init.\-c}!mutex\-\_\-wait\-\_\-clock@{mutex\-\_\-wait\-\_\-clock}}
 \index{mutex\-\_\-wait\-\_\-clock@{mutex\-\_\-wait\-\_\-clock}!init.c@{init.\-c}}
 \subsubsection[{mutex\-\_\-wait\-\_\-clock}]{\setlength{\rightskip}{0pt plus 5cm}mutex\-\_\-wait\-\_\-clock = 0}}\label{init_8c_adb069d27d0e8108916723b0efbfdd791}
+
+
+mutex per accedere al soft\-Block\-Counter 
+
 \hypertarget{init_8c_a58f4b53b4c0a64c0f4638954abea960b}{\index{init.\-c@{init.\-c}!new\-\_\-old\-\_\-areas@{new\-\_\-old\-\_\-areas}}
 \index{new\-\_\-old\-\_\-areas@{new\-\_\-old\-\_\-areas}!init.c@{init.\-c}}
 \subsubsection[{new\-\_\-old\-\_\-areas}]{\setlength{\rightskip}{0pt plus 5cm}new\-\_\-old\-\_\-areas}}\label{init_8c_a58f4b53b4c0a64c0f4638954abea960b}

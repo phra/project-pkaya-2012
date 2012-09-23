@@ -80,7 +80,7 @@ void \hyperlink{init_8h_a7abcb9dadc69c5930054fe69a54e7890}{init\-Semaphore} (\hy
 \item 
 void \hyperlink{init_8h_a2faa709054408d895d29c3b8363359f8}{print} (char $\ast$label, char $\ast$value)
 \item 
-\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_a6a0c937f22f4f8e2d7c8223fd92f1e0c}{mytermstat} (\hyperlink{lib_2base_8h_a8dfc83cbb8a200048ed977af78885aa1}{memaddr} $\ast$stataddr)
+\hyperlink{base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_a6a0c937f22f4f8e2d7c8223fd92f1e0c}{mytermstat} (\hyperlink{base_8h_a8dfc83cbb8a200048ed977af78885aa1}{memaddr} $\ast$stataddr)
 \item 
 void \hyperlink{init_8h_a9bbf90d0109753b6667a357315156d7c}{myprintint} (char $\ast$str1, int numero)
 \item 
@@ -107,20 +107,20 @@ int \hyperlink{init_8h_a6c44e837b0fd2f80668756147b608b68}{usedpid}
 \begin{DoxyCompactList}\small\item\em Puntatori ai processi attualmente in esecuzione. \end{DoxyCompactList}\item 
 \hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{init_8h_ab34ea7a4ccc789298395e89aea3d439d}{P\-I\-Ds} \mbox{[}\hyperlink{init_8h_a9b896b5481b8e7b305a5ea99a0d3554c}{M\-A\-X\-P\-I\-D}\mbox{]}
 \begin{DoxyCompactList}\small\item\em un array per tenere conto dei pid assegnati, null se è libero, altrimenti l'indirizzo del pcb \end{DoxyCompactList}\item 
-\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{init_8h_ae2ec74ae8cfbd226a3402447b5c39250}{wait\-\_\-clock} \mbox{[}\hyperlink{phase1_2const_8h_abe4567498db286a3185a522c6dae3cbc}{M\-A\-X\-P\-R\-O\-C}\mbox{]}
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{init_8h_ae2ec74ae8cfbd226a3402447b5c39250}{wait\-\_\-clock} \mbox{[}\hyperlink{const_8h_abe4567498db286a3185a522c6dae3cbc}{M\-A\-X\-P\-R\-O\-C}\mbox{]}
 \item 
 \hyperlink{structstate__t}{state\-\_\-t} $\ast$ \hyperlink{init_8h_aae3d0072a5941f26acca0f68fb153ede}{new\-\_\-old\-\_\-areas} \mbox{[}\hyperlink{init_8h_abc16f63a572f5b4de9617288fc7c9559}{M\-A\-X\-C\-P\-Us}\mbox{]}\mbox{[}8\mbox{]}
 \begin{DoxyCompactList}\small\item\em Tabella generale per le new/old areas, in modo da avere un'unica tabella per tutti i processori. \end{DoxyCompactList}\item 
 \hyperlink{structstate__t}{state\-\_\-t} \hyperlink{init_8h_ad8d03912fa853ee36d3807fb9c0f93d8}{real\-\_\-new\-\_\-old\-\_\-areas} \mbox{[}\hyperlink{init_8h_abc16f63a572f5b4de9617288fc7c9559}{M\-A\-X\-C\-P\-Us}-\/1\mbox{]}\mbox{[}8\mbox{]}
 \begin{DoxyCompactList}\small\item\em new/old area reali dei processori 1..n che le hanno sullo stack \end{DoxyCompactList}\item 
-\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_a969950f64fcd15d16b272192dfde837b}{mutex\-\_\-semaphore} \mbox{[}\hyperlink{phase1_2const_8h_abe4567498db286a3185a522c6dae3cbc}{M\-A\-X\-P\-R\-O\-C}+\hyperlink{phase1_2const_8h_a4e132cfaa78353e3af1474a86b2dd535}{M\-A\-X\-\_\-\-D\-E\-V\-I\-C\-E\-S}+1\mbox{]}
-\begin{DoxyCompactList}\small\item\em interi per la Test\&Set dei semafori e dei device \end{DoxyCompactList}\item 
-\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_a425d9cd01235780ef39533f15c2571f9}{mutex\-\_\-semaphoreprova}
+\hyperlink{base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_a969950f64fcd15d16b272192dfde837b}{mutex\-\_\-semaphore} \mbox{[}\hyperlink{const_8h_abe4567498db286a3185a522c6dae3cbc}{M\-A\-X\-P\-R\-O\-C}+\hyperlink{const_8h_a4e132cfaa78353e3af1474a86b2dd535}{M\-A\-X\-\_\-\-D\-E\-V\-I\-C\-E\-S}+1\mbox{]}
 \item 
-\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_a35d0c320307b977f43debef8bda3a2d5}{mutex\-\_\-scheduler}
-\item 
-\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_ac5fabb5dd95e7acc108e6e0d230cf608}{mutex\-\_\-wait\-\_\-clock}
-\end{DoxyCompactItemize}
+\hyperlink{base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_a425d9cd01235780ef39533f15c2571f9}{mutex\-\_\-semaphoreprova}
+\begin{DoxyCompactList}\small\item\em mutex per accedere ai semafori \end{DoxyCompactList}\item 
+\hyperlink{base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_a35d0c320307b977f43debef8bda3a2d5}{mutex\-\_\-scheduler}
+\begin{DoxyCompactList}\small\item\em mutex per accedere allo scheduler, process counter e code dei processi \end{DoxyCompactList}\item 
+\hyperlink{base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_ac5fabb5dd95e7acc108e6e0d230cf608}{mutex\-\_\-wait\-\_\-clock}
+\begin{DoxyCompactList}\small\item\em mutex per accedere al soft\-Block\-Counter \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Documentazione delle definizioni}
@@ -282,19 +282,27 @@ Puntatori ai processi attualmente in esecuzione.
 \hypertarget{init_8h_a35d0c320307b977f43debef8bda3a2d5}{\index{init.\-h@{init.\-h}!mutex\-\_\-scheduler@{mutex\-\_\-scheduler}}
 \index{mutex\-\_\-scheduler@{mutex\-\_\-scheduler}!init.h@{init.\-h}}
 \subsubsection[{mutex\-\_\-scheduler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} mutex\-\_\-scheduler}}\label{init_8h_a35d0c320307b977f43debef8bda3a2d5}
+
+
+mutex per accedere allo scheduler, process counter e code dei processi 
+
 \hypertarget{init_8h_a969950f64fcd15d16b272192dfde837b}{\index{init.\-h@{init.\-h}!mutex\-\_\-semaphore@{mutex\-\_\-semaphore}}
 \index{mutex\-\_\-semaphore@{mutex\-\_\-semaphore}!init.h@{init.\-h}}
 \subsubsection[{mutex\-\_\-semaphore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} mutex\-\_\-semaphore\mbox{[}{\bf M\-A\-X\-P\-R\-O\-C}+{\bf M\-A\-X\-\_\-\-D\-E\-V\-I\-C\-E\-S}+1\mbox{]}}}\label{init_8h_a969950f64fcd15d16b272192dfde837b}
-
-
-interi per la Test\&Set dei semafori e dei device 
-
 \hypertarget{init_8h_a425d9cd01235780ef39533f15c2571f9}{\index{init.\-h@{init.\-h}!mutex\-\_\-semaphoreprova@{mutex\-\_\-semaphoreprova}}
 \index{mutex\-\_\-semaphoreprova@{mutex\-\_\-semaphoreprova}!init.h@{init.\-h}}
 \subsubsection[{mutex\-\_\-semaphoreprova}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} mutex\-\_\-semaphoreprova}}\label{init_8h_a425d9cd01235780ef39533f15c2571f9}
+
+
+mutex per accedere ai semafori 
+
 \hypertarget{init_8h_ac5fabb5dd95e7acc108e6e0d230cf608}{\index{init.\-h@{init.\-h}!mutex\-\_\-wait\-\_\-clock@{mutex\-\_\-wait\-\_\-clock}}
 \index{mutex\-\_\-wait\-\_\-clock@{mutex\-\_\-wait\-\_\-clock}!init.h@{init.\-h}}
 \subsubsection[{mutex\-\_\-wait\-\_\-clock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} mutex\-\_\-wait\-\_\-clock}}\label{init_8h_ac5fabb5dd95e7acc108e6e0d230cf608}
+
+
+mutex per accedere al soft\-Block\-Counter 
+
 \hypertarget{init_8h_aae3d0072a5941f26acca0f68fb153ede}{\index{init.\-h@{init.\-h}!new\-\_\-old\-\_\-areas@{new\-\_\-old\-\_\-areas}}
 \index{new\-\_\-old\-\_\-areas@{new\-\_\-old\-\_\-areas}!init.h@{init.\-h}}
 \subsubsection[{new\-\_\-old\-\_\-areas}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state\-\_\-t}$\ast$ new\-\_\-old\-\_\-areas\mbox{[}{\bf M\-A\-X\-C\-P\-Us}\mbox{]}\mbox{[}8\mbox{]}}}\label{init_8h_aae3d0072a5941f26acca0f68fb153ede}

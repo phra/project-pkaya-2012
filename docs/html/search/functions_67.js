@@ -9,7 +9,7 @@ var searchData=
   ['getindex',['getINDEX',['../libumps_8h.html#a91b8f29ab15cd921479e3c55961cb010',1,'libumps.h']]],
   ['getprid',['getPRID',['../libumps_8h.html#a188e2193398285c46e37f217feef731c',1,'libumps.h']]],
   ['getrandom',['getRANDOM',['../libumps_8h.html#a694559b10814d4f8ee259a2949052767',1,'libumps.h']]],
-  ['getsemd',['getSemd',['../lib_2asl_8c.html#a7dd34e8ddc18c62f1253e9ddb657cb99',1,'getSemd(int key):&#160;asl.c'],['../lib_2asl_8h.html#a7dd34e8ddc18c62f1253e9ddb657cb99',1,'getSemd(int key):&#160;asl.c'],['../phase1_2asl_8c.html#a7dd34e8ddc18c62f1253e9ddb657cb99',1,'getSemd(int key):&#160;asl.c'],['../phase1_2asl_8h.html#a7dd34e8ddc18c62f1253e9ddb657cb99',1,'getSemd(int key):&#160;asl.c']]],
+  ['getsemd',['getSemd',['../asl_8c.html#a7dd34e8ddc18c62f1253e9ddb657cb99',1,'getSemd(int key):&#160;asl.c'],['../asl_8h.html#a7dd34e8ddc18c62f1253e9ddb657cb99',1,'getSemd(int key):&#160;asl.c']]],
   ['getstatus',['getSTATUS',['../libumps_8h.html#a9ee013f04d59d001ffe5d334a11e8db0',1,'libumps.h']]],
   ['gettimer',['getTIMER',['../libumps_8h.html#adb69672932d8e414ed530d917b033e4d',1,'libumps.h']]]
 ];
