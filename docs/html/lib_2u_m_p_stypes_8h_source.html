@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>PKAYA-2012:  File sorgente C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="prova.jpg"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PKAYA-2012
+   &#160;<span id="projectnumber">v2</span>
+   </div>
+   <div id="projectbrief">a multiprocessor kernel for umps2</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Strutture&#160;dati</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;globali</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Strutture dati</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Ridefinizioni di tipo (typedef)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c85d3e3c5052e9ad9ce18c6863244a25.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">uMPStypes.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lib_2u_m_p_stypes_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _TYPES_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _TYPES_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="lib_2const_8h.html">const.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lib_2base_8h.html">base.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/************************** Device register types ***************************/</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/* Device register type for disks, tapes and printers (dtp) */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="structdtpreg__t.html">    9</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="structdtpreg__t.html#ae37efb991e613c0dc476ece5ed4ffa71">   10</a></span>&#160;  <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structdtpreg__t.html#ae37efb991e613c0dc476ece5ed4ffa71">status</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="structdtpreg__t.html#a8538fdce575b580097b18700c560a5a8">   11</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structdtpreg__t.html#a8538fdce575b580097b18700c560a5a8">command</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="structdtpreg__t.html#a8a0c321ffd2847534bfd0bc849a972b4">   12</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structdtpreg__t.html#a8a0c321ffd2847534bfd0bc849a972b4">data0</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="structdtpreg__t.html#a6eef7e2e6f5e38b7d153e3f25d6fefb8">   13</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structdtpreg__t.html#a6eef7e2e6f5e38b7d153e3f25d6fefb8">data1</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;} <a class="code" href="structdtpreg__t.html">dtpreg_t</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/* Device register type for terminals; fields have different meanings */</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="structtermreg__t.html">   17</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="structtermreg__t.html#adb515c26e4c6508ab1a44cc43a8a91ae">   18</a></span>&#160;  <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structtermreg__t.html#adb515c26e4c6508ab1a44cc43a8a91ae">recv_status</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="structtermreg__t.html#aaee0ee8a649c4a4792f3ee83350db6ea">   19</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structtermreg__t.html#aaee0ee8a649c4a4792f3ee83350db6ea">recv_command</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="structtermreg__t.html#ab3957b0f10a0e492e4e29b90167f513d">   20</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structtermreg__t.html#ab3957b0f10a0e492e4e29b90167f513d">transm_status</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="structtermreg__t.html#a2b198d43d6df5503425e365297cd5444">   21</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structtermreg__t.html#a2b198d43d6df5503425e365297cd5444">transm_command</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;} <a class="code" href="structtermreg__t.html">termreg_t</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* With a pointer to devreg_t we can refer to a &quot;generic&quot; device register, and</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">   then use the appropriate union member to access the fields (not strictly </span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">     necessary, but for convenience and clarity) */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="uniondevreg__t.html">   27</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">union </span>{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="uniondevreg__t.html#a78e61f38ebbbb2b669e0cf6d6ea00d77">   28</a></span>&#160;  <a class="code" href="structdtpreg__t.html">dtpreg_t</a> <a class="code" href="uniondevreg__t.html#a78e61f38ebbbb2b669e0cf6d6ea00d77">dtp</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="uniondevreg__t.html#a98298db6115a0ce0138af4474b6b9ad9">   29</a></span>&#160;    <a class="code" href="structtermreg__t.html">termreg_t</a> <a class="code" href="uniondevreg__t.html#a98298db6115a0ce0138af4474b6b9ad9">term</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;} <a class="code" href="uniondevreg__t.html">devreg_t</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/************************* CPU state type ***********************************/</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="structstate__t.html">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="structstate__t.html#a867e8a3789b0868e6fe3cb734b8d7e34">   35</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structstate__t.html#a867e8a3789b0868e6fe3cb734b8d7e34">entry_hi</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="structstate__t.html#a977139f16407ef0c648e940dabe05318">   36</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structstate__t.html#a977139f16407ef0c648e940dabe05318">cause</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="structstate__t.html#ae37efb991e613c0dc476ece5ed4ffa71">   37</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structstate__t.html#ae37efb991e613c0dc476ece5ed4ffa71">status</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="structstate__t.html#ac0cfee10c7a13bb3749604cd15892217">   38</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structstate__t.html#ac0cfee10c7a13bb3749604cd15892217">pc_epc</a>;  <span class="comment">/* pc in the new area, epc in the old area */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="structstate__t.html#a42033ce9f27270ef281d89603922dcab">   39</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> gpr[29];</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="structstate__t.html#a0e34aeb4eba44f3971bb1bf383435897">   40</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structstate__t.html#a0e34aeb4eba44f3971bb1bf383435897">hi</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="structstate__t.html#a55f6b3c956fb70c8ef13c4a00ccd3a7b">   41</a></span>&#160;    <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structstate__t.html#a55f6b3c956fb70c8ef13c4a00ccd3a7b">lo</a>;             </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} <a class="code" href="structstate__t.html">state_t</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a10d0c36991b9e120c9047d9f12347569">   44</a></span>&#160;<span class="preprocessor">#define reg_at  gpr[0]  </span><span class="comment">/* so we can use registers by name */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#acf5b9f61827162835dc72f4e2b85c260">   45</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_v0  gpr[1]</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a6aa511f6a155b3bdd4fd788b98364a7f">   46</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_v1  gpr[2]</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#af5a1de2bc6096395e02a267506496f57">   47</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_a0  gpr[3]</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a9557d75055b147f87a5edd1f1a58379f">   48</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_a1  gpr[4]</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#ae08726992f79a28c9e83294ae80c29f6">   49</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_a2  gpr[5]</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#aa14c489d5b3388bda3bb0c46ee93356d">   50</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_a3  gpr[6]</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a5cc573ab812a946c94417604c32ad6e4">   51</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_t0  gpr[7]</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#abdd77b3baab674649e6b1aabcc6f96cd">   52</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_t1  gpr[8]</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a56b03bac0b24d21a08d6dcd870976250">   53</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_t2  gpr[9]</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a246a27ba0a836384da38ea57dae451b3">   54</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_t3  gpr[10]</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a11f3711c8e921bc3df8815bc74a90682">   55</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_t4  gpr[11]</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a285c42961bb6e0d2791fcd34b4b71a91">   56</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_t5  gpr[12]</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#abee7dd19be61df88a5333994eaca762f">   57</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_t6  gpr[13]</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a7f36de5cd8b455872c3a5a567ba845bf">   58</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_t7  gpr[14]</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a498b9c994c8fb9f497605bda5c3b3a63">   59</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_s0  gpr[15]</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a0ed7101eb42a6c731b19b893a91e3e95">   60</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_s1  gpr[16]</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#adba6df3efe5c33e83d3942adf7feb038">   61</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_s2  gpr[17]</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#aac7ae4ddfeed3e19308418a7919e9af7">   62</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_s3  gpr[18]</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a910a9a398f7876dc6b122d61ded91963">   63</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_s4  gpr[19]</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a2918877a84175a55089c9e5aba59bfe0">   64</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_s5  gpr[20]</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a2d662e8bbcee2bbf2a5514922fb80108">   65</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_s6  gpr[21]</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#abbc5e7131858347de3659d304fcd5086">   66</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_s7  gpr[22]</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a895023074c3994f12dace8d81b4c5728">   67</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_t8  gpr[23]</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#ac2713a414772de192fd4b7119d3cbca7">   68</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_t9  gpr[24]</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a3abcfeac523b8abf388c5a79556cb3b9">   69</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_gp  gpr[25]</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a908b1056f57615b3d510b367ef081308">   70</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_sp  gpr[26]</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a07d51549d93731ddb4c80f911d018268">   71</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_fp  gpr[27]</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a2d77d57d813bc660fd1748f23435a1cc">   72</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_ra  gpr[28]</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a59c575f462f1953ba031bb06c66cf6b8">   73</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_HI  gpr[29]</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="lib_2u_m_p_stypes_8h.html#a1ecb88384351531788fec8461e0d0615">   74</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define reg_LO  gpr[30]</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">/********************** process-supplied trap vectors ***********************/</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="structsys5__vect__t.html">   78</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="code" href="structsys5__vect__t.html#a1666828afe40c79669fb24589f693669">   79</a></span>&#160;  <a class="code" href="structstate__t.html">state_t</a> *<a class="code" href="structsys5__vect__t.html#a1666828afe40c79669fb24589f693669">old_area</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="structsys5__vect__t.html#a9f82661633186f4f5f4c70a5844c00c0">   80</a></span>&#160;    <a class="code" href="structstate__t.html">state_t</a> *<a class="code" href="structsys5__vect__t.html#a9f82661633186f4f5f4c70a5844c00c0">new_area</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <a class="code" href="structsys5__vect__t.html">sys5_vect_t</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="code" href="structdisk__data__t.html">   83</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="structdisk__data__t.html#aeb8030b3dd1287feefb6380f4c8e3611">   84</a></span>&#160;  <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structdisk__data__t.html#aeb8030b3dd1287feefb6380f4c8e3611">max_cyl</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="structdisk__data__t.html#aa6c7020fb3ea2240307fe8cef518f4a0">   85</a></span>&#160;  <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structdisk__data__t.html#aa6c7020fb3ea2240307fe8cef518f4a0">max_head</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="structdisk__data__t.html#ab583dd23c9c85bbeacf54b11d8d59a28">   86</a></span>&#160;  <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structdisk__data__t.html#ab583dd23c9c85bbeacf54b11d8d59a28">max_sect</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} <a class="code" href="structdisk__data__t.html">disk_data_t</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">/******************* VM data structures *************************************/</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="structpte__entry__t.html">   90</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="structpte__entry__t.html#a867e8a3789b0868e6fe3cb734b8d7e34">   91</a></span>&#160;  <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structpte__entry__t.html#a867e8a3789b0868e6fe3cb734b8d7e34">entry_hi</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="structpte__entry__t.html#afe028ede8677834da78a88fb7257be4e">   92</a></span>&#160;  <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structpte__entry__t.html#afe028ede8677834da78a88fb7257be4e">entry_lo</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <a class="code" href="structpte__entry__t.html">pte_entry_t</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">/* PTE for kUseg2 and kUseg3 */</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="structu_p_t_e__t.html">   96</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="code" href="structu_p_t_e__t.html#a45eed61436d7fec550ec1071e528d577">   97</a></span>&#160;  <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structu_p_t_e__t.html#a45eed61436d7fec550ec1071e528d577">header</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="structu_p_t_e__t.html#a204ccbbb972125396c1c5d89cede3d4d">   98</a></span>&#160;  <a class="code" href="structpte__entry__t.html">pte_entry_t</a> pte[<a class="code" href="lib_2const_8h.html#a343972254f8fab5a6141ba018d1ed7a2">KUSEG_PAGES</a>]; <span class="comment">/* kUseg2 and kUseg3 PTEs have same length */</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;} <a class="code" href="structu_p_t_e__t.html">uPTE_t</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">/* PTE for ksegOS (has more entries) */</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="code" href="structos_p_t_e__t.html">  102</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="structos_p_t_e__t.html#a45eed61436d7fec550ec1071e528d577">  103</a></span>&#160;  <a class="code" href="lib_2base_8h.html#ac3df7cf3c8cb172a588adec881447d68">U32</a> <a class="code" href="structos_p_t_e__t.html#a45eed61436d7fec550ec1071e528d577">header</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="code" href="structos_p_t_e__t.html#a4b0494719d6e84b6e12eaa135cd54532">  104</a></span>&#160;  <a class="code" href="structpte__entry__t.html">pte_entry_t</a> pte[<a class="code" href="lib_2const_8h.html#ab5c2c6e008c8304671037d897fe670e7">KSEGOS_PAGES</a>];</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;} <a class="code" href="structos_p_t_e__t.html">osPTE_t</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">/* segment table type */</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="structsegtable__t.html">  108</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="structsegtable__t.html#a1ad5abe16dc0227ef51afe8babaa2775">  109</a></span>&#160;  <a class="code" href="structos_p_t_e__t.html">osPTE_t</a> *<a class="code" href="structsegtable__t.html#a1ad5abe16dc0227ef51afe8babaa2775">ksegOS_pte</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="code" href="structsegtable__t.html#add1f86d705fdc8ed1dafa2c2b21e30cc">  110</a></span>&#160;  <a class="code" href="structu_p_t_e__t.html">uPTE_t</a> *<a class="code" href="structsegtable__t.html#add1f86d705fdc8ed1dafa2c2b21e30cc">kUseg2_pte</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="code" href="structsegtable__t.html#a98aea21d8709199bb3dfba4818260493">  111</a></span>&#160;  <a class="code" href="structu_p_t_e__t.html">uPTE_t</a> *<a class="code" href="structsegtable__t.html#a98aea21d8709199bb3dfba4818260493">kUseg3_pte</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;} <a class="code" href="structsegtable__t.html">segtable_t</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato Dom 23 Set 2012 18:29:06 per PKAYA-2012 da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

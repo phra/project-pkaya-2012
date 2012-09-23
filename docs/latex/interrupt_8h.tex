@@ -1,0 +1,83 @@
+\hypertarget{interrupt_8h}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/interrupt.h}
+\label{interrupt_8h}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/interrupt.\-h@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/interrupt.\-h}}
+}
+{\ttfamily \#include \char`\"{}lib/const.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/base.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/u\-M\-P\-Stypes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/libumps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/listx.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/types11.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/pcb.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/asl.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/utils.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}exception.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}syscall.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}init.\-h\char`\"{}}\\*
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interrupt_8h_a32f34b160341ecb125d9af0e7d3b936e}{device\-Handler} (\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} intline)
+\item 
+void \hyperlink{interrupt_8h_acc77bfb6e4822a8e77a7cbe0cfc2dada}{\-\_\-verhogen} (int semkey, unsigned int $\ast$status)
+\item 
+void \hyperlink{interrupt_8h_ac8dc451d3dfaea9ef445fa2e77acf120}{\-\_\-passeren} (int semkey)
+\item 
+void \hyperlink{interrupt_8h_aae20182833e9cb218bcf3e0dc079abec}{\-\_\-verhogenclock} (int semkey)
+\item 
+void \hyperlink{interrupt_8h_a2d83085b5c3534a73f40da132967face}{\-\_\-passerenclock} (int semkey)
+\end{DoxyCompactItemize}
+\subsection*{Variabili}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{interrupt_8h_a985e6acfab6dd500bc3c4ad69a95162d}{devstatus} \mbox{[}\hyperlink{phase1_2const_8h_a58475cf2c6fec61240a581b4cb795e9f}{D\-E\-V\-\_\-\-U\-S\-E\-D\-\_\-\-I\-N\-T\-S}\mbox{]}\mbox{[}\hyperlink{phase1_2const_8h_ac488a197b10aaecb90e1c57b17d56e64}{D\-E\-V\-\_\-\-P\-E\-R\-\_\-\-I\-N\-T}\mbox{]}
+\begin{DoxyCompactList}\small\item\em matrice per la gestione degli interrupt \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle funzioni}
+\hypertarget{interrupt_8h_ac8dc451d3dfaea9ef445fa2e77acf120}{\index{interrupt.\-h@{interrupt.\-h}!\-\_\-passeren@{\-\_\-passeren}}
+\index{\-\_\-passeren@{\-\_\-passeren}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{\-\_\-passeren}]{\setlength{\rightskip}{0pt plus 5cm}void \-\_\-passeren (
+\begin{DoxyParamCaption}
+\item[{int}]{semkey}
+\end{DoxyParamCaption}
+)}}\label{interrupt_8h_ac8dc451d3dfaea9ef445fa2e77acf120}
+passeren per gli interrupt dei devices \hypertarget{interrupt_8h_a2d83085b5c3534a73f40da132967face}{\index{interrupt.\-h@{interrupt.\-h}!\-\_\-passerenclock@{\-\_\-passerenclock}}
+\index{\-\_\-passerenclock@{\-\_\-passerenclock}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{\-\_\-passerenclock}]{\setlength{\rightskip}{0pt plus 5cm}void \-\_\-passerenclock (
+\begin{DoxyParamCaption}
+\item[{int}]{semkey}
+\end{DoxyParamCaption}
+)}}\label{interrupt_8h_a2d83085b5c3534a73f40da132967face}
+passeren per il clock \hypertarget{interrupt_8h_acc77bfb6e4822a8e77a7cbe0cfc2dada}{\index{interrupt.\-h@{interrupt.\-h}!\-\_\-verhogen@{\-\_\-verhogen}}
+\index{\-\_\-verhogen@{\-\_\-verhogen}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{\-\_\-verhogen}]{\setlength{\rightskip}{0pt plus 5cm}void \-\_\-verhogen (
+\begin{DoxyParamCaption}
+\item[{int}]{semkey, }
+\item[{unsigned int $\ast$}]{status}
+\end{DoxyParamCaption}
+)}}\label{interrupt_8h_acc77bfb6e4822a8e77a7cbe0cfc2dada}
+verhogen per gli interrupt \hypertarget{interrupt_8h_aae20182833e9cb218bcf3e0dc079abec}{\index{interrupt.\-h@{interrupt.\-h}!\-\_\-verhogenclock@{\-\_\-verhogenclock}}
+\index{\-\_\-verhogenclock@{\-\_\-verhogenclock}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{\-\_\-verhogenclock}]{\setlength{\rightskip}{0pt plus 5cm}void \-\_\-verhogenclock (
+\begin{DoxyParamCaption}
+\item[{int}]{semkey}
+\end{DoxyParamCaption}
+)}}\label{interrupt_8h_aae20182833e9cb218bcf3e0dc079abec}
+verhogen per il clock \hypertarget{interrupt_8h_a32f34b160341ecb125d9af0e7d3b936e}{\index{interrupt.\-h@{interrupt.\-h}!device\-Handler@{device\-Handler}}
+\index{device\-Handler@{device\-Handler}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{device\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void device\-Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{intline}
+\end{DoxyParamCaption}
+)}}\label{interrupt_8h_a32f34b160341ecb125d9af0e7d3b936e}
+funzione per la gestione degli interrupt 
+
+\subsection{Documentazione delle variabili}
+\hypertarget{interrupt_8h_a985e6acfab6dd500bc3c4ad69a95162d}{\index{interrupt.\-h@{interrupt.\-h}!devstatus@{devstatus}}
+\index{devstatus@{devstatus}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{devstatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} devstatus\mbox{[}{\bf D\-E\-V\-\_\-\-U\-S\-E\-D\-\_\-\-I\-N\-T\-S}\mbox{]}\mbox{[}{\bf D\-E\-V\-\_\-\-P\-E\-R\-\_\-\-I\-N\-T}\mbox{]}}}\label{interrupt_8h_a985e6acfab6dd500bc3c4ad69a95162d}
+
+
+matrice per la gestione degli interrupt 
+

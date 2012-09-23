@@ -1,0 +1,69 @@
+\hypertarget{structpcb__t}{\section{Riferimenti per la struct pcb\-\_\-t}
+\label{structpcb__t}\index{pcb\-\_\-t@{pcb\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$types11.\-h$>$}
+
+\subsection*{Campi}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structpcb__t_af500917c052066b40cf47f96b43c607b}{pid}
+\item 
+int \hyperlink{structpcb__t_aab19ac996ae189b600c68cb4e4e8b66b}{last\-\_\-sched\-\_\-time}
+\item 
+int \hyperlink{structpcb__t_a7438f6e4370c77335272481935c3c2da}{cpu\-\_\-time}
+\item 
+\hyperlink{structstate__t}{state\-\_\-t} $\ast$ \hyperlink{structpcb__t_aafb68b6d949df584f04372a411587a3e}{handler} \mbox{[}6\mbox{]}
+\item 
+int \hyperlink{structpcb__t_acec9ce2df15222151ad66fcb1d74eb9f}{priority}
+\item 
+int \hyperlink{structpcb__t_a831f803a73e91f4b1530e60bc24e92b4}{p\-\_\-semkey}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head} \hyperlink{structpcb__t_adb25d84c36e53123e815e122610fd3ab}{p\-\_\-next}
+\item 
+struct \hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{structpcb__t_a9e790d449812df0e71df251bb744648a}{p\-\_\-parent}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head} p\-\_\-child \hyperlink{structpcb__t_ae571e01892f17d1ccf6332d96e6c5373}{p\-\_\-sib}
+\item 
+\hyperlink{structstate__t}{state\-\_\-t} \hyperlink{structpcb__t_ae1524fbfc37b7766b551477e48b3bf4d}{p\-\_\-s}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione dei campi}
+\hypertarget{structpcb__t_a7438f6e4370c77335272481935c3c2da}{\index{pcb\-\_\-t@{pcb\-\_\-t}!cpu\-\_\-time@{cpu\-\_\-time}}
+\index{cpu\-\_\-time@{cpu\-\_\-time}!pcb_t@{pcb\-\_\-t}}
+\subsubsection[{cpu\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}int cpu\-\_\-time}}\label{structpcb__t_a7438f6e4370c77335272481935c3c2da}
+\hypertarget{structpcb__t_aafb68b6d949df584f04372a411587a3e}{\index{pcb\-\_\-t@{pcb\-\_\-t}!handler@{handler}}
+\index{handler@{handler}!pcb_t@{pcb\-\_\-t}}
+\subsubsection[{handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state\-\_\-t}$\ast$ handler\mbox{[}6\mbox{]}}}\label{structpcb__t_aafb68b6d949df584f04372a411587a3e}
+\hypertarget{structpcb__t_aab19ac996ae189b600c68cb4e4e8b66b}{\index{pcb\-\_\-t@{pcb\-\_\-t}!last\-\_\-sched\-\_\-time@{last\-\_\-sched\-\_\-time}}
+\index{last\-\_\-sched\-\_\-time@{last\-\_\-sched\-\_\-time}!pcb_t@{pcb\-\_\-t}}
+\subsubsection[{last\-\_\-sched\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}int last\-\_\-sched\-\_\-time}}\label{structpcb__t_aab19ac996ae189b600c68cb4e4e8b66b}
+\hypertarget{structpcb__t_adb25d84c36e53123e815e122610fd3ab}{\index{pcb\-\_\-t@{pcb\-\_\-t}!p\-\_\-next@{p\-\_\-next}}
+\index{p\-\_\-next@{p\-\_\-next}!pcb_t@{pcb\-\_\-t}}
+\subsubsection[{p\-\_\-next}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf list\-\_\-head} p\-\_\-next}}\label{structpcb__t_adb25d84c36e53123e815e122610fd3ab}
+\hypertarget{structpcb__t_a9e790d449812df0e71df251bb744648a}{\index{pcb\-\_\-t@{pcb\-\_\-t}!p\-\_\-parent@{p\-\_\-parent}}
+\index{p\-\_\-parent@{p\-\_\-parent}!pcb_t@{pcb\-\_\-t}}
+\subsubsection[{p\-\_\-parent}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf pcb\-\_\-t} $\ast$ p\-\_\-parent}}\label{structpcb__t_a9e790d449812df0e71df251bb744648a}
+\hypertarget{structpcb__t_ae1524fbfc37b7766b551477e48b3bf4d}{\index{pcb\-\_\-t@{pcb\-\_\-t}!p\-\_\-s@{p\-\_\-s}}
+\index{p\-\_\-s@{p\-\_\-s}!pcb_t@{pcb\-\_\-t}}
+\subsubsection[{p\-\_\-s}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state\-\_\-t} p\-\_\-s}}\label{structpcb__t_ae1524fbfc37b7766b551477e48b3bf4d}
+\hypertarget{structpcb__t_a831f803a73e91f4b1530e60bc24e92b4}{\index{pcb\-\_\-t@{pcb\-\_\-t}!p\-\_\-semkey@{p\-\_\-semkey}}
+\index{p\-\_\-semkey@{p\-\_\-semkey}!pcb_t@{pcb\-\_\-t}}
+\subsubsection[{p\-\_\-semkey}]{\setlength{\rightskip}{0pt plus 5cm}int p\-\_\-semkey}}\label{structpcb__t_a831f803a73e91f4b1530e60bc24e92b4}
+\hypertarget{structpcb__t_ae571e01892f17d1ccf6332d96e6c5373}{\index{pcb\-\_\-t@{pcb\-\_\-t}!p\-\_\-sib@{p\-\_\-sib}}
+\index{p\-\_\-sib@{p\-\_\-sib}!pcb_t@{pcb\-\_\-t}}
+\subsubsection[{p\-\_\-sib}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf list\-\_\-head} p\-\_\-child p\-\_\-sib}}\label{structpcb__t_ae571e01892f17d1ccf6332d96e6c5373}
+\hypertarget{structpcb__t_af500917c052066b40cf47f96b43c607b}{\index{pcb\-\_\-t@{pcb\-\_\-t}!pid@{pid}}
+\index{pid@{pid}!pcb_t@{pcb\-\_\-t}}
+\subsubsection[{pid}]{\setlength{\rightskip}{0pt plus 5cm}int pid}}\label{structpcb__t_af500917c052066b40cf47f96b43c607b}
+\hypertarget{structpcb__t_acec9ce2df15222151ad66fcb1d74eb9f}{\index{pcb\-\_\-t@{pcb\-\_\-t}!priority@{priority}}
+\index{priority@{priority}!pcb_t@{pcb\-\_\-t}}
+\subsubsection[{priority}]{\setlength{\rightskip}{0pt plus 5cm}int priority}}\label{structpcb__t_acec9ce2df15222151ad66fcb1d74eb9f}
+
+
+La documentazione per questa struct è stata generata a partire dai seguenti file\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/\hyperlink{lib_2types11_8h}{types11.\-h}\item 
+C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/phase1/\hyperlink{phase1_2types11_8h}{types11.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,129 @@
+\hypertarget{syscall_8c}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/syscall.c}
+\label{syscall_8c}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/syscall.\-c@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/syscall.\-c}}
+}
+{\ttfamily \#include \char`\"{}lib/const.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/base.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/u\-M\-P\-Stypes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/libumps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/listx.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/types11.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/pcb.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/asl.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/utils.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}init.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}exception.\-h\char`\"{}}\\*
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{syscall_8c_a5f3dd55d8e6085223954d78747dd6b72}{create\-\_\-process} (void)
+\item 
+void \hyperlink{syscall_8c_a9fa839c5f7747474f88184ef479b1892}{create\-\_\-brother} (void)
+\item 
+void \hyperlink{syscall_8c_a571924dff6ed140d04f45cbb62b5be74}{terminate\-\_\-process} (void)
+\item 
+void \hyperlink{syscall_8c_a8747193e9da55f459fbac3aadf890892}{verhogen} (void)
+\item 
+void \hyperlink{syscall_8c_a712f84ab52df0c461f7bfc3d16261ffd}{passeren} (void)
+\item 
+void \hyperlink{syscall_8c_ae0714195afd60424ae10408629dec94a}{get\-\_\-cpu\-\_\-time} (void)
+\item 
+void \hyperlink{syscall_8c_a78b3744f5f72569a104800b8c6712b77}{wait\-\_\-for\-\_\-clock} (void)
+\item 
+void \hyperlink{syscall_8c_af010b7975b6274028bdde13870abb684}{wait\-\_\-for\-\_\-io\-\_\-device} (void)
+\item 
+void \hyperlink{syscall_8c_aac4ac3d35643b455ec7df570b7f8d51c}{specify\-\_\-prg\-\_\-state\-\_\-vector} (void)
+\item 
+void \hyperlink{syscall_8c_a85a0a644738a772ffdb1e3b7d41b86fb}{specify\-\_\-tlb\-\_\-state\-\_\-vector} (void)
+\item 
+void \hyperlink{syscall_8c_adf4457bb3956749a696028d9d276bc6d}{specify\-\_\-sys\-\_\-state\-\_\-vector} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle funzioni}
+\hypertarget{syscall_8c_a9fa839c5f7747474f88184ef479b1892}{\index{syscall.\-c@{syscall.\-c}!create\-\_\-brother@{create\-\_\-brother}}
+\index{create\-\_\-brother@{create\-\_\-brother}!syscall.c@{syscall.\-c}}
+\subsubsection[{create\-\_\-brother}]{\setlength{\rightskip}{0pt plus 5cm}void create\-\_\-brother (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{syscall_8c_a9fa839c5f7747474f88184ef479b1892}
+Quando invocata, la sys2 determina la creazione di un processo fratello del processo chiamante. Registro a1\-: indirizzo fisico dello \hyperlink{structstate__t}{state\-\_\-t} del nuovo processo. Registro a2\-: priorità del nuovo processo. Valori di ritorno nel registro v0\-:
+\begin{DoxyItemize}
+\item 0 nel caso di creazione corretta
+\item -\/1 nel caso di errore. 
+\end{DoxyItemize}\hypertarget{syscall_8c_a5f3dd55d8e6085223954d78747dd6b72}{\index{syscall.\-c@{syscall.\-c}!create\-\_\-process@{create\-\_\-process}}
+\index{create\-\_\-process@{create\-\_\-process}!syscall.c@{syscall.\-c}}
+\subsubsection[{create\-\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}void create\-\_\-process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{syscall_8c_a5f3dd55d8e6085223954d78747dd6b72}
+Quando invocata, la sys1 determina la creazione di un processo figlio del processo chiamante. Registro a1\-: indirizzo fisico dello \hyperlink{structstate__t}{state\-\_\-t} del nuovo processo. Registro a2\-: priorità del nuovo processo. Valori di ritorno nel registro v0\-:
+\begin{DoxyItemize}
+\item 0 nel caso di creazione corretta
+\item -\/1 nel caso di errore 
+\end{DoxyItemize}\hypertarget{syscall_8c_ae0714195afd60424ae10408629dec94a}{\index{syscall.\-c@{syscall.\-c}!get\-\_\-cpu\-\_\-time@{get\-\_\-cpu\-\_\-time}}
+\index{get\-\_\-cpu\-\_\-time@{get\-\_\-cpu\-\_\-time}!syscall.c@{syscall.\-c}}
+\subsubsection[{get\-\_\-cpu\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}void get\-\_\-cpu\-\_\-time (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{syscall_8c_ae0714195afd60424ae10408629dec94a}
+Quando invocata, la sys6 restituisce il tempo di C\-P\-U (in microsecondi) usato dal processo corrente. Registro v0\-: valore di ritorno. \hypertarget{syscall_8c_a712f84ab52df0c461f7bfc3d16261ffd}{\index{syscall.\-c@{syscall.\-c}!passeren@{passeren}}
+\index{passeren@{passeren}!syscall.c@{syscall.\-c}}
+\subsubsection[{passeren}]{\setlength{\rightskip}{0pt plus 5cm}void passeren (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{syscall_8c_a712f84ab52df0c461f7bfc3d16261ffd}
+Quando invocata, la sys5 esegue una P sul semaforo con chiave sem\-Key. Registro a1\-: chiave del semaforo su cui effettuare la P. \hypertarget{syscall_8c_aac4ac3d35643b455ec7df570b7f8d51c}{\index{syscall.\-c@{syscall.\-c}!specify\-\_\-prg\-\_\-state\-\_\-vector@{specify\-\_\-prg\-\_\-state\-\_\-vector}}
+\index{specify\-\_\-prg\-\_\-state\-\_\-vector@{specify\-\_\-prg\-\_\-state\-\_\-vector}!syscall.c@{syscall.\-c}}
+\subsubsection[{specify\-\_\-prg\-\_\-state\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}void specify\-\_\-prg\-\_\-state\-\_\-vector (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{syscall_8c_aac4ac3d35643b455ec7df570b7f8d51c}
+Quando invocata, la sys9 consente di definire gestori di Pgm\-Trap per il processo corrente. Registro a1\-: indirizzo della O\-L\-D\-Area in cui salvare lo stato corrente del processore. Registro a2\-: indirizzo della N\-E\-W\-Area del processo (da utilizzare nel caso si verifichi un Pgm\-Trap) \hypertarget{syscall_8c_adf4457bb3956749a696028d9d276bc6d}{\index{syscall.\-c@{syscall.\-c}!specify\-\_\-sys\-\_\-state\-\_\-vector@{specify\-\_\-sys\-\_\-state\-\_\-vector}}
+\index{specify\-\_\-sys\-\_\-state\-\_\-vector@{specify\-\_\-sys\-\_\-state\-\_\-vector}!syscall.c@{syscall.\-c}}
+\subsubsection[{specify\-\_\-sys\-\_\-state\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}void specify\-\_\-sys\-\_\-state\-\_\-vector (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{syscall_8c_adf4457bb3956749a696028d9d276bc6d}
+Quando invocata, la sys11 consente di definire gestori di S\-Y\-S/\-B\-P Exception per il processo corrente. Registro a1\-: indirizzo della O\-L\-D\-Area in cui salvare lo stato corrente del processore. Registro a2\-: indirizzo della N\-E\-W\-Area del processore (da utilizzare nel caso si verifichi una S\-Y\-S/\-B\-P Exception) \hypertarget{syscall_8c_a85a0a644738a772ffdb1e3b7d41b86fb}{\index{syscall.\-c@{syscall.\-c}!specify\-\_\-tlb\-\_\-state\-\_\-vector@{specify\-\_\-tlb\-\_\-state\-\_\-vector}}
+\index{specify\-\_\-tlb\-\_\-state\-\_\-vector@{specify\-\_\-tlb\-\_\-state\-\_\-vector}!syscall.c@{syscall.\-c}}
+\subsubsection[{specify\-\_\-tlb\-\_\-state\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}void specify\-\_\-tlb\-\_\-state\-\_\-vector (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{syscall_8c_a85a0a644738a772ffdb1e3b7d41b86fb}
+Quando invocata, la sys10 consente di definire gestori di T\-L\-B Exception per il processo corrente. Registro a1\-: indirizzo della O\-L\-D\-Area in cui salvare lo stato corrente del processore. Registro a2\-: indirizzo della N\-E\-W\-Area del processore (da utilizzare nel caso si verifichi una T\-L\-B Exception) \hypertarget{syscall_8c_a571924dff6ed140d04f45cbb62b5be74}{\index{syscall.\-c@{syscall.\-c}!terminate\-\_\-process@{terminate\-\_\-process}}
+\index{terminate\-\_\-process@{terminate\-\_\-process}!syscall.c@{syscall.\-c}}
+\subsubsection[{terminate\-\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}void terminate\-\_\-process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{syscall_8c_a571924dff6ed140d04f45cbb62b5be74}
+quando invocata la sys3 termina il processo corrente e tutta la sua progenia. \hypertarget{syscall_8c_a8747193e9da55f459fbac3aadf890892}{\index{syscall.\-c@{syscall.\-c}!verhogen@{verhogen}}
+\index{verhogen@{verhogen}!syscall.c@{syscall.\-c}}
+\subsubsection[{verhogen}]{\setlength{\rightskip}{0pt plus 5cm}void verhogen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{syscall_8c_a8747193e9da55f459fbac3aadf890892}
+Quando invocata, la sys4 esegue una V sul semaforo con chiave sem\-Key Registro a1\-: chiave del semaforo su cui effettuare la V. \hypertarget{syscall_8c_a78b3744f5f72569a104800b8c6712b77}{\index{syscall.\-c@{syscall.\-c}!wait\-\_\-for\-\_\-clock@{wait\-\_\-for\-\_\-clock}}
+\index{wait\-\_\-for\-\_\-clock@{wait\-\_\-for\-\_\-clock}!syscall.c@{syscall.\-c}}
+\subsubsection[{wait\-\_\-for\-\_\-clock}]{\setlength{\rightskip}{0pt plus 5cm}void wait\-\_\-for\-\_\-clock (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{syscall_8c_a78b3744f5f72569a104800b8c6712b77}
+Quando invocata, la sys7 esegue una P sul semaforo associato allo pseudo-\/clock timer. La V su tale semaforo deve essere eseguito dal nucleo ogni 100 millisecondi (tutti i processi in coda su tale semaforo devono essere sbloccati). \hypertarget{syscall_8c_af010b7975b6274028bdde13870abb684}{\index{syscall.\-c@{syscall.\-c}!wait\-\_\-for\-\_\-io\-\_\-device@{wait\-\_\-for\-\_\-io\-\_\-device}}
+\index{wait\-\_\-for\-\_\-io\-\_\-device@{wait\-\_\-for\-\_\-io\-\_\-device}!syscall.c@{syscall.\-c}}
+\subsubsection[{wait\-\_\-for\-\_\-io\-\_\-device}]{\setlength{\rightskip}{0pt plus 5cm}void wait\-\_\-for\-\_\-io\-\_\-device (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{syscall_8c_af010b7975b6274028bdde13870abb684}
+Quando invocata, la sys8 esegue una P sul semaforo associato al device identificato da int\-No, dnume e wait\-For\-Term\-Read Registro a1\-: linea di interrupt Registro a2\-: device number Registro a3\-: operazione di terminal read/write Registro v0\-: status del device 

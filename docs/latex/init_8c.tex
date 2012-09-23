@@ -1,0 +1,203 @@
+\hypertarget{init_8c}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/init.c}
+\label{init_8c}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/init.\-c@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/init.\-c}}
+}
+{\ttfamily \#include \char`\"{}lib/const.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/base.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/u\-M\-P\-Stypes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/libumps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/listx.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/types11.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/pcb.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/asl.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/utils.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}exception.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}syscall.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}interrupt.\-h\char`\"{}}\\*
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_a6a0c937f22f4f8e2d7c8223fd92f1e0c}{mytermstat} (\hyperlink{lib_2base_8h_a8dfc83cbb8a200048ed977af78885aa1}{memaddr} $\ast$stataddr)
+\item 
+unsigned int \hyperlink{init_8c_a4bfe35af00daa0de1d426f484ab4f533}{mytermprint} (char $\ast$str, unsigned int term)
+\item 
+void \hyperlink{init_8c_a3dff7a7ddb7b31f1a3f84462906b78e3}{myprint} (char $\ast$str1)
+\item 
+void \hyperlink{init_8c_a9bbf90d0109753b6667a357315156d7c}{myprintint} (char $\ast$str1, int numero)
+\item 
+void \hyperlink{init_8c_a91fcd5c68a8b0ccf94d0167fe1b4e8f6}{myprintbin} (char $\ast$str1, int numero)
+\item 
+void \hyperlink{init_8c_a37123e336d19f111e111d2baebb40898}{myprinthex} (char $\ast$str1, int numero)
+\item 
+void \hyperlink{init_8c_a7e50c32ff34e340cf6a55068981c5d22}{sleep} (int count)
+\item 
+void \hyperlink{init_8c_ae1a3968e7947464bee7714f6d43b7002}{test} ()
+\item 
+int \hyperlink{init_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variabili}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{init_8c_a69b8d39be10ca914356df47dece51d4d}{process\-Counter} = 0
+\begin{DoxyCompactList}\small\item\em contatore dei processi \end{DoxyCompactList}\item 
+int \hyperlink{init_8c_ad318e0d6e55bda844999a756a010d6ad}{soft\-Block\-Counter} = 0
+\begin{DoxyCompactList}\small\item\em Contatore processi bloccati per I/\-O. \end{DoxyCompactList}\item 
+int \hyperlink{init_8c_ad0b360b54c065def8f306dd38587add6}{usedpid} = 0
+\begin{DoxyCompactList}\small\item\em Per tenere conto dei pid assegnati. \end{DoxyCompactList}\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{init_8c_ab13508b903f28c9e7d10840b2451367c}{currentproc} \mbox{[}\hyperlink{init_8h_abc16f63a572f5b4de9617288fc7c9559}{M\-A\-X\-C\-P\-Us}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Puntatori ai processi attualmente in esecuzione. \end{DoxyCompactList}\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{init_8c_ae30a58778136e047f76089ffa33a5108}{P\-I\-Ds} \mbox{[}\hyperlink{init_8h_a9b896b5481b8e7b305a5ea99a0d3554c}{M\-A\-X\-P\-I\-D}\mbox{]}
+\begin{DoxyCompactList}\small\item\em un array per tenere conto dei pid assegnati, null se è libero, altrimenti l'indirizzo del pcb \end{DoxyCompactList}\item 
+\hyperlink{structstate__t}{state\-\_\-t} $\ast$ \hyperlink{init_8c_a58f4b53b4c0a64c0f4638954abea960b}{new\-\_\-old\-\_\-areas} \mbox{[}\hyperlink{init_8h_abc16f63a572f5b4de9617288fc7c9559}{M\-A\-X\-C\-P\-Us}\mbox{]}\mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tabella generale per le new/old areas, in modo da avere un'unica tabella per tutti i processori. \end{DoxyCompactList}\item 
+\hyperlink{structstate__t}{state\-\_\-t} \hyperlink{init_8c_a0ee87a1f66854fadca96c35ba49a43cd}{real\-\_\-new\-\_\-old\-\_\-areas} \mbox{[}\hyperlink{init_8h_abc16f63a572f5b4de9617288fc7c9559}{M\-A\-X\-C\-P\-Us}-\/1\mbox{]}\mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em new/old area reali dei processori 1..n che le hanno sullo stack \end{DoxyCompactList}\item 
+\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_a75a4c6cacc11bfa00977873e53249823}{mutex\-\_\-semaphore} \mbox{[}\hyperlink{phase1_2const_8h_abe4567498db286a3185a522c6dae3cbc}{M\-A\-X\-P\-R\-O\-C}+\hyperlink{phase1_2const_8h_a4e132cfaa78353e3af1474a86b2dd535}{M\-A\-X\-\_\-\-D\-E\-V\-I\-C\-E\-S}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em interi per la Test\&Set dei semafori e dei device \end{DoxyCompactList}\item 
+\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_a8327c9ced3c94e6a4747295c57b5ca6e}{mutex\-\_\-semaphoreprova} = 0
+\item 
+\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_a5a26a9c5982056efa1de6e7e834a753b}{mutex\-\_\-scheduler} = 0
+\item 
+\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8c_adb069d27d0e8108916723b0efbfdd791}{mutex\-\_\-wait\-\_\-clock} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle funzioni}
+\hypertarget{init_8c_a840291bc02cba5474a4cb46a9b9566fe}{\index{init.\-c@{init.\-c}!main@{main}}
+\index{main@{main}!init.c@{init.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{init_8c_a840291bc02cba5474a4cb46a9b9566fe}
+Entry point dal Kernel \begin{DoxyReturn}{Restituisce}
+0 
+\end{DoxyReturn}
+\hypertarget{init_8c_a3dff7a7ddb7b31f1a3f84462906b78e3}{\index{init.\-c@{init.\-c}!myprint@{myprint}}
+\index{myprint@{myprint}!init.c@{init.\-c}}
+\subsubsection[{myprint}]{\setlength{\rightskip}{0pt plus 5cm}void myprint (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str1}
+\end{DoxyParamCaption}
+)}}\label{init_8c_a3dff7a7ddb7b31f1a3f84462906b78e3}
+\hypertarget{init_8c_a91fcd5c68a8b0ccf94d0167fe1b4e8f6}{\index{init.\-c@{init.\-c}!myprintbin@{myprintbin}}
+\index{myprintbin@{myprintbin}!init.c@{init.\-c}}
+\subsubsection[{myprintbin}]{\setlength{\rightskip}{0pt plus 5cm}void myprintbin (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str1, }
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+)}}\label{init_8c_a91fcd5c68a8b0ccf94d0167fe1b4e8f6}
+\hypertarget{init_8c_a37123e336d19f111e111d2baebb40898}{\index{init.\-c@{init.\-c}!myprinthex@{myprinthex}}
+\index{myprinthex@{myprinthex}!init.c@{init.\-c}}
+\subsubsection[{myprinthex}]{\setlength{\rightskip}{0pt plus 5cm}void myprinthex (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str1, }
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+)}}\label{init_8c_a37123e336d19f111e111d2baebb40898}
+\hypertarget{init_8c_a9bbf90d0109753b6667a357315156d7c}{\index{init.\-c@{init.\-c}!myprintint@{myprintint}}
+\index{myprintint@{myprintint}!init.c@{init.\-c}}
+\subsubsection[{myprintint}]{\setlength{\rightskip}{0pt plus 5cm}void myprintint (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str1, }
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+)}}\label{init_8c_a9bbf90d0109753b6667a357315156d7c}
+\hypertarget{init_8c_a4bfe35af00daa0de1d426f484ab4f533}{\index{init.\-c@{init.\-c}!mytermprint@{mytermprint}}
+\index{mytermprint@{mytermprint}!init.c@{init.\-c}}
+\subsubsection[{mytermprint}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int mytermprint (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{unsigned int}]{term}
+\end{DoxyParamCaption}
+)}}\label{init_8c_a4bfe35af00daa0de1d426f484ab4f533}
+\hypertarget{init_8c_a6a0c937f22f4f8e2d7c8223fd92f1e0c}{\index{init.\-c@{init.\-c}!mytermstat@{mytermstat}}
+\index{mytermstat@{mytermstat}!init.c@{init.\-c}}
+\subsubsection[{mytermstat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} mytermstat (
+\begin{DoxyParamCaption}
+\item[{{\bf memaddr} $\ast$}]{stataddr}
+\end{DoxyParamCaption}
+)}}\label{init_8c_a6a0c937f22f4f8e2d7c8223fd92f1e0c}
+\hypertarget{init_8c_a7e50c32ff34e340cf6a55068981c5d22}{\index{init.\-c@{init.\-c}!sleep@{sleep}}
+\index{sleep@{sleep}!init.c@{init.\-c}}
+\subsubsection[{sleep}]{\setlength{\rightskip}{0pt plus 5cm}void sleep (
+\begin{DoxyParamCaption}
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{init_8c_a7e50c32ff34e340cf6a55068981c5d22}
+\hypertarget{init_8c_ae1a3968e7947464bee7714f6d43b7002}{\index{init.\-c@{init.\-c}!test@{test}}
+\index{test@{test}!init.c@{init.\-c}}
+\subsubsection[{test}]{\setlength{\rightskip}{0pt plus 5cm}void test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{init_8c_ae1a3968e7947464bee7714f6d43b7002}
+
+
+\subsection{Documentazione delle variabili}
+\hypertarget{init_8c_ab13508b903f28c9e7d10840b2451367c}{\index{init.\-c@{init.\-c}!currentproc@{currentproc}}
+\index{currentproc@{currentproc}!init.c@{init.\-c}}
+\subsubsection[{currentproc}]{\setlength{\rightskip}{0pt plus 5cm}currentproc}}\label{init_8c_ab13508b903f28c9e7d10840b2451367c}
+
+
+Puntatori ai processi attualmente in esecuzione. 
+
+\hypertarget{init_8c_a5a26a9c5982056efa1de6e7e834a753b}{\index{init.\-c@{init.\-c}!mutex\-\_\-scheduler@{mutex\-\_\-scheduler}}
+\index{mutex\-\_\-scheduler@{mutex\-\_\-scheduler}!init.c@{init.\-c}}
+\subsubsection[{mutex\-\_\-scheduler}]{\setlength{\rightskip}{0pt plus 5cm}mutex\-\_\-scheduler = 0}}\label{init_8c_a5a26a9c5982056efa1de6e7e834a753b}
+\hypertarget{init_8c_a75a4c6cacc11bfa00977873e53249823}{\index{init.\-c@{init.\-c}!mutex\-\_\-semaphore@{mutex\-\_\-semaphore}}
+\index{mutex\-\_\-semaphore@{mutex\-\_\-semaphore}!init.c@{init.\-c}}
+\subsubsection[{mutex\-\_\-semaphore}]{\setlength{\rightskip}{0pt plus 5cm}mutex\-\_\-semaphore}}\label{init_8c_a75a4c6cacc11bfa00977873e53249823}
+
+
+interi per la Test\&Set dei semafori e dei device 
+
+\hypertarget{init_8c_a8327c9ced3c94e6a4747295c57b5ca6e}{\index{init.\-c@{init.\-c}!mutex\-\_\-semaphoreprova@{mutex\-\_\-semaphoreprova}}
+\index{mutex\-\_\-semaphoreprova@{mutex\-\_\-semaphoreprova}!init.c@{init.\-c}}
+\subsubsection[{mutex\-\_\-semaphoreprova}]{\setlength{\rightskip}{0pt plus 5cm}mutex\-\_\-semaphoreprova = 0}}\label{init_8c_a8327c9ced3c94e6a4747295c57b5ca6e}
+\hypertarget{init_8c_adb069d27d0e8108916723b0efbfdd791}{\index{init.\-c@{init.\-c}!mutex\-\_\-wait\-\_\-clock@{mutex\-\_\-wait\-\_\-clock}}
+\index{mutex\-\_\-wait\-\_\-clock@{mutex\-\_\-wait\-\_\-clock}!init.c@{init.\-c}}
+\subsubsection[{mutex\-\_\-wait\-\_\-clock}]{\setlength{\rightskip}{0pt plus 5cm}mutex\-\_\-wait\-\_\-clock = 0}}\label{init_8c_adb069d27d0e8108916723b0efbfdd791}
+\hypertarget{init_8c_a58f4b53b4c0a64c0f4638954abea960b}{\index{init.\-c@{init.\-c}!new\-\_\-old\-\_\-areas@{new\-\_\-old\-\_\-areas}}
+\index{new\-\_\-old\-\_\-areas@{new\-\_\-old\-\_\-areas}!init.c@{init.\-c}}
+\subsubsection[{new\-\_\-old\-\_\-areas}]{\setlength{\rightskip}{0pt plus 5cm}new\-\_\-old\-\_\-areas}}\label{init_8c_a58f4b53b4c0a64c0f4638954abea960b}
+
+
+Tabella generale per le new/old areas, in modo da avere un'unica tabella per tutti i processori. 
+
+\hypertarget{init_8c_ae30a58778136e047f76089ffa33a5108}{\index{init.\-c@{init.\-c}!P\-I\-Ds@{P\-I\-Ds}}
+\index{P\-I\-Ds@{P\-I\-Ds}!init.c@{init.\-c}}
+\subsubsection[{P\-I\-Ds}]{\setlength{\rightskip}{0pt plus 5cm}P\-I\-Ds}}\label{init_8c_ae30a58778136e047f76089ffa33a5108}
+
+
+un array per tenere conto dei pid assegnati, null se è libero, altrimenti l'indirizzo del pcb 
+
+\hypertarget{init_8c_a69b8d39be10ca914356df47dece51d4d}{\index{init.\-c@{init.\-c}!process\-Counter@{process\-Counter}}
+\index{process\-Counter@{process\-Counter}!init.c@{init.\-c}}
+\subsubsection[{process\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}process\-Counter = 0}}\label{init_8c_a69b8d39be10ca914356df47dece51d4d}
+
+
+contatore dei processi 
+
+\hypertarget{init_8c_a0ee87a1f66854fadca96c35ba49a43cd}{\index{init.\-c@{init.\-c}!real\-\_\-new\-\_\-old\-\_\-areas@{real\-\_\-new\-\_\-old\-\_\-areas}}
+\index{real\-\_\-new\-\_\-old\-\_\-areas@{real\-\_\-new\-\_\-old\-\_\-areas}!init.c@{init.\-c}}
+\subsubsection[{real\-\_\-new\-\_\-old\-\_\-areas}]{\setlength{\rightskip}{0pt plus 5cm}real\-\_\-new\-\_\-old\-\_\-areas}}\label{init_8c_a0ee87a1f66854fadca96c35ba49a43cd}
+
+
+new/old area reali dei processori 1..n che le hanno sullo stack 
+
+\hypertarget{init_8c_ad318e0d6e55bda844999a756a010d6ad}{\index{init.\-c@{init.\-c}!soft\-Block\-Counter@{soft\-Block\-Counter}}
+\index{soft\-Block\-Counter@{soft\-Block\-Counter}!init.c@{init.\-c}}
+\subsubsection[{soft\-Block\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}soft\-Block\-Counter = 0}}\label{init_8c_ad318e0d6e55bda844999a756a010d6ad}
+
+
+Contatore processi bloccati per I/\-O. 
+
+\hypertarget{init_8c_ad0b360b54c065def8f306dd38587add6}{\index{init.\-c@{init.\-c}!usedpid@{usedpid}}
+\index{usedpid@{usedpid}!init.c@{init.\-c}}
+\subsubsection[{usedpid}]{\setlength{\rightskip}{0pt plus 5cm}usedpid = 0}}\label{init_8c_ad0b360b54c065def8f306dd38587add6}
+
+
+Per tenere conto dei pid assegnati. 
+

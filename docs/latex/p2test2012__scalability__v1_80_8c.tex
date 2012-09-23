@@ -1,0 +1,263 @@
+\hypertarget{p2test2012__scalability__v1_80_8c}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/p2test2012\-\_\-scalability\-\_\-v1.0.c}
+\label{p2test2012__scalability__v1_80_8c}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+}
+{\ttfamily \#include \char`\"{}lib/const.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/types11.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/libumps.\-h\char`\"{}}\\*
+\subsection*{Definizioni}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a5af38e3a7bc301757e367a04a3a8a96d}{P\-R\-I\-N\-T\-C\-H\-R}~2
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_abe79fc669d3c0309fd5a0f2c2c7399a7}{B\-Y\-T\-E\-L\-E\-N}~8
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a71e7b3e1bd160a1788cbe8f36a16f7af}{R\-E\-C\-V\-D}~5
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a4bf60bb0309adeed84fcbcb98e00a3a8}{T\-R\-A\-N\-S\-M}~5
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a34a034953c81b053792e7f402ab230ed}{C\-L\-O\-C\-K\-I\-N\-T\-E\-R\-V\-A\-L}~100000\-U\-L	/$\ast$ interval to V clock semaphore $\ast$/
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_ac369663bfa0fcc22cf0cac572e4e932f}{T\-E\-R\-M\-S\-T\-A\-T\-M\-A\-S\-K}~0x\-F\-F
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_ad648c9616f853fabafc80389653f2398}{C\-A\-U\-S\-E\-M\-A\-S\-K}~0x\-F\-F
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a6385ca756e3f79e4ae08aae813c0e7de}{V\-M\-O\-F\-F}~0x\-F8\-F\-F\-F\-F\-F\-F
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a9cd28a13ab66bcd49aca6939f044215e}{Q\-P\-A\-G\-E}~1024
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a3a899fe89559f24dc6ec920115e0d56c}{K\-U\-P\-B\-I\-T\-O\-N}~0x8
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a2eb90400839d6fe6fa14fe3c85fd6600}{K\-U\-P\-B\-I\-T\-O\-F\-F}~0x\-F\-F\-F\-F\-F\-F\-F7
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a63a7c1cde5fb0cf0d0023d55c742dd4f}{B\-A\-D\-A\-D\-D\-R}~0x\-F\-F\-F\-F\-F\-F\-F\-F /$\ast$ could be 0x00000000 as well $\ast$/
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_afd7c9be68e62aa06f63ba025c13ee34a}{T\-E\-R\-M0\-A\-D\-D\-R}~0x10000250
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_ac16e51f6c599534f2cdd80d7c5f31c82}{B\-A\-S\-E\-\_\-\-V\-A\-L\-U\-E}~1000000000
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_af5025f57ab8321df7b0b551a46bffe00}{D\-I\-G\-I\-T\-\_\-\-A\-S\-C\-I\-I}~48
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a6918fedc593652387b93ea5832745bbb}{N\-U\-M\-P\-R\-O\-C}~16
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_ad1bd6eabac419670ddd3c9ed82145988}{M\-A\-X\-L\-O\-O\-P}~200000
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a6cbb126cf4e56c027ee42d5d626bbea5}{M\-I\-N\-L\-O\-O\-P}~2000
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a2fc06658f0f4f60e2152e12c1e6e7f51}{T\-E\-R\-M\-\_\-\-M\-U\-T}~0
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a7943397162bac44cdb63777ca17b86ce}{S\-T\-A\-R\-T\-C\-P\-U}~1
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_ab2fb339bef46d509f686a162dd21f86b}{E\-N\-D\-C\-P\-U}~2
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_ab842bd4935d7b7f9b71ac10fd53fd3f3}{E\-N\-D\-S\-E\-R\-V\-I\-C\-E}~3
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a71c0871ea5abd66b93d30e2c021c24ec}{E\-N\-D\-I\-N\-T\-E\-R\-A\-C\-T}~4
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_ad608dbe7b94a6f003a23484444646756}{B\-A\-S\-E\-K\-E\-Y\-S\-E\-M}~5
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a0756f011ef667460d583017366823244}{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}~2
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a9b470dff68ba3321209a33edc4638bd8}{L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}~1
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_aed801c122c559efe4677d351d07747b4}{H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}~4
+\item 
+\#define \hyperlink{p2test2012__scalability__v1_80_8c_a48eadb1f89bf68346c9171cec71478fd}{M\-E\-D\-I\-U\-M\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}~2
+\end{DoxyCompactItemize}
+\subsection*{Ridefinizioni di tipo (typedef)}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \hyperlink{p2test2012__scalability__v1_80_8c_abfc6c2b42b64c61dde10f5cd4da5f722}{devregtr}
+\item 
+typedef \hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{p2test2012__scalability__v1_80_8c_a4b9733fb8281793352f6feaa938b760e}{cpu\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p2test2012__scalability__v1_80_8c_a06375fee1f29c11c92c476484eec4f8e}{proc\-\_\-cpu} ()
+\item 
+void \hyperlink{p2test2012__scalability__v1_80_8c_a158dc638f54f01594a0a9d6f008ddd5b}{proc\-\_\-cpu2} ()
+\item 
+void \hyperlink{p2test2012__scalability__v1_80_8c_a55157d26f5839043dd450b23570fb4a8}{proc\-\_\-services} ()
+\item 
+void \hyperlink{p2test2012__scalability__v1_80_8c_a5e0a4a92ffcd71b8dc92a301c2946caf}{proc\-\_\-interactive1} (int)
+\item 
+void \hyperlink{p2test2012__scalability__v1_80_8c_ad63235f1f591c5ec51aeec1cd918a91a}{proc\-\_\-interactive2} (int)
+\item 
+void \hyperlink{p2test2012__scalability__v1_80_8c_ad024a1e5d48fcc72b6befd262d03791a}{print} (char $\ast$msg)
+\item 
+void \hyperlink{p2test2012__scalability__v1_80_8c_a0a1953da273179bc9595ec83fcda758a}{print\-\_\-val} (int val, char $\ast$strp)
+\item 
+void \hyperlink{p2test2012__scalability__v1_80_8c_ae1a3968e7947464bee7714f6d43b7002}{test} ()
+\end{DoxyCompactItemize}
+\subsection*{Variabili}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structstate__t}{state\-\_\-t} \hyperlink{p2test2012__scalability__v1_80_8c_a37037990efb76bf1d6de19f50368413c}{pstate} \mbox{[}\hyperlink{p2test2012__scalability__v1_80_8c_a6918fedc593652387b93ea5832745bbb}{N\-U\-M\-P\-R\-O\-C}\mbox{]}
+\item 
+char \hyperlink{p2test2012__scalability__v1_80_8c_abb3fb3c13325b6f5206e79234aea8772}{buffer} \mbox{[}30\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle definizioni}
+\hypertarget{p2test2012__scalability__v1_80_8c_a63a7c1cde5fb0cf0d0023d55c742dd4f}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!B\-A\-D\-A\-D\-D\-R@{B\-A\-D\-A\-D\-D\-R}}
+\index{B\-A\-D\-A\-D\-D\-R@{B\-A\-D\-A\-D\-D\-R}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{B\-A\-D\-A\-D\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-A\-D\-A\-D\-D\-R~0x\-F\-F\-F\-F\-F\-F\-F\-F /$\ast$ could be 0x00000000 as well $\ast$/}}\label{p2test2012__scalability__v1_80_8c_a63a7c1cde5fb0cf0d0023d55c742dd4f}
+\hypertarget{p2test2012__scalability__v1_80_8c_ac16e51f6c599534f2cdd80d7c5f31c82}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!B\-A\-S\-E\-\_\-\-V\-A\-L\-U\-E@{B\-A\-S\-E\-\_\-\-V\-A\-L\-U\-E}}
+\index{B\-A\-S\-E\-\_\-\-V\-A\-L\-U\-E@{B\-A\-S\-E\-\_\-\-V\-A\-L\-U\-E}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{B\-A\-S\-E\-\_\-\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-A\-S\-E\-\_\-\-V\-A\-L\-U\-E~1000000000}}\label{p2test2012__scalability__v1_80_8c_ac16e51f6c599534f2cdd80d7c5f31c82}
+\hypertarget{p2test2012__scalability__v1_80_8c_ad608dbe7b94a6f003a23484444646756}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!B\-A\-S\-E\-K\-E\-Y\-S\-E\-M@{B\-A\-S\-E\-K\-E\-Y\-S\-E\-M}}
+\index{B\-A\-S\-E\-K\-E\-Y\-S\-E\-M@{B\-A\-S\-E\-K\-E\-Y\-S\-E\-M}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{B\-A\-S\-E\-K\-E\-Y\-S\-E\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-A\-S\-E\-K\-E\-Y\-S\-E\-M~5}}\label{p2test2012__scalability__v1_80_8c_ad608dbe7b94a6f003a23484444646756}
+\hypertarget{p2test2012__scalability__v1_80_8c_abe79fc669d3c0309fd5a0f2c2c7399a7}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!B\-Y\-T\-E\-L\-E\-N@{B\-Y\-T\-E\-L\-E\-N}}
+\index{B\-Y\-T\-E\-L\-E\-N@{B\-Y\-T\-E\-L\-E\-N}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{B\-Y\-T\-E\-L\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-Y\-T\-E\-L\-E\-N~8}}\label{p2test2012__scalability__v1_80_8c_abe79fc669d3c0309fd5a0f2c2c7399a7}
+\hypertarget{p2test2012__scalability__v1_80_8c_ad648c9616f853fabafc80389653f2398}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!C\-A\-U\-S\-E\-M\-A\-S\-K@{C\-A\-U\-S\-E\-M\-A\-S\-K}}
+\index{C\-A\-U\-S\-E\-M\-A\-S\-K@{C\-A\-U\-S\-E\-M\-A\-S\-K}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{C\-A\-U\-S\-E\-M\-A\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-A\-U\-S\-E\-M\-A\-S\-K~0x\-F\-F}}\label{p2test2012__scalability__v1_80_8c_ad648c9616f853fabafc80389653f2398}
+\hypertarget{p2test2012__scalability__v1_80_8c_a34a034953c81b053792e7f402ab230ed}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!C\-L\-O\-C\-K\-I\-N\-T\-E\-R\-V\-A\-L@{C\-L\-O\-C\-K\-I\-N\-T\-E\-R\-V\-A\-L}}
+\index{C\-L\-O\-C\-K\-I\-N\-T\-E\-R\-V\-A\-L@{C\-L\-O\-C\-K\-I\-N\-T\-E\-R\-V\-A\-L}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{C\-L\-O\-C\-K\-I\-N\-T\-E\-R\-V\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-L\-O\-C\-K\-I\-N\-T\-E\-R\-V\-A\-L~100000\-U\-L	/$\ast$ interval to V clock semaphore $\ast$/}}\label{p2test2012__scalability__v1_80_8c_a34a034953c81b053792e7f402ab230ed}
+\hypertarget{p2test2012__scalability__v1_80_8c_a0756f011ef667460d583017366823244}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y~2}}\label{p2test2012__scalability__v1_80_8c_a0756f011ef667460d583017366823244}
+\hypertarget{p2test2012__scalability__v1_80_8c_af5025f57ab8321df7b0b551a46bffe00}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!D\-I\-G\-I\-T\-\_\-\-A\-S\-C\-I\-I@{D\-I\-G\-I\-T\-\_\-\-A\-S\-C\-I\-I}}
+\index{D\-I\-G\-I\-T\-\_\-\-A\-S\-C\-I\-I@{D\-I\-G\-I\-T\-\_\-\-A\-S\-C\-I\-I}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{D\-I\-G\-I\-T\-\_\-\-A\-S\-C\-I\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-G\-I\-T\-\_\-\-A\-S\-C\-I\-I~48}}\label{p2test2012__scalability__v1_80_8c_af5025f57ab8321df7b0b551a46bffe00}
+\hypertarget{p2test2012__scalability__v1_80_8c_ab2fb339bef46d509f686a162dd21f86b}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!E\-N\-D\-C\-P\-U@{E\-N\-D\-C\-P\-U}}
+\index{E\-N\-D\-C\-P\-U@{E\-N\-D\-C\-P\-U}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{E\-N\-D\-C\-P\-U}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-D\-C\-P\-U~2}}\label{p2test2012__scalability__v1_80_8c_ab2fb339bef46d509f686a162dd21f86b}
+\hypertarget{p2test2012__scalability__v1_80_8c_a71c0871ea5abd66b93d30e2c021c24ec}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!E\-N\-D\-I\-N\-T\-E\-R\-A\-C\-T@{E\-N\-D\-I\-N\-T\-E\-R\-A\-C\-T}}
+\index{E\-N\-D\-I\-N\-T\-E\-R\-A\-C\-T@{E\-N\-D\-I\-N\-T\-E\-R\-A\-C\-T}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{E\-N\-D\-I\-N\-T\-E\-R\-A\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-D\-I\-N\-T\-E\-R\-A\-C\-T~4}}\label{p2test2012__scalability__v1_80_8c_a71c0871ea5abd66b93d30e2c021c24ec}
+\hypertarget{p2test2012__scalability__v1_80_8c_ab842bd4935d7b7f9b71ac10fd53fd3f3}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!E\-N\-D\-S\-E\-R\-V\-I\-C\-E@{E\-N\-D\-S\-E\-R\-V\-I\-C\-E}}
+\index{E\-N\-D\-S\-E\-R\-V\-I\-C\-E@{E\-N\-D\-S\-E\-R\-V\-I\-C\-E}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{E\-N\-D\-S\-E\-R\-V\-I\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-D\-S\-E\-R\-V\-I\-C\-E~3}}\label{p2test2012__scalability__v1_80_8c_ab842bd4935d7b7f9b71ac10fd53fd3f3}
+\hypertarget{p2test2012__scalability__v1_80_8c_aed801c122c559efe4677d351d07747b4}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}}
+\index{H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y~4}}\label{p2test2012__scalability__v1_80_8c_aed801c122c559efe4677d351d07747b4}
+\hypertarget{p2test2012__scalability__v1_80_8c_a2eb90400839d6fe6fa14fe3c85fd6600}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!K\-U\-P\-B\-I\-T\-O\-F\-F@{K\-U\-P\-B\-I\-T\-O\-F\-F}}
+\index{K\-U\-P\-B\-I\-T\-O\-F\-F@{K\-U\-P\-B\-I\-T\-O\-F\-F}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{K\-U\-P\-B\-I\-T\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\-U\-P\-B\-I\-T\-O\-F\-F~0x\-F\-F\-F\-F\-F\-F\-F7}}\label{p2test2012__scalability__v1_80_8c_a2eb90400839d6fe6fa14fe3c85fd6600}
+\hypertarget{p2test2012__scalability__v1_80_8c_a3a899fe89559f24dc6ec920115e0d56c}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!K\-U\-P\-B\-I\-T\-O\-N@{K\-U\-P\-B\-I\-T\-O\-N}}
+\index{K\-U\-P\-B\-I\-T\-O\-N@{K\-U\-P\-B\-I\-T\-O\-N}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{K\-U\-P\-B\-I\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\-U\-P\-B\-I\-T\-O\-N~0x8}}\label{p2test2012__scalability__v1_80_8c_a3a899fe89559f24dc6ec920115e0d56c}
+\hypertarget{p2test2012__scalability__v1_80_8c_a9b470dff68ba3321209a33edc4638bd8}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}}
+\index{L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y~1}}\label{p2test2012__scalability__v1_80_8c_a9b470dff68ba3321209a33edc4638bd8}
+\hypertarget{p2test2012__scalability__v1_80_8c_ad1bd6eabac419670ddd3c9ed82145988}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!M\-A\-X\-L\-O\-O\-P@{M\-A\-X\-L\-O\-O\-P}}
+\index{M\-A\-X\-L\-O\-O\-P@{M\-A\-X\-L\-O\-O\-P}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{M\-A\-X\-L\-O\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-L\-O\-O\-P~200000}}\label{p2test2012__scalability__v1_80_8c_ad1bd6eabac419670ddd3c9ed82145988}
+\hypertarget{p2test2012__scalability__v1_80_8c_a48eadb1f89bf68346c9171cec71478fd}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!M\-E\-D\-I\-U\-M\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{M\-E\-D\-I\-U\-M\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}}
+\index{M\-E\-D\-I\-U\-M\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{M\-E\-D\-I\-U\-M\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{M\-E\-D\-I\-U\-M\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-E\-D\-I\-U\-M\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y~2}}\label{p2test2012__scalability__v1_80_8c_a48eadb1f89bf68346c9171cec71478fd}
+\hypertarget{p2test2012__scalability__v1_80_8c_a6cbb126cf4e56c027ee42d5d626bbea5}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!M\-I\-N\-L\-O\-O\-P@{M\-I\-N\-L\-O\-O\-P}}
+\index{M\-I\-N\-L\-O\-O\-P@{M\-I\-N\-L\-O\-O\-P}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{M\-I\-N\-L\-O\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-N\-L\-O\-O\-P~2000}}\label{p2test2012__scalability__v1_80_8c_a6cbb126cf4e56c027ee42d5d626bbea5}
+\hypertarget{p2test2012__scalability__v1_80_8c_a6918fedc593652387b93ea5832745bbb}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!N\-U\-M\-P\-R\-O\-C@{N\-U\-M\-P\-R\-O\-C}}
+\index{N\-U\-M\-P\-R\-O\-C@{N\-U\-M\-P\-R\-O\-C}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{N\-U\-M\-P\-R\-O\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-U\-M\-P\-R\-O\-C~16}}\label{p2test2012__scalability__v1_80_8c_a6918fedc593652387b93ea5832745bbb}
+\hypertarget{p2test2012__scalability__v1_80_8c_a5af38e3a7bc301757e367a04a3a8a96d}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!P\-R\-I\-N\-T\-C\-H\-R@{P\-R\-I\-N\-T\-C\-H\-R}}
+\index{P\-R\-I\-N\-T\-C\-H\-R@{P\-R\-I\-N\-T\-C\-H\-R}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{P\-R\-I\-N\-T\-C\-H\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-I\-N\-T\-C\-H\-R~2}}\label{p2test2012__scalability__v1_80_8c_a5af38e3a7bc301757e367a04a3a8a96d}
+\hypertarget{p2test2012__scalability__v1_80_8c_a9cd28a13ab66bcd49aca6939f044215e}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!Q\-P\-A\-G\-E@{Q\-P\-A\-G\-E}}
+\index{Q\-P\-A\-G\-E@{Q\-P\-A\-G\-E}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{Q\-P\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-P\-A\-G\-E~1024}}\label{p2test2012__scalability__v1_80_8c_a9cd28a13ab66bcd49aca6939f044215e}
+\hypertarget{p2test2012__scalability__v1_80_8c_a71e7b3e1bd160a1788cbe8f36a16f7af}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!R\-E\-C\-V\-D@{R\-E\-C\-V\-D}}
+\index{R\-E\-C\-V\-D@{R\-E\-C\-V\-D}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{R\-E\-C\-V\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-C\-V\-D~5}}\label{p2test2012__scalability__v1_80_8c_a71e7b3e1bd160a1788cbe8f36a16f7af}
+\hypertarget{p2test2012__scalability__v1_80_8c_a7943397162bac44cdb63777ca17b86ce}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!S\-T\-A\-R\-T\-C\-P\-U@{S\-T\-A\-R\-T\-C\-P\-U}}
+\index{S\-T\-A\-R\-T\-C\-P\-U@{S\-T\-A\-R\-T\-C\-P\-U}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{S\-T\-A\-R\-T\-C\-P\-U}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-A\-R\-T\-C\-P\-U~1}}\label{p2test2012__scalability__v1_80_8c_a7943397162bac44cdb63777ca17b86ce}
+\hypertarget{p2test2012__scalability__v1_80_8c_afd7c9be68e62aa06f63ba025c13ee34a}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!T\-E\-R\-M0\-A\-D\-D\-R@{T\-E\-R\-M0\-A\-D\-D\-R}}
+\index{T\-E\-R\-M0\-A\-D\-D\-R@{T\-E\-R\-M0\-A\-D\-D\-R}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{T\-E\-R\-M0\-A\-D\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-R\-M0\-A\-D\-D\-R~0x10000250}}\label{p2test2012__scalability__v1_80_8c_afd7c9be68e62aa06f63ba025c13ee34a}
+\hypertarget{p2test2012__scalability__v1_80_8c_a2fc06658f0f4f60e2152e12c1e6e7f51}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!T\-E\-R\-M\-\_\-\-M\-U\-T@{T\-E\-R\-M\-\_\-\-M\-U\-T}}
+\index{T\-E\-R\-M\-\_\-\-M\-U\-T@{T\-E\-R\-M\-\_\-\-M\-U\-T}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{T\-E\-R\-M\-\_\-\-M\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-R\-M\-\_\-\-M\-U\-T~0}}\label{p2test2012__scalability__v1_80_8c_a2fc06658f0f4f60e2152e12c1e6e7f51}
+\hypertarget{p2test2012__scalability__v1_80_8c_ac369663bfa0fcc22cf0cac572e4e932f}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!T\-E\-R\-M\-S\-T\-A\-T\-M\-A\-S\-K@{T\-E\-R\-M\-S\-T\-A\-T\-M\-A\-S\-K}}
+\index{T\-E\-R\-M\-S\-T\-A\-T\-M\-A\-S\-K@{T\-E\-R\-M\-S\-T\-A\-T\-M\-A\-S\-K}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{T\-E\-R\-M\-S\-T\-A\-T\-M\-A\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-R\-M\-S\-T\-A\-T\-M\-A\-S\-K~0x\-F\-F}}\label{p2test2012__scalability__v1_80_8c_ac369663bfa0fcc22cf0cac572e4e932f}
+\hypertarget{p2test2012__scalability__v1_80_8c_a4bf60bb0309adeed84fcbcb98e00a3a8}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!T\-R\-A\-N\-S\-M@{T\-R\-A\-N\-S\-M}}
+\index{T\-R\-A\-N\-S\-M@{T\-R\-A\-N\-S\-M}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{T\-R\-A\-N\-S\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-A\-N\-S\-M~5}}\label{p2test2012__scalability__v1_80_8c_a4bf60bb0309adeed84fcbcb98e00a3a8}
+\hypertarget{p2test2012__scalability__v1_80_8c_a6385ca756e3f79e4ae08aae813c0e7de}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!V\-M\-O\-F\-F@{V\-M\-O\-F\-F}}
+\index{V\-M\-O\-F\-F@{V\-M\-O\-F\-F}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{V\-M\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-M\-O\-F\-F~0x\-F8\-F\-F\-F\-F\-F\-F}}\label{p2test2012__scalability__v1_80_8c_a6385ca756e3f79e4ae08aae813c0e7de}
+
+
+\subsection{Documentazione delle ridefinizioni di tipo (typedef)}
+\hypertarget{p2test2012__scalability__v1_80_8c_a4b9733fb8281793352f6feaa938b760e}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!cpu\-\_\-t@{cpu\-\_\-t}}
+\index{cpu\-\_\-t@{cpu\-\_\-t}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{cpu\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf U32} {\bf cpu\-\_\-t}}}\label{p2test2012__scalability__v1_80_8c_a4b9733fb8281793352f6feaa938b760e}
+\hypertarget{p2test2012__scalability__v1_80_8c_abfc6c2b42b64c61dde10f5cd4da5f722}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!devregtr@{devregtr}}
+\index{devregtr@{devregtr}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{devregtr}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf devregtr}}}\label{p2test2012__scalability__v1_80_8c_abfc6c2b42b64c61dde10f5cd4da5f722}
+
+
+\subsection{Documentazione delle funzioni}
+\hypertarget{p2test2012__scalability__v1_80_8c_ad024a1e5d48fcc72b6befd262d03791a}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!print@{print}}
+\index{print@{print}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void print (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}}\label{p2test2012__scalability__v1_80_8c_ad024a1e5d48fcc72b6befd262d03791a}
+\hypertarget{p2test2012__scalability__v1_80_8c_a0a1953da273179bc9595ec83fcda758a}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!print\-\_\-val@{print\-\_\-val}}
+\index{print\-\_\-val@{print\-\_\-val}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{print\-\_\-val}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-val (
+\begin{DoxyParamCaption}
+\item[{int}]{val, }
+\item[{char $\ast$}]{strp}
+\end{DoxyParamCaption}
+)}}\label{p2test2012__scalability__v1_80_8c_a0a1953da273179bc9595ec83fcda758a}
+\hypertarget{p2test2012__scalability__v1_80_8c_a06375fee1f29c11c92c476484eec4f8e}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!proc\-\_\-cpu@{proc\-\_\-cpu}}
+\index{proc\-\_\-cpu@{proc\-\_\-cpu}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{proc\-\_\-cpu}]{\setlength{\rightskip}{0pt plus 5cm}void proc\-\_\-cpu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p2test2012__scalability__v1_80_8c_a06375fee1f29c11c92c476484eec4f8e}
+\hypertarget{p2test2012__scalability__v1_80_8c_a158dc638f54f01594a0a9d6f008ddd5b}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!proc\-\_\-cpu2@{proc\-\_\-cpu2}}
+\index{proc\-\_\-cpu2@{proc\-\_\-cpu2}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{proc\-\_\-cpu2}]{\setlength{\rightskip}{0pt plus 5cm}void proc\-\_\-cpu2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p2test2012__scalability__v1_80_8c_a158dc638f54f01594a0a9d6f008ddd5b}
+\hypertarget{p2test2012__scalability__v1_80_8c_a5e0a4a92ffcd71b8dc92a301c2946caf}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!proc\-\_\-interactive1@{proc\-\_\-interactive1}}
+\index{proc\-\_\-interactive1@{proc\-\_\-interactive1}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{proc\-\_\-interactive1}]{\setlength{\rightskip}{0pt plus 5cm}void proc\-\_\-interactive1 (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{p2test2012__scalability__v1_80_8c_a5e0a4a92ffcd71b8dc92a301c2946caf}
+\hypertarget{p2test2012__scalability__v1_80_8c_ad63235f1f591c5ec51aeec1cd918a91a}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!proc\-\_\-interactive2@{proc\-\_\-interactive2}}
+\index{proc\-\_\-interactive2@{proc\-\_\-interactive2}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{proc\-\_\-interactive2}]{\setlength{\rightskip}{0pt plus 5cm}void proc\-\_\-interactive2 (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{p2test2012__scalability__v1_80_8c_ad63235f1f591c5ec51aeec1cd918a91a}
+\hypertarget{p2test2012__scalability__v1_80_8c_a55157d26f5839043dd450b23570fb4a8}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!proc\-\_\-services@{proc\-\_\-services}}
+\index{proc\-\_\-services@{proc\-\_\-services}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{proc\-\_\-services}]{\setlength{\rightskip}{0pt plus 5cm}void proc\-\_\-services (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p2test2012__scalability__v1_80_8c_a55157d26f5839043dd450b23570fb4a8}
+\hypertarget{p2test2012__scalability__v1_80_8c_ae1a3968e7947464bee7714f6d43b7002}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!test@{test}}
+\index{test@{test}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{test}]{\setlength{\rightskip}{0pt plus 5cm}void test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p2test2012__scalability__v1_80_8c_ae1a3968e7947464bee7714f6d43b7002}
+
+
+\subsection{Documentazione delle variabili}
+\hypertarget{p2test2012__scalability__v1_80_8c_abb3fb3c13325b6f5206e79234aea8772}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!buffer@{buffer}}
+\index{buffer@{buffer}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}char buffer\mbox{[}30\mbox{]}}}\label{p2test2012__scalability__v1_80_8c_abb3fb3c13325b6f5206e79234aea8772}
+\hypertarget{p2test2012__scalability__v1_80_8c_a37037990efb76bf1d6de19f50368413c}{\index{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}!pstate@{pstate}}
+\index{pstate@{pstate}!p2test2012_scalability_v1.0.c@{p2test2012\-\_\-scalability\-\_\-v1.\-0.\-c}}
+\subsubsection[{pstate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state\-\_\-t} pstate\mbox{[}{\bf N\-U\-M\-P\-R\-O\-C}\mbox{]}}}\label{p2test2012__scalability__v1_80_8c_a37037990efb76bf1d6de19f50368413c}

@@ -1,0 +1,348 @@
+\hypertarget{init_8h}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/init.h}
+\label{init_8h}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/init.\-h@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/init.\-h}}
+}
+{\ttfamily \#include \char`\"{}lib/const.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/base.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/u\-M\-P\-Stypes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/libumps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/listx.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/types11.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/pcb.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/asl.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/utils.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}exception.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}syscall.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}interrupt.\-h\char`\"{}}\\*
+\subsection*{Definizioni}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{init_8h_abc16f63a572f5b4de9617288fc7c9559}{M\-A\-X\-C\-P\-Us}~16
+\item 
+\#define \hyperlink{init_8h_a9b896b5481b8e7b305a5ea99a0d3554c}{M\-A\-X\-P\-I\-D}~128
+\item 
+\#define \hyperlink{init_8h_a39604002c6cbb68b1be5bc3e21caadd1}{D\-E\-F\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}~5
+\item 
+\#define \hyperlink{init_8h_a63c62a284d91c978cc80ca559c223e07}{M\-A\-X\-P\-R\-I\-N\-T}~128
+\item 
+\#define \hyperlink{init_8h_adf0526200120de69a5faac212ae1e0c5}{I\-N\-T\-\_\-\-O\-L\-D}~0
+\item 
+\#define \hyperlink{init_8h_a1c70b67aa8a2da0db1ad44ef72a2f050}{I\-N\-T\-\_\-\-N\-E\-W}~1
+\item 
+\#define \hyperlink{init_8h_a09276c76a19689cebfd74dd3846e9f38}{T\-L\-B\-\_\-\-O\-L\-D}~2
+\item 
+\#define \hyperlink{init_8h_ac80e3cb5a610919db7a4c96d73b6c5a3}{T\-L\-B\-\_\-\-N\-E\-W}~3
+\item 
+\#define \hyperlink{init_8h_a00eb3e886ed75bb0469c878c16ac3f0c}{P\-G\-M\-T\-R\-A\-P\-\_\-\-O\-L\-D}~4
+\item 
+\#define \hyperlink{init_8h_aa8385e9f72c50f39525b45dba68596d9}{P\-G\-M\-T\-R\-A\-P\-\_\-\-N\-E\-W}~5
+\item 
+\#define \hyperlink{init_8h_a78d7439f7d0654d7ed94e5241dd19a8c}{S\-Y\-S\-B\-K\-\_\-\-O\-L\-D}~6
+\item 
+\#define \hyperlink{init_8h_aa4478ceb212e95f83acb5efc6a4b2f96}{S\-Y\-S\-B\-K\-\_\-\-N\-E\-W}~7
+\item 
+\#define \hyperlink{init_8h_a285ae64e0dea6b13f94979f1cc7c382d}{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}~5
+\item 
+\#define \hyperlink{init_8h_ac74c3ef3346da1a7f0e5695f26981021}{T\-R\-A\-N\-S\-T\-A\-T\-U\-S}~2
+\item 
+\#define \hyperlink{init_8h_a6f6489887e08bff4887d0bc5dcf214d8}{A\-C\-K}~1
+\item 
+\#define \hyperlink{init_8h_a5af38e3a7bc301757e367a04a3a8a96d}{P\-R\-I\-N\-T\-C\-H\-R}~2
+\item 
+\#define \hyperlink{init_8h_aa1bf756391a9960a2445236428e08068}{C\-H\-A\-R\-O\-F\-F\-S\-E\-T}~8
+\item 
+\#define \hyperlink{init_8h_a937dd9f9084a17618cdebdacad7299c7}{S\-T\-A\-T\-U\-S\-M\-A\-S\-K}~0x\-F\-F
+\item 
+\#define \hyperlink{init_8h_afd7c9be68e62aa06f63ba025c13ee34a}{T\-E\-R\-M0\-A\-D\-D\-R}~0x10000250
+\item 
+\#define \hyperlink{init_8h_a46c3d6184a0f7fe61df840f07e3e3a2f}{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E}~16
+\item 
+\#define \hyperlink{init_8h_ad1235d5ce36f7267285e82dccd428aa6}{R\-E\-A\-D\-Y}~1
+\item 
+\#define \hyperlink{init_8h_a6d290d1da702b40a5947ee63700f890e}{D\-E\-V\-R\-E\-G\-L\-E\-N}~4
+\item 
+\#define \hyperlink{init_8h_ab5be0aaddb58ffb9cb20c12530d66316}{B\-U\-S\-Y}~3
+\item 
+\#define \hyperlink{init_8h_a444c52e2594d67f8801c17bf50491683}{R\-E\-C\-V\-S\-T\-A\-T\-U\-S}~0
+\item 
+\#define \hyperlink{init_8h_a7cc2c7f2230a13e65c1ef97ec2216b5d}{R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D}~1
+\item 
+\#define \hyperlink{init_8h_ac74c3ef3346da1a7f0e5695f26981021}{T\-R\-A\-N\-S\-T\-A\-T\-U\-S}~2
+\item 
+\#define \hyperlink{init_8h_ade5cf18f7c8b9f995f4d07fa5d8e7073}{T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D}~3
+\end{DoxyCompactItemize}
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{init_8h_a7e50c32ff34e340cf6a55068981c5d22}{sleep} (int count)
+\item 
+void \hyperlink{init_8h_a7abcb9dadc69c5930054fe69a54e7890}{init\-Semaphore} (\hyperlink{structsemd__t}{semd\-\_\-t} $\ast$sem, int value)
+\item 
+void \hyperlink{init_8h_a2faa709054408d895d29c3b8363359f8}{print} (char $\ast$label, char $\ast$value)
+\item 
+\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_a6a0c937f22f4f8e2d7c8223fd92f1e0c}{mytermstat} (\hyperlink{lib_2base_8h_a8dfc83cbb8a200048ed977af78885aa1}{memaddr} $\ast$stataddr)
+\item 
+void \hyperlink{init_8h_a9bbf90d0109753b6667a357315156d7c}{myprintint} (char $\ast$str1, int numero)
+\item 
+void \hyperlink{init_8h_a91fcd5c68a8b0ccf94d0167fe1b4e8f6}{myprintbin} (char $\ast$str1, int numero)
+\item 
+void \hyperlink{init_8h_a37123e336d19f111e111d2baebb40898}{myprinthex} (char $\ast$str1, int numero)
+\item 
+void \hyperlink{init_8h_a3dff7a7ddb7b31f1a3f84462906b78e3}{myprint} (char $\ast$str1)
+\end{DoxyCompactItemize}
+\subsection*{Variabili}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{init_8h_ab85d8f7d643bc614d9f7cae7e1e4675b}{process\-Counter}
+\begin{DoxyCompactList}\small\item\em contatore dei processi \end{DoxyCompactList}\item 
+int \hyperlink{init_8h_a34fb108bb4d12ff7641dcf19b0170003}{soft\-Block\-Counter}
+\begin{DoxyCompactList}\small\item\em Contatore processi bloccati per I/\-O. \end{DoxyCompactList}\item 
+int \hyperlink{init_8h_ab7dc53e52926bc6676f5b04d4352a60c}{readyproc}
+\item 
+int \hyperlink{init_8h_a6326d90a3e16bab50f95bed5ff9ab477}{P\-R\-O\-V\-A}
+\item 
+int \hyperlink{init_8h_a6c44e837b0fd2f80668756147b608b68}{usedpid}
+\begin{DoxyCompactList}\small\item\em Per tenere conto dei pid assegnati. \end{DoxyCompactList}\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{init_8h_a7413093d68eef1d8e928626212fbb010}{currentproc} \mbox{[}\hyperlink{init_8h_abc16f63a572f5b4de9617288fc7c9559}{M\-A\-X\-C\-P\-Us}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Puntatori ai processi attualmente in esecuzione. \end{DoxyCompactList}\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{init_8h_ab34ea7a4ccc789298395e89aea3d439d}{P\-I\-Ds} \mbox{[}\hyperlink{init_8h_a9b896b5481b8e7b305a5ea99a0d3554c}{M\-A\-X\-P\-I\-D}\mbox{]}
+\begin{DoxyCompactList}\small\item\em un array per tenere conto dei pid assegnati, null se è libero, altrimenti l'indirizzo del pcb \end{DoxyCompactList}\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{init_8h_ae2ec74ae8cfbd226a3402447b5c39250}{wait\-\_\-clock} \mbox{[}\hyperlink{phase1_2const_8h_abe4567498db286a3185a522c6dae3cbc}{M\-A\-X\-P\-R\-O\-C}\mbox{]}
+\item 
+\hyperlink{structstate__t}{state\-\_\-t} $\ast$ \hyperlink{init_8h_aae3d0072a5941f26acca0f68fb153ede}{new\-\_\-old\-\_\-areas} \mbox{[}\hyperlink{init_8h_abc16f63a572f5b4de9617288fc7c9559}{M\-A\-X\-C\-P\-Us}\mbox{]}\mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tabella generale per le new/old areas, in modo da avere un'unica tabella per tutti i processori. \end{DoxyCompactList}\item 
+\hyperlink{structstate__t}{state\-\_\-t} \hyperlink{init_8h_ad8d03912fa853ee36d3807fb9c0f93d8}{real\-\_\-new\-\_\-old\-\_\-areas} \mbox{[}\hyperlink{init_8h_abc16f63a572f5b4de9617288fc7c9559}{M\-A\-X\-C\-P\-Us}-\/1\mbox{]}\mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em new/old area reali dei processori 1..n che le hanno sullo stack \end{DoxyCompactList}\item 
+\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_a969950f64fcd15d16b272192dfde837b}{mutex\-\_\-semaphore} \mbox{[}\hyperlink{phase1_2const_8h_abe4567498db286a3185a522c6dae3cbc}{M\-A\-X\-P\-R\-O\-C}+\hyperlink{phase1_2const_8h_a4e132cfaa78353e3af1474a86b2dd535}{M\-A\-X\-\_\-\-D\-E\-V\-I\-C\-E\-S}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em interi per la Test\&Set dei semafori e dei device \end{DoxyCompactList}\item 
+\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_a425d9cd01235780ef39533f15c2571f9}{mutex\-\_\-semaphoreprova}
+\item 
+\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_a35d0c320307b977f43debef8bda3a2d5}{mutex\-\_\-scheduler}
+\item 
+\hyperlink{lib_2base_8h_ac3df7cf3c8cb172a588adec881447d68}{U32} \hyperlink{init_8h_ac5fabb5dd95e7acc108e6e0d230cf608}{mutex\-\_\-wait\-\_\-clock}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle definizioni}
+\hypertarget{init_8h_a6f6489887e08bff4887d0bc5dcf214d8}{\index{init.\-h@{init.\-h}!A\-C\-K@{A\-C\-K}}
+\index{A\-C\-K@{A\-C\-K}!init.h@{init.\-h}}
+\subsubsection[{A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-C\-K~1}}\label{init_8h_a6f6489887e08bff4887d0bc5dcf214d8}
+\hypertarget{init_8h_ab5be0aaddb58ffb9cb20c12530d66316}{\index{init.\-h@{init.\-h}!B\-U\-S\-Y@{B\-U\-S\-Y}}
+\index{B\-U\-S\-Y@{B\-U\-S\-Y}!init.h@{init.\-h}}
+\subsubsection[{B\-U\-S\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-U\-S\-Y~3}}\label{init_8h_ab5be0aaddb58ffb9cb20c12530d66316}
+\hypertarget{init_8h_aa1bf756391a9960a2445236428e08068}{\index{init.\-h@{init.\-h}!C\-H\-A\-R\-O\-F\-F\-S\-E\-T@{C\-H\-A\-R\-O\-F\-F\-S\-E\-T}}
+\index{C\-H\-A\-R\-O\-F\-F\-S\-E\-T@{C\-H\-A\-R\-O\-F\-F\-S\-E\-T}!init.h@{init.\-h}}
+\subsubsection[{C\-H\-A\-R\-O\-F\-F\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-O\-F\-F\-S\-E\-T~8}}\label{init_8h_aa1bf756391a9960a2445236428e08068}
+\hypertarget{init_8h_a39604002c6cbb68b1be5bc3e21caadd1}{\index{init.\-h@{init.\-h}!D\-E\-F\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{D\-E\-F\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}}
+\index{D\-E\-F\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{D\-E\-F\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}!init.h@{init.\-h}}
+\subsubsection[{D\-E\-F\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y~5}}\label{init_8h_a39604002c6cbb68b1be5bc3e21caadd1}
+\hypertarget{init_8h_a6d290d1da702b40a5947ee63700f890e}{\index{init.\-h@{init.\-h}!D\-E\-V\-R\-E\-G\-L\-E\-N@{D\-E\-V\-R\-E\-G\-L\-E\-N}}
+\index{D\-E\-V\-R\-E\-G\-L\-E\-N@{D\-E\-V\-R\-E\-G\-L\-E\-N}!init.h@{init.\-h}}
+\subsubsection[{D\-E\-V\-R\-E\-G\-L\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-V\-R\-E\-G\-L\-E\-N~4}}\label{init_8h_a6d290d1da702b40a5947ee63700f890e}
+\hypertarget{init_8h_a46c3d6184a0f7fe61df840f07e3e3a2f}{\index{init.\-h@{init.\-h}!D\-E\-V\-R\-E\-G\-S\-I\-Z\-E@{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E}}
+\index{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E@{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E}!init.h@{init.\-h}}
+\subsubsection[{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-V\-R\-E\-G\-S\-I\-Z\-E~16}}\label{init_8h_a46c3d6184a0f7fe61df840f07e3e3a2f}
+\hypertarget{init_8h_a1c70b67aa8a2da0db1ad44ef72a2f050}{\index{init.\-h@{init.\-h}!I\-N\-T\-\_\-\-N\-E\-W@{I\-N\-T\-\_\-\-N\-E\-W}}
+\index{I\-N\-T\-\_\-\-N\-E\-W@{I\-N\-T\-\_\-\-N\-E\-W}!init.h@{init.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-N\-E\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-N\-E\-W~1}}\label{init_8h_a1c70b67aa8a2da0db1ad44ef72a2f050}
+\hypertarget{init_8h_adf0526200120de69a5faac212ae1e0c5}{\index{init.\-h@{init.\-h}!I\-N\-T\-\_\-\-O\-L\-D@{I\-N\-T\-\_\-\-O\-L\-D}}
+\index{I\-N\-T\-\_\-\-O\-L\-D@{I\-N\-T\-\_\-\-O\-L\-D}!init.h@{init.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-O\-L\-D~0}}\label{init_8h_adf0526200120de69a5faac212ae1e0c5}
+\hypertarget{init_8h_abc16f63a572f5b4de9617288fc7c9559}{\index{init.\-h@{init.\-h}!M\-A\-X\-C\-P\-Us@{M\-A\-X\-C\-P\-Us}}
+\index{M\-A\-X\-C\-P\-Us@{M\-A\-X\-C\-P\-Us}!init.h@{init.\-h}}
+\subsubsection[{M\-A\-X\-C\-P\-Us}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-C\-P\-Us~16}}\label{init_8h_abc16f63a572f5b4de9617288fc7c9559}
+\hypertarget{init_8h_a9b896b5481b8e7b305a5ea99a0d3554c}{\index{init.\-h@{init.\-h}!M\-A\-X\-P\-I\-D@{M\-A\-X\-P\-I\-D}}
+\index{M\-A\-X\-P\-I\-D@{M\-A\-X\-P\-I\-D}!init.h@{init.\-h}}
+\subsubsection[{M\-A\-X\-P\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-P\-I\-D~128}}\label{init_8h_a9b896b5481b8e7b305a5ea99a0d3554c}
+\hypertarget{init_8h_a63c62a284d91c978cc80ca559c223e07}{\index{init.\-h@{init.\-h}!M\-A\-X\-P\-R\-I\-N\-T@{M\-A\-X\-P\-R\-I\-N\-T}}
+\index{M\-A\-X\-P\-R\-I\-N\-T@{M\-A\-X\-P\-R\-I\-N\-T}!init.h@{init.\-h}}
+\subsubsection[{M\-A\-X\-P\-R\-I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-P\-R\-I\-N\-T~128}}\label{init_8h_a63c62a284d91c978cc80ca559c223e07}
+\hypertarget{init_8h_aa8385e9f72c50f39525b45dba68596d9}{\index{init.\-h@{init.\-h}!P\-G\-M\-T\-R\-A\-P\-\_\-\-N\-E\-W@{P\-G\-M\-T\-R\-A\-P\-\_\-\-N\-E\-W}}
+\index{P\-G\-M\-T\-R\-A\-P\-\_\-\-N\-E\-W@{P\-G\-M\-T\-R\-A\-P\-\_\-\-N\-E\-W}!init.h@{init.\-h}}
+\subsubsection[{P\-G\-M\-T\-R\-A\-P\-\_\-\-N\-E\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-G\-M\-T\-R\-A\-P\-\_\-\-N\-E\-W~5}}\label{init_8h_aa8385e9f72c50f39525b45dba68596d9}
+\hypertarget{init_8h_a00eb3e886ed75bb0469c878c16ac3f0c}{\index{init.\-h@{init.\-h}!P\-G\-M\-T\-R\-A\-P\-\_\-\-O\-L\-D@{P\-G\-M\-T\-R\-A\-P\-\_\-\-O\-L\-D}}
+\index{P\-G\-M\-T\-R\-A\-P\-\_\-\-O\-L\-D@{P\-G\-M\-T\-R\-A\-P\-\_\-\-O\-L\-D}!init.h@{init.\-h}}
+\subsubsection[{P\-G\-M\-T\-R\-A\-P\-\_\-\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-G\-M\-T\-R\-A\-P\-\_\-\-O\-L\-D~4}}\label{init_8h_a00eb3e886ed75bb0469c878c16ac3f0c}
+\hypertarget{init_8h_a5af38e3a7bc301757e367a04a3a8a96d}{\index{init.\-h@{init.\-h}!P\-R\-I\-N\-T\-C\-H\-R@{P\-R\-I\-N\-T\-C\-H\-R}}
+\index{P\-R\-I\-N\-T\-C\-H\-R@{P\-R\-I\-N\-T\-C\-H\-R}!init.h@{init.\-h}}
+\subsubsection[{P\-R\-I\-N\-T\-C\-H\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-I\-N\-T\-C\-H\-R~2}}\label{init_8h_a5af38e3a7bc301757e367a04a3a8a96d}
+\hypertarget{init_8h_ad1235d5ce36f7267285e82dccd428aa6}{\index{init.\-h@{init.\-h}!R\-E\-A\-D\-Y@{R\-E\-A\-D\-Y}}
+\index{R\-E\-A\-D\-Y@{R\-E\-A\-D\-Y}!init.h@{init.\-h}}
+\subsubsection[{R\-E\-A\-D\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-A\-D\-Y~1}}\label{init_8h_ad1235d5ce36f7267285e82dccd428aa6}
+\hypertarget{init_8h_a7cc2c7f2230a13e65c1ef97ec2216b5d}{\index{init.\-h@{init.\-h}!R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D@{R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D}}
+\index{R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D@{R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D}!init.h@{init.\-h}}
+\subsubsection[{R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D~1}}\label{init_8h_a7cc2c7f2230a13e65c1ef97ec2216b5d}
+\hypertarget{init_8h_a444c52e2594d67f8801c17bf50491683}{\index{init.\-h@{init.\-h}!R\-E\-C\-V\-S\-T\-A\-T\-U\-S@{R\-E\-C\-V\-S\-T\-A\-T\-U\-S}}
+\index{R\-E\-C\-V\-S\-T\-A\-T\-U\-S@{R\-E\-C\-V\-S\-T\-A\-T\-U\-S}!init.h@{init.\-h}}
+\subsubsection[{R\-E\-C\-V\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-C\-V\-S\-T\-A\-T\-U\-S~0}}\label{init_8h_a444c52e2594d67f8801c17bf50491683}
+\hypertarget{init_8h_a937dd9f9084a17618cdebdacad7299c7}{\index{init.\-h@{init.\-h}!S\-T\-A\-T\-U\-S\-M\-A\-S\-K@{S\-T\-A\-T\-U\-S\-M\-A\-S\-K}}
+\index{S\-T\-A\-T\-U\-S\-M\-A\-S\-K@{S\-T\-A\-T\-U\-S\-M\-A\-S\-K}!init.h@{init.\-h}}
+\subsubsection[{S\-T\-A\-T\-U\-S\-M\-A\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-A\-T\-U\-S\-M\-A\-S\-K~0x\-F\-F}}\label{init_8h_a937dd9f9084a17618cdebdacad7299c7}
+\hypertarget{init_8h_aa4478ceb212e95f83acb5efc6a4b2f96}{\index{init.\-h@{init.\-h}!S\-Y\-S\-B\-K\-\_\-\-N\-E\-W@{S\-Y\-S\-B\-K\-\_\-\-N\-E\-W}}
+\index{S\-Y\-S\-B\-K\-\_\-\-N\-E\-W@{S\-Y\-S\-B\-K\-\_\-\-N\-E\-W}!init.h@{init.\-h}}
+\subsubsection[{S\-Y\-S\-B\-K\-\_\-\-N\-E\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-B\-K\-\_\-\-N\-E\-W~7}}\label{init_8h_aa4478ceb212e95f83acb5efc6a4b2f96}
+\hypertarget{init_8h_a78d7439f7d0654d7ed94e5241dd19a8c}{\index{init.\-h@{init.\-h}!S\-Y\-S\-B\-K\-\_\-\-O\-L\-D@{S\-Y\-S\-B\-K\-\_\-\-O\-L\-D}}
+\index{S\-Y\-S\-B\-K\-\_\-\-O\-L\-D@{S\-Y\-S\-B\-K\-\_\-\-O\-L\-D}!init.h@{init.\-h}}
+\subsubsection[{S\-Y\-S\-B\-K\-\_\-\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-B\-K\-\_\-\-O\-L\-D~6}}\label{init_8h_a78d7439f7d0654d7ed94e5241dd19a8c}
+\hypertarget{init_8h_afd7c9be68e62aa06f63ba025c13ee34a}{\index{init.\-h@{init.\-h}!T\-E\-R\-M0\-A\-D\-D\-R@{T\-E\-R\-M0\-A\-D\-D\-R}}
+\index{T\-E\-R\-M0\-A\-D\-D\-R@{T\-E\-R\-M0\-A\-D\-D\-R}!init.h@{init.\-h}}
+\subsubsection[{T\-E\-R\-M0\-A\-D\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-R\-M0\-A\-D\-D\-R~0x10000250}}\label{init_8h_afd7c9be68e62aa06f63ba025c13ee34a}
+\hypertarget{init_8h_ac80e3cb5a610919db7a4c96d73b6c5a3}{\index{init.\-h@{init.\-h}!T\-L\-B\-\_\-\-N\-E\-W@{T\-L\-B\-\_\-\-N\-E\-W}}
+\index{T\-L\-B\-\_\-\-N\-E\-W@{T\-L\-B\-\_\-\-N\-E\-W}!init.h@{init.\-h}}
+\subsubsection[{T\-L\-B\-\_\-\-N\-E\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-L\-B\-\_\-\-N\-E\-W~3}}\label{init_8h_ac80e3cb5a610919db7a4c96d73b6c5a3}
+\hypertarget{init_8h_a09276c76a19689cebfd74dd3846e9f38}{\index{init.\-h@{init.\-h}!T\-L\-B\-\_\-\-O\-L\-D@{T\-L\-B\-\_\-\-O\-L\-D}}
+\index{T\-L\-B\-\_\-\-O\-L\-D@{T\-L\-B\-\_\-\-O\-L\-D}!init.h@{init.\-h}}
+\subsubsection[{T\-L\-B\-\_\-\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-L\-B\-\_\-\-O\-L\-D~2}}\label{init_8h_a09276c76a19689cebfd74dd3846e9f38}
+\hypertarget{init_8h_ade5cf18f7c8b9f995f4d07fa5d8e7073}{\index{init.\-h@{init.\-h}!T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D@{T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D}}
+\index{T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D@{T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D}!init.h@{init.\-h}}
+\subsubsection[{T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D~3}}\label{init_8h_ade5cf18f7c8b9f995f4d07fa5d8e7073}
+\hypertarget{init_8h_a285ae64e0dea6b13f94979f1cc7c382d}{\index{init.\-h@{init.\-h}!T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D@{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}}
+\index{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D@{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}!init.h@{init.\-h}}
+\subsubsection[{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D~5}}\label{init_8h_a285ae64e0dea6b13f94979f1cc7c382d}
+\hypertarget{init_8h_ac74c3ef3346da1a7f0e5695f26981021}{\index{init.\-h@{init.\-h}!T\-R\-A\-N\-S\-T\-A\-T\-U\-S@{T\-R\-A\-N\-S\-T\-A\-T\-U\-S}}
+\index{T\-R\-A\-N\-S\-T\-A\-T\-U\-S@{T\-R\-A\-N\-S\-T\-A\-T\-U\-S}!init.h@{init.\-h}}
+\subsubsection[{T\-R\-A\-N\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-A\-N\-S\-T\-A\-T\-U\-S~2}}\label{init_8h_ac74c3ef3346da1a7f0e5695f26981021}
+\hypertarget{init_8h_ac74c3ef3346da1a7f0e5695f26981021}{\index{init.\-h@{init.\-h}!T\-R\-A\-N\-S\-T\-A\-T\-U\-S@{T\-R\-A\-N\-S\-T\-A\-T\-U\-S}}
+\index{T\-R\-A\-N\-S\-T\-A\-T\-U\-S@{T\-R\-A\-N\-S\-T\-A\-T\-U\-S}!init.h@{init.\-h}}
+\subsubsection[{T\-R\-A\-N\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-A\-N\-S\-T\-A\-T\-U\-S~2}}\label{init_8h_ac74c3ef3346da1a7f0e5695f26981021}
+
+
+\subsection{Documentazione delle funzioni}
+\hypertarget{init_8h_a7abcb9dadc69c5930054fe69a54e7890}{\index{init.\-h@{init.\-h}!init\-Semaphore@{init\-Semaphore}}
+\index{init\-Semaphore@{init\-Semaphore}!init.h@{init.\-h}}
+\subsubsection[{init\-Semaphore}]{\setlength{\rightskip}{0pt plus 5cm}void init\-Semaphore (
+\begin{DoxyParamCaption}
+\item[{{\bf semd\-\_\-t} $\ast$}]{sem, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{init_8h_a7abcb9dadc69c5930054fe69a54e7890}
+\hypertarget{init_8h_a3dff7a7ddb7b31f1a3f84462906b78e3}{\index{init.\-h@{init.\-h}!myprint@{myprint}}
+\index{myprint@{myprint}!init.h@{init.\-h}}
+\subsubsection[{myprint}]{\setlength{\rightskip}{0pt plus 5cm}void myprint (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str1}
+\end{DoxyParamCaption}
+)}}\label{init_8h_a3dff7a7ddb7b31f1a3f84462906b78e3}
+\hypertarget{init_8h_a91fcd5c68a8b0ccf94d0167fe1b4e8f6}{\index{init.\-h@{init.\-h}!myprintbin@{myprintbin}}
+\index{myprintbin@{myprintbin}!init.h@{init.\-h}}
+\subsubsection[{myprintbin}]{\setlength{\rightskip}{0pt plus 5cm}void myprintbin (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str1, }
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+)}}\label{init_8h_a91fcd5c68a8b0ccf94d0167fe1b4e8f6}
+\hypertarget{init_8h_a37123e336d19f111e111d2baebb40898}{\index{init.\-h@{init.\-h}!myprinthex@{myprinthex}}
+\index{myprinthex@{myprinthex}!init.h@{init.\-h}}
+\subsubsection[{myprinthex}]{\setlength{\rightskip}{0pt plus 5cm}void myprinthex (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str1, }
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+)}}\label{init_8h_a37123e336d19f111e111d2baebb40898}
+\hypertarget{init_8h_a9bbf90d0109753b6667a357315156d7c}{\index{init.\-h@{init.\-h}!myprintint@{myprintint}}
+\index{myprintint@{myprintint}!init.h@{init.\-h}}
+\subsubsection[{myprintint}]{\setlength{\rightskip}{0pt plus 5cm}void myprintint (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str1, }
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+)}}\label{init_8h_a9bbf90d0109753b6667a357315156d7c}
+\hypertarget{init_8h_a6a0c937f22f4f8e2d7c8223fd92f1e0c}{\index{init.\-h@{init.\-h}!mytermstat@{mytermstat}}
+\index{mytermstat@{mytermstat}!init.h@{init.\-h}}
+\subsubsection[{mytermstat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} mytermstat (
+\begin{DoxyParamCaption}
+\item[{{\bf memaddr} $\ast$}]{stataddr}
+\end{DoxyParamCaption}
+)}}\label{init_8h_a6a0c937f22f4f8e2d7c8223fd92f1e0c}
+\hypertarget{init_8h_a2faa709054408d895d29c3b8363359f8}{\index{init.\-h@{init.\-h}!print@{print}}
+\index{print@{print}!init.h@{init.\-h}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void print (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{label, }
+\item[{char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{init_8h_a2faa709054408d895d29c3b8363359f8}
+\hypertarget{init_8h_a7e50c32ff34e340cf6a55068981c5d22}{\index{init.\-h@{init.\-h}!sleep@{sleep}}
+\index{sleep@{sleep}!init.h@{init.\-h}}
+\subsubsection[{sleep}]{\setlength{\rightskip}{0pt plus 5cm}void sleep (
+\begin{DoxyParamCaption}
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{init_8h_a7e50c32ff34e340cf6a55068981c5d22}
+
+
+\subsection{Documentazione delle variabili}
+\hypertarget{init_8h_a7413093d68eef1d8e928626212fbb010}{\index{init.\-h@{init.\-h}!currentproc@{currentproc}}
+\index{currentproc@{currentproc}!init.h@{init.\-h}}
+\subsubsection[{currentproc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ currentproc\mbox{[}{\bf M\-A\-X\-C\-P\-Us}\mbox{]}}}\label{init_8h_a7413093d68eef1d8e928626212fbb010}
+
+
+Puntatori ai processi attualmente in esecuzione. 
+
+\hypertarget{init_8h_a35d0c320307b977f43debef8bda3a2d5}{\index{init.\-h@{init.\-h}!mutex\-\_\-scheduler@{mutex\-\_\-scheduler}}
+\index{mutex\-\_\-scheduler@{mutex\-\_\-scheduler}!init.h@{init.\-h}}
+\subsubsection[{mutex\-\_\-scheduler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} mutex\-\_\-scheduler}}\label{init_8h_a35d0c320307b977f43debef8bda3a2d5}
+\hypertarget{init_8h_a969950f64fcd15d16b272192dfde837b}{\index{init.\-h@{init.\-h}!mutex\-\_\-semaphore@{mutex\-\_\-semaphore}}
+\index{mutex\-\_\-semaphore@{mutex\-\_\-semaphore}!init.h@{init.\-h}}
+\subsubsection[{mutex\-\_\-semaphore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} mutex\-\_\-semaphore\mbox{[}{\bf M\-A\-X\-P\-R\-O\-C}+{\bf M\-A\-X\-\_\-\-D\-E\-V\-I\-C\-E\-S}+1\mbox{]}}}\label{init_8h_a969950f64fcd15d16b272192dfde837b}
+
+
+interi per la Test\&Set dei semafori e dei device 
+
+\hypertarget{init_8h_a425d9cd01235780ef39533f15c2571f9}{\index{init.\-h@{init.\-h}!mutex\-\_\-semaphoreprova@{mutex\-\_\-semaphoreprova}}
+\index{mutex\-\_\-semaphoreprova@{mutex\-\_\-semaphoreprova}!init.h@{init.\-h}}
+\subsubsection[{mutex\-\_\-semaphoreprova}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} mutex\-\_\-semaphoreprova}}\label{init_8h_a425d9cd01235780ef39533f15c2571f9}
+\hypertarget{init_8h_ac5fabb5dd95e7acc108e6e0d230cf608}{\index{init.\-h@{init.\-h}!mutex\-\_\-wait\-\_\-clock@{mutex\-\_\-wait\-\_\-clock}}
+\index{mutex\-\_\-wait\-\_\-clock@{mutex\-\_\-wait\-\_\-clock}!init.h@{init.\-h}}
+\subsubsection[{mutex\-\_\-wait\-\_\-clock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} mutex\-\_\-wait\-\_\-clock}}\label{init_8h_ac5fabb5dd95e7acc108e6e0d230cf608}
+\hypertarget{init_8h_aae3d0072a5941f26acca0f68fb153ede}{\index{init.\-h@{init.\-h}!new\-\_\-old\-\_\-areas@{new\-\_\-old\-\_\-areas}}
+\index{new\-\_\-old\-\_\-areas@{new\-\_\-old\-\_\-areas}!init.h@{init.\-h}}
+\subsubsection[{new\-\_\-old\-\_\-areas}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state\-\_\-t}$\ast$ new\-\_\-old\-\_\-areas\mbox{[}{\bf M\-A\-X\-C\-P\-Us}\mbox{]}\mbox{[}8\mbox{]}}}\label{init_8h_aae3d0072a5941f26acca0f68fb153ede}
+
+
+Tabella generale per le new/old areas, in modo da avere un'unica tabella per tutti i processori. 
+
+\hypertarget{init_8h_ab34ea7a4ccc789298395e89aea3d439d}{\index{init.\-h@{init.\-h}!P\-I\-Ds@{P\-I\-Ds}}
+\index{P\-I\-Ds@{P\-I\-Ds}!init.h@{init.\-h}}
+\subsubsection[{P\-I\-Ds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ P\-I\-Ds\mbox{[}{\bf M\-A\-X\-P\-I\-D}\mbox{]}}}\label{init_8h_ab34ea7a4ccc789298395e89aea3d439d}
+
+
+un array per tenere conto dei pid assegnati, null se è libero, altrimenti l'indirizzo del pcb 
+
+\hypertarget{init_8h_ab85d8f7d643bc614d9f7cae7e1e4675b}{\index{init.\-h@{init.\-h}!process\-Counter@{process\-Counter}}
+\index{process\-Counter@{process\-Counter}!init.h@{init.\-h}}
+\subsubsection[{process\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}int process\-Counter}}\label{init_8h_ab85d8f7d643bc614d9f7cae7e1e4675b}
+
+
+contatore dei processi 
+
+\hypertarget{init_8h_a6326d90a3e16bab50f95bed5ff9ab477}{\index{init.\-h@{init.\-h}!P\-R\-O\-V\-A@{P\-R\-O\-V\-A}}
+\index{P\-R\-O\-V\-A@{P\-R\-O\-V\-A}!init.h@{init.\-h}}
+\subsubsection[{P\-R\-O\-V\-A}]{\setlength{\rightskip}{0pt plus 5cm}int P\-R\-O\-V\-A}}\label{init_8h_a6326d90a3e16bab50f95bed5ff9ab477}
+\hypertarget{init_8h_ab7dc53e52926bc6676f5b04d4352a60c}{\index{init.\-h@{init.\-h}!readyproc@{readyproc}}
+\index{readyproc@{readyproc}!init.h@{init.\-h}}
+\subsubsection[{readyproc}]{\setlength{\rightskip}{0pt plus 5cm}int readyproc}}\label{init_8h_ab7dc53e52926bc6676f5b04d4352a60c}
+\hypertarget{init_8h_ad8d03912fa853ee36d3807fb9c0f93d8}{\index{init.\-h@{init.\-h}!real\-\_\-new\-\_\-old\-\_\-areas@{real\-\_\-new\-\_\-old\-\_\-areas}}
+\index{real\-\_\-new\-\_\-old\-\_\-areas@{real\-\_\-new\-\_\-old\-\_\-areas}!init.h@{init.\-h}}
+\subsubsection[{real\-\_\-new\-\_\-old\-\_\-areas}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state\-\_\-t} real\-\_\-new\-\_\-old\-\_\-areas\mbox{[}{\bf M\-A\-X\-C\-P\-Us}-\/1\mbox{]}\mbox{[}8\mbox{]}}}\label{init_8h_ad8d03912fa853ee36d3807fb9c0f93d8}
+
+
+new/old area reali dei processori 1..n che le hanno sullo stack 
+
+\hypertarget{init_8h_a34fb108bb4d12ff7641dcf19b0170003}{\index{init.\-h@{init.\-h}!soft\-Block\-Counter@{soft\-Block\-Counter}}
+\index{soft\-Block\-Counter@{soft\-Block\-Counter}!init.h@{init.\-h}}
+\subsubsection[{soft\-Block\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}int soft\-Block\-Counter}}\label{init_8h_a34fb108bb4d12ff7641dcf19b0170003}
+
+
+Contatore processi bloccati per I/\-O. 
+
+\hypertarget{init_8h_a6c44e837b0fd2f80668756147b608b68}{\index{init.\-h@{init.\-h}!usedpid@{usedpid}}
+\index{usedpid@{usedpid}!init.h@{init.\-h}}
+\subsubsection[{usedpid}]{\setlength{\rightskip}{0pt plus 5cm}int usedpid}}\label{init_8h_a6c44e837b0fd2f80668756147b608b68}
+
+
+Per tenere conto dei pid assegnati. 
+
+\hypertarget{init_8h_ae2ec74ae8cfbd226a3402447b5c39250}{\index{init.\-h@{init.\-h}!wait\-\_\-clock@{wait\-\_\-clock}}
+\index{wait\-\_\-clock@{wait\-\_\-clock}!init.h@{init.\-h}}
+\subsubsection[{wait\-\_\-clock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ wait\-\_\-clock\mbox{[}{\bf M\-A\-X\-P\-R\-O\-C}\mbox{]}}}\label{init_8h_ae2ec74ae8cfbd226a3402447b5c39250}

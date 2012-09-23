@@ -1,0 +1,224 @@
+\hypertarget{phase1_2pcb_8h}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/phase1/pcb.h}
+\label{phase1_2pcb_8h}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/phase1/pcb.\-h@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/phase1/pcb.\-h}}
+}
+{\ttfamily \#include \char`\"{}const11.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}const.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}base.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}u\-M\-P\-Stypes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}libumps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}listx.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}types11.\-h\char`\"{}}\\*
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{phase1_2pcb_8h_ac842b91f7c9963383016a95ae09f903c}{out\-Child} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$\hyperlink{p1test__pkaya__v1_81_8c_a3bec781e4e77d9931af780e1605d7d94}{p})
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{phase1_2pcb_8h_a4d8a060bdeac7847a16e45ffe18d3389}{remove\-Child} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$\hyperlink{p1test__pkaya__v1_81_8c_a3bec781e4e77d9931af780e1605d7d94}{p})
+\item 
+void \hyperlink{phase1_2pcb_8h_acbb38484ab3807a24bf6513c05101a72}{insert\-Child} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$prnt, \hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$\hyperlink{p1test__pkaya__v1_81_8c_a3bec781e4e77d9931af780e1605d7d94}{p})
+\item 
+int \hyperlink{phase1_2pcb_8h_a7d6e59469f944f132a41c390b606ab08}{empty\-Child} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$\hyperlink{p1test__pkaya__v1_81_8c_a3bec781e4e77d9931af780e1605d7d94}{p})
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{phase1_2pcb_8h_a43c105746bbed6463dc347e023821efd}{out\-Proc\-Q} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head, \hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$\hyperlink{p1test__pkaya__v1_81_8c_a3bec781e4e77d9931af780e1605d7d94}{p})
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{phase1_2pcb_8h_a90fa8ebc0a1c39c83e836bdf04275a17}{remove\-Proc\-Q} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{phase1_2pcb_8h_a9b581f743cc1fe0dfbceecb8d529c451}{head\-Proc\-Q} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head)
+\item 
+void \hyperlink{phase1_2pcb_8h_a9f83539fc894253a43a7a8e22ba6c3ba}{insert\-Proc\-Q} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head, \hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$\hyperlink{p1test__pkaya__v1_81_8c_a3bec781e4e77d9931af780e1605d7d94}{p})
+\item 
+int \hyperlink{phase1_2pcb_8h_a4b271dabd4c2d2897b71cccbe934bdac}{empty\-Proc\-Q} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head)
+\item 
+void \hyperlink{phase1_2pcb_8h_a7d7b6160ba5bee4b501ed07afb8caa93}{mk\-Empty\-Proc\-Q} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{phase1_2pcb_8h_a953a4918f234322fc93193f53d897d5d}{alloc\-Pcb} (void)
+\item 
+void \hyperlink{phase1_2pcb_8h_ab42d615bd7053b952a73dee6fd84c54d}{free\-Pcb} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$\hyperlink{p1test__pkaya__v1_81_8c_a3bec781e4e77d9931af780e1605d7d94}{p})
+\item 
+void \hyperlink{phase1_2pcb_8h_a44e85174fc260ea2383787113059a047}{init\-Pcbs} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variabili}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} \hyperlink{phase1_2pcb_8h_a27cb1ea9958e54c34990d835770fb6a7}{pcb\-Free\-\_\-table} \mbox{[}\hyperlink{phase1_2const_8h_abe4567498db286a3185a522c6dae3cbc}{M\-A\-X\-P\-R\-O\-C}\mbox{]}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head} \hyperlink{phase1_2pcb_8h_a4aff766f79d278b87192491c94425ee2}{pcbfree\-\_\-h}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle funzioni}
+\hypertarget{phase1_2pcb_8h_a953a4918f234322fc93193f53d897d5d}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!alloc\-Pcb@{alloc\-Pcb}}
+\index{alloc\-Pcb@{alloc\-Pcb}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{alloc\-Pcb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ alloc\-Pcb (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_a953a4918f234322fc93193f53d897d5d}
+(puntatore a \hyperlink{structpcb__t}{pcb\-\_\-t}) \hyperlink{lib_2pcb_8c_a953a4918f234322fc93193f53d897d5d}{alloc\-Pcb()}\-: rimuove il primo elemento dalla lista dei pcb liberi e inizializza tutti i campi a N\-U\-L\-L e lo restituisce. in caso non ci siano pcb liberi, restituisce N\-U\-L\-L. \begin{DoxyReturn}{Restituisce}
+indirizzo del pcb allocato, N\-U\-L\-L altrimenti 
+\end{DoxyReturn}
+\hypertarget{phase1_2pcb_8h_a7d6e59469f944f132a41c390b606ab08}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!empty\-Child@{empty\-Child}}
+\index{empty\-Child@{empty\-Child}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{empty\-Child}]{\setlength{\rightskip}{0pt plus 5cm}int empty\-Child (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_a7d6e59469f944f132a41c390b606ab08}
+(1 T\-R\-U\-E oppure 0 F\-A\-L\-S\-E) empty\-Child(puntatore al processo)\-: restituisce 1 se il processo puntato da p non ha figli, altrimenti 0. 
+\begin{DoxyParams}{Parametri}
+{\em p} & puntatore al processo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+1 se non ha figli, 0 altrimenti 
+\end{DoxyReturn}
+\hypertarget{phase1_2pcb_8h_a4b271dabd4c2d2897b71cccbe934bdac}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!empty\-Proc\-Q@{empty\-Proc\-Q}}
+\index{empty\-Proc\-Q@{empty\-Proc\-Q}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{empty\-Proc\-Q}]{\setlength{\rightskip}{0pt plus 5cm}int empty\-Proc\-Q (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_a4b271dabd4c2d2897b71cccbe934bdac}
+(1 T\-R\-U\-E oppure 0 F\-A\-L\-S\-E) empty\-Proc\-Q(puntatore alla sentinella della lista)\-: restituisce 1 se la lista è vuota altrimenti restituisce 0. 
+\begin{DoxyParams}{Parametri}
+{\em head} & puntatore alla sentinella \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+1 se la lista è vuota, 0 altrimenti 
+\end{DoxyReturn}
+\hypertarget{phase1_2pcb_8h_ab42d615bd7053b952a73dee6fd84c54d}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!free\-Pcb@{free\-Pcb}}
+\index{free\-Pcb@{free\-Pcb}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{free\-Pcb}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Pcb (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_ab42d615bd7053b952a73dee6fd84c54d}
+free\-Pcb(puntatore a pcb\-\_\-t)\-: inserisce il processo puntato da p nella lista dei pcb liberi. 
+\begin{DoxyParams}{Parametri}
+{\em p} & puntatore al processo \\
+\hline
+\end{DoxyParams}
+\hypertarget{phase1_2pcb_8h_a9b581f743cc1fe0dfbceecb8d529c451}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!head\-Proc\-Q@{head\-Proc\-Q}}
+\index{head\-Proc\-Q@{head\-Proc\-Q}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{head\-Proc\-Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ head\-Proc\-Q (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_a9b581f743cc1fe0dfbceecb8d529c451}
+(puntatore al processo) head\-Proc\-Q(puntatore alla sentinella)\-:restituisce l'elemento in testa della coda S\-E\-N\-Z\-A R\-I\-M\-U\-O\-V\-E\-R\-L\-O. se la coda è vuota, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em head} & puntatore alla sentinella \\
+\hline
+\end{DoxyParams}
+\hypertarget{phase1_2pcb_8h_a44e85174fc260ea2383787113059a047}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!init\-Pcbs@{init\-Pcbs}}
+\index{init\-Pcbs@{init\-Pcbs}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{init\-Pcbs}]{\setlength{\rightskip}{0pt plus 5cm}void init\-Pcbs (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_a44e85174fc260ea2383787113059a047}
+init\-Pbcs()\-: inizializza la lista pcb\-Free in modo da contenere tutti gli elementi di pcb\-Free\-\_\-table. \hypertarget{phase1_2pcb_8h_acbb38484ab3807a24bf6513c05101a72}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!insert\-Child@{insert\-Child}}
+\index{insert\-Child@{insert\-Child}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{insert\-Child}]{\setlength{\rightskip}{0pt plus 5cm}void insert\-Child (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{prnt, }
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_acbb38484ab3807a24bf6513c05101a72}
+insert\-Child(puntatore al processo, puntatore al processo)\-: inserisce il processo p come figlio di prnt. 
+\begin{DoxyParams}{Parametri}
+{\em prnt} & puntatore al padre \\
+\hline
+{\em p} & puntatore al figlio \\
+\hline
+\end{DoxyParams}
+\hypertarget{phase1_2pcb_8h_a9f83539fc894253a43a7a8e22ba6c3ba}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!insert\-Proc\-Q@{insert\-Proc\-Q}}
+\index{insert\-Proc\-Q@{insert\-Proc\-Q}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{insert\-Proc\-Q}]{\setlength{\rightskip}{0pt plus 5cm}void insert\-Proc\-Q (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head, }
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_a9f83539fc894253a43a7a8e22ba6c3ba}
+insert\-Proc\-Q(puntatore alla sentinella, puntatore ad un processo)\-: inserisce il processo nella lista a cui punta la sentinella, tenendo conto della priorità dei processi. 
+\begin{DoxyParams}{Parametri}
+{\em head} & puntatore alla sentinella \\
+\hline
+{\em p} & puntatore al processo \\
+\hline
+\end{DoxyParams}
+\hypertarget{phase1_2pcb_8h_a7d7b6160ba5bee4b501ed07afb8caa93}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!mk\-Empty\-Proc\-Q@{mk\-Empty\-Proc\-Q}}
+\index{mk\-Empty\-Proc\-Q@{mk\-Empty\-Proc\-Q}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{mk\-Empty\-Proc\-Q}]{\setlength{\rightskip}{0pt plus 5cm}void mk\-Empty\-Proc\-Q (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_a7d7b6160ba5bee4b501ed07afb8caa93}
+mk\-Empty\-Proc\-Q(puntatore a list\-\_\-head)\-: inizializza la sentinella. 
+\begin{DoxyParams}{Parametri}
+{\em head} & puntatore alla sentinella \\
+\hline
+\end{DoxyParams}
+\hypertarget{phase1_2pcb_8h_ac842b91f7c9963383016a95ae09f903c}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!out\-Child@{out\-Child}}
+\index{out\-Child@{out\-Child}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{out\-Child}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ out\-Child (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_ac842b91f7c9963383016a95ae09f903c}
+(puntatore al processo) out\-Child(puntatore al processo)\-:restituisce il processo puntato da p R\-I\-M\-U\-O\-V\-E\-N\-D\-O\-L\-O dalla lista dei figli del padre. se il processo p non ha un padre, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em p} & puntatore al processo da rimuovere \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al processo rimosso 
+\end{DoxyReturn}
+\hypertarget{phase1_2pcb_8h_a43c105746bbed6463dc347e023821efd}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!out\-Proc\-Q@{out\-Proc\-Q}}
+\index{out\-Proc\-Q@{out\-Proc\-Q}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{out\-Proc\-Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ out\-Proc\-Q (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head, }
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_a43c105746bbed6463dc347e023821efd}
+\hypertarget{phase1_2pcb_8h_a4d8a060bdeac7847a16e45ffe18d3389}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!remove\-Child@{remove\-Child}}
+\index{remove\-Child@{remove\-Child}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{remove\-Child}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ remove\-Child (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_a4d8a060bdeac7847a16e45ffe18d3389}
+(puntatore al processo) remove\-Child(puntatore al processo)\-: restituisce il primo figlio del processo puntato da p R\-I\-M\-U\-O\-V\-E\-N\-D\-O\-L\-O. se p non ha figli, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em p} & puntatore al processo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+indirizzo del figlio rimosso 
+\end{DoxyReturn}
+\hypertarget{phase1_2pcb_8h_a90fa8ebc0a1c39c83e836bdf04275a17}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!remove\-Proc\-Q@{remove\-Proc\-Q}}
+\index{remove\-Proc\-Q@{remove\-Proc\-Q}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{remove\-Proc\-Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ remove\-Proc\-Q (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}}\label{phase1_2pcb_8h_a90fa8ebc0a1c39c83e836bdf04275a17}
+(puntatore al processo) remove\-Proc\-Q(puntatore alla sentinella)\-: restiuisce l'elemento in testa della coda R\-I\-M\-U\-O\-V\-E\-N\-D\-O\-L\-O. se la coda è vuota, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em head} & puntatore alla sentinella \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al processo rimosso 
+\end{DoxyReturn}
+
+
+\subsection{Documentazione delle variabili}
+\hypertarget{phase1_2pcb_8h_a4aff766f79d278b87192491c94425ee2}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!pcbfree\-\_\-h@{pcbfree\-\_\-h}}
+\index{pcbfree\-\_\-h@{pcbfree\-\_\-h}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{pcbfree\-\_\-h}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf list\-\_\-head} pcbfree\-\_\-h}}\label{phase1_2pcb_8h_a4aff766f79d278b87192491c94425ee2}
+\hypertarget{phase1_2pcb_8h_a27cb1ea9958e54c34990d835770fb6a7}{\index{phase1/pcb.\-h@{phase1/pcb.\-h}!pcb\-Free\-\_\-table@{pcb\-Free\-\_\-table}}
+\index{pcb\-Free\-\_\-table@{pcb\-Free\-\_\-table}!phase1/pcb.h@{phase1/pcb.\-h}}
+\subsubsection[{pcb\-Free\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t} pcb\-Free\-\_\-table\mbox{[}{\bf M\-A\-X\-P\-R\-O\-C}\mbox{]}}}\label{phase1_2pcb_8h_a27cb1ea9958e54c34990d835770fb6a7}

@@ -1,0 +1,59 @@
+\hypertarget{exception_8h}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/exception.h}
+\label{exception_8h}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/exception.\-h@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/exception.\-h}}
+}
+{\ttfamily \#include \char`\"{}lib/const.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/base.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/u\-M\-P\-Stypes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/libumps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/listx.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/types11.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/pcb.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/asl.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/utils.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scheduler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}init.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}syscall.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}interrupt.\-h\char`\"{}}\\*
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{exception_8h_a8bc55352fc8ce73231129ee8dcc35563}{sysbk\-\_\-handler} (void)
+\item 
+void \hyperlink{exception_8h_a89545726f1e21a94df465ce505fb004d}{pgmtrap\-\_\-handler} (void)
+\item 
+void \hyperlink{exception_8h_ae42e7b6fc994b2616bb067eec168a004}{tlb\-\_\-handler} (void)
+\item 
+void \hyperlink{exception_8h_a040cab4a1a9f9ff634d8cd71735816bc}{int\-\_\-handler} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle funzioni}
+\hypertarget{exception_8h_a040cab4a1a9f9ff634d8cd71735816bc}{\index{exception.\-h@{exception.\-h}!int\-\_\-handler@{int\-\_\-handler}}
+\index{int\-\_\-handler@{int\-\_\-handler}!exception.h@{exception.\-h}}
+\subsubsection[{int\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void int\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{exception_8h_a040cab4a1a9f9ff634d8cd71735816bc}
+handler degli interrupt \hypertarget{exception_8h_a89545726f1e21a94df465ce505fb004d}{\index{exception.\-h@{exception.\-h}!pgmtrap\-\_\-handler@{pgmtrap\-\_\-handler}}
+\index{pgmtrap\-\_\-handler@{pgmtrap\-\_\-handler}!exception.h@{exception.\-h}}
+\subsubsection[{pgmtrap\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void pgmtrap\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{exception_8h_a89545726f1e21a94df465ce505fb004d}
+handler dei program trap \hypertarget{exception_8h_a8bc55352fc8ce73231129ee8dcc35563}{\index{exception.\-h@{exception.\-h}!sysbk\-\_\-handler@{sysbk\-\_\-handler}}
+\index{sysbk\-\_\-handler@{sysbk\-\_\-handler}!exception.h@{exception.\-h}}
+\subsubsection[{sysbk\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void sysbk\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{exception_8h_a8bc55352fc8ce73231129ee8dcc35563}
+handler delle system calls \hypertarget{exception_8h_ae42e7b6fc994b2616bb067eec168a004}{\index{exception.\-h@{exception.\-h}!tlb\-\_\-handler@{tlb\-\_\-handler}}
+\index{tlb\-\_\-handler@{tlb\-\_\-handler}!exception.h@{exception.\-h}}
+\subsubsection[{tlb\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void tlb\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{exception_8h_ae42e7b6fc994b2616bb067eec168a004}
+handler delle tlb exception 

@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>PKAYA-2012:  File sorgente C:/Users/phra/Desktop/progetto_so/src/lib/const.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="prova.jpg"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PKAYA-2012
+   &#160;<span id="projectnumber">v2</span>
+   </div>
+   <div id="projectbrief">a multiprocessor kernel for umps2</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Strutture&#160;dati</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;globali</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Strutture dati</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Ridefinizioni di tipo (typedef)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c85d3e3c5052e9ad9ce18c6863244a25.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">const.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lib_2const_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _CONST_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _CONST_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/**************************************************************************** </span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * This header file contains the global constant &amp; macro definitions.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lib_2base_8h.html">base.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* Maxi number of overall (eg, system, daemons, user) concurrent processes */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#abe4567498db286a3185a522c6dae3cbc">   13</a></span>&#160;<span class="preprocessor">#define MAXPROC 20</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a2e5091b3296b6d29e0f8242c0d53727f">   15</a></span>&#160;<span class="preprocessor">#define UPROCMAX 3  </span><span class="comment">/* number of usermode processes (not including master proc</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">                                             and system daemons */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ad09a91def56396e787fc83e5efac035c">   17</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define DELAY_DAEMON_ASID UPROCMAX   </span><span class="comment">/* to avoid overlapping ASIDs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span><span class="comment">/* #define ANOTHER_DAEMON_ASID UPROCMAX + 1</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">   #define YET_ANOTHER_DAEMON_ASID UPROCMAX + 2</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">     etc. */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ab49d96b956c5c64a6dc1ae5ffdf83bc4">   23</a></span>&#160;<span class="comment">/* Syscall definition */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a7013b96cb9437d7ecca32db97742f924">   24</a></span>&#160;<span class="preprocessor">#define CREATEPROCESS       1</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#adc1341b318b4bfc52a21db9cd1c45a11">   25</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CREATEBROTHER       2</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ab7c9d73dc77126cab9c63823d52ba282">   26</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TERMINATEPROCESS    3</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a33d8199f3e5df8dda374bc18d918f24c">   27</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define VERHOGEN        4</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aed9027689147bd9d925e2e4f58963ebf">   28</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PASSEREN        5</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a86edff88e58ca8bde7889320c5bf8d06">   29</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define GETCPUTIME      6</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aa6feebfa581f7a27c9d29ba0af469ca7">   30</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define WAITCLOCK       7</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ab4d4f943fdb8a47462df537dfc2130d5">   31</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define WAITIO          8</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#af04ab96d98e6300241443330c2960085">   32</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SPECPRGVEC      9</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aaefd7faba4a84596913a54c08e70d6c6">   33</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SPECTLBVEC      10</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SPECSYSVEC      11</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">/* Addresses for new and old areas (where new and old processor states are </span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a165d58183bfd70b348651a00e3876b4b">   38</a></span>&#160;<span class="comment">   stored on exceptions) */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a67d4fabb12bd55cc2ff69b783825285b">   39</a></span>&#160;<span class="preprocessor">#define INT_NEWAREA 0x2000008c</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ae9085df9671391c53fe7893ee3f884df">   40</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define INT_OLDAREA 0x20000000</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a5d4b27d0155e892ebf631914ff824f40">   41</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TLB_NEWAREA 0x200001a4</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#afd7d1fdb609b0ed8ecaf547ae30de9f3">   42</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TLB_OLDAREA 0x20000118</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ab58e9368f30d392e392430947edc5dd5">   43</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PGMTRAP_NEWAREA 0x200002bc</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a403cf9f89a1a4d5cee0ff2af5687670b">   44</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PGMTRAP_OLDAREA 0x20000230</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a8d20c6fabd639da26017ceba336aaee4">   45</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SYSBK_NEWAREA 0x200003d4</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SYSBK_OLDAREA 0x20000348</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">/* Bus register area. Among other informations, the start and amount of</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aaee8cf16ded6c483175a65c248c243bb">   49</a></span>&#160;<span class="comment">   installed RAM are stored here */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aa4f372f1841539b1410b6a949a98d46e">   50</a></span>&#160;<span class="preprocessor">#define BUS_RAMBASEADDR 0x10000000</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BUS_INSTALLEDRAM 0x10000004</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aece40125a4bf69bdb1823da3d199f2f6">   52</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#define RAMTOP (*((U32 *)BUS_RAMBASEADDR)) + (*((U32 *)BUS_INSTALLEDRAM))</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a53efaae1ec0448017014af1bec19fcfa">   54</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aa1d3673305b27a207af6634d14085ecd">   55</a></span>&#160;<span class="preprocessor">#define BUS_TIMESCALE 0x10000024  </span><span class="comment">/* How many clock ticks per microsecond */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BUS_INTERVALTIMER 0x10000020</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">/* Elapsed clock ticks (CPU instructions executed) since system power on.</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a14e00c494d299fc3c63702f1ffbc117a">   59</a></span>&#160;<span class="comment">   Only the &quot;low&quot; part is actually used. */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a1d3b5a500a6f913bed64efeed77301d4">   60</a></span>&#160;<span class="preprocessor">#define BUS_TODLOW 0x1000001c</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BUS_TODHIGH 0x10000018</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a58475cf2c6fec61240a581b4cb795e9f">   62</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#define DEV_USED_INTS 5 </span><span class="comment">/* Number of ints reserved for devices: 3,4,5,6,7 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ac488a197b10aaecb90e1c57b17d56e64">   64</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#define DEV_PER_INT 8 </span><span class="comment">/* Maximum number of devices per interrupt line */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">/* Total maximum number of devices: terminals are really two devices each, so</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a4e132cfaa78353e3af1474a86b2dd535">   68</a></span>&#160;<span class="comment">   re-add DEV_PER_INT devices, plus one for the pseudo-clock */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#define MAX_DEVICES (DEV_USED_INTS * DEV_PER_INT) + DEV_PER_INT + 1</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a02f2f72ff6a9b230f98b3f23883b491f">   71</a></span>&#160;<span class="comment">/* The last semaphore is the pseudo-clock one */</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#define CLOCK_SEM (MAX_DEVICES - 1)</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aec7ad0cbcfe926738d97bd81e9244766">   74</a></span>&#160;<span class="comment">/* Interrupt lines used by the devices */</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a6bd3e6d6244d73e7ad9b64d7c8f506dc">   75</a></span>&#160;<span class="preprocessor">#define INT_PLT 1</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a95758361f973e5cd56df98ef298dbf79">   76</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define INT_TIMER 2    </span><span class="comment">/* timer interrupt */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ae36d20ac4513da8567c679f15993b246">   77</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define INT_LOWEST 3   </span><span class="comment">/* minimum interrupt number used by real devices */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a3ef8038e24722327768cde4e732529a0">   78</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define INT_DISK 3</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a2756f3532dcb69d39a8b7adfb32cf29b">   79</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define INT_TAPE 4</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ad0c26105e571e8da96fe3bf8b952bf3a">   80</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define INT_UNUSED 5   </span><span class="comment">/* network? */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a2bf14531b6ad3ef3d3c26d33f1ef3289">   81</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define INT_PRINTER 6</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define INT_TERMINAL 7</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">/* Device command and status codes</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">   Only those actually used in the code are defined here. If the need arises,</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">   other commands and states may be defined here. */</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aac22728668b8dc0bca00bb3cbe9acd4d">   87</a></span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#define DEV_C_ACK   1 </span><span class="comment">/* command common to all devices */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ab46b42488e9531ac0d0c97c8bbd9bd03">   89</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a796bb84f3924f5a0dae27a718230e3d7">   90</a></span>&#160;<span class="preprocessor">#define DEV_DISK_C_SEEKCYL  2        </span><span class="comment">/* disk:       */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ac5811cf607074586b1e6eec2178e240c">   91</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DEV_DISK_C_READBLK  3</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DEV_DISK_C_WRITEBLK 4</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a7c20e27f183865c835981a55b6d14c58">   93</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#define DEV_TAPE_C_READBLK 3   </span><span class="comment">/* tape:       */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#adf7381b224d41090d1498caf5da6bebb">   95</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#define DEV_PRNT_C_PRINTCHR 2   </span><span class="comment">/* printer */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aa8b24b9bc4354b9d5262ecd360cfd11d">   97</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a989c0e4be2aecf255689df134ccf1c4e">   98</a></span>&#160;<span class="preprocessor">#define DEV_TRCV_C_RECVCHAR 2   </span><span class="comment">/* terminal */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DEV_TTRS_C_TRSMCHAR 2   </span></div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a3a58ef6088520b8215469498ab43fe53">  100</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#define DEV_S_READY   1   </span><span class="comment">/* status common to all devices */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ab845d392aafadc5efe61f547fe16166f">  102</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ad3bc52a1a90b93d8cc2833f2c3881b9c">  103</a></span>&#160;<span class="preprocessor">#define DEV_TRCV_S_RECVERR  4  </span><span class="comment">/* terminal-specific */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DEV_TRCV_S_CHARRECV 5</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ae58dd71cab5900dd917d7b7bb4293d28">  105</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a758cb21687da2425a8c611c29c8b7ae6">  106</a></span>&#160;<span class="preprocessor">#define DEV_TTRS_S_TRSMERR  4</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DEV_TTRS_S_CHARTRSM 5</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a771790d1e78b326694594dbfaacbaf4d">  108</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a865e9c6985a6bea733de6e8b411b018e">  109</a></span>&#160;<span class="preprocessor">#define TAPE_EOF 1</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TAPE_EOT 0</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#af9b1b2ba12857a4bf11289dac8c5462d">  113</a></span>&#160;<span class="comment">/* Physical memory frame size */</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a92ed8507d1cd2331ad09275c5c4c1c89">  114</a></span>&#160;<span class="preprocessor">#define FRAME_SIZE 4096   </span><span class="comment">/* or 0x1000 bytes, or 4K */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define WORD_SIZE 4</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">/* Interrupting devices bitmaps starting address: the actual bitmap address is</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a93b6e8e26cf08fa175aab8299c85530e">  119</a></span>&#160;<span class="comment">   computed with INT_INTBITMAP_START + (WORD_SIZE * (int_no - 3)) */</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#define PENDING_BITMAP_START 0x1000003c</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">/* Installed devices bitmap starting address: same as above */</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">/* #define INST_BITMAP_START 0x10000028 */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a02940ca6a4f4f8553325cc00d24c24f2">  125</a></span>&#160;<span class="comment">/* Address of the first real device register */</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#define DEV_REGS_START 0x10000050</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aa2e2379dc2c6ef04664756bd7f93b23a">  128</a></span>&#160;<span class="comment">/* Size of a single device register */</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#afaabb12636a47d2b266fc74de2d79352">  129</a></span>&#160;<span class="preprocessor">#define DEV_REG_LEN 4</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DEV_REG_SIZE (DEV_REG_LEN * WORD_SIZE)</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ae8342e38ef837f5d269eb28a826aaac4">  132</a></span>&#160;<span class="comment">/* Size of a device register group */</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#define DEV_REGBLOCK_SIZE (DEV_REG_SIZE * DEV_PER_INT)</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a56ade63a97e9c466e4fb375350e57ec4">  135</a></span>&#160;<span class="comment">/* Scheduling constants */</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a06507a339811e272f2590a094281e4a3">  136</a></span>&#160;<span class="preprocessor">#define SCHED_TIME_SLICE 5000     </span><span class="comment">/* in microseconds, aka 5 milliseconds */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a4476b9ac6a5d75ea4c92e4d83b0eb682">  137</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SCHED_PSEUDO_CLOCK 100000 </span><span class="comment">/* pseudo-clock tick &quot;slice&quot; length */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SCHED_BOGUS_SLICE 500000  </span><span class="comment">/* just to make sure */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">/* The next two are used a lot and should better be &quot;inlined&quot; for speed, so</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">   define them as macros */</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aad357e6c1a0d7a9c16c32be0e7d0f562">  143</a></span>&#160;<span class="comment">/* &quot;current&quot; TOD value (elapsed CPU ticks), converted in microseconds */</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#define GET_TODLOW (*((U32 *)BUS_TODLOW) / (*(U32 *)BUS_TIMESCALE))</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">/* Set the interval timer with the given value (in microseconds). Convert the</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a98a44c978bf3f7290f7029cef3e57cb1">  147</a></span>&#160;<span class="comment">   value in CPU ticks, and load the interval timer register with it */</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#define SET_IT(timer_val) ((*((U32 *)BUS_INTERVALTIMER)) = (timer_val * (*(U32 *)BUS_TIMESCALE)))</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">/* Utility definitions for the status register: OR the register with these</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">   to set a specific bit, AND with the opposite to unset a specific bit.</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">     For example, to set STATUS_VMc, do status = status | STATUS_VMc;  to unset </span></div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a8d0d0af423396f882ca23f2b8c47e4da">  153</a></span>&#160;<span class="comment">     it do status = status &amp; ~STATUS_VMc */</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a1e046d5b0ce22c1223cb54f7b8735cec">  154</a></span>&#160;<span class="preprocessor">#define STATUS_IEc 0x00000001</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ac7e4378f034ec46f403ba6c5b4336dc3">  155</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STATUS_KUc 0x00000002</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aef7ac29581473a7572744e8e36fc5335">  156</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STATUS_IEp 0x00000004</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a2fec7ab5c5b847bbcce98d5206040568">  157</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STATUS_KUp 0x00000008</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a0a5cc573c0036dfb0034cb6277a0e468">  158</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STATUS_IEo 0x00000010</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a3b3836dddfb0caf0cf88c797fe74bc08">  159</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STATUS_KUo 0x00000020</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a1201cd50b5e7b398ebf37522bbf41653">  160</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STATUS_VMc 0x01000000</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a4eb78d59507801e34cad124f27c4b773">  161</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STATUS_VMp 0x02000000</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ad4cd204cc4a604897e6bec80af274cf9">  162</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STATUS_VMo 0x04000000</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STATUS_PLT 0x08000000</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ab01ef032dcd10746f9741e50d02cbebb">  165</a></span>&#160;<span class="comment">/* All interrupts unmasked */</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#define STATUS_INT_UNMASKED 0x0000ff00</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a4439ac6edcf3b5335273067415ebd81c">  168</a></span>&#160;<span class="comment">/* Utility definitions for the entryHI register */</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a60bb80dec726e2e33d22c052cb451dee">  169</a></span>&#160;<span class="preprocessor">#define ENTRYHI_SEGNO_GET(entryHI) (((entryHI) &amp; 0xc0000000) &gt;&gt; 30)</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a38d38d8926ae8e8befa17f297b503285">  170</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENTRYHI_VPN_GET(entryHI) (((entryHI) &amp; 0x3ffff000) &gt;&gt; 12)</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENTRYHI_ASID_GET(entryHI) (((entryHI) &amp; 0x00000fc0) &gt;&gt; 6)</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a386e91d7c84386651fb0c9a5aa759555">  172</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a543db6c77c52907ec3ca16e4f1618d96">  173</a></span>&#160;<span class="preprocessor">#define ENTRYHI_SEGNO_SET(entryHI, seg_no) (((entryHI) &amp; 0x3fffffff) | ((seg_no) &lt;&lt; 30) )</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a9c059001559bf463c5626c1acca8e70f">  174</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENTRYHI_VPN_SET(entryHI, vpn) (((entryHI) &amp; 0xc0000fff) | ((vpn) &lt;&lt; 12))</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENTRYHI_ASID_SET(entryHI, asid) (((entryHI) &amp; 0xfffff03f) | ((asid) &lt;&lt; 6))</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a1d586b7b26df6062657575fab2f86e06">  177</a></span>&#160;<span class="comment">/* Utility definitions for the entryLO register */</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a056da13e7de22e50475848d44e462bb0">  178</a></span>&#160;<span class="preprocessor">#define ENTRYLO_PFN_GET(entryLO) (((entryLO) &amp; 0xfffff000) &gt;&gt; 12)</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#afe159b65147c429d57f35418bcef72ee">  179</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENTRYLO_PFN_SET(entryLO, pfn) (((entryLO) &amp; 0x00000fff) | ((pfn) &lt;&lt; 12))</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a73561c94400ea900cb0490639fb8ccfb">  180</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENTRYLO_NOCACHE 0x00000800  </span><span class="comment">/* Not used in uMPS */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ac359bf7b84a027a443eeb7c1711e882c">  181</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENTRYLO_DIRTY 0x00000400</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a661ee7f5ab8ff6f56bb697782e6357c5">  182</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENTRYLO_VALID 0x00000200</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ab2f7f48823616a3a359ee839a9ad27a8">  183</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENTRYLO_GLOBAL 0x00000100</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENTRYLO_ACCESSED 0x00000080  </span><span class="comment">/* NEW flag, not in the specs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a70ac7660c9b759d6c2001e31ac7f7f97">  186</a></span>&#160;<span class="comment">/* Utility definitions for the Cause CP0 register */</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a4cc285f1103420cf8b4eb1d8d1f71fd1">  187</a></span>&#160;<span class="preprocessor">#define CAUSE_EXCCODE_GET(cause) (((cause) &amp; 0x0000007c) &gt;&gt; 2)</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a9baf25606bc3d2b2123805731c2d0594">  188</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CAUSE_EXCCODE_SET(cause, exc_code) (((cause) &amp; 0xffffff83) | ((exc_code) &lt;&lt; 2))</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CAUSE_CE_GET(cause) (cause &amp; 0x30000000)</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aad7feb396f7dc28219bdb1ae73d2cfd6">  191</a></span>&#160;<span class="comment">/* Returns 1 if the interrupt int_no is pending */</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor">#define CAUSE_IP_GET(cause, int_no) ((cause) &amp; (1 &lt;&lt; ((int_no) + 8)))</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a2559906e761ab3b583d487bc2e4bc6d4">  194</a></span>&#160;<span class="comment">/* Values for CP0 Cause.ExcCode */</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#af41510c3a96a994a5f40c4c22f767306">  195</a></span>&#160;<span class="preprocessor">#define EXC_INTERRUPT 0</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a78f72a0bc0e289063398d5629785909d">  196</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_TLBMOD 1</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#afa67b10f5e32808d9847893d9b96fc0a">  197</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_TLBINVLOAD 2</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#adadd84428763e046ed22539436734076">  198</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_TLBINVSTORE 3</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a35c248d11dcc86edf7970d36c74e128d">  199</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_ADDRINVLOAD 4</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#af12301b84976d206b01d9534f72ea6f7">  200</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_ADDRINVSTORE 5</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a018785048e80ea648fd14b60204289a8">  201</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_BUSINVFETCH 6</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ab6e3c7c4587ff8dfa1a2241e0066d5dd">  202</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_BUSINVLDSTORE 7</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a99aff0ae890d31fc23169c988a0dbd1f">  203</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_SYSCALL 8</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#af0d0bb8fdc22657e0616babe66eddfdd">  204</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_BREAKPOINT 9</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a4d5c98408c579aa967bdd074ef9496cc">  205</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_RESERVEDINSTR 10</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a02a82fd5487bf8849c797e602a8198f0">  206</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_COPROCUNUSABLE 11</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aacf8db1dbab8177bb06f695ca350bf47">  207</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_ARITHOVERFLOW 12</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a8d1924ac91339e290d0409f48947cc9f">  208</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_BADPTE 13</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXC_PTEMISS 14</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ada74e7db007a68e763f20c17f2985356">  211</a></span>&#160;<span class="comment">/* Used for disk_op() and in the pager to identify request types */</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aa10f470e996d0f51210d24f442d25e1e">  212</a></span>&#160;<span class="preprocessor">#define READ 0</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define WRITE 1</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a5e39a93659c08c18db061cbff753aa02">  214</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a9685d992a40ea1da21249199fb5319aa">  215</a></span>&#160;<span class="preprocessor">#define KSEGOS 0x0</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define KSEGOS_BASE_MAP 0x20000000 </span><span class="comment">/* 00|10 0000 0000 0000 0000 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a558f2338c82fe8e45bbea9ac609bb23a">  217</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a4331006234c4a752d5114a3cd80ae255">  218</a></span>&#160;<span class="preprocessor">#define KUSEG2 0x2</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define KUSEG2_BASE_MAP 0x80000000 </span><span class="comment">/* 10|00 0000 0000 0000 0000 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a7d4be5aa3204d9e85e3f90768dd65679">  220</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a884258f4c56cf1a0a2ef800d47917c2b">  221</a></span>&#160;<span class="preprocessor">#define KUSEG3 0x3</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define KUSEG3_BASE_MAP 0xc0000000 </span><span class="comment">/* 11|00 0000 0000 0000 0000 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a7fd108a102df19dfc97ef2bf1d40e585">  223</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a343972254f8fab5a6141ba018d1ed7a2">  224</a></span>&#160;<span class="preprocessor">#define MAXPAGES 32</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define KUSEG_PAGES MAXPAGES  </span><span class="comment">/* pages for segments 2 and 3 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">  226</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor">#define PAGE_SIZE 0x1000   </span><span class="comment">/* 4 KB */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ac623b00ee9f7d2c8ba51040bb5e7ba9e">  228</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor">#define OS_PAGES 32   </span><span class="comment">/* ARBITRARY!!!!! (but should be enough) */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">/* The following definitions are useful to compute the overall space taken</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">   by the OS (see below) */</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a203a5da7eefd8bbf2ee80e63c6726dfd">  234</a></span>&#160;<span class="comment">/* Tape DMA buffers */</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a7b699408a6fcadaec01955a926d9db08">  235</a></span>&#160;<span class="preprocessor">#define OS_T_DMA_START  KSEGOS_BASE_MAP + (OS_PAGES * PAGE_SIZE)</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define OS_T_DMA_PAGES  DEV_PER_INT</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aad4bc4ebe05d2f2a08721c01bb6fb41e">  238</a></span>&#160;<span class="comment">/* Disk DMA buffers */</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a1f5b22b6ca4cb92def8e40c13d3d86f5">  239</a></span>&#160;<span class="preprocessor">#define OS_D_DMA_START  OS_T_DMA_START + (OS_T_DMA_PAGES * PAGE_SIZE)</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define OS_D_DMA_PAGES  DEV_PER_INT</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a2a2873bac49b20e529e8a3d840aa52b5">  242</a></span>&#160;<span class="comment">/* sys/bk stacks for the u-procs */</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a82886168fc112ed19d6b663b3f567b5f">  243</a></span>&#160;<span class="preprocessor">#define OS_USYSSTACK_START  OS_D_DMA_START + (OS_D_DMA_PAGES * PAGE_SIZE)</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define OS_USYSSTACK_PAGES  UPROCMAX</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00246"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ad024ff42d720edf630016da3f59174cb">  246</a></span>&#160;<span class="comment">/* tlb stacks for the u-procs */</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ade264c6dbd1ecc0d551d5a41686284e5">  247</a></span>&#160;<span class="preprocessor">#define OS_UTLBSTACK_START  OS_USYSSTACK_START + (OS_USYSSTACK_PAGES * PAGE_SIZE)</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define OS_UTLBSTACK_PAGES  UPROCMAX</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a57594e468c200eedef7d08ff34d8f44f">  250</a></span>&#160;<span class="comment">/* delay daemon stack */</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">#define OS_DSTACK_START  OS_UTLBSTACK_START + (OS_UTLBSTACK_PAGES * PAGE_SIZE)</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ab5c2c6e008c8304671037d897fe670e7">  253</a></span>&#160;<span class="comment">/* Thus: */</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">#define KSEGOS_PAGES   OS_PAGES + OS_T_DMA_PAGES + OS_D_DMA_PAGES + OS_USYSSTACK_PAGES + OS_UTLBSTACK_PAGES + 1</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a1fa721d59b552c10c007c02992ed5c31">  255</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">#define SEGTABLE_START 0x20000500</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#afa1ba8bed75c1cae2adaf333b28006b1">  257</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">#define PTE_MAGICNO 0x2a</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a44f42d08566acfc7ce1df7fbb42f8bb4">  261</a></span>&#160;<span class="comment">/* Frame-pool definitions: play with the next to test VM */</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#define FRAMEPOOL_FRAMES (2 * UPROCMAX)</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor"></span><span class="comment">/* #define FRAMEPOOL_FRAMES 14 */</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a24dba5535433f6a9796c6e9166c85212">  264</a></span>&#160;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="preprocessor">#define FRAMEPOOL_SIZE (FRAMEPOOL_FRAMES * FRAME_SIZE)</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#afdbda23d38f2cfbaadc56fbbc3ac7be5">  266</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00267"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aa91f97e10d898cc852bd495923dc93f3">  267</a></span>&#160;<span class="preprocessor">#define FRAMEPOOL_END (RAMTOP - (2 * FRAME_SIZE))  </span><span class="comment">/* the 2 stack frames */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define FRAMEPOOL_START (FRAMEPOOL_END - FRAMEPOOL_SIZE)</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">  270</a></span>&#160;<span class="comment">/* Utility definitions */</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">#define MIN(a, b) (((a) &lt; (b)) ? (a) : (b))</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ab42ef41116f8f2fe447484e2844cf0df">  272</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d">  273</a></span>&#160;<span class="preprocessor">#define HIDDEN static</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aa93f0eb578d23995850d61f7d61c55c1">  274</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TRUE    1</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#ad76d1750a6cdeebd506bfcd6752554d2">  275</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define FALSE   0</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a29e413f6725b2ba32d165ffaa35b01e5">  276</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ON  1</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#aadbbc7b02d94a4c18646813ac8d7dec1">  277</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define OFF     0</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EOS &#39;\0&#39;</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">  279</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">#define NULL ((void *)0)</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="code" href="lib_2const_8h.html#a876ce77f3c672c7162658151e648389e">  281</a></span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="preprocessor">#define CR 0x0a   </span><span class="comment">/* carriage return as returned by the terminal */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato Dom 23 Set 2012 18:29:06 per PKAYA-2012 da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

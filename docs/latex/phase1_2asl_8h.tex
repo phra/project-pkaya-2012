@@ -1,0 +1,174 @@
+\hypertarget{phase1_2asl_8h}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/phase1/asl.h}
+\label{phase1_2asl_8h}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/phase1/asl.\-h@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/phase1/asl.\-h}}
+}
+{\ttfamily \#include \char`\"{}const11.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}const.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}base.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}u\-M\-P\-Stypes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}libumps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}listx.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}types11.\-h\char`\"{}}\\*
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{phase1_2asl_8h_af045446ae3e4b6b112ea15d2059c84cd}{out\-Child\-Blocked} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$\hyperlink{p1test__pkaya__v1_81_8c_a3bec781e4e77d9931af780e1605d7d94}{p})
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{phase1_2asl_8h_aa01e6af434d18efb9280e801c9ac54fd}{head\-Blocked} (int key)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{phase1_2asl_8h_a0726c34768ec59b5bfcb118bc2bb09f8}{out\-Blocked} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$\hyperlink{p1test__pkaya__v1_81_8c_a3bec781e4e77d9931af780e1605d7d94}{p})
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{phase1_2asl_8h_a9cef24579d8726fc855feec0eb2ae6cf}{remove\-Blocked} (int key)
+\item 
+int \hyperlink{phase1_2asl_8h_a8641466df0ac1ca496e0fd74a2564c76}{insert\-Blocked} (int key, \hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$\hyperlink{p1test__pkaya__v1_81_8c_a3bec781e4e77d9931af780e1605d7d94}{p})
+\item 
+\hyperlink{structsemd__t}{semd\-\_\-t} $\ast$ \hyperlink{phase1_2asl_8h_a7dd34e8ddc18c62f1253e9ddb657cb99}{get\-Semd} (int key)
+\item 
+\hyperlink{structsemd__t}{semd\-\_\-t} $\ast$ \hyperlink{phase1_2asl_8h_aefbbb4412b9d14dc7745f72cb1e52d2b}{myget\-Semd} (int key)
+\item 
+void \hyperlink{phase1_2asl_8h_a37f5309d6814c22605b7da62eccc0f3a}{init\-A\-S\-L} (void)
+\item 
+void \hyperlink{phase1_2asl_8h_af6604db13223ddd83cb83d91a00b7ad3}{stampasemafori} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head)
+\end{DoxyCompactItemize}
+\subsection*{Variabili}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head} \hyperlink{phase1_2asl_8h_a43faf701af9530f6934df170370b8d94}{semd\-\_\-h}
+\item 
+\hyperlink{structsemd__t}{semd\-\_\-t} \hyperlink{phase1_2asl_8h_ace4f22fff82a479e8b4386a8045d4405}{semd\-\_\-table} \mbox{[}\hyperlink{phase1_2const_8h_abe4567498db286a3185a522c6dae3cbc}{M\-A\-X\-P\-R\-O\-C}\mbox{]}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head} \hyperlink{phase1_2asl_8h_afc0834df7c1a47ec6890b35bbaa74e0f}{semd\-Free\-\_\-h}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle funzioni}
+\hypertarget{phase1_2asl_8h_a7dd34e8ddc18c62f1253e9ddb657cb99}{\index{phase1/asl.\-h@{phase1/asl.\-h}!get\-Semd@{get\-Semd}}
+\index{get\-Semd@{get\-Semd}!phase1/asl.h@{phase1/asl.\-h}}
+\subsubsection[{get\-Semd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf semd\-\_\-t}$\ast$ get\-Semd (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}\label{phase1_2asl_8h_a7dd34e8ddc18c62f1253e9ddb657cb99}
+(puntatore a semaforo) get\-Semd(id del semaforo)\-: restituisce il puntatore al semaforo avente id=key della lista dei semafori attivi. se non esiste nessun elemento con tale id, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em key} & chiave del semaforo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al semaforo se attivo oppure N\-U\-L\-L 
+\end{DoxyReturn}
+\hypertarget{phase1_2asl_8h_aa01e6af434d18efb9280e801c9ac54fd}{\index{phase1/asl.\-h@{phase1/asl.\-h}!head\-Blocked@{head\-Blocked}}
+\index{head\-Blocked@{head\-Blocked}!phase1/asl.h@{phase1/asl.\-h}}
+\subsubsection[{head\-Blocked}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ head\-Blocked (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}\label{phase1_2asl_8h_aa01e6af434d18efb9280e801c9ac54fd}
+(puntatore al processo) head\-Blocked(id del semaforo)\-: restituisce il processo in testa S\-E\-N\-Z\-A R\-I\-M\-U\-O\-V\-E\-R\-L\-O dalla lista dei processi bloccati dal semaforo con id=key. se il semaforo non viene trovato oppure se non ha processi in attesa, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em key} & chiave del semaforo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al processo 
+\end{DoxyReturn}
+\hypertarget{phase1_2asl_8h_a37f5309d6814c22605b7da62eccc0f3a}{\index{phase1/asl.\-h@{phase1/asl.\-h}!init\-A\-S\-L@{init\-A\-S\-L}}
+\index{init\-A\-S\-L@{init\-A\-S\-L}!phase1/asl.h@{phase1/asl.\-h}}
+\subsubsection[{init\-A\-S\-L}]{\setlength{\rightskip}{0pt plus 5cm}void init\-A\-S\-L (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{phase1_2asl_8h_a37f5309d6814c22605b7da62eccc0f3a}
+\hyperlink{lib_2asl_8c_a37f5309d6814c22605b7da62eccc0f3a}{init\-A\-S\-L()}\-:inizializza le due liste necessarie per la gestione dei semafori. \hypertarget{phase1_2asl_8h_a8641466df0ac1ca496e0fd74a2564c76}{\index{phase1/asl.\-h@{phase1/asl.\-h}!insert\-Blocked@{insert\-Blocked}}
+\index{insert\-Blocked@{insert\-Blocked}!phase1/asl.h@{phase1/asl.\-h}}
+\subsubsection[{insert\-Blocked}]{\setlength{\rightskip}{0pt plus 5cm}int insert\-Blocked (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{phase1_2asl_8h_a8641466df0ac1ca496e0fd74a2564c76}
+(1 T\-R\-U\-E oppure 0 F\-A\-L\-S\-E) insert\-Blocked(id del semaforo, puntatore al processo)\-: inserisce il processo puntato da p nella coda dei processi bloccati dal semaforo con id=key. se il semaforo non è presente, allora viene allocato un nuovo semaforo. in caso di errore restituisce 1, altrimenti 0. 
+\begin{DoxyParams}{Parametri}
+{\em key} & chiave del semaforo \\
+\hline
+{\em p} & puntatore al processo da inserire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+1 in caso di errore, 0 altrimenti 
+\end{DoxyReturn}
+\hypertarget{phase1_2asl_8h_aefbbb4412b9d14dc7745f72cb1e52d2b}{\index{phase1/asl.\-h@{phase1/asl.\-h}!myget\-Semd@{myget\-Semd}}
+\index{myget\-Semd@{myget\-Semd}!phase1/asl.h@{phase1/asl.\-h}}
+\subsubsection[{myget\-Semd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf semd\-\_\-t}$\ast$ myget\-Semd (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}\label{phase1_2asl_8h_aefbbb4412b9d14dc7745f72cb1e52d2b}
+(puntatore a semaforo) myget\-Semd(id del semaforo)\-: restituisce il puntatore al semaforo avente id=key della lista dei semafori attivi. se non esiste nessun elemento con tale id, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em key} & chiave del semaforo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al semaforo, se non attivo lo alloca 
+\end{DoxyReturn}
+\hypertarget{phase1_2asl_8h_a0726c34768ec59b5bfcb118bc2bb09f8}{\index{phase1/asl.\-h@{phase1/asl.\-h}!out\-Blocked@{out\-Blocked}}
+\index{out\-Blocked@{out\-Blocked}!phase1/asl.h@{phase1/asl.\-h}}
+\subsubsection[{out\-Blocked}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ out\-Blocked (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{phase1_2asl_8h_a0726c34768ec59b5bfcb118bc2bb09f8}
+(puntatore al processo) out\-Blocked(puntatore al processo)\-: restituisce il processo puntato da p R\-I\-M\-U\-O\-V\-E\-N\-D\-O\-L\-O dalla lista dei processi bloccati da un semaforo. se il processo non viene trovato, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em p} & puntatore al processo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al processo 
+\end{DoxyReturn}
+\hypertarget{phase1_2asl_8h_af045446ae3e4b6b112ea15d2059c84cd}{\index{phase1/asl.\-h@{phase1/asl.\-h}!out\-Child\-Blocked@{out\-Child\-Blocked}}
+\index{out\-Child\-Blocked@{out\-Child\-Blocked}!phase1/asl.h@{phase1/asl.\-h}}
+\subsubsection[{out\-Child\-Blocked}]{\setlength{\rightskip}{0pt plus 5cm}void out\-Child\-Blocked (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{phase1_2asl_8h_af045446ae3e4b6b112ea15d2059c84cd}
+out\-Child\-Blocked(puntatore al processo)\-: elimina il processo puntato da p dalla coda del semaforo associato, rimuovendo anche i processi discendenti. 
+\begin{DoxyParams}{Parametri}
+{\em p} & puntatore al processo \\
+\hline
+\end{DoxyParams}
+\hypertarget{phase1_2asl_8h_a9cef24579d8726fc855feec0eb2ae6cf}{\index{phase1/asl.\-h@{phase1/asl.\-h}!remove\-Blocked@{remove\-Blocked}}
+\index{remove\-Blocked@{remove\-Blocked}!phase1/asl.h@{phase1/asl.\-h}}
+\subsubsection[{remove\-Blocked}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ remove\-Blocked (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}\label{phase1_2asl_8h_a9cef24579d8726fc855feec0eb2ae6cf}
+(puntatore al processo) remove\-Blocked(id del semaforo)\-: ritorna il primo processo della coda associata al semaforo con id=key. se questo semaforo non esiste, restituisce N\-U\-L\-L. se non ci sono più processi bloccati, sposta il semaforo nella lista dei semafori liberi 
+\begin{DoxyParams}{Parametri}
+{\em key} & chiave del semaforo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al processo sbloccato 
+\end{DoxyReturn}
+\hypertarget{phase1_2asl_8h_af6604db13223ddd83cb83d91a00b7ad3}{\index{phase1/asl.\-h@{phase1/asl.\-h}!stampasemafori@{stampasemafori}}
+\index{stampasemafori@{stampasemafori}!phase1/asl.h@{phase1/asl.\-h}}
+\subsubsection[{stampasemafori}]{\setlength{\rightskip}{0pt plus 5cm}void stampasemafori (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}}\label{phase1_2asl_8h_af6604db13223ddd83cb83d91a00b7ad3}
+
+
+\subsection{Documentazione delle variabili}
+\hypertarget{phase1_2asl_8h_a43faf701af9530f6934df170370b8d94}{\index{phase1/asl.\-h@{phase1/asl.\-h}!semd\-\_\-h@{semd\-\_\-h}}
+\index{semd\-\_\-h@{semd\-\_\-h}!phase1/asl.h@{phase1/asl.\-h}}
+\subsubsection[{semd\-\_\-h}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf list\-\_\-head} semd\-\_\-h}}\label{phase1_2asl_8h_a43faf701af9530f6934df170370b8d94}
+\hypertarget{phase1_2asl_8h_ace4f22fff82a479e8b4386a8045d4405}{\index{phase1/asl.\-h@{phase1/asl.\-h}!semd\-\_\-table@{semd\-\_\-table}}
+\index{semd\-\_\-table@{semd\-\_\-table}!phase1/asl.h@{phase1/asl.\-h}}
+\subsubsection[{semd\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf semd\-\_\-t} semd\-\_\-table\mbox{[}{\bf M\-A\-X\-P\-R\-O\-C}\mbox{]}}}\label{phase1_2asl_8h_ace4f22fff82a479e8b4386a8045d4405}
+\hypertarget{phase1_2asl_8h_afc0834df7c1a47ec6890b35bbaa74e0f}{\index{phase1/asl.\-h@{phase1/asl.\-h}!semd\-Free\-\_\-h@{semd\-Free\-\_\-h}}
+\index{semd\-Free\-\_\-h@{semd\-Free\-\_\-h}!phase1/asl.h@{phase1/asl.\-h}}
+\subsubsection[{semd\-Free\-\_\-h}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf list\-\_\-head} semd\-Free\-\_\-h}}\label{phase1_2asl_8h_afc0834df7c1a47ec6890b35bbaa74e0f}

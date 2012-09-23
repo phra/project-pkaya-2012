@@ -1,0 +1,154 @@
+\hypertarget{utils_8h}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/utils.h}
+\label{utils_8h}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/utils.\-h@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/utils.\-h}}
+}
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{utils_8h_aa7439c3a4d37f53dcb946c7616592cf4}{memset} (void $\ast$ptr, int val, unsigned int len)
+\item 
+int \hyperlink{utils_8h_aa5f66c64cb19c1c7a986f05185e93030}{memcmp} (void $\ast$ptr1, void $\ast$ptr2, int lenght)
+\item 
+void \hyperlink{utils_8h_a8282d1135f313d4ede39f567094120f0}{memcpy} (void $\ast$dest, void $\ast$src, int lenght)
+\item 
+int \hyperlink{utils_8h_a9896699f331c8da8f438f606832f31db}{strlen} (char $\ast$str)
+\item 
+int \hyperlink{utils_8h_a57b18ef9eecf3a059b3138b3806868bb}{strcmp} (char $\ast$str1, char $\ast$str2)
+\item 
+void \hyperlink{utils_8h_af9af30bd4e6b10d1560aabd834144e33}{strcpy} (char $\ast$dest, char $\ast$src)
+\item 
+void \hyperlink{utils_8h_a01264c39e4ef8945e436d9a9a51e3ff1}{strreverse} (char $\ast$begin, char $\ast$end)
+\item 
+void \hyperlink{utils_8h_a0338f8f78dbf81dc70849a16e3ec22bb}{itoa} (int value, char $\ast$str, int base)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle funzioni}
+\hypertarget{utils_8h_a0338f8f78dbf81dc70849a16e3ec22bb}{\index{utils.\-h@{utils.\-h}!itoa@{itoa}}
+\index{itoa@{itoa}!utils.h@{utils.\-h}}
+\subsubsection[{itoa}]{\setlength{\rightskip}{0pt plus 5cm}void itoa (
+\begin{DoxyParamCaption}
+\item[{int}]{value, }
+\item[{char $\ast$}]{str, }
+\item[{int}]{base}
+\end{DoxyParamCaption}
+)}}\label{utils_8h_a0338f8f78dbf81dc70849a16e3ec22bb}
+itoa(valore, puntatore della stringa, base in cui convertire) \-: converte un intero in una stringa nella base specificata 
+\begin{DoxyParams}{Parametri}
+{\em value} & intero da convertire \\
+\hline
+{\em str} & indirizzo dove scrivere la stringa \\
+\hline
+{\em base} & base in cui convertire l'intero \\
+\hline
+\end{DoxyParams}
+\hypertarget{utils_8h_aa5f66c64cb19c1c7a986f05185e93030}{\index{utils.\-h@{utils.\-h}!memcmp@{memcmp}}
+\index{memcmp@{memcmp}!utils.h@{utils.\-h}}
+\subsubsection[{memcmp}]{\setlength{\rightskip}{0pt plus 5cm}int memcmp (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr1, }
+\item[{void $\ast$}]{ptr2, }
+\item[{int}]{lenght}
+\end{DoxyParamCaption}
+)}}\label{utils_8h_aa5f66c64cb19c1c7a986f05185e93030}
+memcmp(puntatore a void, puntatore a void, lunghezza da confrontare)\-: confronta le due aree di memoria ritorna l'n-\/esimo byte da cui differiscono oppure in caso di uguaglianza ritorna 0 
+\begin{DoxyParams}{Parametri}
+{\em ptr1} & primo indirizzo \\
+\hline
+{\em ptr2} & secondo indirizzo \\
+\hline
+{\em lenght} & dimensione \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+1 se sono diversi, 0 altrimenti 
+\end{DoxyReturn}
+\hypertarget{utils_8h_a8282d1135f313d4ede39f567094120f0}{\index{utils.\-h@{utils.\-h}!memcpy@{memcpy}}
+\index{memcpy@{memcpy}!utils.h@{utils.\-h}}
+\subsubsection[{memcpy}]{\setlength{\rightskip}{0pt plus 5cm}void memcpy (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{dest, }
+\item[{void $\ast$}]{src, }
+\item[{int}]{lenght}
+\end{DoxyParamCaption}
+)}}\label{utils_8h_a8282d1135f313d4ede39f567094120f0}
+\hypertarget{utils_8h_aa7439c3a4d37f53dcb946c7616592cf4}{\index{utils.\-h@{utils.\-h}!memset@{memset}}
+\index{memset@{memset}!utils.h@{utils.\-h}}
+\subsubsection[{memset}]{\setlength{\rightskip}{0pt plus 5cm}void memset (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{int}]{val, }
+\item[{unsigned int}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{utils_8h_aa7439c3a4d37f53dcb946c7616592cf4}
+memset(puntatore a void, valore da assegnare, quantità dei byte da scrivere)\-: setta il valore val da $\ast$ptr a $\ast$ptr + len. 
+\begin{DoxyParams}{Parametri}
+{\em ptr} & indirizzo dell'area di memoria da scrivere \\
+\hline
+{\em val} & valore da scrivere \\
+\hline
+{\em len} & dimensione \\
+\hline
+\end{DoxyParams}
+\hypertarget{utils_8h_a57b18ef9eecf3a059b3138b3806868bb}{\index{utils.\-h@{utils.\-h}!strcmp@{strcmp}}
+\index{strcmp@{strcmp}!utils.h@{utils.\-h}}
+\subsubsection[{strcmp}]{\setlength{\rightskip}{0pt plus 5cm}int strcmp (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str1, }
+\item[{char $\ast$}]{str2}
+\end{DoxyParamCaption}
+)}}\label{utils_8h_a57b18ef9eecf3a059b3138b3806868bb}
+strcmp(puntatore a char, puntatore a char)\-: confronta le due stringhe ritorna 0 in caso di uguaglianza, -\/1 altrimenti 
+\begin{DoxyParams}{Parametri}
+{\em str1} & puntatore alla prima stringa \\
+\hline
+{\em str2} & puntatore alla seconda stringa \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+0 se uguali, 1 altrimenti 
+\end{DoxyReturn}
+\hypertarget{utils_8h_af9af30bd4e6b10d1560aabd834144e33}{\index{utils.\-h@{utils.\-h}!strcpy@{strcpy}}
+\index{strcpy@{strcpy}!utils.h@{utils.\-h}}
+\subsubsection[{strcpy}]{\setlength{\rightskip}{0pt plus 5cm}void strcpy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}}\label{utils_8h_af9af30bd4e6b10d1560aabd834144e33}
+strcpy(puntatore a char, puntatore a char)\-: trascrive una stringa 
+\begin{DoxyParams}{Parametri}
+{\em dest} & destinazione \\
+\hline
+{\em src} & sorgente \\
+\hline
+\end{DoxyParams}
+\hypertarget{utils_8h_a9896699f331c8da8f438f606832f31db}{\index{utils.\-h@{utils.\-h}!strlen@{strlen}}
+\index{strlen@{strlen}!utils.h@{utils.\-h}}
+\subsubsection[{strlen}]{\setlength{\rightskip}{0pt plus 5cm}int strlen (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{utils_8h_a9896699f331c8da8f438f606832f31db}
+strlen(puntatore a char)\-: ritorna il numero di char in una stringa A\-S\-C\-I\-I senza contare lo zero terminatore 
+\begin{DoxyParams}{Parametri}
+{\em str} & puntatore alla stringa zeroterminata \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+lunghezza della stringa senza '\textbackslash{}0' 
+\end{DoxyReturn}
+\hypertarget{utils_8h_a01264c39e4ef8945e436d9a9a51e3ff1}{\index{utils.\-h@{utils.\-h}!strreverse@{strreverse}}
+\index{strreverse@{strreverse}!utils.h@{utils.\-h}}
+\subsubsection[{strreverse}]{\setlength{\rightskip}{0pt plus 5cm}void strreverse (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{begin, }
+\item[{char $\ast$}]{end}
+\end{DoxyParamCaption}
+)}}\label{utils_8h_a01264c39e4ef8945e436d9a9a51e3ff1}
+strreverse(puntatore a char, puntatore a char)\-: rovescia una stringa 
+\begin{DoxyParams}{Parametri}
+{\em begin} & inizio stringa \\
+\hline
+{\em end} & fine stringa \\
+\hline
+\end{DoxyParams}

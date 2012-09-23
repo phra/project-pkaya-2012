@@ -1,0 +1,123 @@
+\documentclass{book}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage{amssymb}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=4,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large P\-K\-A\-Y\-A-\/2012 \\[1ex]\large v2 }\\
+\vspace*{1cm}
+{\large Generato da Doxygen 1.8.2}\\
+\vspace*{0.5cm}
+{\small Dom 23 Set 2012 18:29:06}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{Indice delle strutture dati}
+\input{annotated}
+\chapter{Indice dei file}
+\input{files}
+\chapter{Documentazione delle classi}
+\input{uniondevreg__t}
+\input{structdisk__data__t}
+\input{structdtpreg__t}
+\input{structlist__head}
+\input{structos_p_t_e__t}
+\input{structpcb__t}
+\input{structpte__entry__t}
+\input{structsegtable__t}
+\input{structsemd__t}
+\input{structstate__t}
+\input{structsys5__vect__t}
+\input{structtermreg__t}
+\input{structu_p_t_e__t}
+\chapter{Documentazione dei file}
+\input{exception_8c}
+\input{exception_8h}
+\input{init_8c}
+\input{init_8h}
+\input{interrupt_8c}
+\input{interrupt_8h}
+\input{lib_2asl_8c}
+\input{phase1_2asl_8c}
+\input{lib_2asl_8h}
+\input{phase1_2asl_8h}
+\input{lib_2base_8h}
+\input{phase1_2base_8h}
+\input{lib_2const_8h}
+\input{phase1_2const_8h}
+\input{libumps_8h}
+\input{lib_2listx_8h}
+\input{phase1_2listx_8h}
+\input{lib_2pcb_8c}
+\input{phase1_2pcb_8c}
+\input{lib_2pcb_8h}
+\input{phase1_2pcb_8h}
+\input{lib_2types11_8h}
+\input{phase1_2types11_8h}
+\input{lib_2u_m_p_stypes_8h}
+\input{phase1_2u_m_p_stypes_8h}
+\input{utils_8c}
+\input{utils_8h}
+\input{p2test2012__scalability__v1_80_8c}
+\input{p2test2012__v1_80_8c}
+\input{p1test__pkaya__v1_81_8c}
+\input{scheduler_8c}
+\input{scheduler_8h}
+\input{syscall_8c}
+\input{syscall_8h}
+\addcontentsline{toc}{part}{Indice}
+\printindex
+\end{document}

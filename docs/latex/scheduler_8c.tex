@@ -1,0 +1,129 @@
+\hypertarget{scheduler_8c}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/scheduler.c}
+\label{scheduler_8c}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/scheduler.\-c@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/scheduler.\-c}}
+}
+{\ttfamily \#include \char`\"{}lib/const.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/base.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/u\-M\-P\-Stypes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/libumps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/listx.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/types11.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/pcb.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/asl.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/utils.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}init.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}interrupt.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}exception.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}syscall.\-h\char`\"{}}\\*
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{scheduler_8c_ae3130408c0650504c0c59ce8ab55476d}{pigliapid} (void)
+\item 
+void \hyperlink{scheduler_8c_a484e394dee46178e86dbf6c082598629}{inserisciprocessoexpired} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$pcb)
+\item 
+void \hyperlink{scheduler_8c_a36f350361c844b6f548e4e4579b87719}{inserisciprocessoready} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$pcb)
+\item 
+void \hyperlink{scheduler_8c_afe2502898946fda9e5ef2121db5e79ce}{kill} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$target)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{scheduler_8c_a0e21ba9f85390e60366d1152ce12eb6e}{alloca\-Pcb} (int priority)
+\item 
+void \hyperlink{scheduler_8c_a9fa00b0be5d3c4781048861e2506eb63}{scheduler} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variabili}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head} \hyperlink{scheduler_8c_af02dc756f0d9e8f52a93c30d47528975}{ready\-Queue}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head} \hyperlink{scheduler_8c_a6c1f2d38d1ac2f92bed49a7e6bbfc683}{expired\-Queue}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$ \hyperlink{scheduler_8c_a8d081d17201033e370076493cb36fc77}{ready\-Q} = \&\hyperlink{scheduler_8h_a2ceefeb6a269e899c490237adb72e0a1}{ready\-Queue}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$ \hyperlink{scheduler_8c_a2cb62a5efc6bb08dd921a93b1042484e}{expired\-Q} = \&\hyperlink{scheduler_8h_a6c1f2d38d1ac2f92bed49a7e6bbfc683}{expired\-Queue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle funzioni}
+\hypertarget{scheduler_8c_a0e21ba9f85390e60366d1152ce12eb6e}{\index{scheduler.\-c@{scheduler.\-c}!alloca\-Pcb@{alloca\-Pcb}}
+\index{alloca\-Pcb@{alloca\-Pcb}!scheduler.c@{scheduler.\-c}}
+\subsubsection[{alloca\-Pcb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ alloca\-Pcb (
+\begin{DoxyParamCaption}
+\item[{int}]{priority}
+\end{DoxyParamCaption}
+)}}\label{scheduler_8c_a0e21ba9f85390e60366d1152ce12eb6e}
+funzione per alloca Pcb ed assegna il pid e la priorita' ai processi 
+\begin{DoxyParams}{Parametri}
+{\em priority} & priorità del processo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+l'indirizzo del pcb allocato oppure Null 
+\end{DoxyReturn}
+\hypertarget{scheduler_8c_a484e394dee46178e86dbf6c082598629}{\index{scheduler.\-c@{scheduler.\-c}!inserisciprocessoexpired@{inserisciprocessoexpired}}
+\index{inserisciprocessoexpired@{inserisciprocessoexpired}!scheduler.c@{scheduler.\-c}}
+\subsubsection[{inserisciprocessoexpired}]{\setlength{\rightskip}{0pt plus 5cm}void inserisciprocessoexpired (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{pcb}
+\end{DoxyParamCaption}
+)}}\label{scheduler_8c_a484e394dee46178e86dbf6c082598629}
+funzione per inserire un processo nella lista expired 
+\begin{DoxyParams}{Parametri}
+{\em pcb} & indirizzo del processo \\
+\hline
+\end{DoxyParams}
+\hypertarget{scheduler_8c_a36f350361c844b6f548e4e4579b87719}{\index{scheduler.\-c@{scheduler.\-c}!inserisciprocessoready@{inserisciprocessoready}}
+\index{inserisciprocessoready@{inserisciprocessoready}!scheduler.c@{scheduler.\-c}}
+\subsubsection[{inserisciprocessoready}]{\setlength{\rightskip}{0pt plus 5cm}void inserisciprocessoready (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{pcb}
+\end{DoxyParamCaption}
+)}}\label{scheduler_8c_a36f350361c844b6f548e4e4579b87719}
+funzione per inserire un processo nella lista ready 
+\begin{DoxyParams}{Parametri}
+{\em pcb} & indirizzo del processo \\
+\hline
+\end{DoxyParams}
+\hypertarget{scheduler_8c_afe2502898946fda9e5ef2121db5e79ce}{\index{scheduler.\-c@{scheduler.\-c}!kill@{kill}}
+\index{kill@{kill}!scheduler.c@{scheduler.\-c}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}void kill (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{target}
+\end{DoxyParamCaption}
+)}}\label{scheduler_8c_afe2502898946fda9e5ef2121db5e79ce}
+funzione per uccidere un processo e tutti i figli e li rimuove da eventuali semafori 
+\begin{DoxyParams}{Parametri}
+{\em target} & indirizzo del processo \\
+\hline
+\end{DoxyParams}
+\hypertarget{scheduler_8c_ae3130408c0650504c0c59ce8ab55476d}{\index{scheduler.\-c@{scheduler.\-c}!pigliapid@{pigliapid}}
+\index{pigliapid@{pigliapid}!scheduler.c@{scheduler.\-c}}
+\subsubsection[{pigliapid}]{\setlength{\rightskip}{0pt plus 5cm}int pigliapid (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{scheduler_8c_ae3130408c0650504c0c59ce8ab55476d}
+funzione per assegnare il pid \begin{DoxyReturn}{Restituisce}
+un intero che rappresenta il pid 
+\end{DoxyReturn}
+\hypertarget{scheduler_8c_a9fa00b0be5d3c4781048861e2506eb63}{\index{scheduler.\-c@{scheduler.\-c}!scheduler@{scheduler}}
+\index{scheduler@{scheduler}!scheduler.c@{scheduler.\-c}}
+\subsubsection[{scheduler}]{\setlength{\rightskip}{0pt plus 5cm}void scheduler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{scheduler_8c_a9fa00b0be5d3c4781048861e2506eb63}
+the scheduler 
+
+\subsection{Documentazione delle variabili}
+\hypertarget{scheduler_8c_a2cb62a5efc6bb08dd921a93b1042484e}{\index{scheduler.\-c@{scheduler.\-c}!expired\-Q@{expired\-Q}}
+\index{expired\-Q@{expired\-Q}!scheduler.c@{scheduler.\-c}}
+\subsubsection[{expired\-Q}]{\setlength{\rightskip}{0pt plus 5cm}expired\-Q = \&{\bf expired\-Queue}}}\label{scheduler_8c_a2cb62a5efc6bb08dd921a93b1042484e}
+puntatore alla sentinella della expired queue \hypertarget{scheduler_8c_a6c1f2d38d1ac2f92bed49a7e6bbfc683}{\index{scheduler.\-c@{scheduler.\-c}!expired\-Queue@{expired\-Queue}}
+\index{expired\-Queue@{expired\-Queue}!scheduler.c@{scheduler.\-c}}
+\subsubsection[{expired\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf list\-\_\-head} expired\-Queue}}\label{scheduler_8c_a6c1f2d38d1ac2f92bed49a7e6bbfc683}
+\hypertarget{scheduler_8c_a8d081d17201033e370076493cb36fc77}{\index{scheduler.\-c@{scheduler.\-c}!ready\-Q@{ready\-Q}}
+\index{ready\-Q@{ready\-Q}!scheduler.c@{scheduler.\-c}}
+\subsubsection[{ready\-Q}]{\setlength{\rightskip}{0pt plus 5cm}ready\-Q = \&{\bf ready\-Queue}}}\label{scheduler_8c_a8d081d17201033e370076493cb36fc77}
+puntatore alla sentinella della ready queue \hypertarget{scheduler_8c_af02dc756f0d9e8f52a93c30d47528975}{\index{scheduler.\-c@{scheduler.\-c}!ready\-Queue@{ready\-Queue}}
+\index{ready\-Queue@{ready\-Queue}!scheduler.c@{scheduler.\-c}}
+\subsubsection[{ready\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}ready\-Queue}}\label{scheduler_8c_af02dc756f0d9e8f52a93c30d47528975}
+sentinella della ready queue 
