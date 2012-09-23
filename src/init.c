@@ -190,16 +190,6 @@ static inline void initSemaphoreASL(int value){
 }
 
 /**
- * funzione per inizializzare i semafori per la mutua esclusione
- * \param value valore a cui inizializzare i semafori
- */
-static inline void initMutexSemaphore(int value){
-	int i = 0;
-	for (;i<MAXPROC+MAX_DEVICES;i++)
-		 mutex_semaphore[i] = value;
-}
-
-/**
  * funzione per inizializzare la tabella per gestire gli interrupt
  */
 static inline void initDevStatus(void){
@@ -339,7 +329,6 @@ int main(void)
 	initPcbs();		
 	initASL();
 	initSemaphoreASL(0);
-	initMutexSemaphore(0);
 	initPIDs();
 	initSchedQueue();
 	initCurrentProcs();
