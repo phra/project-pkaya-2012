@@ -19,21 +19,6 @@ struct list_head expiredQueue;
 struct list_head* readyQ = &readyQueue;
 struct list_head* expiredQ = &expiredQueue;
 
-void stampalista(struct list_head* head){
-	pcb_t* item;
-	list_for_each_entry(item,head,p_next){
-		myprintint("PROCESSO IN LISTA CON PID",item->pid);
-	}
-}
-
-void stampareadyq(void){
-	pcb_t* item;
-	myprint("READYQ:\n");
-	list_for_each_entry(item,readyQ,p_next){
-		myprintint("PROCESSO IN LISTA CON PID",item->pid);
-	}
-}
-
 int pigliapid(void){
 	int i = usedpid;
 	while (PIDs[i] != 0)
