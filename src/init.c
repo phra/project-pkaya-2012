@@ -215,6 +215,7 @@ static inline void initPIDs(){
  * funzione per inizializzare le new areas
  * \param handler indirizzo della funzione da eseguire
  * \param addr indirizzo della new area
+ * \param numcpu indice del processore
  * Bisogna settare i bit precedenti IE/KU/VM nella new area, poiché la LDST fa una pop su questi bit
  */
 static void initNewArea(memaddr handler, state_t* addr, int numcpu){
