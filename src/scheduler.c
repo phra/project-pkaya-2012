@@ -140,7 +140,6 @@ void scheduler(void){
 		return scheduler();
 
 	} else if ((processCounter > 0) && (softBlockCounter == 0) && (inactivecpu())) {
-				myprintint("\nscheduler: PANIC!",getPRID());
 				PANIC();
 
 	} else {
