@@ -25,31 +25,24 @@ unsigned int mytermprint(char * str, unsigned int term) {
 
 	memaddr *statusp;
 	memaddr *commandp;
-	
 	U32 stat;
 	U32 cmd;
-	
 	unsigned int error = FALSE;
-	
 	if (term < DEV_PER_INT) {
 		/* terminal is correct */
 		/* compute device register field addresses */
 		statusp = (U32 *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANSTATUS * DEVREGLEN));
 		commandp = (U32 *) (TERM0ADDR + (term * DEVREGSIZE) + (TRANCOMMAND * DEVREGLEN));
-		
 		/* test device status */
 		stat = mytermstat(statusp);
 		if ((stat == READY) || (stat == TRANSMITTED)) {
 			/* device is available */
-			
 			/* print cycle */
 			while ((*str != '\0') && (!error)) {
 				cmd = (*str << CHAROFFSET) | PRINTCHR;
 				*commandp = cmd;
-
 				/* busy waiting */
 				while ((stat = mytermstat(statusp)) == BUSY);
-				
 				/* end of wait */
 				if (stat != TRANSMITTED) {
 					error = TRUE;
@@ -66,7 +59,6 @@ unsigned int mytermprint(char * str, unsigned int term) {
 		/* wrong terminal device number */
 		error = TRUE;
 	}
-
 	return (!error);		
 }
 
@@ -158,26 +150,20 @@ state_t* new_old_areas[MAXCPUs][8];
 state_t real_new_old_areas[MAXCPUs-1][8];
 
 /**
- * \var mutex_semaphore
- * \brief  interi per la Test&Set dei semafori e dei device
- */
-U32 mutex_semaphore[MAXPROC+MAX_DEVICES+1];
-
-/**
  * \var mutex_semaphoreprova
- * \brief  
+ * \brief mutex per accedere ai semafori 
  */
 U32 mutex_semaphoreprova = 0;
 
 /**
 * \var mutex_scheduler
-* \brief
+* \brief mutex per accedere allo scheduler, process counter e code dei processi
 */
 U32 mutex_scheduler = 0;
 
 /**
 * \var mutex_wait_clock
-* \brief
+* \brief mutex per accedere al softBlockCounter
 */
 U32 mutex_wait_clock = 0;
 
