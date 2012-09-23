@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="structtermreg__t" kind="struct" prot="public">
+    <compoundname>termreg_t</compoundname>
+    <includes refid="u_m_p_stypes_8h" local="no">uMPStypes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtermreg__t_1adb515c26e4c6508ab1a44cc43a8a91ae" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 recv_status</definition>
+        <argsstring></argsstring>
+        <name>recv_status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="18" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtermreg__t_1aaee0ee8a649c4a4792f3ee83350db6ea" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 recv_command</definition>
+        <argsstring></argsstring>
+        <name>recv_command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="19" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtermreg__t_1ab3957b0f10a0e492e4e29b90167f513d" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 transm_status</definition>
+        <argsstring></argsstring>
+        <name>transm_status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="20" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtermreg__t_1a2b198d43d6df5503425e365297cd5444" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 transm_command</definition>
+        <argsstring></argsstring>
+        <name>transm_command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="21" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="17" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="17" bodyend="22"/>
+    <listofallmembers>
+      <member refid="structtermreg__t_1aaee0ee8a649c4a4792f3ee83350db6ea" prot="public" virt="non-virtual"><scope>termreg_t</scope><name>recv_command</name></member>
+      <member refid="structtermreg__t_1adb515c26e4c6508ab1a44cc43a8a91ae" prot="public" virt="non-virtual"><scope>termreg_t</scope><name>recv_status</name></member>
+      <member refid="structtermreg__t_1a2b198d43d6df5503425e365297cd5444" prot="public" virt="non-virtual"><scope>termreg_t</scope><name>transm_command</name></member>
+      <member refid="structtermreg__t_1ab3957b0f10a0e492e4e29b90167f513d" prot="public" virt="non-virtual"><scope>termreg_t</scope><name>transm_status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

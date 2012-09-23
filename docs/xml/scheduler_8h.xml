@@ -1,0 +1,598 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="scheduler_8h" kind="file">
+    <compoundname>scheduler.h</compoundname>
+    <includes refid="const_8h" local="yes">lib/const.h</includes>
+    <includes refid="base_8h" local="yes">lib/base.h</includes>
+    <includes refid="u_m_p_stypes_8h" local="yes">lib/uMPStypes.h</includes>
+    <includes refid="libumps_8h" local="yes">lib/libumps.h</includes>
+    <includes refid="listx_8h" local="yes">lib/listx.h</includes>
+    <includes refid="types11_8h" local="yes">lib/types11.h</includes>
+    <includes refid="pcb_8h" local="yes">lib/pcb.h</includes>
+    <includes refid="asl_8h" local="yes">lib/asl.h</includes>
+    <includes refid="utils_8h" local="yes">lib/utils.h</includes>
+    <includes refid="init_8h" local="yes">init.h</includes>
+    <includes refid="exception_8h" local="yes">exception.h</includes>
+    <includes refid="syscall_8h" local="yes">syscall.h</includes>
+    <includes refid="interrupt_8h" local="yes">interrupt.h</includes>
+    <includedby refid="init_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.h</includedby>
+    <includedby refid="exception_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.h</includedby>
+    <includedby refid="syscall_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.h</includedby>
+    <includedby refid="interrupt_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.h</includedby>
+    <includedby refid="exception_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.c</includedby>
+    <includedby refid="init_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.c</includedby>
+    <includedby refid="interrupt_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.c</includedby>
+    <includedby refid="syscall_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.c</includedby>
+    <incdepgraph>
+      <node id="345">
+        <label>lib/listx.h</label>
+        <link refid="listx_8h"/>
+      </node>
+      <node id="348">
+        <label>lib/asl.h</label>
+        <link refid="asl_8h"/>
+        <childnode refid="341" relation="include">
+        </childnode>
+        <childnode refid="342" relation="include">
+        </childnode>
+        <childnode refid="343" relation="include">
+        </childnode>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="346" relation="include">
+        </childnode>
+      </node>
+      <node id="346">
+        <label>lib/types11.h</label>
+        <link refid="types11_8h"/>
+        <childnode refid="343" relation="include">
+        </childnode>
+        <childnode refid="345" relation="include">
+        </childnode>
+      </node>
+      <node id="351">
+        <label>exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="341" relation="include">
+        </childnode>
+        <childnode refid="342" relation="include">
+        </childnode>
+        <childnode refid="343" relation="include">
+        </childnode>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="346" relation="include">
+        </childnode>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="348" relation="include">
+        </childnode>
+        <childnode refid="349" relation="include">
+        </childnode>
+        <childnode refid="340" relation="include">
+        </childnode>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="352" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+      </node>
+      <node id="344">
+        <label>lib/libumps.h</label>
+        <link refid="libumps_8h"/>
+      </node>
+      <node id="340">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.h</label>
+        <link refid="scheduler.h"/>
+        <childnode refid="341" relation="include">
+        </childnode>
+        <childnode refid="342" relation="include">
+        </childnode>
+        <childnode refid="343" relation="include">
+        </childnode>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="346" relation="include">
+        </childnode>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="348" relation="include">
+        </childnode>
+        <childnode refid="349" relation="include">
+        </childnode>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="351" relation="include">
+        </childnode>
+        <childnode refid="352" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+      </node>
+      <node id="353">
+        <label>interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="341" relation="include">
+        </childnode>
+        <childnode refid="342" relation="include">
+        </childnode>
+        <childnode refid="343" relation="include">
+        </childnode>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="346" relation="include">
+        </childnode>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="348" relation="include">
+        </childnode>
+        <childnode refid="349" relation="include">
+        </childnode>
+        <childnode refid="340" relation="include">
+        </childnode>
+        <childnode refid="351" relation="include">
+        </childnode>
+        <childnode refid="352" relation="include">
+        </childnode>
+        <childnode refid="350" relation="include">
+        </childnode>
+      </node>
+      <node id="343">
+        <label>lib/uMPStypes.h</label>
+        <link refid="u_m_p_stypes_8h"/>
+        <childnode refid="341" relation="include">
+        </childnode>
+        <childnode refid="342" relation="include">
+        </childnode>
+      </node>
+      <node id="350">
+        <label>init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="341" relation="include">
+        </childnode>
+        <childnode refid="342" relation="include">
+        </childnode>
+        <childnode refid="343" relation="include">
+        </childnode>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="346" relation="include">
+        </childnode>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="348" relation="include">
+        </childnode>
+        <childnode refid="349" relation="include">
+        </childnode>
+        <childnode refid="340" relation="include">
+        </childnode>
+        <childnode refid="351" relation="include">
+        </childnode>
+        <childnode refid="352" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+      </node>
+      <node id="347">
+        <label>lib/pcb.h</label>
+        <link refid="pcb_8h"/>
+        <childnode refid="341" relation="include">
+        </childnode>
+        <childnode refid="342" relation="include">
+        </childnode>
+        <childnode refid="343" relation="include">
+        </childnode>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="346" relation="include">
+        </childnode>
+      </node>
+      <node id="352">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="341" relation="include">
+        </childnode>
+        <childnode refid="342" relation="include">
+        </childnode>
+        <childnode refid="343" relation="include">
+        </childnode>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="346" relation="include">
+        </childnode>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="348" relation="include">
+        </childnode>
+        <childnode refid="349" relation="include">
+        </childnode>
+        <childnode refid="340" relation="include">
+        </childnode>
+        <childnode refid="351" relation="include">
+        </childnode>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+      </node>
+      <node id="342">
+        <label>base.h</label>
+        <link refid="base_8h"/>
+      </node>
+      <node id="349">
+        <label>lib/utils.h</label>
+        <link refid="utils_8h"/>
+      </node>
+      <node id="341">
+        <label>lib/const.h</label>
+        <link refid="const_8h"/>
+        <childnode refid="342" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="356">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.c</label>
+        <link refid="exception_8c"/>
+      </node>
+      <node id="357">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+      </node>
+      <node id="361">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.c</label>
+        <link refid="scheduler_8c"/>
+      </node>
+      <node id="354">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.h</label>
+        <link refid="scheduler.h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+      </node>
+      <node id="362">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.c</label>
+        <link refid="interrupt_8c"/>
+      </node>
+      <node id="359">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+      <node id="360">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="355">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+      </node>
+      <node id="363">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="358">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="scheduler_8h_1a6c1f2d38d1ac2f92bed49a7e6bbfc683" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref></type>
+        <definition>struct list_head expiredQueue</definition>
+        <argsstring></argsstring>
+        <name>expiredQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.h" line="21" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="scheduler_8h_1a2ceefeb6a269e899c490237adb72e0a1" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref></type>
+        <definition>struct list_head readyQueue</definition>
+        <argsstring></argsstring>
+        <name>readyQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sentinella della ready queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.h" line="22" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="scheduler_8h_1a62271adc2d4ada09ef5e06e902a3a4cc" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+        <definition>struct list_head* readyQ</definition>
+        <argsstring></argsstring>
+        <name>readyQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>puntatore alla sentinella della ready queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.h" line="23" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="scheduler_8h_1ae90dc54070055f2efd5bf01403cbc860" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+        <definition>struct list_head* expiredQ</definition>
+        <argsstring></argsstring>
+        <name>expiredQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>puntatore alla sentinella della expired queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.h" line="24" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="scheduler_8h_1a9fa00b0be5d3c4781048861e2506eb63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler</definition>
+        <argsstring>(void)</argsstring>
+        <name>scheduler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the scheduler </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.h" line="26" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="150" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="scheduler_8h_1ae3130408c0650504c0c59ce8ab55476d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pigliapid</definition>
+        <argsstring>(void)</argsstring>
+        <name>pigliapid</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>funzione per assegnare il pid <simplesect kind="return"><para>un intero che rappresenta il pid </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.h" line="27" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="45" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="scheduler_8h_1a0e21ba9f85390e60366d1152ce12eb6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* allocaPcb</definition>
+        <argsstring>(int priority)</argsstring>
+        <name>allocaPcb</name>
+        <param>
+          <type>int</type>
+          <declname>priority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>funzione per alloca Pcb ed assegna il pid e la priorita&apos; ai processi <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>priorità del processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>l&apos;indirizzo del pcb allocato oppure Null </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.h" line="28" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="117" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="scheduler_8h_1a36f350361c844b6f548e4e4579b87719" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void inserisciprocessoready</definition>
+        <argsstring>(pcb_t *pcb)</argsstring>
+        <name>inserisciprocessoready</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>pcb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>funzione per inserire un processo nella lista ready <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pcb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indirizzo del processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.h" line="29" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="scheduler_8h_1a484e394dee46178e86dbf6c082598629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void inserisciprocessoexpired</definition>
+        <argsstring>(pcb_t *pcb)</argsstring>
+        <name>inserisciprocessoexpired</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>pcb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>funzione per inserire un processo nella lista expired <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pcb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indirizzo del processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.h" line="30" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="57" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="scheduler_8h_1afe2502898946fda9e5ef2121db5e79ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kill</definition>
+        <argsstring>(pcb_t *target)</argsstring>
+        <name>kill</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>funzione per uccidere un processo e tutti i figli e li rimuove da eventuali semafori <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indirizzo del processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.h" line="31" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="77" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__SCHEDULER__</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__SCHEDULER__</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="const_8h" kindref="compound">lib/const.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base_8h" kindref="compound">lib/base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="u_m_p_stypes_8h" kindref="compound">lib/uMPStypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libumps_8h" kindref="compound">lib/libumps.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="listx_8h" kindref="compound">lib/listx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types11_8h" kindref="compound">lib/types11.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pcb_8h" kindref="compound">lib/pcb.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="asl_8h" kindref="compound">lib/asl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_8h" kindref="compound">lib/utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="exception_8h" kindref="compound">exception.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="syscall_8h" kindref="compound">syscall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interrupt_8h" kindref="compound">interrupt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><ref refid="scheduler_8c_1a6c1f2d38d1ac2f92bed49a7e6bbfc683" kindref="member">expiredQueue</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><ref refid="scheduler_8c_1af02dc756f0d9e8f52a93c30d47528975" kindref="member">readyQueue</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref>*<sp/><ref refid="scheduler_8c_1a8d081d17201033e370076493cb36fc77" kindref="member">readyQ</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref>*<sp/><ref refid="scheduler_8c_1a2cb62a5efc6bb08dd921a93b1042484e" kindref="member">expiredQ</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1a9fa00b0be5d3c4781048861e2506eb63" kindref="member">scheduler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1ae3130408c0650504c0c59ce8ab55476d" kindref="member">pigliapid</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/><ref refid="scheduler_8c_1a0e21ba9f85390e60366d1152ce12eb6e" kindref="member">allocaPcb</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>priority);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1a36f350361c844b6f548e4e4579b87719" kindref="member">inserisciprocessoready</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>pcb);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1a484e394dee46178e86dbf6c082598629" kindref="member">inserisciprocessoexpired</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>pcb);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1afe2502898946fda9e5ef2121db5e79ce" kindref="member">kill</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>target);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.h"/>
+  </compounddef>
+</doxygen>

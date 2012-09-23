@@ -1,0 +1,131 @@
+\hypertarget{listx_8h}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/listx.h}
+\label{listx_8h}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/listx.\-h@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/listx.\-h}}
+}
+\subsection*{Strutture dati}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head}
+\end{DoxyCompactItemize}
+\subsection*{Definizioni}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{listx_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}~0
+\item 
+\#define \hyperlink{listx_8h_af8c317a42292b61c93aae91e59118a46}{container\-\_\-of}(ptr, type, member)
+\item 
+\#define \hyperlink{listx_8h_a276e8a32e0bbf024aadd9420b8f2d3b3}{offsetof}(T\-Y\-P\-E, M\-E\-M\-B\-E\-R)~((\hyperlink{listx_8h_aa417d8afeb93f434b5d3bd2c79b19394}{size\-\_\-tt}) \&((T\-Y\-P\-E $\ast$)0)-\/$>$M\-E\-M\-B\-E\-R)
+\item 
+\#define \hyperlink{listx_8h_a4642d4b7df28478bb762fe43c85b5c63}{L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T}(name)~\{ \&(name), \&(name) \}
+\item 
+\#define \hyperlink{listx_8h_a42f0e72af970a790b60a740af8c9ecd0}{L\-I\-S\-T\-\_\-\-H\-E\-A\-D}(name)~struct \hyperlink{structlist__head}{list\-\_\-head} name = \hyperlink{listx_8h_a4642d4b7df28478bb762fe43c85b5c63}{L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T}(name)
+\item 
+\#define \hyperlink{listx_8h_ab8b24e6660ab3760c923e4b4db3fa502}{list\-\_\-for\-\_\-each}(pos, head)~for (pos = (head)-\/$>$next; pos != (head); pos = pos-\/$>$next)
+\item 
+\#define \hyperlink{listx_8h_a19fc06b83f3502a83ce566b8887e6aec}{list\-\_\-for\-\_\-each\-\_\-prev}(pos, head)~for (pos = (head)-\/$>$prev; pos != (head); pos = pos-\/$>$prev)
+\item 
+\#define \hyperlink{listx_8h_a9b782fefb5ab71ce9762182e45a615e1}{list\-\_\-for\-\_\-each\-\_\-entry}(pos, head, member)
+\item 
+\#define \hyperlink{listx_8h_accc8d8e6c8ffe8ce964c5a1b59732cf3}{list\-\_\-for\-\_\-each\-\_\-entry\-\_\-reverse}(pos, head, member)
+\end{DoxyCompactItemize}
+\subsection*{Ridefinizioni di tipo (typedef)}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \hyperlink{listx_8h_aa417d8afeb93f434b5d3bd2c79b19394}{size\-\_\-tt}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle definizioni}
+\hypertarget{listx_8h_af8c317a42292b61c93aae91e59118a46}{\index{listx.\-h@{listx.\-h}!container\-\_\-of@{container\-\_\-of}}
+\index{container\-\_\-of@{container\-\_\-of}!listx.h@{listx.\-h}}
+\subsubsection[{container\-\_\-of}]{\setlength{\rightskip}{0pt plus 5cm}\#define container\-\_\-of(
+\begin{DoxyParamCaption}
+\item[{}]{ptr, }
+\item[{}]{type, }
+\item[{}]{member}
+\end{DoxyParamCaption}
+)}}\label{listx_8h_af8c317a42292b61c93aae91e59118a46}
+{\bfseries Valore\-:}
+\begin{DoxyCode}
+(\{          \(\backslash\)
+        const typeof( ((type *)0)->member ) *\_\_mptr = (ptr);    \(\backslash\)
+        (type *)( (\textcolor{keywordtype}{char} *)\_\_mptr - \hyperlink{listx_8h_a276e8a32e0bbf024aadd9420b8f2d3b3}{offsetof}(type,member) );\})
+\end{DoxyCode}
+\hypertarget{listx_8h_ab8b24e6660ab3760c923e4b4db3fa502}{\index{listx.\-h@{listx.\-h}!list\-\_\-for\-\_\-each@{list\-\_\-for\-\_\-each}}
+\index{list\-\_\-for\-\_\-each@{list\-\_\-for\-\_\-each}!listx.h@{listx.\-h}}
+\subsubsection[{list\-\_\-for\-\_\-each}]{\setlength{\rightskip}{0pt plus 5cm}\#define list\-\_\-for\-\_\-each(
+\begin{DoxyParamCaption}
+\item[{}]{pos, }
+\item[{}]{head}
+\end{DoxyParamCaption}
+)~for (pos = (head)-\/$>$next; pos != (head); pos = pos-\/$>$next)}}\label{listx_8h_ab8b24e6660ab3760c923e4b4db3fa502}
+\hypertarget{listx_8h_a9b782fefb5ab71ce9762182e45a615e1}{\index{listx.\-h@{listx.\-h}!list\-\_\-for\-\_\-each\-\_\-entry@{list\-\_\-for\-\_\-each\-\_\-entry}}
+\index{list\-\_\-for\-\_\-each\-\_\-entry@{list\-\_\-for\-\_\-each\-\_\-entry}!listx.h@{listx.\-h}}
+\subsubsection[{list\-\_\-for\-\_\-each\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}\#define list\-\_\-for\-\_\-each\-\_\-entry(
+\begin{DoxyParamCaption}
+\item[{}]{pos, }
+\item[{}]{head, }
+\item[{}]{member}
+\end{DoxyParamCaption}
+)}}\label{listx_8h_a9b782fefb5ab71ce9762182e45a615e1}
+{\bfseries Valore\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for} (pos = \hyperlink{listx_8h_af8c317a42292b61c93aae91e59118a46}{container\_of}((head)->\hyperlink{structlist__head_ad6116fd07816a828c3a9830f54871bd0}{next}, typeof(*pos), member);   
+         \(\backslash\)
+    &pos->member != (head);        \(\backslash\)
+    pos = \hyperlink{listx_8h_af8c317a42292b61c93aae91e59118a46}{container\_of}(pos->member.next, typeof(*pos), member))
+\end{DoxyCode}
+\hypertarget{listx_8h_accc8d8e6c8ffe8ce964c5a1b59732cf3}{\index{listx.\-h@{listx.\-h}!list\-\_\-for\-\_\-each\-\_\-entry\-\_\-reverse@{list\-\_\-for\-\_\-each\-\_\-entry\-\_\-reverse}}
+\index{list\-\_\-for\-\_\-each\-\_\-entry\-\_\-reverse@{list\-\_\-for\-\_\-each\-\_\-entry\-\_\-reverse}!listx.h@{listx.\-h}}
+\subsubsection[{list\-\_\-for\-\_\-each\-\_\-entry\-\_\-reverse}]{\setlength{\rightskip}{0pt plus 5cm}\#define list\-\_\-for\-\_\-each\-\_\-entry\-\_\-reverse(
+\begin{DoxyParamCaption}
+\item[{}]{pos, }
+\item[{}]{head, }
+\item[{}]{member}
+\end{DoxyParamCaption}
+)}}\label{listx_8h_accc8d8e6c8ffe8ce964c5a1b59732cf3}
+{\bfseries Valore\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for} (pos = \hyperlink{listx_8h_af8c317a42292b61c93aae91e59118a46}{container\_of}((head)->\hyperlink{structlist__head_ad8f06cb209b17c3a4a5b24cad8793f72}{prev}, typeof(*pos), member);   
+         \(\backslash\)
+    &pos->member != (head);        \(\backslash\)
+    pos = \hyperlink{listx_8h_af8c317a42292b61c93aae91e59118a46}{container\_of}(pos->member.prev, typeof(*pos), member))
+\end{DoxyCode}
+\hypertarget{listx_8h_a19fc06b83f3502a83ce566b8887e6aec}{\index{listx.\-h@{listx.\-h}!list\-\_\-for\-\_\-each\-\_\-prev@{list\-\_\-for\-\_\-each\-\_\-prev}}
+\index{list\-\_\-for\-\_\-each\-\_\-prev@{list\-\_\-for\-\_\-each\-\_\-prev}!listx.h@{listx.\-h}}
+\subsubsection[{list\-\_\-for\-\_\-each\-\_\-prev}]{\setlength{\rightskip}{0pt plus 5cm}\#define list\-\_\-for\-\_\-each\-\_\-prev(
+\begin{DoxyParamCaption}
+\item[{}]{pos, }
+\item[{}]{head}
+\end{DoxyParamCaption}
+)~for (pos = (head)-\/$>$prev; pos != (head); pos = pos-\/$>$prev)}}\label{listx_8h_a19fc06b83f3502a83ce566b8887e6aec}
+\hypertarget{listx_8h_a42f0e72af970a790b60a740af8c9ecd0}{\index{listx.\-h@{listx.\-h}!L\-I\-S\-T\-\_\-\-H\-E\-A\-D@{L\-I\-S\-T\-\_\-\-H\-E\-A\-D}}
+\index{L\-I\-S\-T\-\_\-\-H\-E\-A\-D@{L\-I\-S\-T\-\_\-\-H\-E\-A\-D}!listx.h@{listx.\-h}}
+\subsubsection[{L\-I\-S\-T\-\_\-\-H\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-S\-T\-\_\-\-H\-E\-A\-D(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~struct {\bf list\-\_\-head} name = {\bf L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T}(name)}}\label{listx_8h_a42f0e72af970a790b60a740af8c9ecd0}
+\hypertarget{listx_8h_a4642d4b7df28478bb762fe43c85b5c63}{\index{listx.\-h@{listx.\-h}!L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T@{L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T}}
+\index{L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T@{L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T}!listx.h@{listx.\-h}}
+\subsubsection[{L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~\{ \&(name), \&(name) \}}}\label{listx_8h_a4642d4b7df28478bb762fe43c85b5c63}
+\hypertarget{listx_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{\index{listx.\-h@{listx.\-h}!N\-U\-L\-L@{N\-U\-L\-L}}
+\index{N\-U\-L\-L@{N\-U\-L\-L}!listx.h@{listx.\-h}}
+\subsubsection[{N\-U\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-U\-L\-L~0}}\label{listx_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}
+\hypertarget{listx_8h_a276e8a32e0bbf024aadd9420b8f2d3b3}{\index{listx.\-h@{listx.\-h}!offsetof@{offsetof}}
+\index{offsetof@{offsetof}!listx.h@{listx.\-h}}
+\subsubsection[{offsetof}]{\setlength{\rightskip}{0pt plus 5cm}\#define offsetof(
+\begin{DoxyParamCaption}
+\item[{}]{T\-Y\-P\-E, }
+\item[{}]{M\-E\-M\-B\-E\-R}
+\end{DoxyParamCaption}
+)~(({\bf size\-\_\-tt}) \&((T\-Y\-P\-E $\ast$)0)-\/$>$M\-E\-M\-B\-E\-R)}}\label{listx_8h_a276e8a32e0bbf024aadd9420b8f2d3b3}
+
+
+\subsection{Documentazione delle ridefinizioni di tipo (typedef)}
+\hypertarget{listx_8h_aa417d8afeb93f434b5d3bd2c79b19394}{\index{listx.\-h@{listx.\-h}!size\-\_\-tt@{size\-\_\-tt}}
+\index{size\-\_\-tt@{size\-\_\-tt}!listx.h@{listx.\-h}}
+\subsubsection[{size\-\_\-tt}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf size\-\_\-tt}}}\label{listx_8h_aa417d8afeb93f434b5d3bd2c79b19394}

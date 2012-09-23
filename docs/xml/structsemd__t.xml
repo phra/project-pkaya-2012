@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="structsemd__t" kind="struct" prot="public">
+    <compoundname>semd_t</compoundname>
+    <includes refid="types11_8h" local="no">types11.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsemd__t_1a104d7150b55e51644df16fdc9814191f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int s_value</definition>
+        <argsstring></argsstring>
+        <name>s_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="52" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsemd__t_1a2f9b394e0876b74e8f9e0a53c8aa7e0c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int s_key</definition>
+        <argsstring></argsstring>
+        <name>s_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="55" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsemd__t_1a09cdbeceec30846f32399900706a408f" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref></type>
+        <definition>struct list_head s_next</definition>
+        <argsstring></argsstring>
+        <name>s_next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="57" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsemd__t_1a9a531117316667eceb70495342c36be1" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref></type>
+        <definition>struct list_head s_procQ</definition>
+        <argsstring></argsstring>
+        <name>s_procQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="60" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="25">
+        <label>semd_t</label>
+        <link refid="structsemd__t"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>s_next</edgelabel>
+          <edgelabel>s_procQ</edgelabel>
+        </childnode>
+      </node>
+      <node id="26">
+        <label>list_head</label>
+        <link refid="structlist__head"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>prev</edgelabel>
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="50" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="50" bodyend="61"/>
+    <listofallmembers>
+      <member refid="structsemd__t_1a2f9b394e0876b74e8f9e0a53c8aa7e0c" prot="public" virt="non-virtual"><scope>semd_t</scope><name>s_key</name></member>
+      <member refid="structsemd__t_1a09cdbeceec30846f32399900706a408f" prot="public" virt="non-virtual"><scope>semd_t</scope><name>s_next</name></member>
+      <member refid="structsemd__t_1a9a531117316667eceb70495342c36be1" prot="public" virt="non-virtual"><scope>semd_t</scope><name>s_procQ</name></member>
+      <member refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" prot="public" virt="non-virtual"><scope>semd_t</scope><name>s_value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

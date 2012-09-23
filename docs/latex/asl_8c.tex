@@ -1,0 +1,239 @@
+\hypertarget{asl_8c}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/asl.c}
+\label{asl_8c}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/asl.\-c@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/asl.\-c}}
+}
+{\ttfamily \#include \char`\"{}const.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}u\-M\-P\-Stypes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}listx.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}types11.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\-h\char`\"{}}\\*
+\subsection*{Definizioni}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{asl_8c_a285ae64e0dea6b13f94979f1cc7c382d}{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}~5
+\item 
+\#define \hyperlink{asl_8c_a6f6489887e08bff4887d0bc5dcf214d8}{A\-C\-K}~1
+\item 
+\#define \hyperlink{asl_8c_a5af38e3a7bc301757e367a04a3a8a96d}{P\-R\-I\-N\-T\-C\-H\-R}~2
+\item 
+\#define \hyperlink{asl_8c_aa1bf756391a9960a2445236428e08068}{C\-H\-A\-R\-O\-F\-F\-S\-E\-T}~8
+\item 
+\#define \hyperlink{asl_8c_a937dd9f9084a17618cdebdacad7299c7}{S\-T\-A\-T\-U\-S\-M\-A\-S\-K}~0x\-F\-F
+\item 
+\#define \hyperlink{asl_8c_afd7c9be68e62aa06f63ba025c13ee34a}{T\-E\-R\-M0\-A\-D\-D\-R}~0x10000250
+\item 
+\#define \hyperlink{asl_8c_a46c3d6184a0f7fe61df840f07e3e3a2f}{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E}~16
+\item 
+\#define \hyperlink{asl_8c_ad1235d5ce36f7267285e82dccd428aa6}{R\-E\-A\-D\-Y}~1
+\item 
+\#define \hyperlink{asl_8c_a6d290d1da702b40a5947ee63700f890e}{D\-E\-V\-R\-E\-G\-L\-E\-N}~4
+\item 
+\#define \hyperlink{asl_8c_ab5be0aaddb58ffb9cb20c12530d66316}{B\-U\-S\-Y}~3
+\item 
+\#define \hyperlink{asl_8c_a444c52e2594d67f8801c17bf50491683}{R\-E\-C\-V\-S\-T\-A\-T\-U\-S}~0
+\item 
+\#define \hyperlink{asl_8c_a7cc2c7f2230a13e65c1ef97ec2216b5d}{R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D}~1
+\item 
+\#define \hyperlink{asl_8c_ac74c3ef3346da1a7f0e5695f26981021}{T\-R\-A\-N\-S\-T\-A\-T\-U\-S}~2
+\item 
+\#define \hyperlink{asl_8c_ade5cf18f7c8b9f995f4d07fa5d8e7073}{T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D}~3
+\end{DoxyCompactItemize}
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{asl_8c_a37f5309d6814c22605b7da62eccc0f3a}{init\-A\-S\-L} (void)
+\item 
+\hyperlink{structsemd__t}{semd\-\_\-t} $\ast$ \hyperlink{asl_8c_a7dd34e8ddc18c62f1253e9ddb657cb99}{get\-Semd} (int key)
+\item 
+\hyperlink{structsemd__t}{semd\-\_\-t} $\ast$ \hyperlink{asl_8c_aefbbb4412b9d14dc7745f72cb1e52d2b}{myget\-Semd} (int key)
+\item 
+int \hyperlink{asl_8c_a8641466df0ac1ca496e0fd74a2564c76}{insert\-Blocked} (int key, \hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$p)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{asl_8c_a9cef24579d8726fc855feec0eb2ae6cf}{remove\-Blocked} (int key)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{asl_8c_a0726c34768ec59b5bfcb118bc2bb09f8}{out\-Blocked} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$p)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{asl_8c_aa01e6af434d18efb9280e801c9ac54fd}{head\-Blocked} (int key)
+\item 
+void \hyperlink{asl_8c_af045446ae3e4b6b112ea15d2059c84cd}{out\-Child\-Blocked} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Variabili}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structsemd__t}{semd\-\_\-t} \hyperlink{asl_8c_a7c5093a5a97c19cb85a352beda71e1b5}{semd\-\_\-table} \mbox{[}\hyperlink{const_8h_abe4567498db286a3185a522c6dae3cbc}{M\-A\-X\-P\-R\-O\-C}+\hyperlink{const_8h_a4e132cfaa78353e3af1474a86b2dd535}{M\-A\-X\-\_\-\-D\-E\-V\-I\-C\-E\-S}+1\mbox{]}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head} \hyperlink{asl_8c_afc0834df7c1a47ec6890b35bbaa74e0f}{semd\-Free\-\_\-h}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head} \hyperlink{asl_8c_a43faf701af9530f6934df170370b8d94}{semd\-\_\-h}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle definizioni}
+\hypertarget{asl_8c_a6f6489887e08bff4887d0bc5dcf214d8}{\index{asl.\-c@{asl.\-c}!A\-C\-K@{A\-C\-K}}
+\index{A\-C\-K@{A\-C\-K}!asl.c@{asl.\-c}}
+\subsubsection[{A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-C\-K~1}}\label{asl_8c_a6f6489887e08bff4887d0bc5dcf214d8}
+\hypertarget{asl_8c_ab5be0aaddb58ffb9cb20c12530d66316}{\index{asl.\-c@{asl.\-c}!B\-U\-S\-Y@{B\-U\-S\-Y}}
+\index{B\-U\-S\-Y@{B\-U\-S\-Y}!asl.c@{asl.\-c}}
+\subsubsection[{B\-U\-S\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-U\-S\-Y~3}}\label{asl_8c_ab5be0aaddb58ffb9cb20c12530d66316}
+\hypertarget{asl_8c_aa1bf756391a9960a2445236428e08068}{\index{asl.\-c@{asl.\-c}!C\-H\-A\-R\-O\-F\-F\-S\-E\-T@{C\-H\-A\-R\-O\-F\-F\-S\-E\-T}}
+\index{C\-H\-A\-R\-O\-F\-F\-S\-E\-T@{C\-H\-A\-R\-O\-F\-F\-S\-E\-T}!asl.c@{asl.\-c}}
+\subsubsection[{C\-H\-A\-R\-O\-F\-F\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-O\-F\-F\-S\-E\-T~8}}\label{asl_8c_aa1bf756391a9960a2445236428e08068}
+\hypertarget{asl_8c_a6d290d1da702b40a5947ee63700f890e}{\index{asl.\-c@{asl.\-c}!D\-E\-V\-R\-E\-G\-L\-E\-N@{D\-E\-V\-R\-E\-G\-L\-E\-N}}
+\index{D\-E\-V\-R\-E\-G\-L\-E\-N@{D\-E\-V\-R\-E\-G\-L\-E\-N}!asl.c@{asl.\-c}}
+\subsubsection[{D\-E\-V\-R\-E\-G\-L\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-V\-R\-E\-G\-L\-E\-N~4}}\label{asl_8c_a6d290d1da702b40a5947ee63700f890e}
+\hypertarget{asl_8c_a46c3d6184a0f7fe61df840f07e3e3a2f}{\index{asl.\-c@{asl.\-c}!D\-E\-V\-R\-E\-G\-S\-I\-Z\-E@{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E}}
+\index{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E@{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E}!asl.c@{asl.\-c}}
+\subsubsection[{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-V\-R\-E\-G\-S\-I\-Z\-E~16}}\label{asl_8c_a46c3d6184a0f7fe61df840f07e3e3a2f}
+\hypertarget{asl_8c_a5af38e3a7bc301757e367a04a3a8a96d}{\index{asl.\-c@{asl.\-c}!P\-R\-I\-N\-T\-C\-H\-R@{P\-R\-I\-N\-T\-C\-H\-R}}
+\index{P\-R\-I\-N\-T\-C\-H\-R@{P\-R\-I\-N\-T\-C\-H\-R}!asl.c@{asl.\-c}}
+\subsubsection[{P\-R\-I\-N\-T\-C\-H\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-I\-N\-T\-C\-H\-R~2}}\label{asl_8c_a5af38e3a7bc301757e367a04a3a8a96d}
+\hypertarget{asl_8c_ad1235d5ce36f7267285e82dccd428aa6}{\index{asl.\-c@{asl.\-c}!R\-E\-A\-D\-Y@{R\-E\-A\-D\-Y}}
+\index{R\-E\-A\-D\-Y@{R\-E\-A\-D\-Y}!asl.c@{asl.\-c}}
+\subsubsection[{R\-E\-A\-D\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-A\-D\-Y~1}}\label{asl_8c_ad1235d5ce36f7267285e82dccd428aa6}
+\hypertarget{asl_8c_a7cc2c7f2230a13e65c1ef97ec2216b5d}{\index{asl.\-c@{asl.\-c}!R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D@{R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D}}
+\index{R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D@{R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D}!asl.c@{asl.\-c}}
+\subsubsection[{R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-C\-V\-C\-O\-M\-M\-A\-N\-D~1}}\label{asl_8c_a7cc2c7f2230a13e65c1ef97ec2216b5d}
+\hypertarget{asl_8c_a444c52e2594d67f8801c17bf50491683}{\index{asl.\-c@{asl.\-c}!R\-E\-C\-V\-S\-T\-A\-T\-U\-S@{R\-E\-C\-V\-S\-T\-A\-T\-U\-S}}
+\index{R\-E\-C\-V\-S\-T\-A\-T\-U\-S@{R\-E\-C\-V\-S\-T\-A\-T\-U\-S}!asl.c@{asl.\-c}}
+\subsubsection[{R\-E\-C\-V\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-C\-V\-S\-T\-A\-T\-U\-S~0}}\label{asl_8c_a444c52e2594d67f8801c17bf50491683}
+\hypertarget{asl_8c_a937dd9f9084a17618cdebdacad7299c7}{\index{asl.\-c@{asl.\-c}!S\-T\-A\-T\-U\-S\-M\-A\-S\-K@{S\-T\-A\-T\-U\-S\-M\-A\-S\-K}}
+\index{S\-T\-A\-T\-U\-S\-M\-A\-S\-K@{S\-T\-A\-T\-U\-S\-M\-A\-S\-K}!asl.c@{asl.\-c}}
+\subsubsection[{S\-T\-A\-T\-U\-S\-M\-A\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-A\-T\-U\-S\-M\-A\-S\-K~0x\-F\-F}}\label{asl_8c_a937dd9f9084a17618cdebdacad7299c7}
+\hypertarget{asl_8c_afd7c9be68e62aa06f63ba025c13ee34a}{\index{asl.\-c@{asl.\-c}!T\-E\-R\-M0\-A\-D\-D\-R@{T\-E\-R\-M0\-A\-D\-D\-R}}
+\index{T\-E\-R\-M0\-A\-D\-D\-R@{T\-E\-R\-M0\-A\-D\-D\-R}!asl.c@{asl.\-c}}
+\subsubsection[{T\-E\-R\-M0\-A\-D\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-R\-M0\-A\-D\-D\-R~0x10000250}}\label{asl_8c_afd7c9be68e62aa06f63ba025c13ee34a}
+\hypertarget{asl_8c_ade5cf18f7c8b9f995f4d07fa5d8e7073}{\index{asl.\-c@{asl.\-c}!T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D@{T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D}}
+\index{T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D@{T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D}!asl.c@{asl.\-c}}
+\subsubsection[{T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-A\-N\-C\-O\-M\-M\-A\-N\-D~3}}\label{asl_8c_ade5cf18f7c8b9f995f4d07fa5d8e7073}
+\hypertarget{asl_8c_a285ae64e0dea6b13f94979f1cc7c382d}{\index{asl.\-c@{asl.\-c}!T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D@{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}}
+\index{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D@{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}!asl.c@{asl.\-c}}
+\subsubsection[{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D~5}}\label{asl_8c_a285ae64e0dea6b13f94979f1cc7c382d}
+\hypertarget{asl_8c_ac74c3ef3346da1a7f0e5695f26981021}{\index{asl.\-c@{asl.\-c}!T\-R\-A\-N\-S\-T\-A\-T\-U\-S@{T\-R\-A\-N\-S\-T\-A\-T\-U\-S}}
+\index{T\-R\-A\-N\-S\-T\-A\-T\-U\-S@{T\-R\-A\-N\-S\-T\-A\-T\-U\-S}!asl.c@{asl.\-c}}
+\subsubsection[{T\-R\-A\-N\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-A\-N\-S\-T\-A\-T\-U\-S~2}}\label{asl_8c_ac74c3ef3346da1a7f0e5695f26981021}
+
+
+\subsection{Documentazione delle funzioni}
+\hypertarget{asl_8c_a7dd34e8ddc18c62f1253e9ddb657cb99}{\index{asl.\-c@{asl.\-c}!get\-Semd@{get\-Semd}}
+\index{get\-Semd@{get\-Semd}!asl.c@{asl.\-c}}
+\subsubsection[{get\-Semd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf semd\-\_\-t}$\ast$ get\-Semd (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}\label{asl_8c_a7dd34e8ddc18c62f1253e9ddb657cb99}
+(puntatore a semaforo) get\-Semd(id del semaforo)\-: restituisce il puntatore al semaforo avente id=key della lista dei semafori attivi. se non esiste nessun elemento con tale id, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em key} & chiave del semaforo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al semaforo se attivo oppure N\-U\-L\-L 
+\end{DoxyReturn}
+\hypertarget{asl_8c_aa01e6af434d18efb9280e801c9ac54fd}{\index{asl.\-c@{asl.\-c}!head\-Blocked@{head\-Blocked}}
+\index{head\-Blocked@{head\-Blocked}!asl.c@{asl.\-c}}
+\subsubsection[{head\-Blocked}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ head\-Blocked (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}\label{asl_8c_aa01e6af434d18efb9280e801c9ac54fd}
+(puntatore al processo) head\-Blocked(id del semaforo)\-: restituisce il processo in testa S\-E\-N\-Z\-A R\-I\-M\-U\-O\-V\-E\-R\-L\-O dalla lista dei processi bloccati dal semaforo con id=key. se il semaforo non viene trovato oppure se non ha processi in attesa, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em key} & chiave del semaforo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al processo 
+\end{DoxyReturn}
+\hypertarget{asl_8c_a37f5309d6814c22605b7da62eccc0f3a}{\index{asl.\-c@{asl.\-c}!init\-A\-S\-L@{init\-A\-S\-L}}
+\index{init\-A\-S\-L@{init\-A\-S\-L}!asl.c@{asl.\-c}}
+\subsubsection[{init\-A\-S\-L}]{\setlength{\rightskip}{0pt plus 5cm}void init\-A\-S\-L (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{asl_8c_a37f5309d6814c22605b7da62eccc0f3a}
+\hyperlink{asl_8c_a37f5309d6814c22605b7da62eccc0f3a}{init\-A\-S\-L()}\-:inizializza le due liste necessarie per la gestione dei semafori. \hypertarget{asl_8c_a8641466df0ac1ca496e0fd74a2564c76}{\index{asl.\-c@{asl.\-c}!insert\-Blocked@{insert\-Blocked}}
+\index{insert\-Blocked@{insert\-Blocked}!asl.c@{asl.\-c}}
+\subsubsection[{insert\-Blocked}]{\setlength{\rightskip}{0pt plus 5cm}int insert\-Blocked (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{asl_8c_a8641466df0ac1ca496e0fd74a2564c76}
+(1 T\-R\-U\-E oppure 0 F\-A\-L\-S\-E) insert\-Blocked(id del semaforo, puntatore al processo)\-: inserisce il processo puntato da p nella coda dei processi bloccati dal semaforo con id=key. se il semaforo non è presente, allora viene allocato un nuovo semaforo. in caso di errore restituisce 1, altrimenti 0. 
+\begin{DoxyParams}{Parametri}
+{\em key} & chiave del semaforo \\
+\hline
+{\em p} & puntatore al processo da inserire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+1 in caso di errore, 0 altrimenti 
+\end{DoxyReturn}
+\hypertarget{asl_8c_aefbbb4412b9d14dc7745f72cb1e52d2b}{\index{asl.\-c@{asl.\-c}!myget\-Semd@{myget\-Semd}}
+\index{myget\-Semd@{myget\-Semd}!asl.c@{asl.\-c}}
+\subsubsection[{myget\-Semd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf semd\-\_\-t}$\ast$ myget\-Semd (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}\label{asl_8c_aefbbb4412b9d14dc7745f72cb1e52d2b}
+(puntatore a semaforo) myget\-Semd(id del semaforo)\-: restituisce il puntatore al semaforo avente id=key della lista dei semafori attivi. se non esiste nessun elemento con tale id, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em key} & chiave del semaforo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al semaforo, se non attivo lo alloca 
+\end{DoxyReturn}
+\hypertarget{asl_8c_a0726c34768ec59b5bfcb118bc2bb09f8}{\index{asl.\-c@{asl.\-c}!out\-Blocked@{out\-Blocked}}
+\index{out\-Blocked@{out\-Blocked}!asl.c@{asl.\-c}}
+\subsubsection[{out\-Blocked}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ out\-Blocked (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{asl_8c_a0726c34768ec59b5bfcb118bc2bb09f8}
+(puntatore al processo) out\-Blocked(puntatore al processo)\-: restituisce il processo puntato da p R\-I\-M\-U\-O\-V\-E\-N\-D\-O\-L\-O dalla lista dei processi bloccati da un semaforo. se il processo non viene trovato, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em p} & puntatore al processo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al processo 
+\end{DoxyReturn}
+\hypertarget{asl_8c_af045446ae3e4b6b112ea15d2059c84cd}{\index{asl.\-c@{asl.\-c}!out\-Child\-Blocked@{out\-Child\-Blocked}}
+\index{out\-Child\-Blocked@{out\-Child\-Blocked}!asl.c@{asl.\-c}}
+\subsubsection[{out\-Child\-Blocked}]{\setlength{\rightskip}{0pt plus 5cm}void out\-Child\-Blocked (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{asl_8c_af045446ae3e4b6b112ea15d2059c84cd}
+out\-Child\-Blocked(puntatore al processo)\-: elimina il processo puntato da p dalla coda del semaforo associato, rimuovendo anche i processi discendenti. 
+\begin{DoxyParams}{Parametri}
+{\em p} & puntatore al processo \\
+\hline
+\end{DoxyParams}
+\hypertarget{asl_8c_a9cef24579d8726fc855feec0eb2ae6cf}{\index{asl.\-c@{asl.\-c}!remove\-Blocked@{remove\-Blocked}}
+\index{remove\-Blocked@{remove\-Blocked}!asl.c@{asl.\-c}}
+\subsubsection[{remove\-Blocked}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ remove\-Blocked (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}\label{asl_8c_a9cef24579d8726fc855feec0eb2ae6cf}
+(puntatore al processo) remove\-Blocked(id del semaforo)\-: ritorna il primo processo della coda associata al semaforo con id=key. se questo semaforo non esiste, restituisce N\-U\-L\-L. se non ci sono più processi bloccati, sposta il semaforo nella lista dei semafori liberi 
+\begin{DoxyParams}{Parametri}
+{\em key} & chiave del semaforo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al processo sbloccato 
+\end{DoxyReturn}
+
+
+\subsection{Documentazione delle variabili}
+\hypertarget{asl_8c_a43faf701af9530f6934df170370b8d94}{\index{asl.\-c@{asl.\-c}!semd\-\_\-h@{semd\-\_\-h}}
+\index{semd\-\_\-h@{semd\-\_\-h}!asl.c@{asl.\-c}}
+\subsubsection[{semd\-\_\-h}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf list\-\_\-head} semd\-\_\-h}}\label{asl_8c_a43faf701af9530f6934df170370b8d94}
+\hypertarget{asl_8c_a7c5093a5a97c19cb85a352beda71e1b5}{\index{asl.\-c@{asl.\-c}!semd\-\_\-table@{semd\-\_\-table}}
+\index{semd\-\_\-table@{semd\-\_\-table}!asl.c@{asl.\-c}}
+\subsubsection[{semd\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf semd\-\_\-t} semd\-\_\-table\mbox{[}{\bf M\-A\-X\-P\-R\-O\-C}+{\bf M\-A\-X\-\_\-\-D\-E\-V\-I\-C\-E\-S}+1\mbox{]}}}\label{asl_8c_a7c5093a5a97c19cb85a352beda71e1b5}
+\hypertarget{asl_8c_afc0834df7c1a47ec6890b35bbaa74e0f}{\index{asl.\-c@{asl.\-c}!semd\-Free\-\_\-h@{semd\-Free\-\_\-h}}
+\index{semd\-Free\-\_\-h@{semd\-Free\-\_\-h}!asl.c@{asl.\-c}}
+\subsubsection[{semd\-Free\-\_\-h}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf list\-\_\-head} semd\-Free\-\_\-h}}\label{asl_8c_afc0834df7c1a47ec6890b35bbaa74e0f}

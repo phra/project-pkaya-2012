@@ -1,0 +1,898 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="phase1_2asl_8c" kind="file">
+    <compoundname>asl.c</compoundname>
+    <includes refid="phase1_2const_8h" local="yes">const.h</includes>
+    <includes refid="phase1_2u_m_p_stypes_8h" local="yes">uMPStypes.h</includes>
+    <includes refid="phase1_2listx_8h" local="yes">listx.h</includes>
+    <includes refid="phase1_2types11_8h" local="yes">types11.h</includes>
+    <includes refid="utils_8h" local="yes">utils.h</includes>
+    <incdepgraph>
+      <node id="128">
+        <label>C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c</label>
+        <link refid="phase1/asl.c"/>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>base.h</label>
+        <link refid="phase1_2base_8h"/>
+      </node>
+      <node id="129">
+        <label>const.h</label>
+        <link refid="phase1_2const_8h"/>
+        <childnode refid="130" relation="include">
+        </childnode>
+      </node>
+      <node id="132">
+        <label>listx.h</label>
+        <link refid="phase1_2listx_8h"/>
+      </node>
+      <node id="133">
+        <label>types11.h</label>
+        <link refid="phase1_2types11_8h"/>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+      </node>
+      <node id="131">
+        <label>uMPStypes.h</label>
+        <link refid="phase1_2u_m_p_stypes_8h"/>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>utils.h</label>
+        <link refid="utils_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="phase1_2asl_8c_1a285ae64e0dea6b13f94979f1cc7c382d" prot="public" static="no">
+        <name>TRANSMITTED</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="8" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1a6f6489887e08bff4887d0bc5dcf214d8" prot="public" static="no">
+        <name>ACK</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="9" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1a5af38e3a7bc301757e367a04a3a8a96d" prot="public" static="no">
+        <name>PRINTCHR</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="10" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1aa1bf756391a9960a2445236428e08068" prot="public" static="no">
+        <name>CHAROFFSET</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="11" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1a937dd9f9084a17618cdebdacad7299c7" prot="public" static="no">
+        <name>STATUSMASK</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="12" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1afd7c9be68e62aa06f63ba025c13ee34a" prot="public" static="no">
+        <name>TERM0ADDR</name>
+        <initializer>0x10000250</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="13" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1a46c3d6184a0f7fe61df840f07e3e3a2f" prot="public" static="no">
+        <name>DEVREGSIZE</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="14" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1ad1235d5ce36f7267285e82dccd428aa6" prot="public" static="no">
+        <name>READY</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="15" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1a6d290d1da702b40a5947ee63700f890e" prot="public" static="no">
+        <name>DEVREGLEN</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="16" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1ab5be0aaddb58ffb9cb20c12530d66316" prot="public" static="no">
+        <name>BUSY</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="17" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1a444c52e2594d67f8801c17bf50491683" prot="public" static="no">
+        <name>RECVSTATUS</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="19" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1a7cc2c7f2230a13e65c1ef97ec2216b5d" prot="public" static="no">
+        <name>RECVCOMMAND</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="20" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1ac74c3ef3346da1a7f0e5695f26981021" prot="public" static="no">
+        <name>TRANSTATUS</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="21" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="phase1_2asl_8c_1ade5cf18f7c8b9f995f4d07fa5d8e7073" prot="public" static="no">
+        <name>TRANCOMMAND</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="22" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="phase1_2asl_8c_1a2bbc0213ff6ee69ea33b7996afec20ae" prot="public" static="no" mutable="no">
+        <type><ref refid="structsemd__t" kindref="compound">semd_t</ref></type>
+        <definition>semd_t semd_table[MAXPROC+MAX_DEVICES]</definition>
+        <argsstring>[MAXPROC+MAX_DEVICES]</argsstring>
+        <name>semd_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="143" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="phase1_2asl_8c_1afc0834df7c1a47ec6890b35bbaa74e0f" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref></type>
+        <definition>struct list_head semdFree_h</definition>
+        <argsstring></argsstring>
+        <name>semdFree_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="144" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="phase1_2asl_8c_1a43faf701af9530f6934df170370b8d94" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref></type>
+        <definition>struct list_head semd_h</definition>
+        <argsstring></argsstring>
+        <name>semd_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="145" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="phase1_2asl_8c_1ada8ac7e3de557a85ca06b3cc16187c37" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>static U32 mytermstat</definition>
+        <argsstring>(memaddr *stataddr)</argsstring>
+        <name>mytermstat</name>
+        <param>
+          <type><ref refid="lib_2base_8h_1a8dfc83cbb8a200048ed977af78885aa1" kindref="member">memaddr</ref> *</type>
+          <declname>stataddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="25" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1a0ca08dff8cc0f7142146e1c890d1776a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>static unsigned int mytermprint</definition>
+        <argsstring>(char *str, unsigned int term)</argsstring>
+        <name>mytermprint</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="31" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="31" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1aac897f62c678146e7a2f9e7f343170a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void aslprint</definition>
+        <argsstring>(char *str1)</argsstring>
+        <name>aslprint</name>
+        <param>
+          <type>char *</type>
+          <declname>str1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="80" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="80" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1a1883e9e551426a262427bfd6cb698b40" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void aslprintint</definition>
+        <argsstring>(char *str1, int numero)</argsstring>
+        <name>aslprintint</name>
+        <param>
+          <type>char *</type>
+          <declname>str1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numero</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="87" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="87" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1a1d1dc2e83677edef733338cbaa9afc5d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void aslprintbin</definition>
+        <argsstring>(char *str1, int numero)</argsstring>
+        <name>aslprintbin</name>
+        <param>
+          <type>char *</type>
+          <declname>str1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numero</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="102" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="102" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1a8d1b07a46287a162e18d6b35e3dac53b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void aslprinthex</definition>
+        <argsstring>(char *str1, int numero)</argsstring>
+        <name>aslprinthex</name>
+        <param>
+          <type>char *</type>
+          <declname>str1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numero</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="117" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="117" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1af6604db13223ddd83cb83d91a00b7ad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stampasemafori</definition>
+        <argsstring>(struct list_head *head)</argsstring>
+        <name>stampasemafori</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="132" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="132" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1a37f5309d6814c22605b7da62eccc0f3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initASL</definition>
+        <argsstring>(void)</argsstring>
+        <name>initASL</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="lib_2asl_8c_1a37f5309d6814c22605b7da62eccc0f3a" kindref="member">initASL()</ref>:inizializza le due liste necessarie per la gestione dei semafori. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="155" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="155" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1a7dd34e8ddc18c62f1253e9ddb657cb99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structsemd__t" kindref="compound">semd_t</ref> *</type>
+        <definition>semd_t* getSemd</definition>
+        <argsstring>(int key)</argsstring>
+        <name>getSemd</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore a semaforo) getSemd(id del semaforo): restituisce il puntatore al semaforo avente id=key della lista dei semafori attivi. se non esiste nessun elemento con tale id, restituisce NULL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>chiave del semaforo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>puntatore al semaforo se attivo oppure NULL </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="167" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="167" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1aefbbb4412b9d14dc7745f72cb1e52d2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structsemd__t" kindref="compound">semd_t</ref> *</type>
+        <definition>semd_t* mygetSemd</definition>
+        <argsstring>(int key)</argsstring>
+        <name>mygetSemd</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore a semaforo) mygetSemd(id del semaforo): restituisce il puntatore al semaforo avente id=key della lista dei semafori attivi. se non esiste nessun elemento con tale id, restituisce NULL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>chiave del semaforo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>puntatore al semaforo, se non attivo lo alloca </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="178" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="178" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1a8641466df0ac1ca496e0fd74a2564c76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int insertBlocked</definition>
+        <argsstring>(int key, pcb_t *p)</argsstring>
+        <name>insertBlocked</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(1 TRUE oppure 0 FALSE) insertBlocked(id del semaforo, puntatore al processo): inserisce il processo puntato da p nella coda dei processi bloccati dal semaforo con id=key. se il semaforo non è presente, allora viene allocato un nuovo semaforo. in caso di errore restituisce 1, altrimenti 0. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>chiave del semaforo </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al processo da inserire </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 in caso di errore, 0 altrimenti </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="204" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="204" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1a9cef24579d8726fc855feec0eb2ae6cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* removeBlocked</definition>
+        <argsstring>(int key)</argsstring>
+        <name>removeBlocked</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore al processo) removeBlocked(id del semaforo): ritorna il primo processo della coda associata al semaforo con id=key. se questo semaforo non esiste, restituisce NULL. se non ci sono più processi bloccati, sposta il semaforo nella lista dei semafori liberi <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>chiave del semaforo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>puntatore al processo sbloccato </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="230" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="230" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1a0726c34768ec59b5bfcb118bc2bb09f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* outBlocked</definition>
+        <argsstring>(pcb_t *p)</argsstring>
+        <name>outBlocked</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore al processo) outBlocked(puntatore al processo): restituisce il processo puntato da p RIMUOVENDOLO dalla lista dei processi bloccati da un semaforo. se il processo non viene trovato, restituisce NULL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>puntatore al processo </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="251" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="251" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1aa01e6af434d18efb9280e801c9ac54fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* headBlocked</definition>
+        <argsstring>(int key)</argsstring>
+        <name>headBlocked</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore al processo) headBlocked(id del semaforo): restituisce il processo in testa SENZA RIMUOVERLO dalla lista dei processi bloccati dal semaforo con id=key. se il semaforo non viene trovato oppure se non ha processi in attesa, restituisce NULL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>chiave del semaforo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>puntatore al processo </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="266" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="266" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2asl_8c_1af045446ae3e4b6b112ea15d2059c84cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void outChildBlocked</definition>
+        <argsstring>(pcb_t *p)</argsstring>
+        <name>outChildBlocked</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>outChildBlocked(puntatore al processo): elimina il processo puntato da p dalla coda del semaforo associato, rimuovendo anche i processi discendenti. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" line="278" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c" bodystart="278" bodyend="288"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="phase1_2const_8h" kindref="compound">const.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="phase1_2u_m_p_stypes_8h" kindref="compound">uMPStypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="phase1_2listx_8h" kindref="compound">listx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="phase1_2types11_8h" kindref="compound">types11.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_8h" kindref="compound">utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRANSMITTED<sp/>5</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ACK<sp/>1</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PRINTCHR<sp/><sp/><sp/><sp/>2</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CHAROFFSET<sp/><sp/>8</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>STATUSMASK<sp/><sp/>0xFF</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TERM0ADDR<sp/><sp/><sp/>0x10000250</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DEVREGSIZE<sp/>16<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>READY<sp/><sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DEVREGLEN<sp/><sp/><sp/>4</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BUSY<sp/><sp/><sp/><sp/><sp/><sp/>3</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RECVSTATUS<sp/>0</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>RECVCOMMAND<sp/>1</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRANSTATUS<sp/><sp/><sp/><sp/>2</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRANCOMMAND<sp/><sp/><sp/>3</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="init_8c_1a6a0c937f22f4f8e2d7c8223fd92f1e0c" kindref="member">mytermstat</ref>(<ref refid="lib_2base_8h_1a8dfc83cbb8a200048ed977af78885aa1" kindref="member">memaddr</ref><sp/>*stataddr)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">((*stataddr)<sp/>&amp;<sp/><ref refid="phase1_2asl_8c_1a937dd9f9084a17618cdebdacad7299c7" kindref="member">STATUSMASK</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>prints<sp/>a<sp/>string<sp/>on<sp/>specified<sp/>terminal<sp/>and<sp/>returns<sp/>TRUE<sp/>if<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>print<sp/>was<sp/>successful,<sp/>FALSE<sp/>if<sp/>not<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="init_8c_1a4bfe35af00daa0de1d426f484ab4f533" kindref="member">mytermprint</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>str,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>term)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1a8dfc83cbb8a200048ed977af78885aa1" kindref="member">memaddr</ref><sp/>*statusp;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1a8dfc83cbb8a200048ed977af78885aa1" kindref="member">memaddr</ref><sp/>*commandp;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/>cmd;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error<sp/>=<sp/><ref refid="lib_2const_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(term<sp/>&lt;<sp/><ref refid="lib_2const_8h_1ac488a197b10aaecb90e1c57b17d56e64" kindref="member">DEV_PER_INT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>terminal<sp/>is<sp/>correct<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>compute<sp/>device<sp/>register<sp/>field<sp/>addresses<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>statusp<sp/>=<sp/>(<ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/>*)<sp/>(<ref refid="phase1_2asl_8c_1afd7c9be68e62aa06f63ba025c13ee34a" kindref="member">TERM0ADDR</ref><sp/>+<sp/>(term<sp/>*<sp/><ref refid="phase1_2asl_8c_1a46c3d6184a0f7fe61df840f07e3e3a2f" kindref="member">DEVREGSIZE</ref>)<sp/>+<sp/>(<ref refid="phase1_2asl_8c_1ac74c3ef3346da1a7f0e5695f26981021" kindref="member">TRANSTATUS</ref><sp/>*<sp/><ref refid="phase1_2asl_8c_1a6d290d1da702b40a5947ee63700f890e" kindref="member">DEVREGLEN</ref>));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>commandp<sp/>=<sp/>(<ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/>*)<sp/>(<ref refid="phase1_2asl_8c_1afd7c9be68e62aa06f63ba025c13ee34a" kindref="member">TERM0ADDR</ref><sp/>+<sp/>(term<sp/>*<sp/>DEVREGSIZE)<sp/>+<sp/>(<ref refid="phase1_2asl_8c_1ade5cf18f7c8b9f995f4d07fa5d8e7073" kindref="member">TRANCOMMAND</ref><sp/>*<sp/><ref refid="phase1_2asl_8c_1a6d290d1da702b40a5947ee63700f890e" kindref="member">DEVREGLEN</ref>));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>test<sp/>device<sp/>status<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="init_8c_1a6a0c937f22f4f8e2d7c8223fd92f1e0c" kindref="member">mytermstat</ref>(statusp);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((stat<sp/>==<sp/><ref refid="phase1_2asl_8c_1ad1235d5ce36f7267285e82dccd428aa6" kindref="member">READY</ref>)<sp/>||<sp/>(stat<sp/>==<sp/><ref refid="phase1_2asl_8c_1a285ae64e0dea6b13f94979f1cc7c382d" kindref="member">TRANSMITTED</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>device<sp/>is<sp/>available<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>print<sp/>cycle<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((*str<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)<sp/>&amp;&amp;<sp/>(!error))<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmd<sp/>=<sp/>(*str<sp/>&lt;&lt;<sp/><ref refid="phase1_2asl_8c_1aa1bf756391a9960a2445236428e08068" kindref="member">CHAROFFSET</ref>)<sp/>|<sp/><ref refid="phase1_2asl_8c_1a5af38e3a7bc301757e367a04a3a8a96d" kindref="member">PRINTCHR</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*commandp<sp/>=<sp/>cmd;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>busy<sp/>waiting<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((stat<sp/>=<sp/><ref refid="init_8c_1a6a0c937f22f4f8e2d7c8223fd92f1e0c" kindref="member">mytermstat</ref>(statusp))<sp/>==<sp/><ref refid="phase1_2asl_8c_1ab5be0aaddb58ffb9cb20c12530d66316" kindref="member">BUSY</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>end<sp/>of<sp/>wait<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat<sp/>!=<sp/><ref refid="phase1_2asl_8c_1a285ae64e0dea6b13f94979f1cc7c382d" kindref="member">TRANSMITTED</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/>=<sp/><ref refid="lib_2const_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>move<sp/>to<sp/>next<sp/>char<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str++;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>device<sp/>is<sp/>not<sp/>available<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/>=<sp/><ref refid="lib_2const_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>wrong<sp/>terminal<sp/>device<sp/>number<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/>=<sp/><ref refid="lib_2const_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(!error);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>aslprint(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str1){</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>output[128];</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="utils_8c_1af9af30bd4e6b10d1560aabd834144e33" kindref="member">strcpy</ref>(output,<sp/>str1);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="init_8c_1a4bfe35af00daa0de1d426f484ab4f533" kindref="member">mytermprint</ref>(output,0);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>aslprintint(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numero){</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>intero[30];</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>strcpy(output<sp/>+<sp/>1,<sp/>str1);<sp/>//#FIXME</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(output<sp/>+<sp/>strlen(str1)<sp/>+<sp/>1,<sp/>&quot;<sp/>-&gt;<sp/>&quot;);</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(output<sp/>+<sp/>strlen(str1)<sp/>+<sp/>3,<sp/>str2);</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(output,<sp/>&quot;\n&quot;);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprint(str1);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprint(</highlight><highlight class="stringliteral">&quot;<sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="utils_8c_1a0338f8f78dbf81dc70849a16e3ec22bb" kindref="member">itoa</ref>(numero,intero,10);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprint(intero);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprint(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>aslprintbin(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numero){</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>intero[64];</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>strcpy(output<sp/>+<sp/>1,<sp/>str1);<sp/>//#FIXME</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(output<sp/>+<sp/>strlen(str1)<sp/>+<sp/>1,<sp/>&quot;<sp/>-&gt;<sp/>&quot;);</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(output<sp/>+<sp/>strlen(str1)<sp/>+<sp/>3,<sp/>str2);</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(output,<sp/>&quot;\n&quot;);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprint(str1);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprint(</highlight><highlight class="stringliteral">&quot;<sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="utils_8c_1a0338f8f78dbf81dc70849a16e3ec22bb" kindref="member">itoa</ref>(numero,intero,2);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprint(intero);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprint(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>aslprinthex(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numero){</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>intero[64];</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>strcpy(output<sp/>+<sp/>1,<sp/>str1);<sp/>//#FIXME</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(output<sp/>+<sp/>strlen(str1)<sp/>+<sp/>1,<sp/>&quot;<sp/>-&gt;<sp/>&quot;);</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(output<sp/>+<sp/>strlen(str1)<sp/>+<sp/>3,<sp/>str2);</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(output,<sp/>&quot;\n&quot;);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprint(str1);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprint(</highlight><highlight class="stringliteral">&quot;<sp/>-&gt;<sp/>0x&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="utils_8c_1a0338f8f78dbf81dc70849a16e3ec22bb" kindref="member">itoa</ref>(numero,intero,16);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprint(intero);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprint(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="phase1_2asl_8c_1af6604db13223ddd83cb83d91a00b7ad3" kindref="member">stampasemafori</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref>*<sp/>head){</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>item;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>aslprint(</highlight><highlight class="stringliteral">&quot;semafori<sp/>allocati:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2listx_8h_1a9b782fefb5ab71ce9762182e45a615e1" kindref="member">list_for_each_entry</ref>(item,head,s_next){</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprintint(</highlight><highlight class="stringliteral">&quot;semaforo<sp/>attivo<sp/>con<sp/>key&quot;</highlight><highlight class="normal">,item-&gt;<ref refid="structsemd__t_1a2f9b394e0876b74e8f9e0a53c8aa7e0c" kindref="member">s_key</ref>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprintint(</highlight><highlight class="stringliteral">&quot;con<sp/>s_value&quot;</highlight><highlight class="normal">,item-&gt;<ref refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" kindref="member">s_value</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aslprinthex(</highlight><highlight class="stringliteral">&quot;che<sp/>si<sp/>trova<sp/>all&apos;indirizzo&quot;</highlight><highlight class="normal">,item);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><ref refid="structsemd__t" kindref="compound">semd_t</ref><sp/><ref refid="lib_2asl_8c_1a7c5093a5a97c19cb85a352beda71e1b5" kindref="member">semd_table</ref>[<ref refid="lib_2const_8h_1abe4567498db286a3185a522c6dae3cbc" kindref="member">MAXPROC</ref>+<ref refid="lib_2const_8h_1a4e132cfaa78353e3af1474a86b2dd535" kindref="member">MAX_DEVICES</ref>];</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><ref refid="lib_2asl_8c_1afc0834df7c1a47ec6890b35bbaa74e0f" kindref="member">semdFree_h</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><ref refid="lib_2asl_8c_1a43faf701af9530f6934df170370b8d94" kindref="member">semd_h</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/>########################################################</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/>#########<sp/><sp/>Funzioni<sp/>per<sp/>la<sp/>gestione<sp/>della<sp/>ASL<sp/><sp/>#########</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/>########################################################</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="153"><highlight class="comment">initASL():inizializza<sp/>le<sp/>due<sp/>liste<sp/>necessarie<sp/>per<sp/>la<sp/>gestione<sp/>dei<sp/>semafori.</highlight></codeline>
+<codeline lineno="154"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lib_2asl_8c_1a37f5309d6814c22605b7da62eccc0f3a" kindref="member">initASL</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>INIT_LIST_HEAD(&amp;<ref refid="lib_2asl_8c_1afc0834df7c1a47ec6890b35bbaa74e0f" kindref="member">semdFree_h</ref>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>INIT_LIST_HEAD(&amp;<ref refid="lib_2asl_8c_1a43faf701af9530f6934df170370b8d94" kindref="member">semd_h</ref>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;<sp/>i&lt;<ref refid="lib_2const_8h_1abe4567498db286a3185a522c6dae3cbc" kindref="member">MAXPROC</ref>+<ref refid="lib_2const_8h_1a4e132cfaa78353e3af1474a86b2dd535" kindref="member">MAX_DEVICES</ref>;i++<sp/>)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list_add(&amp;semd_table[i].s_next,&amp;<ref refid="lib_2asl_8c_1afc0834df7c1a47ec6890b35bbaa74e0f" kindref="member">semdFree_h</ref>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="163"><highlight class="comment">(puntatore<sp/>a<sp/>semaforo)<sp/>getSemd(id<sp/>del<sp/>semaforo):<sp/>restituisce<sp/>il<sp/>puntatore<sp/>al<sp/>semaforo</highlight></codeline>
+<codeline lineno="164"><highlight class="comment">avente<sp/>id=key<sp/>della<sp/>lista<sp/>dei<sp/>semafori<sp/>attivi.<sp/>se<sp/>non<sp/>esiste<sp/>nessun<sp/>elemento<sp/>con<sp/>tale<sp/>id,</highlight></codeline>
+<codeline lineno="165"><highlight class="comment">restituisce<sp/>NULL.</highlight></codeline>
+<codeline lineno="166"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/><ref refid="lib_2asl_8c_1a7dd34e8ddc18c62f1253e9ddb657cb99" kindref="member">getSemd</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key){</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>item;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2listx_8h_1a9b782fefb5ab71ce9762182e45a615e1" kindref="member">list_for_each_entry</ref>(item,&amp;<ref refid="lib_2asl_8c_1a43faf701af9530f6934df170370b8d94" kindref="member">semd_h</ref>,s_next){</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(item-&gt;<ref refid="structsemd__t_1a2f9b394e0876b74e8f9e0a53c8aa7e0c" kindref="member">s_key</ref><sp/>==<sp/>key){</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>item;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="lib_2const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/><ref refid="lib_2asl_8c_1aefbbb4412b9d14dc7745f72cb1e52d2b" kindref="member">mygetSemd</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key){</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>item;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref>*<sp/>l_next;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2listx_8h_1a9b782fefb5ab71ce9762182e45a615e1" kindref="member">list_for_each_entry</ref>(item,&amp;<ref refid="lib_2asl_8c_1a43faf701af9530f6934df170370b8d94" kindref="member">semd_h</ref>,s_next){</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(item-&gt;<ref refid="structsemd__t_1a2f9b394e0876b74e8f9e0a53c8aa7e0c" kindref="member">s_key</ref><sp/>==<sp/>key){</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//aslprintint(&quot;mygetsemd:<sp/>trovato<sp/>semaforo<sp/>attivo<sp/>con<sp/>key&quot;,key);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>item;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//aslprintint(&quot;mygetsemd:<sp/>alloco<sp/>semaforo<sp/>con<sp/>key&quot;,key);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>l_next<sp/>=<sp/>list_next(&amp;<ref refid="lib_2asl_8c_1afc0834df7c1a47ec6890b35bbaa74e0f" kindref="member">semdFree_h</ref>);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>list_del(l_next);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>list_add(l_next,&amp;<ref refid="lib_2asl_8c_1a43faf701af9530f6934df170370b8d94" kindref="member">semd_h</ref>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>item=<ref refid="lib_2listx_8h_1af8c317a42292b61c93aae91e59118a46" kindref="member">container_of</ref>(l_next,<ref refid="structsemd__t" kindref="compound">semd_t</ref>,s_next);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsemd__t_1a2f9b394e0876b74e8f9e0a53c8aa7e0c" kindref="member">s_key</ref><sp/>=<sp/>key;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>INIT_LIST_HEAD(&amp;item-&gt;<ref refid="structsemd__t_1a9a531117316667eceb70495342c36be1" kindref="member">s_procQ</ref>);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>item;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="199"><highlight class="comment">(1<sp/>TRUE<sp/>oppure<sp/>0<sp/>FALSE)<sp/>insertBlocked(id<sp/>del<sp/>semaforo,<sp/>puntatore<sp/>al<sp/>processo):<sp/>inserisce</highlight></codeline>
+<codeline lineno="200"><highlight class="comment">il<sp/>processo<sp/>puntato<sp/>da<sp/>p<sp/>nella<sp/>coda<sp/>dei<sp/>processi<sp/>bloccati<sp/>dal<sp/>semaforo<sp/>con<sp/>id=key.</highlight></codeline>
+<codeline lineno="201"><highlight class="comment">se<sp/>il<sp/>semaforo<sp/>non<sp/>è<sp/>presente,<sp/>allora<sp/>viene<sp/>allocato<sp/>un<sp/>nuovo<sp/>semaforo.</highlight></codeline>
+<codeline lineno="202"><highlight class="comment">in<sp/>caso<sp/>di<sp/>errore<sp/>restituisce<sp/>1,<sp/>altrimenti<sp/>0.</highlight></codeline>
+<codeline lineno="203"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="lib_2asl_8c_1a8641466df0ac1ca496e0fd74a2564c76" kindref="member">insertBlocked</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key,<sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="p1test__pkaya__v1_81_8c_1a3bec781e4e77d9931af780e1605d7d94" kindref="member">p</ref>){</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>semd_found<sp/>=<sp/><ref refid="lib_2asl_8c_1a7dd34e8ddc18c62f1253e9ddb657cb99" kindref="member">getSemd</ref>(key);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref>*<sp/>l_next;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(semd_found){</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="structpcb__t_1a831f803a73e91f4b1530e60bc24e92b4" kindref="member">p_semkey</ref><sp/>=<sp/>key;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list_add_tail(&amp;p-&gt;<ref refid="structpcb__t_1adb25d84c36e53123e815e122610fd3ab" kindref="member">p_next</ref>,&amp;semd_found-&gt;<ref refid="structsemd__t_1a9a531117316667eceb70495342c36be1" kindref="member">s_procQ</ref>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="lib_2const_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(list_empty(&amp;<ref refid="lib_2asl_8c_1afc0834df7c1a47ec6890b35bbaa74e0f" kindref="member">semdFree_h</ref>))</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="lib_2const_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>l_next<sp/>=<sp/>list_next(&amp;<ref refid="lib_2asl_8c_1afc0834df7c1a47ec6890b35bbaa74e0f" kindref="member">semdFree_h</ref>);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>list_del(l_next);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>list_add(l_next,&amp;<ref refid="lib_2asl_8c_1a43faf701af9530f6934df170370b8d94" kindref="member">semd_h</ref>);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>semd_found=<ref refid="lib_2listx_8h_1af8c317a42292b61c93aae91e59118a46" kindref="member">container_of</ref>(l_next,<ref refid="structsemd__t" kindref="compound">semd_t</ref>,s_next);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>semd_found-&gt;<ref refid="structsemd__t_1a2f9b394e0876b74e8f9e0a53c8aa7e0c" kindref="member">s_key</ref><sp/>=<sp/>key;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>INIT_LIST_HEAD(&amp;semd_found-&gt;<ref refid="structsemd__t_1a9a531117316667eceb70495342c36be1" kindref="member">s_procQ</ref>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>p-&gt;<ref refid="structpcb__t_1a831f803a73e91f4b1530e60bc24e92b4" kindref="member">p_semkey</ref><sp/>=<sp/>key;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>list_add_tail(&amp;p-&gt;<ref refid="structpcb__t_1adb25d84c36e53123e815e122610fd3ab" kindref="member">p_next</ref>,&amp;semd_found-&gt;<ref refid="structsemd__t_1a9a531117316667eceb70495342c36be1" kindref="member">s_procQ</ref>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="lib_2const_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="226"><highlight class="comment">(puntatore<sp/>al<sp/>processo)<sp/>removeBlocked(id<sp/>del<sp/>semaforo):<sp/>ritorna<sp/>il<sp/>primo<sp/>processo<sp/>della<sp/>coda<sp/>associata<sp/>al<sp/>semaforo<sp/>con<sp/>id=key.</highlight></codeline>
+<codeline lineno="227"><highlight class="comment">se<sp/>questo<sp/>semaforo<sp/>non<sp/>esiste,<sp/>restituisce<sp/>NULL.<sp/>se<sp/>non<sp/>ci<sp/>sono<sp/>più<sp/>processi<sp/>bloccati,<sp/>sposta<sp/>il<sp/>semaforo<sp/>nella<sp/>lista<sp/>dei<sp/>semafori<sp/>liberi</highlight></codeline>
+<codeline lineno="228"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/><ref refid="lib_2asl_8c_1a9cef24579d8726fc855feec0eb2ae6cf" kindref="member">removeBlocked</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key){</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>semd_found<sp/>=<sp/><ref refid="lib_2asl_8c_1a7dd34e8ddc18c62f1253e9ddb657cb99" kindref="member">getSemd</ref>(key);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>first_pcb;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref>*<sp/>l_next;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!semd_found)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="lib_2const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>l_next<sp/>=<sp/>list_next(&amp;semd_found-&gt;<ref refid="structsemd__t_1a9a531117316667eceb70495342c36be1" kindref="member">s_procQ</ref>);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>first_pcb=<ref refid="lib_2listx_8h_1af8c317a42292b61c93aae91e59118a46" kindref="member">container_of</ref>(l_next,<ref refid="structpcb__t" kindref="compound">pcb_t</ref>,p_next);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>list_del(l_next);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(list_empty(&amp;semd_found-&gt;<ref refid="structsemd__t_1a9a531117316667eceb70495342c36be1" kindref="member">s_procQ</ref>)){</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list_del(&amp;semd_found-&gt;<ref refid="structsemd__t_1a09cdbeceec30846f32399900706a408f" kindref="member">s_next</ref>);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list_add(&amp;semd_found-&gt;<ref refid="structsemd__t_1a09cdbeceec30846f32399900706a408f" kindref="member">s_next</ref>,&amp;<ref refid="lib_2asl_8c_1afc0834df7c1a47ec6890b35bbaa74e0f" kindref="member">semdFree_h</ref>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>first_pcb;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="248"><highlight class="comment">(puntatore<sp/>al<sp/>processo)<sp/>outBlocked(puntatore<sp/>al<sp/>processo):<sp/>restituisce<sp/>il<sp/>processo<sp/>puntato<sp/>da<sp/>p<sp/>RIMUOVENDOLO<sp/>dalla<sp/>lista<sp/>dei<sp/>processi<sp/>bloccati<sp/>da<sp/>un<sp/>semaforo.</highlight></codeline>
+<codeline lineno="249"><highlight class="comment">se<sp/>il<sp/>processo<sp/>non<sp/>viene<sp/>trovato,<sp/>restituisce<sp/>NULL.</highlight></codeline>
+<codeline lineno="250"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/><ref refid="lib_2asl_8c_1a0726c34768ec59b5bfcb118bc2bb09f8" kindref="member">outBlocked</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*p){</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>semd_found<sp/>=<sp/><ref refid="lib_2asl_8c_1a7dd34e8ddc18c62f1253e9ddb657cb99" kindref="member">getSemd</ref>(p-&gt;<ref refid="structpcb__t_1a831f803a73e91f4b1530e60bc24e92b4" kindref="member">p_semkey</ref>);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>item;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2listx_8h_1a9b782fefb5ab71ce9762182e45a615e1" kindref="member">list_for_each_entry</ref>(item,&amp;semd_found-&gt;<ref refid="structsemd__t_1a9a531117316667eceb70495342c36be1" kindref="member">s_procQ</ref>,p_next){</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p<sp/>==<sp/>item){</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list_del(&amp;item-&gt;<ref refid="structpcb__t_1adb25d84c36e53123e815e122610fd3ab" kindref="member">p_next</ref>);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>item;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="lib_2const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="263"><highlight class="comment">(puntatore<sp/>al<sp/>processo)<sp/>headBlocked(id<sp/>del<sp/>semaforo):<sp/>restituisce<sp/>il<sp/>processo<sp/>in<sp/>testa<sp/>SENZA<sp/>RIMUOVERLO<sp/>dalla<sp/>lista<sp/>dei<sp/>processi<sp/>bloccati<sp/>dal<sp/>semaforo<sp/>con<sp/>id=key.</highlight></codeline>
+<codeline lineno="264"><highlight class="comment">se<sp/>il<sp/>semaforo<sp/>non<sp/>viene<sp/>trovato<sp/>oppure<sp/>se<sp/>non<sp/>ha<sp/>processi<sp/>in<sp/>attesa,<sp/>restituisce<sp/>NULL.</highlight></codeline>
+<codeline lineno="265"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/><ref refid="lib_2asl_8c_1aa01e6af434d18efb9280e801c9ac54fd" kindref="member">headBlocked</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key){</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>semd_found<sp/>=<sp/><ref refid="lib_2asl_8c_1a7dd34e8ddc18c62f1253e9ddb657cb99" kindref="member">getSemd</ref>(key);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref>*<sp/>l_next;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*controlla<sp/>le<sp/>due<sp/>condizioni<sp/>di<sp/>fallimento*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((!semd_found)<sp/>||<sp/>list_empty(&amp;semd_found-&gt;<ref refid="structsemd__t_1a9a531117316667eceb70495342c36be1" kindref="member">s_procQ</ref>))<sp/></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="lib_2const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>l_next<sp/>=<sp/>list_next(&amp;semd_found-&gt;<ref refid="structsemd__t_1a9a531117316667eceb70495342c36be1" kindref="member">s_procQ</ref>);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="lib_2listx_8h_1af8c317a42292b61c93aae91e59118a46" kindref="member">container_of</ref>(l_next,<ref refid="structpcb__t" kindref="compound">pcb_t</ref>,p_next);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="276"><highlight class="comment">outChildBlocked(puntatore<sp/>al<sp/>processo):<sp/>elimina<sp/>il<sp/>processo<sp/>puntato<sp/>da<sp/>p<sp/>dalla<sp/>coda<sp/>del<sp/>semaforo<sp/>associato,<sp/>rimuovendo<sp/>anche<sp/>i<sp/>processi<sp/>discendenti.</highlight></codeline>
+<codeline lineno="277"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lib_2asl_8c_1af045446ae3e4b6b112ea15d2059c84cd" kindref="member">outChildBlocked</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*p){</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>item;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!list_empty(&amp;p-&gt;p_child)){</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*chiamata<sp/>ricorsiva<sp/>per<sp/>ogni<sp/>figlio*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lib_2listx_8h_1a9b782fefb5ab71ce9762182e45a615e1" kindref="member">list_for_each_entry</ref>(item,&amp;p-&gt;p_child,p_sib){</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lib_2asl_8c_1af045446ae3e4b6b112ea15d2059c84cd" kindref="member">outChildBlocked</ref>(item);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*visita<sp/>posticipata,<sp/>quando<sp/>si<sp/>arriva<sp/>qua<sp/>i<sp/>discendenti<sp/>di<sp/>p<sp/>sono<sp/>già<sp/>stati<sp/>eliminati*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2asl_8c_1a0726c34768ec59b5bfcb118bc2bb09f8" kindref="member">outBlocked</ref>(p);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">}<sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c"/>
+  </compounddef>
+</doxygen>

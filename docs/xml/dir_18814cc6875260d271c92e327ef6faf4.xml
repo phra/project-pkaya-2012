@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="dir_18814cc6875260d271c92e327ef6faf4" kind="dir">
+    <compoundname>C:/Users/phra/Desktop/progetto_so/src</compoundname>
+    <innerdir refid="dir_c6279663d03284961bfa1a228c5aa915">C:/Users/phra/Desktop/progetto_so/src/lib</innerdir>
+    <innerfile refid="exception_8c">exception.c</innerfile>
+    <innerfile refid="exception_8h">exception.h</innerfile>
+    <innerfile refid="init_8c">init.c</innerfile>
+    <innerfile refid="init_8h">init.h</innerfile>
+    <innerfile refid="interrupt_8c">interrupt.c</innerfile>
+    <innerfile refid="interrupt_8h">interrupt.h</innerfile>
+    <innerfile refid="p2test2012__scalability__v1_80_8c">p2test2012_scalability_v1.0.c</innerfile>
+    <innerfile refid="p2test2012__v1_80_8c">p2test2012_v1.0.c</innerfile>
+    <innerfile refid="scheduler_8c">scheduler.c</innerfile>
+    <innerfile refid="scheduler_8h">scheduler.h</innerfile>
+    <innerfile refid="syscall_8c">syscall.c</innerfile>
+    <innerfile refid="syscall_8h">syscall.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/"/>
+  </compounddef>
+</doxygen>

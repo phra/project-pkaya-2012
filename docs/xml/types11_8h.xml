@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="types11_8h" kind="file">
+    <compoundname>types11.h</compoundname>
+    <includes refid="u_m_p_stypes_8h" local="yes">uMPStypes.h</includes>
+    <includes refid="listx_8h" local="yes">listx.h</includes>
+    <includedby refid="exception_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.c</includedby>
+    <includedby refid="pcb_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/pcb.h</includedby>
+    <includedby refid="asl_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/asl.h</includedby>
+    <includedby refid="init_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.h</includedby>
+    <includedby refid="scheduler_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.h</includedby>
+    <includedby refid="exception_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.h</includedby>
+    <includedby refid="syscall_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.h</includedby>
+    <includedby refid="interrupt_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.h</includedby>
+    <includedby refid="init_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.c</includedby>
+    <includedby refid="interrupt_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.c</includedby>
+    <includedby refid="asl_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/asl.c</includedby>
+    <includedby refid="pcb_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c</includedby>
+    <includedby refid="p2test2012__scalability__v1_80_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/p2test2012_scalability_v1.0.c</includedby>
+    <includedby refid="p2test2012__v1_80_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/p2test2012_v1.0.c</includedby>
+    <includedby refid="scheduler_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.c</includedby>
+    <includedby refid="syscall_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.c</includedby>
+    <incdepgraph>
+      <node id="253">
+        <label>listx.h</label>
+        <link refid="listx_8h"/>
+      </node>
+      <node id="249">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/types11.h</label>
+        <link refid="types11.h"/>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+      </node>
+      <node id="250">
+        <label>uMPStypes.h</label>
+        <link refid="u_m_p_stypes_8h"/>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+      </node>
+      <node id="252">
+        <label>base.h</label>
+        <link refid="base_8h"/>
+      </node>
+      <node id="251">
+        <label>const.h</label>
+        <link refid="const_8h"/>
+        <childnode refid="252" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="267">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/asl.c</label>
+        <link refid="asl_8c"/>
+      </node>
+      <node id="266">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/asl.h</label>
+        <link refid="asl_8h"/>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="254">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/types11.h</label>
+        <link refid="types11.h"/>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="255">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.c</label>
+        <link refid="exception_8c"/>
+      </node>
+      <node id="259">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="263">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.c</label>
+        <link refid="scheduler_8c"/>
+      </node>
+      <node id="258">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="264">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.c</label>
+        <link refid="interrupt_8c"/>
+      </node>
+      <node id="261">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+      </node>
+      <node id="262">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="257">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="268">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c</label>
+        <link refid="pcb_8c"/>
+      </node>
+      <node id="256">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/pcb.h</label>
+        <link refid="pcb_8h"/>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="270">
+        <label>C:/Users/phra/Desktop/progetto_so/src/p2test2012_v1.0.c</label>
+        <link refid="p2test2012__v1_80_8c"/>
+      </node>
+      <node id="265">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="260">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+      </node>
+      <node id="269">
+        <label>C:/Users/phra/Desktop/progetto_so/src/p2test2012_scalability_v1.0.c</label>
+        <link refid="p2test2012__scalability__v1_80_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpcb__t" prot="public">pcb_t</innerclass>
+    <innerclass refid="structsemd__t" prot="public">semd_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="types11_8h_1a0647cdc23c8d87b01a27ad87ed990d86" prot="public" static="no">
+        <name>__HANDLERS_CONST__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="8" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="types11_8h_1ad77952c6836d744f828d1a5645ca4fd5" prot="public" static="no">
+        <name>SYSBK</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="9" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="types11_8h_1a743aa156f9c23acba3bb4cd621dd5720" prot="public" static="no">
+        <name>PGMTRAP</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="10" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="types11_8h_1a92ab7532702bda7a74487fdbc660d0f5" prot="public" static="no">
+        <name>TLB</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="11" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="types11_8h_1a331b12afbed774bbf9ff0d1191e27a4e" prot="public" static="no">
+        <type>struct <ref refid="structpcb__t" kindref="compound">pcb_t</ref></type>
+        <definition>typedef struct pcb_t  pcb_t</definition>
+        <argsstring></argsstring>
+        <name>pcb_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="45"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types11_8h_1a61bbbd7c913bdd6ea58c2f97eb5c49ec" prot="public" static="no">
+        <type>struct <ref refid="structsemd__t" kindref="compound">semd_t</ref></type>
+        <definition>typedef struct semd_t  semd_t</definition>
+        <argsstring></argsstring>
+        <name>semd_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_TYPES11_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_TYPES11_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="u_m_p_stypes_8h" kindref="compound">uMPStypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="listx_8h" kindref="compound">listx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__HANDLERS_CONST__</highlight></codeline>
+<codeline lineno="8" refid="types11_8h_1a0647cdc23c8d87b01a27ad87ed990d86" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__HANDLERS_CONST__</highlight></codeline>
+<codeline lineno="9" refid="types11_8h_1ad77952c6836d744f828d1a5645ca4fd5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSBK<sp/>0</highlight></codeline>
+<codeline lineno="10" refid="types11_8h_1a743aa156f9c23acba3bb4cd621dd5720" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PGMTRAP<sp/>1</highlight></codeline>
+<codeline lineno="11" refid="types11_8h_1a92ab7532702bda7a74487fdbc660d0f5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TLB<sp/>2</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Process<sp/>Control<sp/>Block<sp/>(PCB)<sp/>data<sp/>structure<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="structpcb__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>phase2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="structpcb__t_1af500917c052066b40cf47f96b43c607b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpcb__t_1af500917c052066b40cf47f96b43c607b" kindref="member">pid</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="structpcb__t_1aab19ac996ae189b600c68cb4e4e8b66b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpcb__t_1aab19ac996ae189b600c68cb4e4e8b66b" kindref="member">last_sched_time</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="structpcb__t_1a7438f6e4370c77335272481935c3c2da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpcb__t_1a7438f6e4370c77335272481935c3c2da" kindref="member">cpu_time</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref>*<sp/><ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[6];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>phase1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>process<sp/>priority<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structpcb__t_1acec9ce2df15222151ad66fcb1d74eb9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpcb__t_1acec9ce2df15222151ad66fcb1d74eb9f" kindref="member">priority</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>key<sp/>of<sp/>the<sp/>semaphore<sp/>on<sp/>which<sp/>the<sp/>process<sp/>is<sp/>eventually<sp/>blocked<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="structpcb__t_1a831f803a73e91f4b1530e60bc24e92b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpcb__t_1a831f803a73e91f4b1530e60bc24e92b4" kindref="member">p_semkey</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*process<sp/>queue<sp/>fields<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structpcb__t_1adb25d84c36e53123e815e122610fd3ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><sp/><sp/><sp/><ref refid="structpcb__t_1adb25d84c36e53123e815e122610fd3ab" kindref="member">p_next</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*process<sp/>tree<sp/>fields<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="structpcb__t_1a4d7a714ff6400c5cc2977964fc3b0c53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structpcb__t_1a4d7a714ff6400c5cc2977964fc3b0c53" kindref="member">p_parent</ref>;</highlight></codeline>
+<codeline lineno="39" refid="structpcb__t_1ae571e01892f17d1ccf6332d96e6c5373" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><sp/><sp/><sp/>p_child,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpcb__t_1ae571e01892f17d1ccf6332d96e6c5373" kindref="member">p_sib</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>processor<sp/>state,<sp/>etc<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="structpcb__t_1ae1524fbfc37b7766b551477e48b3bf4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpcb__t_1ae1524fbfc37b7766b551477e48b3bf4d" kindref="member">p_s</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}<sp/><ref refid="types11_8h_1a331b12afbed774bbf9ff0d1191e27a4e" kindref="member">pcb_t</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Semaphore<sp/>Descriptor<sp/>(SEMD)<sp/>data<sp/>structure<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="structsemd__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsemd__t" kindref="compound">semd_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Semaphore<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" kindref="member">s_value</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Semaphore<sp/>key<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structsemd__t_1a2f9b394e0876b74e8f9e0a53c8aa7e0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsemd__t_1a2f9b394e0876b74e8f9e0a53c8aa7e0c" kindref="member">s_key</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structsemd__t_1a09cdbeceec30846f32399900706a408f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><sp/><sp/><sp/><ref refid="structsemd__t_1a09cdbeceec30846f32399900706a408f" kindref="member">s_next</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Queue<sp/>of<sp/>PCBs<sp/>blocked<sp/>on<sp/>the<sp/>semaphore<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structsemd__t_1a9a531117316667eceb70495342c36be1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><sp/><sp/><sp/><ref refid="structsemd__t_1a9a531117316667eceb70495342c36be1" kindref="member">s_procQ</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}<sp/><ref refid="types11_8h_1a61bbbd7c913bdd6ea58c2f97eb5c49ec" kindref="member">semd_t</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h"/>
+  </compounddef>
+</doxygen>

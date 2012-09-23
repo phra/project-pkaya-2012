@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="phase1_2base_8h" kind="file">
+    <compoundname>base.h</compoundname>
+    <includedby refid="phase1_2const_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/phase1/const.h</includedby>
+    <includedby refid="phase1_2u_m_p_stypes_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/phase1/uMPStypes.h</includedby>
+    <includedby refid="phase1_2asl_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/phase1/asl.h</includedby>
+    <includedby refid="phase1_2pcb_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h</includedby>
+    <invincdepgraph>
+      <node id="187">
+        <label>C:/Users/phra/Desktop/progetto_so/src/phase1/asl.c</label>
+        <link refid="phase1_2asl_8c"/>
+      </node>
+      <node id="185">
+        <label>C:/Users/phra/Desktop/progetto_so/src/phase1/base.h</label>
+        <link refid="phase1/base.h"/>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+      </node>
+      <node id="190">
+        <label>C:/Users/phra/Desktop/progetto_so/src/phase1/asl.h</label>
+        <link refid="phase1_2asl_8h"/>
+      </node>
+      <node id="191">
+        <label>C:/Users/phra/Desktop/progetto_so/src/phase1/p1test_pkaya_v1.1.c</label>
+        <link refid="p1test__pkaya__v1_81_8c"/>
+      </node>
+      <node id="186">
+        <label>C:/Users/phra/Desktop/progetto_so/src/phase1/const.h</label>
+        <link refid="phase1_2const_8h"/>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+      </node>
+      <node id="192">
+        <label>C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.c</label>
+        <link refid="phase1_2pcb_8c"/>
+      </node>
+      <node id="193">
+        <label>C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h</label>
+        <link refid="phase1_2pcb_8h"/>
+      </node>
+      <node id="189">
+        <label>C:/Users/phra/Desktop/progetto_so/src/phase1/types11.h</label>
+        <link refid="phase1_2types11_8h"/>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+      </node>
+      <node id="188">
+        <label>C:/Users/phra/Desktop/progetto_so/src/phase1/uMPStypes.h</label>
+        <link refid="phase1_2u_m_p_stypes_8h"/>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="phase1_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int U32</definition>
+        <argsstring></argsstring>
+        <name>U32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/base.h" line="17" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/base.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="phase1_2base_8h_1a57a2244776e01ad620c556de58eb7880" prot="public" static="no">
+        <type>signed int</type>
+        <definition>typedef signed int S32</definition>
+        <argsstring></argsstring>
+        <name>S32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/base.h" line="18" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/base.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="phase1_2base_8h_1a3cb25ca6f51f003950f9625ff05536fc" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char U8</definition>
+        <argsstring></argsstring>
+        <name>U8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/base.h" line="19" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/base.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="phase1_2base_8h_1a73359529e867901fff0eabb94f7c3fcf" prot="public" static="no">
+        <type>signed char</type>
+        <definition>typedef signed char S8</definition>
+        <argsstring></argsstring>
+        <name>S8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/base.h" line="20" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/base.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="phase1_2base_8h_1a8dfc83cbb8a200048ed977af78885aa1" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int memaddr</definition>
+        <argsstring></argsstring>
+        <name>memaddr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/base.h" line="22" bodyfile="C:/Users/phra/Desktop/progetto_so/src/phase1/base.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************<sp/>Utility<sp/>types<sp/>*********************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>IMPORTANT:<sp/>the<sp/>following<sp/>definitions<sp/>(and<sp/>thus<sp/>the<sp/>whole<sp/>OS)<sp/>assume<sp/>that:</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>sizeof(int)<sp/>==<sp/>4,<sp/>both<sp/>signed<sp/>and<sp/>unsigned</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/>sizeof(short<sp/>int)<sp/>==<sp/>2,<sp/>both<sp/>signed<sp/>and<sp/>unsigned</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/>sizeof(char)<sp/>==<sp/>1,<sp/>both<sp/>signed<sp/>and<sp/>unsigned</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>CHAR_BITS<sp/>is<sp/>8<sp/>(1<sp/>byte<sp/>is<sp/>8<sp/>bits)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/>size<sp/>of<sp/>a<sp/>word<sp/>==<sp/>size<sp/>of<sp/>a<sp/>memory<sp/>address<sp/>==<sp/>sizeof(unsigned<sp/>int)<sp/>==<sp/>4<sp/>bytes</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>The<sp/>next<sp/>5<sp/>definitions<sp/>state<sp/>this<sp/>explicitly.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BASE_INCLUDED</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BASE_INCLUDED</highlight></codeline>
+<codeline lineno="17" refid="phase1_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref>;</highlight></codeline>
+<codeline lineno="18" refid="phase1_2base_8h_1a57a2244776e01ad620c556de58eb7880" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="lib_2base_8h_1a57a2244776e01ad620c556de58eb7880" kindref="member">S32</ref>;</highlight></codeline>
+<codeline lineno="19" refid="phase1_2base_8h_1a3cb25ca6f51f003950f9625ff05536fc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="lib_2base_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref>;</highlight></codeline>
+<codeline lineno="20" refid="phase1_2base_8h_1a73359529e867901fff0eabb94f7c3fcf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="lib_2base_8h_1a73359529e867901fff0eabb94f7c3fcf" kindref="member">S8</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="phase1_2base_8h_1a8dfc83cbb8a200048ed977af78885aa1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="lib_2base_8h_1a8dfc83cbb8a200048ed977af78885aa1" kindref="member">memaddr</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/base.h"/>
+  </compounddef>
+</doxygen>

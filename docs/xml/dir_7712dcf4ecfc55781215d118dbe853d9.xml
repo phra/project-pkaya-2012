@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="dir_7712dcf4ecfc55781215d118dbe853d9" kind="dir">
+    <compoundname>C:/Users/phra/Desktop/progetto_so/src/phase1</compoundname>
+    <innerfile refid="phase1_2asl_8c">asl.c</innerfile>
+    <innerfile refid="phase1_2asl_8h">asl.h</innerfile>
+    <innerfile refid="phase1_2base_8h">base.h</innerfile>
+    <innerfile refid="phase1_2const_8h">const.h</innerfile>
+    <innerfile refid="phase1_2listx_8h">listx.h</innerfile>
+    <innerfile refid="p1test__pkaya__v1_81_8c">p1test_pkaya_v1.1.c</innerfile>
+    <innerfile refid="phase1_2pcb_8c">pcb.c</innerfile>
+    <innerfile refid="phase1_2pcb_8h">pcb.h</innerfile>
+    <innerfile refid="phase1_2types11_8h">types11.h</innerfile>
+    <innerfile refid="phase1_2u_m_p_stypes_8h">uMPStypes.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/"/>
+  </compounddef>
+</doxygen>

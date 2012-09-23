@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="structstate__t" kind="struct" prot="public">
+    <compoundname>state_t</compoundname>
+    <includes refid="u_m_p_stypes_8h" local="no">uMPStypes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structstate__t_1a867e8a3789b0868e6fe3cb734b8d7e34" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 entry_hi</definition>
+        <argsstring></argsstring>
+        <name>entry_hi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="35" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstate__t_1a977139f16407ef0c648e940dabe05318" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 cause</definition>
+        <argsstring></argsstring>
+        <name>cause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="36" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstate__t_1ae37efb991e613c0dc476ece5ed4ffa71" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="37" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstate__t_1ac0cfee10c7a13bb3749604cd15892217" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 pc_epc</definition>
+        <argsstring></argsstring>
+        <name>pc_epc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="38" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstate__t_1aff9aa91408afefa93942d0e288b73c96" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 gpr[29]</definition>
+        <argsstring>[29]</argsstring>
+        <name>gpr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="39" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstate__t_1a0e34aeb4eba44f3971bb1bf383435897" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 hi</definition>
+        <argsstring></argsstring>
+        <name>hi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="40" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstate__t_1a55f6b3c956fb70c8ef13c4a00ccd3a7b" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 lo</definition>
+        <argsstring></argsstring>
+        <name>lo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="41" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="34" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="34" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structstate__t_1a977139f16407ef0c648e940dabe05318" prot="public" virt="non-virtual"><scope>state_t</scope><name>cause</name></member>
+      <member refid="structstate__t_1a867e8a3789b0868e6fe3cb734b8d7e34" prot="public" virt="non-virtual"><scope>state_t</scope><name>entry_hi</name></member>
+      <member refid="structstate__t_1aff9aa91408afefa93942d0e288b73c96" prot="public" virt="non-virtual"><scope>state_t</scope><name>gpr</name></member>
+      <member refid="structstate__t_1a0e34aeb4eba44f3971bb1bf383435897" prot="public" virt="non-virtual"><scope>state_t</scope><name>hi</name></member>
+      <member refid="structstate__t_1a55f6b3c956fb70c8ef13c4a00ccd3a7b" prot="public" virt="non-virtual"><scope>state_t</scope><name>lo</name></member>
+      <member refid="structstate__t_1ac0cfee10c7a13bb3749604cd15892217" prot="public" virt="non-virtual"><scope>state_t</scope><name>pc_epc</name></member>
+      <member refid="structstate__t_1ae37efb991e613c0dc476ece5ed4ffa71" prot="public" virt="non-virtual"><scope>state_t</scope><name>status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

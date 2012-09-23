@@ -1,0 +1,714 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="lib_2listx_8h" kind="file">
+    <compoundname>listx.h</compoundname>
+    <includedby refid="exception_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.c</includedby>
+    <includedby refid="lib_2types11_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/types11.h</includedby>
+    <includedby refid="lib_2pcb_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/pcb.h</includedby>
+    <includedby refid="lib_2asl_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/asl.h</includedby>
+    <includedby refid="init_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.h</includedby>
+    <includedby refid="scheduler_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.h</includedby>
+    <includedby refid="exception_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.h</includedby>
+    <includedby refid="syscall_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.h</includedby>
+    <includedby refid="interrupt_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.h</includedby>
+    <includedby refid="init_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.c</includedby>
+    <includedby refid="interrupt_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.c</includedby>
+    <includedby refid="lib_2asl_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/asl.c</includedby>
+    <includedby refid="lib_2pcb_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c</includedby>
+    <includedby refid="scheduler_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.c</includedby>
+    <includedby refid="syscall_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.c</includedby>
+    <invincdepgraph>
+      <node id="244">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/listx.h</label>
+        <link refid="lib/listx.h"/>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="258">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/asl.c</label>
+        <link refid="lib_2asl_8c"/>
+      </node>
+      <node id="257">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/asl.h</label>
+        <link refid="lib_2asl_8h"/>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="246">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/types11.h</label>
+        <link refid="lib_2types11_8h"/>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="245">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.c</label>
+        <link refid="exception_8c"/>
+      </node>
+      <node id="250">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="254">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.c</label>
+        <link refid="scheduler_8c"/>
+      </node>
+      <node id="249">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="255">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.c</label>
+        <link refid="interrupt_8c"/>
+      </node>
+      <node id="252">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+      </node>
+      <node id="253">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="248">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="259">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c</label>
+        <link refid="lib_2pcb_8c"/>
+      </node>
+      <node id="247">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/pcb.h</label>
+        <link refid="lib_2pcb_8h"/>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="261">
+        <label>C:/Users/phra/Desktop/progetto_so/src/p2test2012_v1.0.c</label>
+        <link refid="p2test2012__v1_80_8c"/>
+      </node>
+      <node id="256">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="251">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+      </node>
+      <node id="260">
+        <label>C:/Users/phra/Desktop/progetto_so/src/p2test2012_scalability_v1.0.c</label>
+        <link refid="p2test2012__scalability__v1_80_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlist__head" prot="public">list_head</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lib_2listx_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" prot="public" static="no">
+        <name>NULL</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="7" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2listx_8h_1af8c317a42292b61c93aae91e59118a46" prot="public" static="no">
+        <name>container_of</name>
+        <param><defname>ptr</defname></param>
+        <param><defname>type</defname></param>
+        <param><defname>member</defname></param>
+        <initializer>({			\
+		const typeof( ((type *)0)-&gt;member ) *__mptr = (ptr);	\
+		(type *)( (char *)__mptr - <ref refid="phase1_2listx_8h_1a276e8a32e0bbf024aadd9420b8f2d3b3" kindref="member">offsetof</ref>(type,member) );})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="13" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2listx_8h_1a276e8a32e0bbf024aadd9420b8f2d3b3" prot="public" static="no">
+        <name>offsetof</name>
+        <param><defname>TYPE</defname></param>
+        <param><defname>MEMBER</defname></param>
+        <initializer>((<ref refid="lib_2listx_8h_1aa417d8afeb93f434b5d3bd2c79b19394" kindref="member">size_tt</ref>) &amp;((TYPE *)0)-&gt;MEMBER)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="15" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2listx_8h_1a4642d4b7df28478bb762fe43c85b5c63" prot="public" static="no">
+        <name>LIST_HEAD_INIT</name>
+        <param><defname>name</defname></param>
+        <initializer>{ &amp;(name), &amp;(name) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="21" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2listx_8h_1a42f0e72af970a790b60a740af8c9ecd0" prot="public" static="no">
+        <name>LIST_HEAD</name>
+        <param><defname>name</defname></param>
+        <initializer>struct <ref refid="structlist__head" kindref="compound">list_head</ref> name = <ref refid="phase1_2listx_8h_1a4642d4b7df28478bb762fe43c85b5c63" kindref="member">LIST_HEAD_INIT</ref>(name)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="23" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2listx_8h_1ab8b24e6660ab3760c923e4b4db3fa502" prot="public" static="no">
+        <name>list_for_each</name>
+        <param><defname>pos</defname></param>
+        <param><defname>head</defname></param>
+        <initializer>for (pos = (head)-&gt;next; pos != (head); pos = pos-&gt;next)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="81" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2listx_8h_1a19fc06b83f3502a83ce566b8887e6aec" prot="public" static="no">
+        <name>list_for_each_prev</name>
+        <param><defname>pos</defname></param>
+        <param><defname>head</defname></param>
+        <initializer>for (pos = (head)-&gt;prev; pos != (head); pos = pos-&gt;prev)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="84" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2listx_8h_1a9b782fefb5ab71ce9762182e45a615e1" prot="public" static="no">
+        <name>list_for_each_entry</name>
+        <param><defname>pos</defname></param>
+        <param><defname>head</defname></param>
+        <param><defname>member</defname></param>
+        <initializer>for (pos = <ref refid="phase1_2listx_8h_1af8c317a42292b61c93aae91e59118a46" kindref="member">container_of</ref>((head)-&gt;next, typeof(*pos), member);      \
+	&amp;pos-&gt;member != (head);        \
+	pos = <ref refid="phase1_2listx_8h_1af8c317a42292b61c93aae91e59118a46" kindref="member">container_of</ref>(pos-&gt;member.next, typeof(*pos), member))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="89" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2listx_8h_1accc8d8e6c8ffe8ce964c5a1b59732cf3" prot="public" static="no">
+        <name>list_for_each_entry_reverse</name>
+        <param><defname>pos</defname></param>
+        <param><defname>head</defname></param>
+        <param><defname>member</defname></param>
+        <initializer>for (pos = <ref refid="phase1_2listx_8h_1af8c317a42292b61c93aae91e59118a46" kindref="member">container_of</ref>((head)-&gt;prev, typeof(*pos), member);      \
+	&amp;pos-&gt;member != (head);        \
+	pos = <ref refid="phase1_2listx_8h_1af8c317a42292b61c93aae91e59118a46" kindref="member">container_of</ref>(pos-&gt;member.prev, typeof(*pos), member))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="94" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="lib_2listx_8h_1aa417d8afeb93f434b5d3bd2c79b19394" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int size_tt</definition>
+        <argsstring></argsstring>
+        <name>size_tt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="9" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lib_2listx_8h_1aea85dd50b9129ddaa3e3c67ed55804e4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void INIT_LIST_HEAD</definition>
+        <argsstring>(struct list_head *list)</argsstring>
+        <name>INIT_LIST_HEAD</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="26" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="25" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="lib_2listx_8h_1a8a28f150a191624bf6923a48cdace7e3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void __list_add</definition>
+        <argsstring>(struct list_head *new, struct list_head *prev, struct list_head *next)</argsstring>
+        <name>__list_add</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>new</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>prev</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>next</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="33" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="30" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="lib_2listx_8h_1a0373c4b3c8ce51a451a569ad978b32e1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void list_add</definition>
+        <argsstring>(struct list_head *new, struct list_head *head)</argsstring>
+        <name>list_add</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>new</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="40" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="lib_2listx_8h_1a588bec046f1e9797b33a5c5ab250f447" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void list_add_tail</definition>
+        <argsstring>(struct list_head *new, struct list_head *head)</argsstring>
+        <name>list_add_tail</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>new</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="44" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="lib_2listx_8h_1a24b474717d65a296695e8b79b4adefda" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void __list_del</definition>
+        <argsstring>(struct list_head *prev, struct list_head *next)</argsstring>
+        <name>__list_del</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>prev</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>next</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="48" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="47" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="lib_2listx_8h_1ab1708206f0f7e0a56550b35372203ba5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void list_del</definition>
+        <argsstring>(struct list_head *entry)</argsstring>
+        <name>list_del</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="53" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="lib_2listx_8h_1ad5c0c492cf872313e8ffceba701139f1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int list_is_last</definition>
+        <argsstring>(const struct list_head *list, const struct list_head *head)</argsstring>
+        <name>list_is_last</name>
+        <param>
+          <type>const struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="58" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="lib_2listx_8h_1a6601e54d8f27ab290ee6819f7e2127b7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int list_empty</definition>
+        <argsstring>(const struct list_head *head)</argsstring>
+        <name>list_empty</name>
+        <param>
+          <type>const struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="62" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="lib_2listx_8h_1a70729b44e5e4a1cb3eb8760de8884ac0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+        <definition>static struct list_head* list_next</definition>
+        <argsstring>(const struct list_head *current)</argsstring>
+        <name>list_next</name>
+        <param>
+          <type>const struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>current</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="66" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="65" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="lib_2listx_8h_1a374a7293f5f99666c1cd3dcbe8967644" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+        <definition>static struct list_head* list_prev</definition>
+        <argsstring>(const struct list_head *current)</argsstring>
+        <name>list_prev</name>
+        <param>
+          <type>const struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>current</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="73" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="72" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>subset<sp/>of<sp/>the<sp/>Linux<sp/>Kernel<sp/>source<sp/>file:<sp/>&quot;include/linux/list.h&quot;</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">CPLv2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_LISTX_H</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_LISTX_H</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NULL</highlight></codeline>
+<codeline lineno="7" refid="lib_2listx_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>NULL<sp/>0</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="9" refid="lib_2listx_8h_1aa417d8afeb93f434b5d3bd2c79b19394" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2listx_8h_1aa417d8afeb93f434b5d3bd2c79b19394" kindref="member">size_tt</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="lib_2listx_8h_1af8c317a42292b61c93aae91e59118a46" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>container_of(ptr,<sp/>type,<sp/>member)<sp/>({<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>typeof(<sp/>((type<sp/>*)0)-&gt;member<sp/>)<sp/>*__mptr<sp/>=<sp/>(ptr);<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(type<sp/>*)(<sp/>(char<sp/>*)__mptr<sp/>-<sp/>offsetof(type,member)<sp/>);})</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="lib_2listx_8h_1a276e8a32e0bbf024aadd9420b8f2d3b3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>offsetof(TYPE,<sp/>MEMBER)<sp/>((size_tt)<sp/>&amp;((TYPE<sp/>*)0)-&gt;MEMBER)</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="structlist__head" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>{</highlight></codeline>
+<codeline lineno="18" refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*<ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref>,<sp/>*<ref refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" kindref="member">prev</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="lib_2listx_8h_1a4642d4b7df28478bb762fe43c85b5c63" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIST_HEAD_INIT(name)<sp/>{<sp/>&amp;(name),<sp/>&amp;(name)<sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="lib_2listx_8h_1a42f0e72af970a790b60a740af8c9ecd0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIST_HEAD(name)<sp/>struct<sp/>list_head<sp/>name<sp/>=<sp/>LIST_HEAD_INIT(name)</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>INIT_LIST_HEAD(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*list)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>list-&gt;<ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref><sp/>=<sp/>list;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>list-&gt;<ref refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" kindref="member">prev</ref><sp/>=<sp/>list;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__list_add(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*</highlight><highlight class="keyword">new</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*<ref refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" kindref="member">prev</ref>,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*<ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref>)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>next-&gt;<ref refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" kindref="member">prev</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">-&gt;<ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref><sp/>=<sp/><ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">-&gt;<ref refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" kindref="member">prev</ref><sp/>=<sp/><ref refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" kindref="member">prev</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>prev-&gt;<ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>list_add(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*</highlight><highlight class="keyword">new</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*head)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>__list_add(</highlight><highlight class="keyword">new</highlight><highlight class="normal">,<sp/>head,<sp/>head-&gt;<ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>list_add_tail(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*</highlight><highlight class="keyword">new</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*head)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>__list_add(</highlight><highlight class="keyword">new</highlight><highlight class="normal">,<sp/>head-&gt;<ref refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" kindref="member">prev</ref>,<sp/>head);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__list_del(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*<sp/><ref refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" kindref="member">prev</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*<sp/><ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>next-&gt;<ref refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" kindref="member">prev</ref><sp/>=<sp/><ref refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" kindref="member">prev</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>prev-&gt;<ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref><sp/>=<sp/><ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>list_del(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*entry)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>__list_del(entry-&gt;<ref refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" kindref="member">prev</ref>,<sp/>entry-&gt;<ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>list_is_last(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*list,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*head)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>list-&gt;<ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref><sp/>==<sp/>head;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>list_empty(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*head)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>head-&gt;<ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref><sp/>==<sp/>head;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*list_next(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*current)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(list_empty(current))</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="lib_2listx_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>current-&gt;<ref refid="structlist__head_1afb6f2172d12efd37f00bb623a6885f2a" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*list_prev(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*current)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(list_empty(current))</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="lib_2listx_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>current-&gt;<ref refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" kindref="member">prev</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="lib_2listx_8h_1ab8b24e6660ab3760c923e4b4db3fa502" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>list_for_each(pos,<sp/>head)<sp/>\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>for<sp/>(pos<sp/>=<sp/>(head)-&gt;next;<sp/>pos<sp/>!=<sp/>(head);<sp/>pos<sp/>=<sp/>pos-&gt;next)</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="lib_2listx_8h_1a19fc06b83f3502a83ce566b8887e6aec" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>list_for_each_prev(pos,<sp/>head)<sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>for<sp/>(pos<sp/>=<sp/>(head)-&gt;prev;<sp/>pos<sp/>!=<sp/>(head);<sp/>pos<sp/>=<sp/>pos-&gt;prev)</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="lib_2listx_8h_1a9b782fefb5ab71ce9762182e45a615e1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>list_for_each_entry(pos,<sp/>head,<sp/>member)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>for<sp/>(pos<sp/>=<sp/>container_of((head)-&gt;next,<sp/>typeof(*pos),<sp/>member);<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&amp;pos-&gt;member<sp/>!=<sp/>(head);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>container_of(pos-&gt;member.next,<sp/>typeof(*pos),<sp/>member))</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="lib_2listx_8h_1accc8d8e6c8ffe8ce964c5a1b59732cf3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>list_for_each_entry_reverse(pos,<sp/>head,<sp/>member)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>for<sp/>(pos<sp/>=<sp/>container_of((head)-&gt;prev,<sp/>typeof(*pos),<sp/>member);<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&amp;pos-&gt;member<sp/>!=<sp/>(head);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>container_of(pos-&gt;member.prev,<sp/>typeof(*pos),<sp/>member))</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,466 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="exception_8h" kind="file">
+    <compoundname>exception.h</compoundname>
+    <includes refid="const_8h" local="yes">lib/const.h</includes>
+    <includes refid="base_8h" local="yes">lib/base.h</includes>
+    <includes refid="u_m_p_stypes_8h" local="yes">lib/uMPStypes.h</includes>
+    <includes refid="libumps_8h" local="yes">lib/libumps.h</includes>
+    <includes refid="listx_8h" local="yes">lib/listx.h</includes>
+    <includes refid="types11_8h" local="yes">lib/types11.h</includes>
+    <includes refid="pcb_8h" local="yes">lib/pcb.h</includes>
+    <includes refid="asl_8h" local="yes">lib/asl.h</includes>
+    <includes refid="utils_8h" local="yes">lib/utils.h</includes>
+    <includes refid="scheduler_8h" local="yes">scheduler.h</includes>
+    <includes refid="init_8h" local="yes">init.h</includes>
+    <includes refid="syscall_8h" local="yes">syscall.h</includes>
+    <includes refid="interrupt_8h" local="yes">interrupt.h</includes>
+    <includedby refid="scheduler_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.h</includedby>
+    <includedby refid="syscall_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.h</includedby>
+    <includedby refid="interrupt_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.h</includedby>
+    <includedby refid="init_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.h</includedby>
+    <includedby refid="init_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.c</includedby>
+    <includedby refid="interrupt_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.c</includedby>
+    <includedby refid="scheduler_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.c</includedby>
+    <includedby refid="syscall_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.c</includedby>
+    <incdepgraph>
+      <node id="21">
+        <label>lib/listx.h</label>
+        <link refid="listx_8h"/>
+      </node>
+      <node id="24">
+        <label>lib/asl.h</label>
+        <link refid="asl_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>lib/types11.h</label>
+        <link refid="types11_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.h</label>
+        <link refid="exception.h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>lib/libumps.h</label>
+        <link refid="libumps_8h"/>
+      </node>
+      <node id="26">
+        <label>scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>lib/uMPStypes.h</label>
+        <link refid="u_m_p_stypes_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>lib/pcb.h</label>
+        <link refid="pcb_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>base.h</label>
+        <link refid="base_8h"/>
+      </node>
+      <node id="25">
+        <label>lib/utils.h</label>
+        <link refid="utils_8h"/>
+      </node>
+      <node id="17">
+        <label>lib/const.h</label>
+        <link refid="const_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="33">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.c</label>
+        <link refid="exception_8c"/>
+      </node>
+      <node id="30">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.h</label>
+        <link refid="exception.h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.c</label>
+        <link refid="scheduler_8c"/>
+      </node>
+      <node id="31">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.c</label>
+        <link refid="interrupt_8c"/>
+      </node>
+      <node id="35">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="32">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="34">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="exception_8h_1a8bc55352fc8ce73231129ee8dcc35563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sysbk_handler</definition>
+        <argsstring>(void)</argsstring>
+        <name>sysbk_handler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>handler delle system calls </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/exception.h" line="20" bodyfile="C:/Users/phra/Desktop/progetto_so/src/exception.c" bodystart="98" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="exception_8h_1a89545726f1e21a94df465ce505fb004d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pgmtrap_handler</definition>
+        <argsstring>(void)</argsstring>
+        <name>pgmtrap_handler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>handler dei program trap </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/exception.h" line="21" bodyfile="C:/Users/phra/Desktop/progetto_so/src/exception.c" bodystart="76" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="exception_8h_1ae42e7b6fc994b2616bb067eec168a004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tlb_handler</definition>
+        <argsstring>(void)</argsstring>
+        <name>tlb_handler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>handler delle tlb exception </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/exception.h" line="22" bodyfile="C:/Users/phra/Desktop/progetto_so/src/exception.c" bodystart="54" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="exception_8h_1a040cab4a1a9f9ff634d8cd71735816bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void int_handler</definition>
+        <argsstring>(void)</argsstring>
+        <name>int_handler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>handler degli interrupt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/exception.h" line="23" bodyfile="C:/Users/phra/Desktop/progetto_so/src/exception.c" bodystart="21" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__EXCEPTION__</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__EXCEPTION__</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="const_8h" kindref="compound">lib/const.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base_8h" kindref="compound">lib/base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="u_m_p_stypes_8h" kindref="compound">lib/uMPStypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libumps_8h" kindref="compound">lib/libumps.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="listx_8h" kindref="compound">lib/listx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types11_8h" kindref="compound">lib/types11.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pcb_8h" kindref="compound">lib/pcb.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="asl_8h" kindref="compound">lib/asl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_8h" kindref="compound">lib/utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scheduler_8h" kindref="compound">scheduler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="syscall_8h" kindref="compound">syscall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interrupt_8h" kindref="compound">interrupt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exception_8c_1a8bc55352fc8ce73231129ee8dcc35563" kindref="member">sysbk_handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exception_8c_1a89545726f1e21a94df465ce505fb004d" kindref="member">pgmtrap_handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exception_8c_1ae42e7b6fc994b2616bb067eec168a004" kindref="member">tlb_handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="exception_8c_1a040cab4a1a9f9ff634d8cd71735816bc" kindref="member">int_handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/exception.h"/>
+  </compounddef>
+</doxygen>

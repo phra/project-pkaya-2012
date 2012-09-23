@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="base_8h" kind="file">
+    <compoundname>base.h</compoundname>
+    <includedby refid="const_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/const.h</includedby>
+    <includedby refid="exception_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.c</includedby>
+    <includedby refid="u_m_p_stypes_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h</includedby>
+    <includedby refid="pcb_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/pcb.h</includedby>
+    <includedby refid="asl_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/asl.h</includedby>
+    <includedby refid="init_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.h</includedby>
+    <includedby refid="scheduler_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.h</includedby>
+    <includedby refid="exception_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.h</includedby>
+    <includedby refid="syscall_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.h</includedby>
+    <includedby refid="interrupt_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.h</includedby>
+    <includedby refid="init_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.c</includedby>
+    <includedby refid="interrupt_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.c</includedby>
+    <includedby refid="scheduler_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.c</includedby>
+    <includedby refid="syscall_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.c</includedby>
+    <invincdepgraph>
+      <node id="163">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/asl.c</label>
+        <link refid="asl_8c"/>
+      </node>
+      <node id="162">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/asl.h</label>
+        <link refid="asl_8h"/>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="151">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/types11.h</label>
+        <link refid="types11_8h"/>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.c</label>
+        <link refid="exception_8c"/>
+      </node>
+      <node id="155">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="159">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.c</label>
+        <link refid="scheduler_8c"/>
+      </node>
+      <node id="154">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.c</label>
+        <link refid="interrupt_8c"/>
+      </node>
+      <node id="157">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="150">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h</label>
+        <link refid="u_m_p_stypes_8h"/>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="153">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="164">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c</label>
+        <link refid="pcb_8c"/>
+      </node>
+      <node id="152">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/pcb.h</label>
+        <link refid="pcb_8h"/>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="166">
+        <label>C:/Users/phra/Desktop/progetto_so/src/p2test2012_v1.0.c</label>
+        <link refid="p2test2012__v1_80_8c"/>
+      </node>
+      <node id="161">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="156">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/base.h</label>
+        <link refid="base.h"/>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="165">
+        <label>C:/Users/phra/Desktop/progetto_so/src/p2test2012_scalability_v1.0.c</label>
+        <link refid="p2test2012__scalability__v1_80_8c"/>
+      </node>
+      <node id="148">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/const.h</label>
+        <link refid="const_8h"/>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="base_8h_1ac3df7cf3c8cb172a588adec881447d68" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int U32</definition>
+        <argsstring></argsstring>
+        <name>U32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/base.h" line="17" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/base.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="base_8h_1a57a2244776e01ad620c556de58eb7880" prot="public" static="no">
+        <type>signed int</type>
+        <definition>typedef signed int S32</definition>
+        <argsstring></argsstring>
+        <name>S32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/base.h" line="18" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/base.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="base_8h_1a3cb25ca6f51f003950f9625ff05536fc" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char U8</definition>
+        <argsstring></argsstring>
+        <name>U8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/base.h" line="19" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/base.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="base_8h_1a73359529e867901fff0eabb94f7c3fcf" prot="public" static="no">
+        <type>signed char</type>
+        <definition>typedef signed char S8</definition>
+        <argsstring></argsstring>
+        <name>S8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/base.h" line="20" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/base.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="base_8h_1a8dfc83cbb8a200048ed977af78885aa1" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int memaddr</definition>
+        <argsstring></argsstring>
+        <name>memaddr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/base.h" line="22" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/base.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************<sp/>Utility<sp/>types<sp/>*********************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>IMPORTANT:<sp/>the<sp/>following<sp/>definitions<sp/>(and<sp/>thus<sp/>the<sp/>whole<sp/>OS)<sp/>assume<sp/>that:</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>sizeof(int)<sp/>==<sp/>4,<sp/>both<sp/>signed<sp/>and<sp/>unsigned</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/>sizeof(short<sp/>int)<sp/>==<sp/>2,<sp/>both<sp/>signed<sp/>and<sp/>unsigned</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/>sizeof(char)<sp/>==<sp/>1,<sp/>both<sp/>signed<sp/>and<sp/>unsigned</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>CHAR_BITS<sp/>is<sp/>8<sp/>(1<sp/>byte<sp/>is<sp/>8<sp/>bits)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/>size<sp/>of<sp/>a<sp/>word<sp/>==<sp/>size<sp/>of<sp/>a<sp/>memory<sp/>address<sp/>==<sp/>sizeof(unsigned<sp/>int)<sp/>==<sp/>4<sp/>bytes</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>The<sp/>next<sp/>5<sp/>definitions<sp/>state<sp/>this<sp/>explicitly.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BASE_INCLUDED</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BASE_INCLUDED</highlight></codeline>
+<codeline lineno="17" refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref>;</highlight></codeline>
+<codeline lineno="18" refid="base_8h_1a57a2244776e01ad620c556de58eb7880" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="base_8h_1a57a2244776e01ad620c556de58eb7880" kindref="member">S32</ref>;</highlight></codeline>
+<codeline lineno="19" refid="base_8h_1a3cb25ca6f51f003950f9625ff05536fc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="base_8h_1a3cb25ca6f51f003950f9625ff05536fc" kindref="member">U8</ref>;</highlight></codeline>
+<codeline lineno="20" refid="base_8h_1a73359529e867901fff0eabb94f7c3fcf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="base_8h_1a73359529e867901fff0eabb94f7c3fcf" kindref="member">S8</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="base_8h_1a8dfc83cbb8a200048ed977af78885aa1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="base_8h_1a8dfc83cbb8a200048ed977af78885aa1" kindref="member">memaddr</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/base.h"/>
+  </compounddef>
+</doxygen>

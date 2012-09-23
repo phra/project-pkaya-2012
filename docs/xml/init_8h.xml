@@ -1,0 +1,1098 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="init_8h" kind="file">
+    <compoundname>init.h</compoundname>
+    <includes refid="const_8h" local="yes">lib/const.h</includes>
+    <includes refid="base_8h" local="yes">lib/base.h</includes>
+    <includes refid="u_m_p_stypes_8h" local="yes">lib/uMPStypes.h</includes>
+    <includes refid="libumps_8h" local="yes">lib/libumps.h</includes>
+    <includes refid="listx_8h" local="yes">lib/listx.h</includes>
+    <includes refid="types11_8h" local="yes">lib/types11.h</includes>
+    <includes refid="pcb_8h" local="yes">lib/pcb.h</includes>
+    <includes refid="asl_8h" local="yes">lib/asl.h</includes>
+    <includes refid="utils_8h" local="yes">lib/utils.h</includes>
+    <includes refid="scheduler_8h" local="yes">scheduler.h</includes>
+    <includes refid="exception_8h" local="yes">exception.h</includes>
+    <includes refid="syscall_8h" local="yes">syscall.h</includes>
+    <includes refid="interrupt_8h" local="yes">interrupt.h</includes>
+    <includedby refid="exception_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.c</includedby>
+    <includedby refid="scheduler_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.h</includedby>
+    <includedby refid="exception_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.h</includedby>
+    <includedby refid="syscall_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.h</includedby>
+    <includedby refid="interrupt_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.h</includedby>
+    <includedby refid="interrupt_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.c</includedby>
+    <includedby refid="scheduler_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.c</includedby>
+    <includedby refid="syscall_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.c</includedby>
+    <incdepgraph>
+      <node id="61">
+        <label>lib/listx.h</label>
+        <link refid="listx_8h"/>
+      </node>
+      <node id="64">
+        <label>lib/asl.h</label>
+        <link refid="asl_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>lib/types11.h</label>
+        <link refid="types11_8h"/>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>lib/libumps.h</label>
+        <link refid="libumps_8h"/>
+      </node>
+      <node id="66">
+        <label>scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>lib/uMPStypes.h</label>
+        <link refid="u_m_p_stypes_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.h</label>
+        <link refid="init.h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>lib/pcb.h</label>
+        <link refid="pcb_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>base.h</label>
+        <link refid="base_8h"/>
+      </node>
+      <node id="65">
+        <label>lib/utils.h</label>
+        <link refid="utils_8h"/>
+      </node>
+      <node id="57">
+        <label>lib/const.h</label>
+        <link refid="const_8h"/>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="71">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.c</label>
+        <link refid="exception_8c"/>
+      </node>
+      <node id="73">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.c</label>
+        <link refid="scheduler_8c"/>
+      </node>
+      <node id="72">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.c</label>
+        <link refid="interrupt_8c"/>
+      </node>
+      <node id="75">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="70">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.h</label>
+        <link refid="init.h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="74">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="init_8h_1abc16f63a572f5b4de9617288fc7c9559" prot="public" static="no">
+        <name>MAXCPUs</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="21" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a9b896b5481b8e7b305a5ea99a0d3554c" prot="public" static="no">
+        <name>MAXPID</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="22" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a39604002c6cbb68b1be5bc3e21caadd1" prot="public" static="no">
+        <name>DEF_PRIORITY</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="23" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a63c62a284d91c978cc80ca559c223e07" prot="public" static="no">
+        <name>MAXPRINT</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="24" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1adf0526200120de69a5faac212ae1e0c5" prot="public" static="no">
+        <name>INT_OLD</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="26" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a1c70b67aa8a2da0db1ad44ef72a2f050" prot="public" static="no">
+        <name>INT_NEW</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="27" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a09276c76a19689cebfd74dd3846e9f38" prot="public" static="no">
+        <name>TLB_OLD</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="28" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1ac80e3cb5a610919db7a4c96d73b6c5a3" prot="public" static="no">
+        <name>TLB_NEW</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="29" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a00eb3e886ed75bb0469c878c16ac3f0c" prot="public" static="no">
+        <name>PGMTRAP_OLD</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="30" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1aa8385e9f72c50f39525b45dba68596d9" prot="public" static="no">
+        <name>PGMTRAP_NEW</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="31" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a78d7439f7d0654d7ed94e5241dd19a8c" prot="public" static="no">
+        <name>SYSBK_OLD</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="32" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1aa4478ceb212e95f83acb5efc6a4b2f96" prot="public" static="no">
+        <name>SYSBK_NEW</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="33" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a285ae64e0dea6b13f94979f1cc7c382d" prot="public" static="no">
+        <name>TRANSMITTED</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="36" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1ac74c3ef3346da1a7f0e5695f26981021" prot="public" static="no">
+        <name>TRANSTATUS</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="37" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a6f6489887e08bff4887d0bc5dcf214d8" prot="public" static="no">
+        <name>ACK</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="38" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a5af38e3a7bc301757e367a04a3a8a96d" prot="public" static="no">
+        <name>PRINTCHR</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="39" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1aa1bf756391a9960a2445236428e08068" prot="public" static="no">
+        <name>CHAROFFSET</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="40" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a937dd9f9084a17618cdebdacad7299c7" prot="public" static="no">
+        <name>STATUSMASK</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="41" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1afd7c9be68e62aa06f63ba025c13ee34a" prot="public" static="no">
+        <name>TERM0ADDR</name>
+        <initializer>0x10000250</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="42" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a46c3d6184a0f7fe61df840f07e3e3a2f" prot="public" static="no">
+        <name>DEVREGSIZE</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="43" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1ad1235d5ce36f7267285e82dccd428aa6" prot="public" static="no">
+        <name>READY</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="44" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a6d290d1da702b40a5947ee63700f890e" prot="public" static="no">
+        <name>DEVREGLEN</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="45" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1ab5be0aaddb58ffb9cb20c12530d66316" prot="public" static="no">
+        <name>BUSY</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="46" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a444c52e2594d67f8801c17bf50491683" prot="public" static="no">
+        <name>RECVSTATUS</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="48" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1a7cc2c7f2230a13e65c1ef97ec2216b5d" prot="public" static="no">
+        <name>RECVCOMMAND</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="49" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1ac74c3ef3346da1a7f0e5695f26981021" prot="public" static="no">
+        <name>TRANSTATUS</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="50" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8h_1ade5cf18f7c8b9f995f4d07fa5d8e7073" prot="public" static="no">
+        <name>TRANCOMMAND</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="51" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="init_8h_1ab85d8f7d643bc614d9f7cae7e1e4675b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int processCounter</definition>
+        <argsstring></argsstring>
+        <name>processCounter</name>
+        <briefdescription>
+<para>contatore dei processi </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="55" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1a34fb108bb4d12ff7641dcf19b0170003" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int softBlockCounter</definition>
+        <argsstring></argsstring>
+        <name>softBlockCounter</name>
+        <briefdescription>
+<para>Contatore processi bloccati per I/O. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="56" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1ab7dc53e52926bc6676f5b04d4352a60c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int readyproc</definition>
+        <argsstring></argsstring>
+        <name>readyproc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="57"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1a6326d90a3e16bab50f95bed5ff9ab477" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PROVA</definition>
+        <argsstring></argsstring>
+        <name>PROVA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="58"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1a6c44e837b0fd2f80668756147b608b68" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int usedpid</definition>
+        <argsstring></argsstring>
+        <name>usedpid</name>
+        <briefdescription>
+<para>Per tenere conto dei pid assegnati. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="59" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1a7413093d68eef1d8e928626212fbb010" prot="public" static="no" mutable="no">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* currentproc[MAXCPUs]</definition>
+        <argsstring>[MAXCPUs]</argsstring>
+        <name>currentproc</name>
+        <briefdescription>
+<para>Puntatori ai processi attualmente in esecuzione. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="60" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1ab34ea7a4ccc789298395e89aea3d439d" prot="public" static="no" mutable="no">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* PIDs[MAXPID]</definition>
+        <argsstring>[MAXPID]</argsstring>
+        <name>PIDs</name>
+        <briefdescription>
+<para>un array per tenere conto dei pid assegnati, null se è libero, altrimenti l&apos;indirizzo del pcb </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="61" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1ae2ec74ae8cfbd226a3402447b5c39250" prot="public" static="no" mutable="no">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* wait_clock[MAXPROC]</definition>
+        <argsstring>[MAXPROC]</argsstring>
+        <name>wait_clock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="62"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1aae3d0072a5941f26acca0f68fb153ede" prot="public" static="no" mutable="no">
+        <type><ref refid="structstate__t" kindref="compound">state_t</ref> *</type>
+        <definition>state_t* new_old_areas[MAXCPUs][8]</definition>
+        <argsstring>[MAXCPUs][8]</argsstring>
+        <name>new_old_areas</name>
+        <briefdescription>
+<para>Tabella generale per le new/old areas, in modo da avere un&apos;unica tabella per tutti i processori. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="63" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1ad8d03912fa853ee36d3807fb9c0f93d8" prot="public" static="no" mutable="no">
+        <type><ref refid="structstate__t" kindref="compound">state_t</ref></type>
+        <definition>state_t real_new_old_areas[MAXCPUs-1][8]</definition>
+        <argsstring>[MAXCPUs-1][8]</argsstring>
+        <name>real_new_old_areas</name>
+        <briefdescription>
+<para>new/old area reali dei processori 1..n che le hanno sullo stack </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="64" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1a969950f64fcd15d16b272192dfde837b" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 mutex_semaphore[MAXPROC+MAX_DEVICES+1]</definition>
+        <argsstring>[MAXPROC+MAX_DEVICES+1]</argsstring>
+        <name>mutex_semaphore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="65"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1a425d9cd01235780ef39533f15c2571f9" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 mutex_semaphoreprova</definition>
+        <argsstring></argsstring>
+        <name>mutex_semaphoreprova</name>
+        <briefdescription>
+<para>mutex per accedere ai semafori </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="66" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1a35d0c320307b977f43debef8bda3a2d5" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 mutex_scheduler</definition>
+        <argsstring></argsstring>
+        <name>mutex_scheduler</name>
+        <briefdescription>
+<para>mutex per accedere allo scheduler, process counter e code dei processi </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="67" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="init_8h_1ac5fabb5dd95e7acc108e6e0d230cf608" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 mutex_wait_clock</definition>
+        <argsstring></argsstring>
+        <name>mutex_wait_clock</name>
+        <briefdescription>
+<para>mutex per accedere al softBlockCounter </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="68" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="init_8h_1a7e50c32ff34e340cf6a55068981c5d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sleep</definition>
+        <argsstring>(int count)</argsstring>
+        <name>sleep</name>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="71" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="init_8h_1a7abcb9dadc69c5930054fe69a54e7890" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void initSemaphore</definition>
+        <argsstring>(semd_t *sem, int value)</argsstring>
+        <name>initSemaphore</name>
+        <param>
+          <type><ref refid="structsemd__t" kindref="compound">semd_t</ref> *</type>
+          <declname>sem</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="init_8h_1a2faa709054408d895d29c3b8363359f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print</definition>
+        <argsstring>(char *label, char *value)</argsstring>
+        <name>print</name>
+        <param>
+          <type>char *</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="init_8h_1a6a0c937f22f4f8e2d7c8223fd92f1e0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 mytermstat</definition>
+        <argsstring>(memaddr *stataddr)</argsstring>
+        <name>mytermstat</name>
+        <param>
+          <type><ref refid="base_8h_1a8dfc83cbb8a200048ed977af78885aa1" kindref="member">memaddr</ref> *</type>
+          <declname>stataddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="74" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="init_8h_1a9bbf90d0109753b6667a357315156d7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myprintint</definition>
+        <argsstring>(char *str1, int numero)</argsstring>
+        <name>myprintint</name>
+        <param>
+          <type>char *</type>
+          <declname>str1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numero</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="75" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="72" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="init_8h_1a91fcd5c68a8b0ccf94d0167fe1b4e8f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myprintbin</definition>
+        <argsstring>(char *str1, int numero)</argsstring>
+        <name>myprintbin</name>
+        <param>
+          <type>char *</type>
+          <declname>str1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numero</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="76" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="82" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="init_8h_1a37123e336d19f111e111d2baebb40898" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myprinthex</definition>
+        <argsstring>(char *str1, int numero)</argsstring>
+        <name>myprinthex</name>
+        <param>
+          <type>char *</type>
+          <declname>str1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numero</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="77" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="92" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="init_8h_1a3dff7a7ddb7b31f1a3f84462906b78e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void myprint</definition>
+        <argsstring>(char *str1)</argsstring>
+        <name>myprint</name>
+        <param>
+          <type>char *</type>
+          <declname>str1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/init.h" line="78" bodyfile="C:/Users/phra/Desktop/progetto_so/src/init.c" bodystart="65" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__INIT__</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__INIT__</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="const_8h" kindref="compound">lib/const.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base_8h" kindref="compound">lib/base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="u_m_p_stypes_8h" kindref="compound">lib/uMPStypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libumps_8h" kindref="compound">lib/libumps.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="listx_8h" kindref="compound">lib/listx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types11_8h" kindref="compound">lib/types11.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pcb_8h" kindref="compound">lib/pcb.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="asl_8h" kindref="compound">lib/asl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_8h" kindref="compound">lib/utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scheduler_8h" kindref="compound">scheduler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="exception_8h" kindref="compound">exception.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="syscall_8h" kindref="compound">syscall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interrupt_8h" kindref="compound">interrupt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="init_8h_1abc16f63a572f5b4de9617288fc7c9559" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAXCPUs<sp/>16</highlight></codeline>
+<codeline lineno="22" refid="init_8h_1a9b896b5481b8e7b305a5ea99a0d3554c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MAXPID<sp/>128</highlight></codeline>
+<codeline lineno="23" refid="init_8h_1a39604002c6cbb68b1be5bc3e21caadd1" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DEF_PRIORITY<sp/>5</highlight></codeline>
+<codeline lineno="24" refid="init_8h_1a63c62a284d91c978cc80ca559c223e07" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MAXPRINT<sp/>128</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="init_8h_1adf0526200120de69a5faac212ae1e0c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INT_OLD<sp/>0</highlight></codeline>
+<codeline lineno="27" refid="init_8h_1a1c70b67aa8a2da0db1ad44ef72a2f050" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INT_NEW<sp/>1</highlight></codeline>
+<codeline lineno="28" refid="init_8h_1a09276c76a19689cebfd74dd3846e9f38" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TLB_OLD<sp/>2</highlight></codeline>
+<codeline lineno="29" refid="init_8h_1ac80e3cb5a610919db7a4c96d73b6c5a3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TLB_NEW<sp/>3</highlight></codeline>
+<codeline lineno="30" refid="init_8h_1a00eb3e886ed75bb0469c878c16ac3f0c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PGMTRAP_OLD<sp/>4</highlight></codeline>
+<codeline lineno="31" refid="init_8h_1aa8385e9f72c50f39525b45dba68596d9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PGMTRAP_NEW<sp/>5</highlight></codeline>
+<codeline lineno="32" refid="init_8h_1a78d7439f7d0654d7ed94e5241dd19a8c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSBK_OLD<sp/>6</highlight></codeline>
+<codeline lineno="33" refid="init_8h_1aa4478ceb212e95f83acb5efc6a4b2f96" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSBK_NEW<sp/>7</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="init_8h_1a285ae64e0dea6b13f94979f1cc7c382d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRANSMITTED<sp/>5</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRANSTATUS<sp/><sp/><sp/><sp/>2</highlight></codeline>
+<codeline lineno="38" refid="init_8h_1a6f6489887e08bff4887d0bc5dcf214d8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ACK<sp/>1</highlight></codeline>
+<codeline lineno="39" refid="init_8h_1a5af38e3a7bc301757e367a04a3a8a96d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PRINTCHR<sp/><sp/><sp/><sp/>2</highlight></codeline>
+<codeline lineno="40" refid="init_8h_1aa1bf756391a9960a2445236428e08068" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CHAROFFSET<sp/><sp/>8</highlight></codeline>
+<codeline lineno="41" refid="init_8h_1a937dd9f9084a17618cdebdacad7299c7" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>STATUSMASK<sp/><sp/>0xFF</highlight></codeline>
+<codeline lineno="42" refid="init_8h_1afd7c9be68e62aa06f63ba025c13ee34a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TERM0ADDR<sp/><sp/><sp/>0x10000250</highlight></codeline>
+<codeline lineno="43" refid="init_8h_1a46c3d6184a0f7fe61df840f07e3e3a2f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DEVREGSIZE<sp/>16<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="init_8h_1ad1235d5ce36f7267285e82dccd428aa6" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>READY<sp/><sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="45" refid="init_8h_1a6d290d1da702b40a5947ee63700f890e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DEVREGLEN<sp/><sp/><sp/>4</highlight></codeline>
+<codeline lineno="46" refid="init_8h_1ab5be0aaddb58ffb9cb20c12530d66316" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BUSY<sp/><sp/><sp/><sp/><sp/><sp/>3</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="init_8h_1a444c52e2594d67f8801c17bf50491683" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RECVSTATUS<sp/>0</highlight></codeline>
+<codeline lineno="49" refid="init_8h_1a7cc2c7f2230a13e65c1ef97ec2216b5d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>RECVCOMMAND<sp/>1</highlight></codeline>
+<codeline lineno="50" refid="init_8h_1ac74c3ef3346da1a7f0e5695f26981021" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRANSTATUS<sp/><sp/><sp/><sp/>2</highlight></codeline>
+<codeline lineno="51" refid="init_8h_1ade5cf18f7c8b9f995f4d07fa5d8e7073" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRANCOMMAND<sp/><sp/><sp/>3</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="init_8c_1a69b8d39be10ca914356df47dece51d4d" kindref="member" tooltip="contatore dei processi">processCounter</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="init_8c_1ad318e0d6e55bda844999a756a010d6ad" kindref="member" tooltip="Contatore processi bloccati per I/O.">softBlockCounter</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="init_8h_1ab7dc53e52926bc6676f5b04d4352a60c" kindref="member">readyproc</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="init_8h_1a6326d90a3e16bab50f95bed5ff9ab477" kindref="member">PROVA</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="init_8c_1ad0b360b54c065def8f306dd38587add6" kindref="member" tooltip="Per tenere conto dei pid assegnati.">usedpid</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="init_8h_1abc16f63a572f5b4de9617288fc7c9559" kindref="member">MAXCPUs</ref>];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/><ref refid="init_8c_1ae30a58778136e047f76089ffa33a5108" kindref="member" tooltip="un array per tenere conto dei pid assegnati, null se è libero, altrimenti l&amp;#39;indirizzo del pcb...">PIDs</ref>[<ref refid="init_8h_1a9b896b5481b8e7b305a5ea99a0d3554c" kindref="member">MAXPID</ref>];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/><ref refid="init_8h_1ae2ec74ae8cfbd226a3402447b5c39250" kindref="member">wait_clock</ref>[<ref refid="const_8h_1abe4567498db286a3185a522c6dae3cbc" kindref="member">MAXPROC</ref>];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structstate__t" kindref="compound">state_t</ref>*<sp/><ref refid="init_8c_1a58f4b53b4c0a64c0f4638954abea960b" kindref="member" tooltip="Tabella generale per le new/old areas, in modo da avere un&amp;#39;unica tabella per tutti i processori...">new_old_areas</ref>[<ref refid="init_8h_1abc16f63a572f5b4de9617288fc7c9559" kindref="member">MAXCPUs</ref>][8];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structstate__t" kindref="compound">state_t</ref><sp/><ref refid="init_8c_1a0ee87a1f66854fadca96c35ba49a43cd" kindref="member" tooltip="new/old area reali dei processori 1..n che le hanno sullo stack">real_new_old_areas</ref>[<ref refid="init_8h_1abc16f63a572f5b4de9617288fc7c9559" kindref="member">MAXCPUs</ref>-1][8];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="init_8h_1a969950f64fcd15d16b272192dfde837b" kindref="member">mutex_semaphore</ref>[<ref refid="const_8h_1abe4567498db286a3185a522c6dae3cbc" kindref="member">MAXPROC</ref>+<ref refid="const_8h_1a4e132cfaa78353e3af1474a86b2dd535" kindref="member">MAX_DEVICES</ref>+1];</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*DEBUG*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="init_8c_1a7e50c32ff34e340cf6a55068981c5d22" kindref="member">sleep</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="init_8h_1a7abcb9dadc69c5930054fe69a54e7890" kindref="member">initSemaphore</ref>(<ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>sem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="init_8h_1a2faa709054408d895d29c3b8363359f8" kindref="member">print</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*label,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="init_8c_1a6a0c937f22f4f8e2d7c8223fd92f1e0c" kindref="member">mytermstat</ref>(<ref refid="base_8h_1a8dfc83cbb8a200048ed977af78885aa1" kindref="member">memaddr</ref><sp/>*stataddr);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="init_8c_1a9bbf90d0109753b6667a357315156d7c" kindref="member">myprintint</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numero);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="init_8c_1a91fcd5c68a8b0ccf94d0167fe1b4e8f6" kindref="member">myprintbin</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numero);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="init_8c_1a37123e336d19f111e111d2baebb40898" kindref="member">myprinthex</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numero);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="init_8c_1a3dff7a7ddb7b31f1a3f84462906b78e3" kindref="member">myprint</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str1);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">/*END<sp/>DEBUG*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/init.h"/>
+  </compounddef>
+</doxygen>

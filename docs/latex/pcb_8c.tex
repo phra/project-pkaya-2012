@@ -1,0 +1,278 @@
+\hypertarget{pcb_8c}{\section{Riferimenti per il file C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/pcb.c}
+\label{pcb_8c}\index{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/pcb.\-c@{C\-:/\-Users/phra/\-Desktop/progetto\-\_\-so/src/lib/pcb.\-c}}
+}
+{\ttfamily \#include \char`\"{}const.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}u\-M\-P\-Stypes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}listx.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}types11.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\-h\char`\"{}}\\*
+\subsection*{Definizioni}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pcb_8c_a285ae64e0dea6b13f94979f1cc7c382d}{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}~5
+\item 
+\#define \hyperlink{pcb_8c_a6f6489887e08bff4887d0bc5dcf214d8}{A\-C\-K}~1
+\item 
+\#define \hyperlink{pcb_8c_a5af38e3a7bc301757e367a04a3a8a96d}{P\-R\-I\-N\-T\-C\-H\-R}~2
+\item 
+\#define \hyperlink{pcb_8c_aa1bf756391a9960a2445236428e08068}{C\-H\-A\-R\-O\-F\-F\-S\-E\-T}~8
+\item 
+\#define \hyperlink{pcb_8c_a937dd9f9084a17618cdebdacad7299c7}{S\-T\-A\-T\-U\-S\-M\-A\-S\-K}~0x\-F\-F
+\item 
+\#define \hyperlink{pcb_8c_afd7c9be68e62aa06f63ba025c13ee34a}{T\-E\-R\-M0\-A\-D\-D\-R}~0x10000250
+\item 
+\#define \hyperlink{pcb_8c_a46c3d6184a0f7fe61df840f07e3e3a2f}{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E}~16
+\item 
+\#define \hyperlink{pcb_8c_ad1235d5ce36f7267285e82dccd428aa6}{R\-E\-A\-D\-Y}~1
+\item 
+\#define \hyperlink{pcb_8c_a6d290d1da702b40a5947ee63700f890e}{D\-E\-V\-R\-E\-G\-L\-E\-N}~4
+\item 
+\#define \hyperlink{pcb_8c_ab5be0aaddb58ffb9cb20c12530d66316}{B\-U\-S\-Y}~3
+\end{DoxyCompactItemize}
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pcb_8c_a44e85174fc260ea2383787113059a047}{init\-Pcbs} (void)
+\item 
+void \hyperlink{pcb_8c_ab42d615bd7053b952a73dee6fd84c54d}{free\-Pcb} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$p)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{pcb_8c_a953a4918f234322fc93193f53d897d5d}{alloc\-Pcb} (void)
+\item 
+void \hyperlink{pcb_8c_a7d7b6160ba5bee4b501ed07afb8caa93}{mk\-Empty\-Proc\-Q} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head)
+\item 
+int \hyperlink{pcb_8c_a4b271dabd4c2d2897b71cccbe934bdac}{empty\-Proc\-Q} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head)
+\item 
+void \hyperlink{pcb_8c_a9f83539fc894253a43a7a8e22ba6c3ba}{insert\-Proc\-Q} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head, \hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$p)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{pcb_8c_a9b581f743cc1fe0dfbceecb8d529c451}{head\-Proc\-Q} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{pcb_8c_a90fa8ebc0a1c39c83e836bdf04275a17}{remove\-Proc\-Q} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{pcb_8c_a43c105746bbed6463dc347e023821efd}{out\-Proc\-Q} (struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head, \hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$p)
+\item 
+int \hyperlink{pcb_8c_a7d6e59469f944f132a41c390b606ab08}{empty\-Child} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$p)
+\item 
+void \hyperlink{pcb_8c_acbb38484ab3807a24bf6513c05101a72}{insert\-Child} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$prnt, \hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$p)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{pcb_8c_a4d8a060bdeac7847a16e45ffe18d3389}{remove\-Child} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$p)
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$ \hyperlink{pcb_8c_ac842b91f7c9963383016a95ae09f903c}{out\-Child} (\hyperlink{structpcb__t}{pcb\-\_\-t} $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Variabili}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head} \hyperlink{pcb_8c_a4aff766f79d278b87192491c94425ee2}{pcbfree\-\_\-h}
+\item 
+\hyperlink{structpcb__t}{pcb\-\_\-t} \hyperlink{pcb_8c_a27cb1ea9958e54c34990d835770fb6a7}{pcb\-Free\-\_\-table} \mbox{[}\hyperlink{const_8h_abe4567498db286a3185a522c6dae3cbc}{M\-A\-X\-P\-R\-O\-C}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentazione delle definizioni}
+\hypertarget{pcb_8c_a6f6489887e08bff4887d0bc5dcf214d8}{\index{pcb.\-c@{pcb.\-c}!A\-C\-K@{A\-C\-K}}
+\index{A\-C\-K@{A\-C\-K}!pcb.c@{pcb.\-c}}
+\subsubsection[{A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-C\-K~1}}\label{pcb_8c_a6f6489887e08bff4887d0bc5dcf214d8}
+\hypertarget{pcb_8c_ab5be0aaddb58ffb9cb20c12530d66316}{\index{pcb.\-c@{pcb.\-c}!B\-U\-S\-Y@{B\-U\-S\-Y}}
+\index{B\-U\-S\-Y@{B\-U\-S\-Y}!pcb.c@{pcb.\-c}}
+\subsubsection[{B\-U\-S\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-U\-S\-Y~3}}\label{pcb_8c_ab5be0aaddb58ffb9cb20c12530d66316}
+\hypertarget{pcb_8c_aa1bf756391a9960a2445236428e08068}{\index{pcb.\-c@{pcb.\-c}!C\-H\-A\-R\-O\-F\-F\-S\-E\-T@{C\-H\-A\-R\-O\-F\-F\-S\-E\-T}}
+\index{C\-H\-A\-R\-O\-F\-F\-S\-E\-T@{C\-H\-A\-R\-O\-F\-F\-S\-E\-T}!pcb.c@{pcb.\-c}}
+\subsubsection[{C\-H\-A\-R\-O\-F\-F\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-O\-F\-F\-S\-E\-T~8}}\label{pcb_8c_aa1bf756391a9960a2445236428e08068}
+\hypertarget{pcb_8c_a6d290d1da702b40a5947ee63700f890e}{\index{pcb.\-c@{pcb.\-c}!D\-E\-V\-R\-E\-G\-L\-E\-N@{D\-E\-V\-R\-E\-G\-L\-E\-N}}
+\index{D\-E\-V\-R\-E\-G\-L\-E\-N@{D\-E\-V\-R\-E\-G\-L\-E\-N}!pcb.c@{pcb.\-c}}
+\subsubsection[{D\-E\-V\-R\-E\-G\-L\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-V\-R\-E\-G\-L\-E\-N~4}}\label{pcb_8c_a6d290d1da702b40a5947ee63700f890e}
+\hypertarget{pcb_8c_a46c3d6184a0f7fe61df840f07e3e3a2f}{\index{pcb.\-c@{pcb.\-c}!D\-E\-V\-R\-E\-G\-S\-I\-Z\-E@{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E}}
+\index{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E@{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E}!pcb.c@{pcb.\-c}}
+\subsubsection[{D\-E\-V\-R\-E\-G\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-V\-R\-E\-G\-S\-I\-Z\-E~16}}\label{pcb_8c_a46c3d6184a0f7fe61df840f07e3e3a2f}
+\hypertarget{pcb_8c_a5af38e3a7bc301757e367a04a3a8a96d}{\index{pcb.\-c@{pcb.\-c}!P\-R\-I\-N\-T\-C\-H\-R@{P\-R\-I\-N\-T\-C\-H\-R}}
+\index{P\-R\-I\-N\-T\-C\-H\-R@{P\-R\-I\-N\-T\-C\-H\-R}!pcb.c@{pcb.\-c}}
+\subsubsection[{P\-R\-I\-N\-T\-C\-H\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-I\-N\-T\-C\-H\-R~2}}\label{pcb_8c_a5af38e3a7bc301757e367a04a3a8a96d}
+\hypertarget{pcb_8c_ad1235d5ce36f7267285e82dccd428aa6}{\index{pcb.\-c@{pcb.\-c}!R\-E\-A\-D\-Y@{R\-E\-A\-D\-Y}}
+\index{R\-E\-A\-D\-Y@{R\-E\-A\-D\-Y}!pcb.c@{pcb.\-c}}
+\subsubsection[{R\-E\-A\-D\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-A\-D\-Y~1}}\label{pcb_8c_ad1235d5ce36f7267285e82dccd428aa6}
+\hypertarget{pcb_8c_a937dd9f9084a17618cdebdacad7299c7}{\index{pcb.\-c@{pcb.\-c}!S\-T\-A\-T\-U\-S\-M\-A\-S\-K@{S\-T\-A\-T\-U\-S\-M\-A\-S\-K}}
+\index{S\-T\-A\-T\-U\-S\-M\-A\-S\-K@{S\-T\-A\-T\-U\-S\-M\-A\-S\-K}!pcb.c@{pcb.\-c}}
+\subsubsection[{S\-T\-A\-T\-U\-S\-M\-A\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-A\-T\-U\-S\-M\-A\-S\-K~0x\-F\-F}}\label{pcb_8c_a937dd9f9084a17618cdebdacad7299c7}
+\hypertarget{pcb_8c_afd7c9be68e62aa06f63ba025c13ee34a}{\index{pcb.\-c@{pcb.\-c}!T\-E\-R\-M0\-A\-D\-D\-R@{T\-E\-R\-M0\-A\-D\-D\-R}}
+\index{T\-E\-R\-M0\-A\-D\-D\-R@{T\-E\-R\-M0\-A\-D\-D\-R}!pcb.c@{pcb.\-c}}
+\subsubsection[{T\-E\-R\-M0\-A\-D\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-R\-M0\-A\-D\-D\-R~0x10000250}}\label{pcb_8c_afd7c9be68e62aa06f63ba025c13ee34a}
+\hypertarget{pcb_8c_a285ae64e0dea6b13f94979f1cc7c382d}{\index{pcb.\-c@{pcb.\-c}!T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D@{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}}
+\index{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D@{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}!pcb.c@{pcb.\-c}}
+\subsubsection[{T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D~5}}\label{pcb_8c_a285ae64e0dea6b13f94979f1cc7c382d}
+
+
+\subsection{Documentazione delle funzioni}
+\hypertarget{pcb_8c_a953a4918f234322fc93193f53d897d5d}{\index{pcb.\-c@{pcb.\-c}!alloc\-Pcb@{alloc\-Pcb}}
+\index{alloc\-Pcb@{alloc\-Pcb}!pcb.c@{pcb.\-c}}
+\subsubsection[{alloc\-Pcb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ alloc\-Pcb (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_a953a4918f234322fc93193f53d897d5d}
+(puntatore a \hyperlink{structpcb__t}{pcb\-\_\-t}) \hyperlink{pcb_8c_a953a4918f234322fc93193f53d897d5d}{alloc\-Pcb()}\-: rimuove il primo elemento dalla lista dei pcb liberi e inizializza tutti i campi a N\-U\-L\-L e lo restituisce. in caso non ci siano pcb liberi, restituisce N\-U\-L\-L. \begin{DoxyReturn}{Restituisce}
+indirizzo del pcb allocato, N\-U\-L\-L altrimenti 
+\end{DoxyReturn}
+\hypertarget{pcb_8c_a7d6e59469f944f132a41c390b606ab08}{\index{pcb.\-c@{pcb.\-c}!empty\-Child@{empty\-Child}}
+\index{empty\-Child@{empty\-Child}!pcb.c@{pcb.\-c}}
+\subsubsection[{empty\-Child}]{\setlength{\rightskip}{0pt plus 5cm}int empty\-Child (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_a7d6e59469f944f132a41c390b606ab08}
+(1 T\-R\-U\-E oppure 0 F\-A\-L\-S\-E) empty\-Child(puntatore al processo)\-: restituisce 1 se il processo puntato da p non ha figli, altrimenti 0. 
+\begin{DoxyParams}{Parametri}
+{\em p} & puntatore al processo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+1 se non ha figli, 0 altrimenti 
+\end{DoxyReturn}
+\hypertarget{pcb_8c_a4b271dabd4c2d2897b71cccbe934bdac}{\index{pcb.\-c@{pcb.\-c}!empty\-Proc\-Q@{empty\-Proc\-Q}}
+\index{empty\-Proc\-Q@{empty\-Proc\-Q}!pcb.c@{pcb.\-c}}
+\subsubsection[{empty\-Proc\-Q}]{\setlength{\rightskip}{0pt plus 5cm}int empty\-Proc\-Q (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_a4b271dabd4c2d2897b71cccbe934bdac}
+(1 T\-R\-U\-E oppure 0 F\-A\-L\-S\-E) empty\-Proc\-Q(puntatore alla sentinella della lista)\-: restituisce 1 se la lista è vuota altrimenti restituisce 0. 
+\begin{DoxyParams}{Parametri}
+{\em head} & puntatore alla sentinella \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+1 se la lista è vuota, 0 altrimenti 
+\end{DoxyReturn}
+\hypertarget{pcb_8c_ab42d615bd7053b952a73dee6fd84c54d}{\index{pcb.\-c@{pcb.\-c}!free\-Pcb@{free\-Pcb}}
+\index{free\-Pcb@{free\-Pcb}!pcb.c@{pcb.\-c}}
+\subsubsection[{free\-Pcb}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Pcb (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_ab42d615bd7053b952a73dee6fd84c54d}
+free\-Pcb(puntatore a pcb\-\_\-t)\-: inserisce il processo puntato da p nella lista dei pcb liberi. 
+\begin{DoxyParams}{Parametri}
+{\em p} & puntatore al processo \\
+\hline
+\end{DoxyParams}
+\hypertarget{pcb_8c_a9b581f743cc1fe0dfbceecb8d529c451}{\index{pcb.\-c@{pcb.\-c}!head\-Proc\-Q@{head\-Proc\-Q}}
+\index{head\-Proc\-Q@{head\-Proc\-Q}!pcb.c@{pcb.\-c}}
+\subsubsection[{head\-Proc\-Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ head\-Proc\-Q (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_a9b581f743cc1fe0dfbceecb8d529c451}
+(puntatore al processo) head\-Proc\-Q(puntatore alla sentinella)\-:restituisce l'elemento in testa della coda S\-E\-N\-Z\-A R\-I\-M\-U\-O\-V\-E\-R\-L\-O. se la coda è vuota, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em head} & puntatore alla sentinella \\
+\hline
+\end{DoxyParams}
+\hypertarget{pcb_8c_a44e85174fc260ea2383787113059a047}{\index{pcb.\-c@{pcb.\-c}!init\-Pcbs@{init\-Pcbs}}
+\index{init\-Pcbs@{init\-Pcbs}!pcb.c@{pcb.\-c}}
+\subsubsection[{init\-Pcbs}]{\setlength{\rightskip}{0pt plus 5cm}void init\-Pcbs (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_a44e85174fc260ea2383787113059a047}
+init\-Pbcs()\-: inizializza la lista pcb\-Free in modo da contenere tutti gli elementi di pcb\-Free\-\_\-table. \hypertarget{pcb_8c_acbb38484ab3807a24bf6513c05101a72}{\index{pcb.\-c@{pcb.\-c}!insert\-Child@{insert\-Child}}
+\index{insert\-Child@{insert\-Child}!pcb.c@{pcb.\-c}}
+\subsubsection[{insert\-Child}]{\setlength{\rightskip}{0pt plus 5cm}void insert\-Child (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{prnt, }
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_acbb38484ab3807a24bf6513c05101a72}
+insert\-Child(puntatore al processo, puntatore al processo)\-: inserisce il processo p come figlio di prnt. 
+\begin{DoxyParams}{Parametri}
+{\em prnt} & puntatore al padre \\
+\hline
+{\em p} & puntatore al figlio \\
+\hline
+\end{DoxyParams}
+\hypertarget{pcb_8c_a9f83539fc894253a43a7a8e22ba6c3ba}{\index{pcb.\-c@{pcb.\-c}!insert\-Proc\-Q@{insert\-Proc\-Q}}
+\index{insert\-Proc\-Q@{insert\-Proc\-Q}!pcb.c@{pcb.\-c}}
+\subsubsection[{insert\-Proc\-Q}]{\setlength{\rightskip}{0pt plus 5cm}void insert\-Proc\-Q (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head, }
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_a9f83539fc894253a43a7a8e22ba6c3ba}
+insert\-Proc\-Q(puntatore alla sentinella, puntatore ad un processo)\-: inserisce il processo nella lista a cui punta la sentinella, tenendo conto della priorità dei processi. 
+\begin{DoxyParams}{Parametri}
+{\em head} & puntatore alla sentinella \\
+\hline
+{\em p} & puntatore al processo \\
+\hline
+\end{DoxyParams}
+\hypertarget{pcb_8c_a7d7b6160ba5bee4b501ed07afb8caa93}{\index{pcb.\-c@{pcb.\-c}!mk\-Empty\-Proc\-Q@{mk\-Empty\-Proc\-Q}}
+\index{mk\-Empty\-Proc\-Q@{mk\-Empty\-Proc\-Q}!pcb.c@{pcb.\-c}}
+\subsubsection[{mk\-Empty\-Proc\-Q}]{\setlength{\rightskip}{0pt plus 5cm}void mk\-Empty\-Proc\-Q (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_a7d7b6160ba5bee4b501ed07afb8caa93}
+mk\-Empty\-Proc\-Q(puntatore a list\-\_\-head)\-: inizializza la sentinella. 
+\begin{DoxyParams}{Parametri}
+{\em head} & puntatore alla sentinella \\
+\hline
+\end{DoxyParams}
+\hypertarget{pcb_8c_ac842b91f7c9963383016a95ae09f903c}{\index{pcb.\-c@{pcb.\-c}!out\-Child@{out\-Child}}
+\index{out\-Child@{out\-Child}!pcb.c@{pcb.\-c}}
+\subsubsection[{out\-Child}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ out\-Child (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_ac842b91f7c9963383016a95ae09f903c}
+(puntatore al processo) out\-Child(puntatore al processo)\-:restituisce il processo puntato da p R\-I\-M\-U\-O\-V\-E\-N\-D\-O\-L\-O dalla lista dei figli del padre. se il processo p non ha un padre, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em p} & puntatore al processo da rimuovere \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al processo rimosso 
+\end{DoxyReturn}
+\hypertarget{pcb_8c_a43c105746bbed6463dc347e023821efd}{\index{pcb.\-c@{pcb.\-c}!out\-Proc\-Q@{out\-Proc\-Q}}
+\index{out\-Proc\-Q@{out\-Proc\-Q}!pcb.c@{pcb.\-c}}
+\subsubsection[{out\-Proc\-Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ out\-Proc\-Q (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head, }
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_a43c105746bbed6463dc347e023821efd}
+\hypertarget{pcb_8c_a4d8a060bdeac7847a16e45ffe18d3389}{\index{pcb.\-c@{pcb.\-c}!remove\-Child@{remove\-Child}}
+\index{remove\-Child@{remove\-Child}!pcb.c@{pcb.\-c}}
+\subsubsection[{remove\-Child}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ remove\-Child (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_a4d8a060bdeac7847a16e45ffe18d3389}
+(puntatore al processo) remove\-Child(puntatore al processo)\-: restituisce il primo figlio del processo puntato da p R\-I\-M\-U\-O\-V\-E\-N\-D\-O\-L\-O. se p non ha figli, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em p} & puntatore al processo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+indirizzo del figlio rimosso 
+\end{DoxyReturn}
+\hypertarget{pcb_8c_a90fa8ebc0a1c39c83e836bdf04275a17}{\index{pcb.\-c@{pcb.\-c}!remove\-Proc\-Q@{remove\-Proc\-Q}}
+\index{remove\-Proc\-Q@{remove\-Proc\-Q}!pcb.c@{pcb.\-c}}
+\subsubsection[{remove\-Proc\-Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t}$\ast$ remove\-Proc\-Q (
+\begin{DoxyParamCaption}
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}}\label{pcb_8c_a90fa8ebc0a1c39c83e836bdf04275a17}
+(puntatore al processo) remove\-Proc\-Q(puntatore alla sentinella)\-: restiuisce l'elemento in testa della coda R\-I\-M\-U\-O\-V\-E\-N\-D\-O\-L\-O. se la coda è vuota, restituisce N\-U\-L\-L. 
+\begin{DoxyParams}{Parametri}
+{\em head} & puntatore alla sentinella \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+puntatore al processo rimosso 
+\end{DoxyReturn}
+
+
+\subsection{Documentazione delle variabili}
+\hypertarget{pcb_8c_a4aff766f79d278b87192491c94425ee2}{\index{pcb.\-c@{pcb.\-c}!pcbfree\-\_\-h@{pcbfree\-\_\-h}}
+\index{pcbfree\-\_\-h@{pcbfree\-\_\-h}!pcb.c@{pcb.\-c}}
+\subsubsection[{pcbfree\-\_\-h}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf list\-\_\-head} pcbfree\-\_\-h}}\label{pcb_8c_a4aff766f79d278b87192491c94425ee2}
+\hypertarget{pcb_8c_a27cb1ea9958e54c34990d835770fb6a7}{\index{pcb.\-c@{pcb.\-c}!pcb\-Free\-\_\-table@{pcb\-Free\-\_\-table}}
+\index{pcb\-Free\-\_\-table@{pcb\-Free\-\_\-table}!pcb.c@{pcb.\-c}}
+\subsubsection[{pcb\-Free\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb\-\_\-t} pcb\-Free\-\_\-table\mbox{[}{\bf M\-A\-X\-P\-R\-O\-C}\mbox{]}}}\label{pcb_8c_a27cb1ea9958e54c34990d835770fb6a7}

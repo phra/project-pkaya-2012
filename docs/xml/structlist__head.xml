@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="structlist__head" kind="struct" prot="public">
+    <compoundname>list_head</compoundname>
+    <includes refid="listx_8h" local="no">listx.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlist__head_1ad6116fd07816a828c3a9830f54871bd0" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+        <definition>struct list_head* next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="18" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+        <definition>struct list_head * prev</definition>
+        <argsstring></argsstring>
+        <name>prev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="18" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="9">
+        <label>list_head</label>
+        <link refid="structlist__head"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>prev</edgelabel>
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" line="17" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/listx.h" bodystart="17" bodyend="19"/>
+    <listofallmembers>
+      <member refid="structlist__head_1ad6116fd07816a828c3a9830f54871bd0" prot="public" virt="non-virtual"><scope>list_head</scope><name>next</name></member>
+      <member refid="structlist__head_1ad8f06cb209b17c3a4a5b24cad8793f72" prot="public" virt="non-virtual"><scope>list_head</scope><name>prev</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

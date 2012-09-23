@@ -1,0 +1,638 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="syscall_8c" kind="file">
+    <compoundname>syscall.c</compoundname>
+    <includes refid="const_8h" local="yes">lib/const.h</includes>
+    <includes refid="base_8h" local="yes">lib/base.h</includes>
+    <includes refid="u_m_p_stypes_8h" local="yes">lib/uMPStypes.h</includes>
+    <includes refid="libumps_8h" local="yes">lib/libumps.h</includes>
+    <includes refid="listx_8h" local="yes">lib/listx.h</includes>
+    <includes refid="types11_8h" local="yes">lib/types11.h</includes>
+    <includes refid="pcb_8h" local="yes">lib/pcb.h</includes>
+    <includes refid="asl_8h" local="yes">lib/asl.h</includes>
+    <includes refid="utils_8h" local="yes">lib/utils.h</includes>
+    <includes refid="init_8h" local="yes">init.h</includes>
+    <includes refid="scheduler_8h" local="yes">scheduler.h</includes>
+    <includes refid="exception_8h" local="yes">exception.h</includes>
+    <incdepgraph>
+      <node id="369">
+        <label>lib/listx.h</label>
+        <link refid="listx_8h"/>
+      </node>
+      <node id="372">
+        <label>lib/asl.h</label>
+        <link refid="asl_8h"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+      </node>
+      <node id="370">
+        <label>lib/types11.h</label>
+        <link refid="types11_8h"/>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+      </node>
+      <node id="376">
+        <label>exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="371" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+        <childnode refid="378" relation="include">
+        </childnode>
+      </node>
+      <node id="368">
+        <label>lib/libumps.h</label>
+        <link refid="libumps_8h"/>
+      </node>
+      <node id="375">
+        <label>scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="371" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+        <childnode refid="378" relation="include">
+        </childnode>
+      </node>
+      <node id="378">
+        <label>interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="371" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+        <childnode refid="374" relation="include">
+        </childnode>
+      </node>
+      <node id="367">
+        <label>lib/uMPStypes.h</label>
+        <link refid="u_m_p_stypes_8h"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+      </node>
+      <node id="374">
+        <label>init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="371" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+        <childnode refid="378" relation="include">
+        </childnode>
+      </node>
+      <node id="371">
+        <label>lib/pcb.h</label>
+        <link refid="pcb_8h"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+      </node>
+      <node id="364">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.c</label>
+        <link refid="syscall.c"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="371" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+        <childnode refid="376" relation="include">
+        </childnode>
+      </node>
+      <node id="377">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="371" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="378" relation="include">
+        </childnode>
+      </node>
+      <node id="366">
+        <label>base.h</label>
+        <link refid="base_8h"/>
+      </node>
+      <node id="373">
+        <label>lib/utils.h</label>
+        <link refid="utils_8h"/>
+      </node>
+      <node id="365">
+        <label>lib/const.h</label>
+        <link refid="const_8h"/>
+        <childnode refid="366" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="syscall_8c_1a5f3dd55d8e6085223954d78747dd6b72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void create_process</definition>
+        <argsstring>(void)</argsstring>
+        <name>create_process</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Quando invocata, la sys1 determina la creazione di un processo figlio del processo chiamante. Registro a1: indirizzo fisico dello <ref refid="structstate__t" kindref="compound">state_t</ref> del nuovo processo. Registro a2: priorità del nuovo processo. Valori di ritorno nel registro v0:<itemizedlist>
+<listitem><para>0 nel caso di creazione corretta</para></listitem><listitem><para>-1 nel caso di errore </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/syscall.c" line="24" bodyfile="C:/Users/phra/Desktop/progetto_so/src/syscall.c" bodystart="24" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a9fa839c5f7747474f88184ef479b1892" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void create_brother</definition>
+        <argsstring>(void)</argsstring>
+        <name>create_brother</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Quando invocata, la sys2 determina la creazione di un processo fratello del processo chiamante. Registro a1: indirizzo fisico dello <ref refid="structstate__t" kindref="compound">state_t</ref> del nuovo processo. Registro a2: priorità del nuovo processo. Valori di ritorno nel registro v0:<itemizedlist>
+<listitem><para>0 nel caso di creazione corretta</para></listitem><listitem><para>-1 nel caso di errore. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/syscall.c" line="52" bodyfile="C:/Users/phra/Desktop/progetto_so/src/syscall.c" bodystart="52" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a571924dff6ed140d04f45cbb62b5be74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void terminate_process</definition>
+        <argsstring>(void)</argsstring>
+        <name>terminate_process</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>quando invocata la sys3 termina il processo corrente e tutta la sua progenia. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/syscall.c" line="74" bodyfile="C:/Users/phra/Desktop/progetto_so/src/syscall.c" bodystart="74" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a8747193e9da55f459fbac3aadf890892" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void verhogen</definition>
+        <argsstring>(void)</argsstring>
+        <name>verhogen</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Quando invocata, la sys4 esegue una V sul semaforo con chiave semKey Registro a1: chiave del semaforo su cui effettuare la V. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/syscall.c" line="84" bodyfile="C:/Users/phra/Desktop/progetto_so/src/syscall.c" bodystart="84" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a712f84ab52df0c461f7bfc3d16261ffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void passeren</definition>
+        <argsstring>(void)</argsstring>
+        <name>passeren</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Quando invocata, la sys5 esegue una P sul semaforo con chiave semKey. Registro a1: chiave del semaforo su cui effettuare la P. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/syscall.c" line="107" bodyfile="C:/Users/phra/Desktop/progetto_so/src/syscall.c" bodystart="107" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1ae0714195afd60424ae10408629dec94a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_cpu_time</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_cpu_time</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Quando invocata, la sys6 restituisce il tempo di CPU (in microsecondi) usato dal processo corrente. Registro v0: valore di ritorno. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/syscall.c" line="130" bodyfile="C:/Users/phra/Desktop/progetto_so/src/syscall.c" bodystart="130" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a78b3744f5f72569a104800b8c6712b77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wait_for_clock</definition>
+        <argsstring>(void)</argsstring>
+        <name>wait_for_clock</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Quando invocata, la sys7 esegue una P sul semaforo associato allo pseudo-clock timer. La V su tale semaforo deve essere eseguito dal nucleo ogni 100 millisecondi (tutti i processi in coda su tale semaforo devono essere sbloccati). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/syscall.c" line="143" bodyfile="C:/Users/phra/Desktop/progetto_so/src/syscall.c" bodystart="143" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1af010b7975b6274028bdde13870abb684" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wait_for_io_device</definition>
+        <argsstring>(void)</argsstring>
+        <name>wait_for_io_device</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Quando invocata, la sys8 esegue una P sul semaforo associato al device identificato da intNo, dnume e waitForTermRead Registro a1: linea di interrupt Registro a2: device number Registro a3: operazione di terminal read/write Registro v0: status del device </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/syscall.c" line="164" bodyfile="C:/Users/phra/Desktop/progetto_so/src/syscall.c" bodystart="164" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1aac4ac3d35643b455ec7df570b7f8d51c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void specify_prg_state_vector</definition>
+        <argsstring>(void)</argsstring>
+        <name>specify_prg_state_vector</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Quando invocata, la sys9 consente di definire gestori di PgmTrap per il processo corrente. Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente del processore. Registro a2: indirizzo della NEWArea del processo (da utilizzare nel caso si verifichi un PgmTrap) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/syscall.c" line="183" bodyfile="C:/Users/phra/Desktop/progetto_so/src/syscall.c" bodystart="183" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1a85a0a644738a772ffdb1e3b7d41b86fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void specify_tlb_state_vector</definition>
+        <argsstring>(void)</argsstring>
+        <name>specify_tlb_state_vector</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Quando invocata, la sys10 consente di definire gestori di TLB Exception per il processo corrente. Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente del processore. Registro a2: indirizzo della NEWArea del processore (da utilizzare nel caso si verifichi una TLB Exception) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/syscall.c" line="204" bodyfile="C:/Users/phra/Desktop/progetto_so/src/syscall.c" bodystart="204" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="syscall_8c_1adf4457bb3956749a696028d9d276bc6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void specify_sys_state_vector</definition>
+        <argsstring>(void)</argsstring>
+        <name>specify_sys_state_vector</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Quando invocata, la sys11 consente di definire gestori di SYS/BP Exception per il processo corrente. Registro a1: indirizzo della OLDArea in cui salvare lo stato corrente del processore. Registro a2: indirizzo della NEWArea del processore (da utilizzare nel caso si verifichi una SYS/BP Exception) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/syscall.c" line="225" bodyfile="C:/Users/phra/Desktop/progetto_so/src/syscall.c" bodystart="225" bodyend="239"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="const_8h" kindref="compound">lib/const.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base_8h" kindref="compound">lib/base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="u_m_p_stypes_8h" kindref="compound">lib/uMPStypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libumps_8h" kindref="compound">lib/libumps.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="listx_8h" kindref="compound">lib/listx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types11_8h" kindref="compound">lib/types11.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pcb_8h" kindref="compound">lib/pcb.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="asl_8h" kindref="compound">lib/asl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_8h" kindref="compound">lib/utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scheduler_8h" kindref="compound">scheduler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="exception_8h" kindref="compound">exception.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a5f3dd55d8e6085223954d78747dd6b72" kindref="member">create_process</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>suspend<sp/>=<sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()];</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>son;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref>*<sp/>before<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)<ref refid="init_8c_1a58f4b53b4c0a64c0f4638954abea960b" kindref="member" tooltip="Tabella generale per le new/old areas, in modo da avere un&amp;#39;unica tabella per tutti i processori...">new_old_areas</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()][<ref refid="init_8h_1a78d7439f7d0654d7ed94e5241dd19a8c" kindref="member">SYSBK_OLD</ref>];</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(son<sp/>=<sp/><ref refid="scheduler_8c_1a0e21ba9f85390e60366d1152ce12eb6e" kindref="member">allocaPcb</ref>(before-&gt;reg_a2)){</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>son-&gt;<ref refid="structpcb__t_1ae1524fbfc37b7766b551477e48b3bf4d" kindref="member">p_s</ref><sp/>=<sp/>*((<ref refid="structstate__t" kindref="compound">state_t</ref>*)before-&gt;reg_a1);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,0,1));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pcb_8c_1acbb38484ab3807a24bf6513c05101a72" kindref="member">insertChild</ref>(suspend,son);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pcb_8c_1a9f83539fc894253a43a7a8e22ba6c3ba" kindref="member">insertProcQ</ref>(<ref refid="scheduler_8c_1a8d081d17201033e370076493cb36fc77" kindref="member">readyQ</ref>,son);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,1,0);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>before-&gt;reg_v0<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>before-&gt;reg_v0<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a9fa839c5f7747474f88184ef479b1892" kindref="member">create_brother</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>suspend<sp/>=<sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()];</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>father<sp/>=<sp/>suspend-&gt;<ref refid="structpcb__t_1a4d7a714ff6400c5cc2977964fc3b0c53" kindref="member">p_parent</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>bro;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref>*<sp/>before<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)<ref refid="init_8c_1a58f4b53b4c0a64c0f4638954abea960b" kindref="member" tooltip="Tabella generale per le new/old areas, in modo da avere un&amp;#39;unica tabella per tutti i processori...">new_old_areas</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()][<ref refid="init_8h_1a78d7439f7d0654d7ed94e5241dd19a8c" kindref="member">SYSBK_OLD</ref>];</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bro<sp/>=<sp/><ref refid="scheduler_8c_1a0e21ba9f85390e60366d1152ce12eb6e" kindref="member">allocaPcb</ref>(before-&gt;reg_a2)){</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bro-&gt;<ref refid="structpcb__t_1ae1524fbfc37b7766b551477e48b3bf4d" kindref="member">p_s</ref><sp/>=<sp/>*((<ref refid="structstate__t" kindref="compound">state_t</ref>*)before-&gt;reg_a1);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,0,1));</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pcb_8c_1acbb38484ab3807a24bf6513c05101a72" kindref="member">insertChild</ref>(father,bro);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pcb_8c_1a9f83539fc894253a43a7a8e22ba6c3ba" kindref="member">insertProcQ</ref>(<ref refid="scheduler_8c_1a8d081d17201033e370076493cb36fc77" kindref="member">readyQ</ref>,bro);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,1,0);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>before-&gt;reg_v0<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>before-&gt;reg_v0<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a571924dff6ed140d04f45cbb62b5be74" kindref="member">terminate_process</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>suspend<sp/>=<sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1afe2502898946fda9e5ef2121db5e79ce" kindref="member">kill</ref>(suspend);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1a9fa00b0be5d3c4781048861e2506eb63" kindref="member">scheduler</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a8747193e9da55f459fbac3aadf890892" kindref="member">verhogen</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/><ref refid="structlist__head_1ad6116fd07816a828c3a9830f54871bd0" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref>*<sp/>before<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)<ref refid="init_8c_1a58f4b53b4c0a64c0f4638954abea960b" kindref="member" tooltip="Tabella generale per le new/old areas, in modo da avere un&amp;#39;unica tabella per tutti i processori...">new_old_areas</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()][<ref refid="init_8h_1a78d7439f7d0654d7ed94e5241dd19a8c" kindref="member">SYSBK_OLD</ref>];</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>semkey<sp/>=<sp/>before-&gt;reg_a1;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>sem;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,0,1));<sp/></highlight><highlight class="comment">/*<sp/>critical<sp/>section<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>sem<sp/>=<sp/><ref refid="asl_8c_1aefbbb4412b9d14dc7745f72cb1e52d2b" kindref="member">mygetSemd</ref>(semkey);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>sem-&gt;<ref refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" kindref="member">s_value</ref>++;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="asl_8c_1aa01e6af434d18efb9280e801c9ac54fd" kindref="member">headBlocked</ref>(semkey)){<sp/></highlight><highlight class="comment">/*<sp/>wake<sp/>up<sp/>someone!<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next<sp/>=<sp/><ref refid="asl_8c_1a9cef24579d8726fc855feec0eb2ae6cf" kindref="member">removeBlocked</ref>(semkey);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,1,0);<sp/></highlight><highlight class="comment">/*<sp/>release<sp/>mutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1a36f350361c844b6f548e4e4579b87719" kindref="member">inserisciprocessoready</ref>(next);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,1,0);<sp/></highlight><highlight class="comment">/*<sp/>release<sp/>mutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a712f84ab52df0c461f7bfc3d16261ffd" kindref="member">passeren</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>suspend<sp/>=<sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()];</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref>*<sp/>before<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)<ref refid="init_8c_1a58f4b53b4c0a64c0f4638954abea960b" kindref="member" tooltip="Tabella generale per le new/old areas, in modo da avere un&amp;#39;unica tabella per tutti i processori...">new_old_areas</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()][<ref refid="init_8h_1a78d7439f7d0654d7ed94e5241dd19a8c" kindref="member">SYSBK_OLD</ref>];</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>semkey<sp/>=<sp/>before-&gt;reg_a1;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>sem;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,0,1));<sp/></highlight><highlight class="comment">/*<sp/>critical<sp/>section<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>sem<sp/>=<sp/><ref refid="asl_8c_1aefbbb4412b9d14dc7745f72cb1e52d2b" kindref="member">mygetSemd</ref>(semkey);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>sem-&gt;<ref refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" kindref="member">s_value</ref>--;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sem-&gt;<ref refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" kindref="member">s_value</ref><sp/>&gt;=<sp/>0){<sp/></highlight><highlight class="comment">/*<sp/>GO!<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,1,0);<sp/></highlight><highlight class="comment">/*<sp/>release<sp/>mutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a6fcab51848f040ca4f81159bad95c3e0" kindref="member">LDST</ref>(&amp;suspend-&gt;<ref refid="structpcb__t_1ae1524fbfc37b7766b551477e48b3bf4d" kindref="member">p_s</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="comment">/*<sp/>wait<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="asl_8c_1a8641466df0ac1ca496e0fd74a2564c76" kindref="member">insertBlocked</ref>(semkey,suspend);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,1,0);<sp/></highlight><highlight class="comment">/*<sp/>release<sp/>mutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1a9fa00b0be5d3c4781048861e2506eb63" kindref="member">scheduler</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1ae0714195afd60424ae10408629dec94a" kindref="member">get_cpu_time</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>suspend<sp/>=<sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()];</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref>*<sp/>before<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)<ref refid="init_8c_1a58f4b53b4c0a64c0f4638954abea960b" kindref="member" tooltip="Tabella generale per le new/old areas, in modo da avere un&amp;#39;unica tabella per tutti i processori...">new_old_areas</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()][<ref refid="init_8h_1a78d7439f7d0654d7ed94e5241dd19a8c" kindref="member">SYSBK_OLD</ref>];</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>before-&gt;reg_v0<sp/>=<sp/>suspend-&gt;<ref refid="structpcb__t_1a7438f6e4370c77335272481935c3c2da" kindref="member">cpu_time</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a78b3744f5f72569a104800b8c6712b77" kindref="member">wait_for_clock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>suspend<sp/>=<sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()];</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>,0,1));<sp/></highlight><highlight class="comment">/*<sp/>critical<sp/>section<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="init_8c_1ad318e0d6e55bda844999a756a010d6ad" kindref="member" tooltip="Contatore processi bloccati per I/O.">softBlockCounter</ref>++;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>,1,0);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interrupt_8c_1a2d83085b5c3534a73f40da132967face" kindref="member">_passerenclock</ref>(<ref refid="const_8h_1abe4567498db286a3185a522c6dae3cbc" kindref="member">MAXPROC</ref>+<ref refid="const_8h_1a4e132cfaa78353e3af1474a86b2dd535" kindref="member">MAX_DEVICES</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1a9fa00b0be5d3c4781048861e2506eb63" kindref="member">scheduler</ref>();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1af010b7975b6274028bdde13870abb684" kindref="member">wait_for_io_device</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref>*<sp/>before<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)<ref refid="init_8c_1a58f4b53b4c0a64c0f4638954abea960b" kindref="member" tooltip="Tabella generale per le new/old areas, in modo da avere un&amp;#39;unica tabella per tutti i processori...">new_old_areas</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()][<ref refid="init_8h_1a78d7439f7d0654d7ed94e5241dd19a8c" kindref="member">SYSBK_OLD</ref>];</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line<sp/>=<sp/>before-&gt;reg_a1;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>devno<sp/>=<sp/>before-&gt;reg_a2;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rw<sp/>=<sp/>before-&gt;reg_a3;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interrupt_8c_1ac8dc451d3dfaea9ef445fa2e77acf120" kindref="member">_passeren</ref>((line*(devno+1)+20)+rw);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>before-&gt;reg_v0<sp/>=<sp/><ref refid="interrupt_8c_1a8f2e0ef78869dd8b660ad9678826efda" kindref="member" tooltip="matrice per la gestione degli interrupt">devstatus</ref>[line-3][devno+rw];</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interrupt_8c_1a8f2e0ef78869dd8b660ad9678826efda" kindref="member" tooltip="matrice per la gestione degli interrupt">devstatus</ref>[line-3][devno+rw]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a6fcab51848f040ca4f81159bad95c3e0" kindref="member">LDST</ref>(before);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1aac4ac3d35643b455ec7df570b7f8d51c" kindref="member">specify_prg_state_vector</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>suspend<sp/>=<sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()];</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref>*<sp/>before<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)<ref refid="init_8c_1a58f4b53b4c0a64c0f4638954abea960b" kindref="member" tooltip="Tabella generale per le new/old areas, in modo da avere un&amp;#39;unica tabella per tutti i processori...">new_old_areas</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()][<ref refid="init_8h_1a78d7439f7d0654d7ed94e5241dd19a8c" kindref="member">SYSBK_OLD</ref>];</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((suspend-&gt;<ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[<ref refid="types11_8h_1a743aa156f9c23acba3bb4cd621dd5720" kindref="member">PGMTRAP</ref>+3]<sp/>==<sp/><ref refid="const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/>&amp;&amp;<sp/>(suspend-&gt;<ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[<ref refid="types11_8h_1a743aa156f9c23acba3bb4cd621dd5720" kindref="member">PGMTRAP</ref>]<sp/>==<sp/><ref refid="const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)){</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suspend-&gt;<ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[<ref refid="types11_8h_1a743aa156f9c23acba3bb4cd621dd5720" kindref="member">PGMTRAP</ref>+3]<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)before-&gt;reg_a1;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suspend-&gt;<ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[<ref refid="types11_8h_1a743aa156f9c23acba3bb4cd621dd5720" kindref="member">PGMTRAP</ref>]<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)before-&gt;reg_a2;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a6fcab51848f040ca4f81159bad95c3e0" kindref="member">LDST</ref>(&amp;suspend-&gt;<ref refid="structpcb__t_1ae1524fbfc37b7766b551477e48b3bf4d" kindref="member">p_s</ref>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1afe2502898946fda9e5ef2121db5e79ce" kindref="member">kill</ref>(suspend);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1a9fa00b0be5d3c4781048861e2506eb63" kindref="member">scheduler</ref>();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1a85a0a644738a772ffdb1e3b7d41b86fb" kindref="member">specify_tlb_state_vector</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>suspend<sp/>=<sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()];</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref>*<sp/>before<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)<ref refid="init_8c_1a58f4b53b4c0a64c0f4638954abea960b" kindref="member" tooltip="Tabella generale per le new/old areas, in modo da avere un&amp;#39;unica tabella per tutti i processori...">new_old_areas</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()][<ref refid="init_8h_1a78d7439f7d0654d7ed94e5241dd19a8c" kindref="member">SYSBK_OLD</ref>];</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((suspend-&gt;<ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[<ref refid="types11_8h_1a92ab7532702bda7a74487fdbc660d0f5" kindref="member">TLB</ref>+3]<sp/>==<sp/><ref refid="const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/>&amp;&amp;<sp/>(suspend-&gt;<ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[<ref refid="types11_8h_1a92ab7532702bda7a74487fdbc660d0f5" kindref="member">TLB</ref>]<sp/>==<sp/><ref refid="const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)){</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suspend-&gt;<ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[<ref refid="types11_8h_1a92ab7532702bda7a74487fdbc660d0f5" kindref="member">TLB</ref>+3]<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)before-&gt;reg_a1;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suspend-&gt;<ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[<ref refid="types11_8h_1a92ab7532702bda7a74487fdbc660d0f5" kindref="member">TLB</ref>]<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)before-&gt;reg_a2;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a6fcab51848f040ca4f81159bad95c3e0" kindref="member">LDST</ref>(&amp;suspend-&gt;<ref refid="structpcb__t_1ae1524fbfc37b7766b551477e48b3bf4d" kindref="member">p_s</ref>);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1afe2502898946fda9e5ef2121db5e79ce" kindref="member">kill</ref>(suspend);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1a9fa00b0be5d3c4781048861e2506eb63" kindref="member">scheduler</ref>();</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="syscall_8c_1adf4457bb3956749a696028d9d276bc6d" kindref="member">specify_sys_state_vector</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>suspend<sp/>=<sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref>*<sp/>before<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)<ref refid="init_8c_1a58f4b53b4c0a64c0f4638954abea960b" kindref="member" tooltip="Tabella generale per le new/old areas, in modo da avere un&amp;#39;unica tabella per tutti i processori...">new_old_areas</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()][<ref refid="init_8h_1a78d7439f7d0654d7ed94e5241dd19a8c" kindref="member">SYSBK_OLD</ref>];</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((suspend-&gt;<ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[<ref refid="types11_8h_1ad77952c6836d744f828d1a5645ca4fd5" kindref="member">SYSBK</ref>+3]<sp/>==<sp/><ref refid="const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/>&amp;&amp;<sp/>(suspend-&gt;<ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[<ref refid="types11_8h_1ad77952c6836d744f828d1a5645ca4fd5" kindref="member">SYSBK</ref>]<sp/>==<sp/><ref refid="const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)){</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suspend-&gt;<ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[<ref refid="types11_8h_1ad77952c6836d744f828d1a5645ca4fd5" kindref="member">SYSBK</ref>+3]<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)before-&gt;reg_a1;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suspend-&gt;<ref refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" kindref="member">handler</ref>[<ref refid="types11_8h_1ad77952c6836d744f828d1a5645ca4fd5" kindref="member">SYSBK</ref>]<sp/>=<sp/>(<ref refid="structstate__t" kindref="compound">state_t</ref>*)before-&gt;reg_a2;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a6fcab51848f040ca4f81159bad95c3e0" kindref="member">LDST</ref>(&amp;suspend-&gt;<ref refid="structpcb__t_1ae1524fbfc37b7766b551477e48b3bf4d" kindref="member">p_s</ref>);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1afe2502898946fda9e5ef2121db5e79ce" kindref="member">kill</ref>(suspend);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1a9fa00b0be5d3c4781048861e2506eb63" kindref="member">scheduler</ref>();</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/syscall.c"/>
+  </compounddef>
+</doxygen>

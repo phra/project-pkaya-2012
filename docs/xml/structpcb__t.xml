@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="structpcb__t" kind="struct" prot="public">
+    <compoundname>pcb_t</compoundname>
+    <includes refid="types11_8h" local="no">types11.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpcb__t_1af500917c052066b40cf47f96b43c607b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pid</definition>
+        <argsstring></argsstring>
+        <name>pid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="18" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpcb__t_1aab19ac996ae189b600c68cb4e4e8b66b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int last_sched_time</definition>
+        <argsstring></argsstring>
+        <name>last_sched_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="20" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpcb__t_1a7438f6e4370c77335272481935c3c2da" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cpu_time</definition>
+        <argsstring></argsstring>
+        <name>cpu_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="22" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpcb__t_1aafb68b6d949df584f04372a411587a3e" prot="public" static="no" mutable="no">
+        <type><ref refid="structstate__t" kindref="compound">state_t</ref> *</type>
+        <definition>state_t* handler[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="24" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpcb__t_1acec9ce2df15222151ad66fcb1d74eb9f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int priority</definition>
+        <argsstring></argsstring>
+        <name>priority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="29" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpcb__t_1a831f803a73e91f4b1530e60bc24e92b4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int p_semkey</definition>
+        <argsstring></argsstring>
+        <name>p_semkey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="32" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpcb__t_1adb25d84c36e53123e815e122610fd3ab" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref></type>
+        <definition>struct list_head p_next</definition>
+        <argsstring></argsstring>
+        <name>p_next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="35" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpcb__t_1a4d7a714ff6400c5cc2977964fc3b0c53" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>struct pcb_t* p_parent</definition>
+        <argsstring></argsstring>
+        <name>p_parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="38" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpcb__t_1ae571e01892f17d1ccf6332d96e6c5373" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> p_child</type>
+        <definition>struct list_head p_child p_sib</definition>
+        <argsstring></argsstring>
+        <name>p_sib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="40" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpcb__t_1ae1524fbfc37b7766b551477e48b3bf4d" prot="public" static="no" mutable="no">
+        <type><ref refid="structstate__t" kindref="compound">state_t</ref></type>
+        <definition>state_t p_s</definition>
+        <argsstring></argsstring>
+        <name>p_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="43" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="15">
+        <label>list_head</label>
+        <link refid="structlist__head"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>prev</edgelabel>
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>state_t</label>
+        <link refid="structstate__t"/>
+      </node>
+      <node id="14">
+        <label>pcb_t</label>
+        <link refid="structpcb__t"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>p_next</edgelabel>
+          <edgelabel>p_sib</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>handler</edgelabel>
+          <edgelabel>p_s</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>p_parent</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" line="15" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/types11.h" bodystart="15" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structpcb__t_1a7438f6e4370c77335272481935c3c2da" prot="public" virt="non-virtual"><scope>pcb_t</scope><name>cpu_time</name></member>
+      <member refid="structpcb__t_1aafb68b6d949df584f04372a411587a3e" prot="public" virt="non-virtual"><scope>pcb_t</scope><name>handler</name></member>
+      <member refid="structpcb__t_1aab19ac996ae189b600c68cb4e4e8b66b" prot="public" virt="non-virtual"><scope>pcb_t</scope><name>last_sched_time</name></member>
+      <member refid="structpcb__t_1adb25d84c36e53123e815e122610fd3ab" prot="public" virt="non-virtual"><scope>pcb_t</scope><name>p_next</name></member>
+      <member refid="structpcb__t_1a4d7a714ff6400c5cc2977964fc3b0c53" prot="public" virt="non-virtual"><scope>pcb_t</scope><name>p_parent</name></member>
+      <member refid="structpcb__t_1ae1524fbfc37b7766b551477e48b3bf4d" prot="public" virt="non-virtual"><scope>pcb_t</scope><name>p_s</name></member>
+      <member refid="structpcb__t_1a831f803a73e91f4b1530e60bc24e92b4" prot="public" virt="non-virtual"><scope>pcb_t</scope><name>p_semkey</name></member>
+      <member refid="structpcb__t_1ae571e01892f17d1ccf6332d96e6c5373" prot="public" virt="non-virtual"><scope>pcb_t</scope><name>p_sib</name></member>
+      <member refid="structpcb__t_1af500917c052066b40cf47f96b43c607b" prot="public" virt="non-virtual"><scope>pcb_t</scope><name>pid</name></member>
+      <member refid="structpcb__t_1acec9ce2df15222151ad66fcb1d74eb9f" prot="public" virt="non-virtual"><scope>pcb_t</scope><name>priority</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

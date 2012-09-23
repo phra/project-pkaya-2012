@@ -1,0 +1,498 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="asl_8h" kind="file">
+    <compoundname>asl.h</compoundname>
+    <includes refid="const_8h" local="yes">const.h</includes>
+    <includes refid="base_8h" local="yes">base.h</includes>
+    <includes refid="u_m_p_stypes_8h" local="yes">uMPStypes.h</includes>
+    <includes refid="libumps_8h" local="yes">libumps.h</includes>
+    <includes refid="listx_8h" local="yes">listx.h</includes>
+    <includes refid="types11_8h" local="yes">types11.h</includes>
+    <includedby refid="exception_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.c</includedby>
+    <includedby refid="init_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.h</includedby>
+    <includedby refid="scheduler_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.h</includedby>
+    <includedby refid="exception_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.h</includedby>
+    <includedby refid="syscall_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.h</includedby>
+    <includedby refid="interrupt_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.h</includedby>
+    <includedby refid="init_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.c</includedby>
+    <includedby refid="interrupt_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.c</includedby>
+    <includedby refid="scheduler_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.c</includedby>
+    <includedby refid="syscall_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.c</includedby>
+    <incdepgraph>
+      <node id="133">
+        <label>listx.h</label>
+        <link refid="listx_8h"/>
+      </node>
+      <node id="128">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/asl.h</label>
+        <link refid="asl.h"/>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>types11.h</label>
+        <link refid="types11_8h"/>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+      </node>
+      <node id="132">
+        <label>libumps.h</label>
+        <link refid="libumps_8h"/>
+      </node>
+      <node id="131">
+        <label>uMPStypes.h</label>
+        <link refid="u_m_p_stypes_8h"/>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>base.h</label>
+        <link refid="base_8h"/>
+      </node>
+      <node id="129">
+        <label>const.h</label>
+        <link refid="const_8h"/>
+        <childnode refid="130" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="135">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/asl.h</label>
+        <link refid="asl.h"/>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+      <node id="136">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.c</label>
+        <link refid="exception_8c"/>
+      </node>
+      <node id="139">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+      <node id="143">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.c</label>
+        <link refid="scheduler_8c"/>
+      </node>
+      <node id="138">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.c</label>
+        <link refid="interrupt_8c"/>
+      </node>
+      <node id="141">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+      </node>
+      <node id="142">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="137">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+      <node id="145">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="140">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="asl_8h_1a43faf701af9530f6934df170370b8d94" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref></type>
+        <definition>struct list_head semd_h</definition>
+        <argsstring></argsstring>
+        <name>semd_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/asl.h" line="19" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/asl.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="asl_8h_1ace4f22fff82a479e8b4386a8045d4405" prot="public" static="no" mutable="no">
+        <type><ref refid="structsemd__t" kindref="compound">semd_t</ref></type>
+        <definition>semd_t semd_table[MAXPROC]</definition>
+        <argsstring>[MAXPROC]</argsstring>
+        <name>semd_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/asl.h" line="20" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/asl.c" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="asl_8h_1afc0834df7c1a47ec6890b35bbaa74e0f" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref></type>
+        <definition>struct list_head semdFree_h</definition>
+        <argsstring></argsstring>
+        <name>semdFree_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/asl.h" line="21" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/asl.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="asl_8h_1af045446ae3e4b6b112ea15d2059c84cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void outChildBlocked</definition>
+        <argsstring>(pcb_t *p)</argsstring>
+        <name>outChildBlocked</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>outChildBlocked(puntatore al processo): elimina il processo puntato da p dalla coda del semaforo associato, rimuovendo anche i processi discendenti. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/asl.h" line="11" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/asl.c" bodystart="179" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="asl_8h_1aa01e6af434d18efb9280e801c9ac54fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* headBlocked</definition>
+        <argsstring>(int key)</argsstring>
+        <name>headBlocked</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore al processo) headBlocked(id del semaforo): restituisce il processo in testa SENZA RIMUOVERLO dalla lista dei processi bloccati dal semaforo con id=key. se il semaforo non viene trovato oppure se non ha processi in attesa, restituisce NULL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>chiave del semaforo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>puntatore al processo </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/asl.h" line="12" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/asl.c" bodystart="165" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="asl_8h_1a0726c34768ec59b5bfcb118bc2bb09f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* outBlocked</definition>
+        <argsstring>(pcb_t *p)</argsstring>
+        <name>outBlocked</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore al processo) outBlocked(puntatore al processo): restituisce il processo puntato da p RIMUOVENDOLO dalla lista dei processi bloccati da un semaforo. se il processo non viene trovato, restituisce NULL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>puntatore al processo </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/asl.h" line="13" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/asl.c" bodystart="146" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="asl_8h_1a9cef24579d8726fc855feec0eb2ae6cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* removeBlocked</definition>
+        <argsstring>(int key)</argsstring>
+        <name>removeBlocked</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore al processo) removeBlocked(id del semaforo): ritorna il primo processo della coda associata al semaforo con id=key. se questo semaforo non esiste, restituisce NULL. se non ci sono più processi bloccati, sposta il semaforo nella lista dei semafori liberi <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>chiave del semaforo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>puntatore al processo sbloccato </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/asl.h" line="14" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/asl.c" bodystart="122" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="asl_8h_1a8641466df0ac1ca496e0fd74a2564c76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int insertBlocked</definition>
+        <argsstring>(int key, pcb_t *p)</argsstring>
+        <name>insertBlocked</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(1 TRUE oppure 0 FALSE) insertBlocked(id del semaforo, puntatore al processo): inserisce il processo puntato da p nella coda dei processi bloccati dal semaforo con id=key. se il semaforo non è presente, allora viene allocato un nuovo semaforo. in caso di errore restituisce 1, altrimenti 0. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>chiave del semaforo </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al processo da inserire </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 in caso di errore, 0 altrimenti </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/asl.h" line="15" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/asl.c" bodystart="95" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="asl_8h_1a7dd34e8ddc18c62f1253e9ddb657cb99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structsemd__t" kindref="compound">semd_t</ref> *</type>
+        <definition>semd_t* getSemd</definition>
+        <argsstring>(int key)</argsstring>
+        <name>getSemd</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore a semaforo) getSemd(id del semaforo): restituisce il puntatore al semaforo avente id=key della lista dei semafori attivi. se non esiste nessun elemento con tale id, restituisce NULL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>chiave del semaforo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>puntatore al semaforo se attivo oppure NULL </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/asl.h" line="16" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/asl.c" bodystart="50" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="asl_8h_1aefbbb4412b9d14dc7745f72cb1e52d2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structsemd__t" kindref="compound">semd_t</ref> *</type>
+        <definition>semd_t* mygetSemd</definition>
+        <argsstring>(int key)</argsstring>
+        <name>mygetSemd</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore a semaforo) mygetSemd(id del semaforo): restituisce il puntatore al semaforo avente id=key della lista dei semafori attivi. se non esiste nessun elemento con tale id, restituisce NULL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>chiave del semaforo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>puntatore al semaforo, se non attivo lo alloca </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/asl.h" line="17" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/asl.c" bodystart="67" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="asl_8h_1a37f5309d6814c22605b7da62eccc0f3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initASL</definition>
+        <argsstring>(void)</argsstring>
+        <name>initASL</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="asl_8c_1a37f5309d6814c22605b7da62eccc0f3a" kindref="member">initASL()</ref>:inizializza le due liste necessarie per la gestione dei semafori. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/asl.h" line="18" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/asl.c" bodystart="36" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__ASL__</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__ASL__</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="const_8h" kindref="compound">const.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base_8h" kindref="compound">base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="u_m_p_stypes_8h" kindref="compound">uMPStypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libumps_8h" kindref="compound">libumps.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="listx_8h" kindref="compound">listx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types11_8h" kindref="compound">types11.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="asl_8c_1af045446ae3e4b6b112ea15d2059c84cd" kindref="member">outChildBlocked</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*p);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="asl_8c_1aa01e6af434d18efb9280e801c9ac54fd" kindref="member">headBlocked</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="asl_8c_1a0726c34768ec59b5bfcb118bc2bb09f8" kindref="member">outBlocked</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*p);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="asl_8c_1a9cef24579d8726fc855feec0eb2ae6cf" kindref="member">removeBlocked</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asl_8c_1a8641466df0ac1ca496e0fd74a2564c76" kindref="member">insertBlocked</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key,<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*p);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="structsemd__t" kindref="compound">semd_t</ref><sp/>*<ref refid="asl_8c_1a7dd34e8ddc18c62f1253e9ddb657cb99" kindref="member">getSemd</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/><ref refid="asl_8c_1aefbbb4412b9d14dc7745f72cb1e52d2b" kindref="member">mygetSemd</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="asl_8c_1a37f5309d6814c22605b7da62eccc0f3a" kindref="member">initASL</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><ref refid="asl_8c_1a43faf701af9530f6934df170370b8d94" kindref="member">semd_h</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref><sp/><ref refid="asl_8c_1a7c5093a5a97c19cb85a352beda71e1b5" kindref="member">semd_table</ref>[<ref refid="const_8h_1abe4567498db286a3185a522c6dae3cbc" kindref="member">MAXPROC</ref>];</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><ref refid="asl_8c_1afc0834df7c1a47ec6890b35bbaa74e0f" kindref="member">semdFree_h</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/asl.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,520 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="interrupt_8c" kind="file">
+    <compoundname>interrupt.c</compoundname>
+    <includes refid="const_8h" local="yes">lib/const.h</includes>
+    <includes refid="base_8h" local="yes">lib/base.h</includes>
+    <includes refid="u_m_p_stypes_8h" local="yes">lib/uMPStypes.h</includes>
+    <includes refid="libumps_8h" local="yes">lib/libumps.h</includes>
+    <includes refid="listx_8h" local="yes">lib/listx.h</includes>
+    <includes refid="types11_8h" local="yes">lib/types11.h</includes>
+    <includes refid="pcb_8h" local="yes">lib/pcb.h</includes>
+    <includes refid="asl_8h" local="yes">lib/asl.h</includes>
+    <includes refid="utils_8h" local="yes">lib/utils.h</includes>
+    <includes refid="init_8h" local="yes">init.h</includes>
+    <includes refid="scheduler_8h" local="yes">scheduler.h</includes>
+    <includes refid="exception_8h" local="yes">exception.h</includes>
+    <includes refid="syscall_8h" local="yes">syscall.h</includes>
+    <incdepgraph>
+      <node id="85">
+        <label>lib/listx.h</label>
+        <link refid="listx_8h"/>
+      </node>
+      <node id="88">
+        <label>lib/asl.h</label>
+        <link refid="asl_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>lib/types11.h</label>
+        <link refid="types11_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>lib/libumps.h</label>
+        <link refid="libumps_8h"/>
+      </node>
+      <node id="91">
+        <label>scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.c</label>
+        <link refid="interrupt.c"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>lib/uMPStypes.h</label>
+        <link refid="u_m_p_stypes_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>lib/pcb.h</label>
+        <link refid="pcb_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>base.h</label>
+        <link refid="base_8h"/>
+      </node>
+      <node id="89">
+        <label>lib/utils.h</label>
+        <link refid="utils_8h"/>
+      </node>
+      <node id="81">
+        <label>lib/const.h</label>
+        <link refid="const_8h"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="interrupt_8c_1a8f2e0ef78869dd8b660ad9678826efda" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>devstatus</definition>
+        <argsstring>[DEV_USED_INTS][DEV_PER_INT]</argsstring>
+        <name>devstatus</name>
+        <briefdescription>
+<para>matrice per la gestione degli interrupt </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/interrupt.c" line="27" bodyfile="C:/Users/phra/Desktop/progetto_so/src/interrupt.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="interrupt_8c_1acc77bfb6e4822a8e77a7cbe0cfc2dada" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _verhogen</definition>
+        <argsstring>(int semkey, unsigned int *status)</argsstring>
+        <name>_verhogen</name>
+        <param>
+          <type>int</type>
+          <declname>semkey</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>verhogen per gli interrupt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/interrupt.c" line="32" bodyfile="C:/Users/phra/Desktop/progetto_so/src/interrupt.c" bodystart="32" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="interrupt_8c_1ac8dc451d3dfaea9ef445fa2e77acf120" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _passeren</definition>
+        <argsstring>(int semkey)</argsstring>
+        <name>_passeren</name>
+        <param>
+          <type>int</type>
+          <declname>semkey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>passeren per gli interrupt dei devices </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/interrupt.c" line="59" bodyfile="C:/Users/phra/Desktop/progetto_so/src/interrupt.c" bodystart="59" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="interrupt_8c_1a2d83085b5c3534a73f40da132967face" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _passerenclock</definition>
+        <argsstring>(int semkey)</argsstring>
+        <name>_passerenclock</name>
+        <param>
+          <type>int</type>
+          <declname>semkey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>passeren per il clock </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/interrupt.c" line="81" bodyfile="C:/Users/phra/Desktop/progetto_so/src/interrupt.c" bodystart="81" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="interrupt_8c_1aae20182833e9cb218bcf3e0dc079abec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _verhogenclock</definition>
+        <argsstring>(int semkey)</argsstring>
+        <name>_verhogenclock</name>
+        <param>
+          <type>int</type>
+          <declname>semkey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>verhogen per il clock </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/interrupt.c" line="98" bodyfile="C:/Users/phra/Desktop/progetto_so/src/interrupt.c" bodystart="98" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="interrupt_8c_1a32f34b160341ecb125d9af0e7d3b936e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void deviceHandler</definition>
+        <argsstring>(U32 intline)</argsstring>
+        <name>deviceHandler</name>
+        <param>
+          <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+          <declname>intline</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>funzione per la gestione degli interrupt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/interrupt.c" line="119" bodyfile="C:/Users/phra/Desktop/progetto_so/src/interrupt.c" bodystart="119" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="const_8h" kindref="compound">lib/const.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base_8h" kindref="compound">lib/base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="u_m_p_stypes_8h" kindref="compound">lib/uMPStypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libumps_8h" kindref="compound">lib/libumps.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="listx_8h" kindref="compound">lib/listx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types11_8h" kindref="compound">lib/types11.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pcb_8h" kindref="compound">lib/pcb.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="asl_8h" kindref="compound">lib/asl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_8h" kindref="compound">lib/utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scheduler_8h" kindref="compound">scheduler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="exception_8h" kindref="compound">exception.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="syscall_8h" kindref="compound">syscall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__INT_MACROS__</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__INT_MACROS__</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>devBaseAddrCalc(line,devNum)<sp/>(dtpreg_t*)DEV_REGS_START<sp/>+<sp/>(line<sp/>*<sp/>0x80)<sp/>+<sp/>(devNum<sp/>*<sp/>0x10)</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>bitmapCalc(line)<sp/>*((int*)(PENDING_BITMAP_START<sp/>+<sp/>(line<sp/>-<sp/>3)<sp/>*<sp/>WORD_SIZE))</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="interrupt_8c_1a8f2e0ef78869dd8b660ad9678826efda" kindref="member" tooltip="matrice per la gestione degli interrupt">devstatus</ref>[<ref refid="const_8h_1a58475cf2c6fec61240a581b4cb795e9f" kindref="member">DEV_USED_INTS</ref>][<ref refid="const_8h_1ac488a197b10aaecb90e1c57b17d56e64" kindref="member">DEV_PER_INT</ref>];</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interrupt_8c_1acc77bfb6e4822a8e77a7cbe0cfc2dada" kindref="member">_verhogen</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>semkey,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>status){</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/><ref refid="structlist__head_1ad6116fd07816a828c3a9830f54871bd0" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>sem;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,0,1));<sp/></highlight><highlight class="comment">/*<sp/>critical<sp/>section<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>sem<sp/>=<sp/><ref refid="asl_8c_1aefbbb4412b9d14dc7745f72cb1e52d2b" kindref="member">mygetSemd</ref>(semkey);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="asl_8c_1aa01e6af434d18efb9280e801c9ac54fd" kindref="member">headBlocked</ref>(semkey)){<sp/></highlight><highlight class="comment">/*<sp/>wake<sp/>up<sp/>someone!<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sem-&gt;<ref refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" kindref="member">s_value</ref>++;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next<sp/>=<sp/><ref refid="asl_8c_1a9cef24579d8726fc855feec0eb2ae6cf" kindref="member">removeBlocked</ref>(semkey);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,1,0);<sp/></highlight><highlight class="comment">/*<sp/>release<sp/>mutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next-&gt;<ref refid="structpcb__t_1ae1524fbfc37b7766b551477e48b3bf4d" kindref="member">p_s</ref>.reg_v0<sp/>=<sp/>*status;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*status<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>,0,1));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="init_8c_1ad318e0d6e55bda844999a756a010d6ad" kindref="member" tooltip="Contatore processi bloccati per I/O.">softBlockCounter</ref>--;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>,1,0);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1a36f350361c844b6f548e4e4579b87719" kindref="member">inserisciprocessoready</ref>(next);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sem-&gt;<ref refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" kindref="member">s_value</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,1,0);<sp/></highlight><highlight class="comment">/*<sp/>release<sp/>mutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interrupt_8c_1ac8dc451d3dfaea9ef445fa2e77acf120" kindref="member">_passeren</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>semkey){</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>suspend<sp/>=<sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>sem;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,0,1));<sp/></highlight><highlight class="comment">/*<sp/>critical<sp/>section<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>sem<sp/>=<sp/><ref refid="asl_8c_1aefbbb4412b9d14dc7745f72cb1e52d2b" kindref="member">mygetSemd</ref>(semkey);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>sem-&gt;<ref refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" kindref="member">s_value</ref><sp/>-=<sp/>1;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sem-&gt;<ref refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" kindref="member">s_value</ref><sp/>&gt;=<sp/>0){<sp/></highlight><highlight class="comment">/*<sp/>GO!<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,1,0);<sp/></highlight><highlight class="comment">/*<sp/>release<sp/>mutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="comment">/*<sp/>wait<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="asl_8c_1a8641466df0ac1ca496e0fd74a2564c76" kindref="member">insertBlocked</ref>(semkey,suspend);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,1,0);<sp/></highlight><highlight class="comment">/*<sp/>release<sp/>mutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>,0,1));</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="init_8c_1ad318e0d6e55bda844999a756a010d6ad" kindref="member" tooltip="Contatore processi bloccati per I/O.">softBlockCounter</ref><sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>,1,0);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1a9fa00b0be5d3c4781048861e2506eb63" kindref="member">scheduler</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interrupt_8c_1a2d83085b5c3534a73f40da132967face" kindref="member">_passerenclock</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>semkey){</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>suspend<sp/>=<sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()];</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,0,1));<sp/></highlight><highlight class="comment">/*<sp/>critical<sp/>section<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>sem<sp/>=<sp/><ref refid="asl_8c_1aefbbb4412b9d14dc7745f72cb1e52d2b" kindref="member">mygetSemd</ref>(semkey);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>sem-&gt;<ref refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" kindref="member">s_value</ref><sp/>-=<sp/>1;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="asl_8c_1a8641466df0ac1ca496e0fd74a2564c76" kindref="member">insertBlocked</ref>(semkey,suspend);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,1,0);<sp/></highlight><highlight class="comment">/*<sp/>release<sp/>mutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>suspend-&gt;<ref refid="structpcb__t_1a831f803a73e91f4b1530e60bc24e92b4" kindref="member">p_semkey</ref><sp/>=<sp/>semkey;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>,0,1));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="init_8c_1ad318e0d6e55bda844999a756a010d6ad" kindref="member" tooltip="Contatore processi bloccati per I/O.">softBlockCounter</ref>++;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>,1,0);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interrupt_8c_1aae20182833e9cb218bcf3e0dc079abec" kindref="member">_verhogenclock</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>semkey){</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/><ref refid="structlist__head_1ad6116fd07816a828c3a9830f54871bd0" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,0,1));<sp/></highlight><highlight class="comment">/*<sp/>critical<sp/>section<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>sem<sp/>=<sp/><ref refid="asl_8c_1aefbbb4412b9d14dc7745f72cb1e52d2b" kindref="member">mygetSemd</ref>(semkey);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="asl_8c_1aa01e6af434d18efb9280e801c9ac54fd" kindref="member">headBlocked</ref>(semkey)){<sp/></highlight><highlight class="comment">/*<sp/>wake<sp/>up<sp/>someone!<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((next<sp/>=<sp/><ref refid="asl_8c_1a9cef24579d8726fc855feec0eb2ae6cf" kindref="member">removeBlocked</ref>(semkey))<sp/>==<sp/><ref refid="const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/><ref refid="init_8c_1a3dff7a7ddb7b31f1a3f84462906b78e3" kindref="member">myprint</ref>(</highlight><highlight class="stringliteral">&quot;next<sp/>==<sp/>NULL&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sem-&gt;<ref refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" kindref="member">s_value</ref>++;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1a36f350361c844b6f548e4e4579b87719" kindref="member">inserisciprocessoready</ref>(next);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,1,0);<sp/></highlight><highlight class="comment">/*<sp/>release<sp/>mutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>,0,1));</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="init_8c_1ad318e0d6e55bda844999a756a010d6ad" kindref="member" tooltip="Contatore processi bloccati per I/O.">softBlockCounter</ref><sp/>-=<sp/>i;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>,1,0);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interrupt_8c_1a32f34b160341ecb125d9af0e7d3b936e" kindref="member">deviceHandler</ref>(<ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/>intline){</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdtpreg__t" kindref="compound">dtpreg_t</ref>*<sp/>device_requested;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/>i,rw,status;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/>bitmap<sp/>=<sp/>bitmapCalc(intline);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>rw<sp/>=<sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base_8h_1a8dfc83cbb8a200048ed977af78885aa1" kindref="member">memaddr</ref>*<sp/>sendstatus<sp/>=<sp/>(<ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/>*)<sp/>(<ref refid="init_8h_1afd7c9be68e62aa06f63ba025c13ee34a" kindref="member">TERM0ADDR</ref><sp/>+<sp/>(0<sp/>*<sp/><ref refid="init_8h_1a46c3d6184a0f7fe61df840f07e3e3a2f" kindref="member">DEVREGSIZE</ref>)<sp/>+<sp/>(<ref refid="init_8h_1ac74c3ef3346da1a7f0e5695f26981021" kindref="member">TRANSTATUS</ref><sp/>*<sp/><ref refid="init_8h_1a6d290d1da702b40a5947ee63700f890e" kindref="member">DEVREGLEN</ref>));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base_8h_1a8dfc83cbb8a200048ed977af78885aa1" kindref="member">memaddr</ref>*<sp/>sendcommand<sp/>=<sp/>(<ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/>*)<sp/>(<ref refid="init_8h_1afd7c9be68e62aa06f63ba025c13ee34a" kindref="member">TERM0ADDR</ref><sp/>+<sp/>(0<sp/>*<sp/><ref refid="init_8h_1a46c3d6184a0f7fe61df840f07e3e3a2f" kindref="member">DEVREGSIZE</ref>)<sp/>+<sp/>(<ref refid="init_8h_1ade5cf18f7c8b9f995f4d07fa5d8e7073" kindref="member">TRANCOMMAND</ref><sp/>*<sp/><ref refid="init_8h_1a6d290d1da702b40a5947ee63700f890e" kindref="member">DEVREGLEN</ref>));</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base_8h_1a8dfc83cbb8a200048ed977af78885aa1" kindref="member">memaddr</ref>*<sp/>recvstatus<sp/>=<sp/>(<ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/>*)<sp/>(<ref refid="init_8h_1afd7c9be68e62aa06f63ba025c13ee34a" kindref="member">TERM0ADDR</ref><sp/>+<sp/>(0<sp/>*<sp/><ref refid="init_8h_1a46c3d6184a0f7fe61df840f07e3e3a2f" kindref="member">DEVREGSIZE</ref>)<sp/>+<sp/>(<ref refid="init_8h_1a444c52e2594d67f8801c17bf50491683" kindref="member">RECVSTATUS</ref><sp/>*<sp/><ref refid="init_8h_1a6d290d1da702b40a5947ee63700f890e" kindref="member">DEVREGLEN</ref>));</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base_8h_1a8dfc83cbb8a200048ed977af78885aa1" kindref="member">memaddr</ref>*<sp/>recvcommand<sp/>=<sp/>(<ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/>*)<sp/>(<ref refid="init_8h_1afd7c9be68e62aa06f63ba025c13ee34a" kindref="member">TERM0ADDR</ref><sp/>+<sp/>(0<sp/>*<sp/><ref refid="init_8h_1a46c3d6184a0f7fe61df840f07e3e3a2f" kindref="member">DEVREGSIZE</ref>)<sp/>+<sp/>(<ref refid="init_8h_1a7cc2c7f2230a13e65c1ef97ec2216b5d" kindref="member">RECVCOMMAND</ref><sp/>*<sp/><ref refid="init_8h_1a6d290d1da702b40a5947ee63700f890e" kindref="member">DEVREGLEN</ref>));</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*cerco<sp/>il<sp/>numero<sp/>del<sp/>device<sp/>che<sp/>ha<sp/>effetuato<sp/>l&apos;interrupt*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="const_8h_1ac488a197b10aaecb90e1c57b17d56e64" kindref="member">DEV_PER_INT</ref>;<sp/>i++)<sp/>{<sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((bitmap)<sp/>&amp;<sp/>0x1)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bitmap<sp/>&gt;&gt;=<sp/>1;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>device_requested<sp/>=<sp/>devBaseAddrCalc(intline,i);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*ACK*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(intline<sp/>!=<sp/><ref refid="const_8h_1a2bf14531b6ad3ef3d3c26d33f1ef3289" kindref="member">INT_TERMINAL</ref>){<sp/></highlight><highlight class="comment">/*non<sp/>è<sp/>sulla<sp/>linea<sp/>del<sp/>terminale*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device_requested-&gt;<ref refid="structdtpreg__t_1a8538fdce575b580097b18700c560a5a8" kindref="member">command</ref><sp/>=<sp/><ref refid="const_8h_1aac22728668b8dc0bca00bb3cbe9acd4d" kindref="member">DEV_C_ACK</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/>device_requested-&gt;<ref refid="structdtpreg__t_1ae37efb991e613c0dc476ece5ed4ffa71" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtermreg__t" kindref="compound">termreg_t</ref>*<sp/>terminal_requested<sp/>=<sp/>(<ref refid="structtermreg__t" kindref="compound">termreg_t</ref>*)device_requested;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="init_8c_1a6a0c937f22f4f8e2d7c8223fd92f1e0c" kindref="member">mytermstat</ref>(sendstatus)<sp/>==<sp/><ref refid="const_8h_1a758cb21687da2425a8c611c29c8b7ae6" kindref="member">DEV_TTRS_S_CHARTRSM</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/>*sendstatus;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*sendcommand<sp/>=<sp/><ref refid="const_8h_1aac22728668b8dc0bca00bb3cbe9acd4d" kindref="member">DEV_C_ACK</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="init_8c_1a6a0c937f22f4f8e2d7c8223fd92f1e0c" kindref="member">mytermstat</ref>(recvstatus)<sp/>==<sp/><ref refid="const_8h_1ad3bc52a1a90b93d8cc2833f2c3881b9c" kindref="member">DEV_TRCV_S_CHARRECV</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/>*recvstatus;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*recvcommand<sp/>=<sp/><ref refid="const_8h_1aac22728668b8dc0bca00bb3cbe9acd4d" kindref="member">DEV_C_ACK</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rw<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interrupt_8c_1a8f2e0ef78869dd8b660ad9678826efda" kindref="member" tooltip="matrice per la gestione degli interrupt">devstatus</ref>[intline-3][i+rw]<sp/>=<sp/>status;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interrupt_8c_1acc77bfb6e4822a8e77a7cbe0cfc2dada" kindref="member">_verhogen</ref>((intline*(i+1)+20)+rw,&amp;<ref refid="interrupt_8c_1a8f2e0ef78869dd8b660ad9678826efda" kindref="member" tooltip="matrice per la gestione degli interrupt">devstatus</ref>[intline-3][i+rw]);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/interrupt.c"/>
+  </compounddef>
+</doxygen>

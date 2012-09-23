@@ -1,0 +1,951 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="libumps_8h" kind="file">
+    <compoundname>libumps.h</compoundname>
+    <includedby refid="exception_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.c</includedby>
+    <includedby refid="pcb_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/pcb.h</includedby>
+    <includedby refid="asl_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/asl.h</includedby>
+    <includedby refid="init_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.h</includedby>
+    <includedby refid="scheduler_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.h</includedby>
+    <includedby refid="exception_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.h</includedby>
+    <includedby refid="syscall_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.h</includedby>
+    <includedby refid="interrupt_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.h</includedby>
+    <includedby refid="init_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.c</includedby>
+    <includedby refid="interrupt_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.c</includedby>
+    <includedby refid="p2test2012__scalability__v1_80_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/p2test2012_scalability_v1.0.c</includedby>
+    <includedby refid="p2test2012__v1_80_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/p2test2012_v1.0.c</includedby>
+    <includedby refid="scheduler_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.c</includedby>
+    <includedby refid="syscall_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.c</includedby>
+    <invincdepgraph>
+      <node id="201">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/asl.h</label>
+        <link refid="asl_8h"/>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="190">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.c</label>
+        <link refid="exception_8c"/>
+      </node>
+      <node id="194">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h</label>
+        <link refid="libumps.h"/>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="198">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.c</label>
+        <link refid="scheduler_8c"/>
+      </node>
+      <node id="193">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="199">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.c</label>
+        <link refid="interrupt_8c"/>
+      </node>
+      <node id="196">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+      </node>
+      <node id="197">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="192">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/pcb.h</label>
+        <link refid="pcb_8h"/>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="203">
+        <label>C:/Users/phra/Desktop/progetto_so/src/p2test2012_v1.0.c</label>
+        <link refid="p2test2012__v1_80_8c"/>
+      </node>
+      <node id="200">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="195">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+      </node>
+      <node id="202">
+        <label>C:/Users/phra/Desktop/progetto_so/src/p2test2012_scalability_v1.0.c</label>
+        <link refid="p2test2012__scalability__v1_80_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="libumps_8h_1a13ea8ec9785b25845f82f408e642b88f" prot="public" static="no">
+        <name>STATE_PTR</name>
+        <initializer>void*</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="15" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="libumps_8h_1abae0ec80331cf17ff7cb31b59535eba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int SYSCALL</definition>
+        <argsstring>(unsigned int number, unsigned int arg1, unsigned int arg2, unsigned int arg3)</argsstring>
+        <name>SYSCALL</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>number</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>arg2</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>arg3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="24"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a91b8f29ab15cd921479e3c55961cb010" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int getINDEX</definition>
+        <argsstring>(void)</argsstring>
+        <name>getINDEX</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="32"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a694559b10814d4f8ee259a2949052767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int getRANDOM</definition>
+        <argsstring>(void)</argsstring>
+        <name>getRANDOM</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a477f78154daea32e3018e3a50ac63e90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int getENTRYLO</definition>
+        <argsstring>(void)</argsstring>
+        <name>getENTRYLO</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a89fd68440472397958155ca4e7e3c88d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int getBADVADDR</definition>
+        <argsstring>(void)</argsstring>
+        <name>getBADVADDR</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a4152da98f9e5b55e3e24a5b658850efd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int getENTRYHI</definition>
+        <argsstring>(void)</argsstring>
+        <name>getENTRYHI</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a9ee013f04d59d001ffe5d334a11e8db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int getSTATUS</definition>
+        <argsstring>(void)</argsstring>
+        <name>getSTATUS</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a0663ed3f4d676b799c433d6b553ee657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int getCAUSE</definition>
+        <argsstring>(void)</argsstring>
+        <name>getCAUSE</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a51fdfce964b2cebf20b8d442bc785889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int getEPC</definition>
+        <argsstring>(void)</argsstring>
+        <name>getEPC</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a188e2193398285c46e37f217feef731c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int getPRID</definition>
+        <argsstring>(void)</argsstring>
+        <name>getPRID</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1adb69672932d8e414ed530d917b033e4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int getTIMER</definition>
+        <argsstring>(void)</argsstring>
+        <name>getTIMER</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a1140d24bb98f5162feb6bdd5203996a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int setINDEX</definition>
+        <argsstring>(unsigned int index)</argsstring>
+        <name>setINDEX</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a090e4d39d90f690444fcf1fc7d7d259c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int setENTRYLO</definition>
+        <argsstring>(unsigned int entry)</argsstring>
+        <name>setENTRYLO</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1ad6039cf35af7e225a08dab8a4bd02d36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int setENTRYHI</definition>
+        <argsstring>(unsigned int entry)</argsstring>
+        <name>setENTRYHI</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1aadbffb1be296a0e6faf9d4c8addbdb2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int setSTATUS</definition>
+        <argsstring>(unsigned int entry)</argsstring>
+        <name>setSTATUS</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1ad5381f797879be134c422d0b1eb75028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int setCAUSE</definition>
+        <argsstring>(unsigned int cause)</argsstring>
+        <name>setCAUSE</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>cause</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a140bb4e299adcb1007ca8e1cdd989b2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int setTIMER</definition>
+        <argsstring>(unsigned int timer)</argsstring>
+        <name>setTIMER</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1ac0b1e6201c0c8c8e9745326d9e93b4ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TLBWR</definition>
+        <argsstring>(void)</argsstring>
+        <name>TLBWR</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1ab88d06f7c18b0693577f50b91fa423e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TLBWI</definition>
+        <argsstring>(void)</argsstring>
+        <name>TLBWI</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a2cb4ec25264536da0b31c947e989b531" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TLBP</definition>
+        <argsstring>(void)</argsstring>
+        <name>TLBP</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1ac49c36cc9828c9b54d834bb729ed3a42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TLBR</definition>
+        <argsstring>(void)</argsstring>
+        <name>TLBR</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a8742056435bfeee7cb3df7b9d763ef08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TLBCLR</definition>
+        <argsstring>(void)</argsstring>
+        <name>TLBCLR</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a61d29d6b98f3a9837fb511e4296c1048" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WAIT</definition>
+        <argsstring>(void)</argsstring>
+        <name>WAIT</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a879d9e1a8951fe104c50341ae06002ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int FORK</definition>
+        <argsstring>(unsigned int entryhi, unsigned int status, unsigned int pc, STATE_PTR statep)</argsstring>
+        <name>FORK</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>entryhi</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>pc</declname>
+        </param>
+        <param>
+          <type><ref refid="libumps_8h_1a13ea8ec9785b25845f82f408e642b88f" kindref="member">STATE_PTR</ref></type>
+          <declname>statep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a239ae0005d74c1d77dcd531c0b1df141" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int STST</definition>
+        <argsstring>(STATE_PTR statep)</argsstring>
+        <name>STST</name>
+        <param>
+          <type><ref refid="libumps_8h_1a13ea8ec9785b25845f82f408e642b88f" kindref="member">STATE_PTR</ref></type>
+          <declname>statep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="136"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a6fcab51848f040ca4f81159bad95c3e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int LDST</definition>
+        <argsstring>(STATE_PTR statep)</argsstring>
+        <name>LDST</name>
+        <param>
+          <type><ref refid="libumps_8h_1a13ea8ec9785b25845f82f408e642b88f" kindref="member">STATE_PTR</ref></type>
+          <declname>statep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="150"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1ab73738c7ca97cc8c51677dbcc0404190" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PANIC</definition>
+        <argsstring>(void)</argsstring>
+        <name>PANIC</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a5b49f43507869e85f0cd17ad7b2d4f2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HALT</definition>
+        <argsstring>(void)</argsstring>
+        <name>HALT</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="163"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a4f1807bd72adbecb22013887627fdca6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void INITCPU</definition>
+        <argsstring>(unsigned int cpuid, STATE_PTR start_state, STATE_PTR state_areas)</argsstring>
+        <name>INITCPU</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>cpuid</declname>
+        </param>
+        <param>
+          <type><ref refid="libumps_8h_1a13ea8ec9785b25845f82f408e642b88f" kindref="member">STATE_PTR</ref></type>
+          <declname>start_state</declname>
+        </param>
+        <param>
+          <type><ref refid="libumps_8h_1a13ea8ec9785b25845f82f408e642b88f" kindref="member">STATE_PTR</ref></type>
+          <declname>state_areas</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="165"/>
+      </memberdef>
+      <memberdef kind="function" id="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CAS</definition>
+        <argsstring>(volatile unsigned int *atomic, unsigned int oldval, unsigned int newval)</argsstring>
+        <name>CAS</name>
+        <param>
+          <type>volatile unsigned int *</type>
+          <declname>atomic</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>oldval</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h" line="167"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>External<sp/>declarations<sp/>for<sp/>uMPS<sp/>library<sp/>module.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>UMPS_LIBUMPS_H</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UMPS_LIBUMPS_H</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>&quot;Forward<sp/>declaration&quot;<sp/>hack!!</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Many<sp/>functions<sp/>in<sp/>this<sp/>module<sp/>accept<sp/>a<sp/>pointer<sp/>to<sp/>a<sp/>cpu<sp/>state</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>(STATE_PTR)<sp/>structure.<sp/>We<sp/>cannot<sp/>just<sp/>forward<sp/>declare<sp/>that<sp/>because</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>state_t<sp/>was<sp/>commonly<sp/>defined<sp/>by<sp/>clients<sp/>as<sp/>an<sp/>anonymous<sp/>struct</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>typedef.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="libumps_8h_1a13ea8ec9785b25845f82f408e642b88f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STATE_PTR<sp/>void*</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Functions<sp/>valid<sp/>in<sp/>user<sp/>mode</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>cause<sp/>a<sp/>system<sp/>call<sp/>trap</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1abae0ec80331cf17ff7cb31b59535eba0" kindref="member">SYSCALL</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>number,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arg1,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arg2,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arg3);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>All<sp/>these<sp/>functions<sp/>access<sp/>CP0<sp/>registers.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>Access<sp/>to<sp/>CP0<sp/>registers<sp/>is<sp/>always<sp/>possible<sp/>in<sp/>kernel<sp/>mode,<sp/>or<sp/>in<sp/>user</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>mode<sp/>with<sp/>CPU<sp/>0<sp/>bit<sp/>_set_<sp/>in<sp/>STATUS<sp/>register<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a91b8f29ab15cd921479e3c55961cb010" kindref="member">getINDEX</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a694559b10814d4f8ee259a2949052767" kindref="member">getRANDOM</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a477f78154daea32e3018e3a50ac63e90" kindref="member">getENTRYLO</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a89fd68440472397958155ca4e7e3c88d" kindref="member">getBADVADDR</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a4152da98f9e5b55e3e24a5b658850efd" kindref="member">getENTRYHI</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a9ee013f04d59d001ffe5d334a11e8db0" kindref="member">getSTATUS</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a0663ed3f4d676b799c433d6b553ee657" kindref="member">getCAUSE</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a51fdfce964b2cebf20b8d442bc785889" kindref="member">getEPC</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1adb69672932d8e414ed530d917b033e4d" kindref="member">getTIMER</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Only<sp/>some<sp/>of<sp/>CP0<sp/>register<sp/>are<sp/>R/W:<sp/>handling<sp/>requires<sp/>care.</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>*<sp/>All<sp/>functions<sp/>return<sp/>the<sp/>value<sp/>in<sp/>register<sp/>after<sp/>write</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a1140d24bb98f5162feb6bdd5203996a3" kindref="member">setINDEX</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a090e4d39d90f690444fcf1fc7d7d259c" kindref="member">setENTRYLO</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>entry);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1ad6039cf35af7e225a08dab8a4bd02d36" kindref="member">setENTRYHI</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>entry);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1aadbffb1be296a0e6faf9d4c8addbdb2e" kindref="member">setSTATUS</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>entry);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1ad5381f797879be134c422d0b1eb75028" kindref="member">setCAUSE</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cause);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a140bb4e299adcb1007ca8e1cdd989b2a" kindref="member">setTIMER</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timer);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>these<sp/>functions<sp/>produce<sp/>a<sp/>program<sp/>trap<sp/>if<sp/>executed<sp/>in<sp/>user<sp/>mode<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/>*<sp/>without<sp/>CPU0<sp/>bit<sp/>_set_</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1ac0b1e6201c0c8c8e9745326d9e93b4ae" kindref="member">TLBWR</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1ab88d06f7c18b0693577f50b91fa423e1" kindref="member">TLBWI</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a2cb4ec25264536da0b31c947e989b531" kindref="member">TLBP</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1ac49c36cc9828c9b54d834bb729ed3a42" kindref="member">TLBR</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a8742056435bfeee7cb3df7b9d763ef08" kindref="member">TLBCLR</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a61d29d6b98f3a9837fb511e4296c1048" kindref="member">WAIT</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>requires<sp/>BIOS<sp/>intervention,<sp/>and<sp/>is<sp/>valid<sp/>_only_<sp/>in<sp/>kernel</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/>*<sp/>mode:<sp/>otherwise<sp/>it<sp/>causes<sp/>a<sp/>program<sp/>trap.<sp/>It<sp/>may<sp/>be<sp/>used<sp/>to<sp/>start</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/>*<sp/>a<sp/>new<sp/>process</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>load<sp/>a<sp/>processor<sp/>state<sp/>from<sp/>memory:<sp/>there<sp/>is<sp/>no<sp/>valid</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/>*<sp/>return<sp/>value.<sp/><sp/>New<sp/>process<sp/>may<sp/>use<sp/>status,<sp/>EntryHI,<sp/>pc<sp/>and<sp/>CAUSE<sp/>as<sp/>actual</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/>*<sp/>arguments<sp/>if<sp/>call<sp/>is<sp/>carefully<sp/>built,<sp/>since<sp/>$4,<sp/>$5,<sp/>and<sp/>$6<sp/>(a0,<sp/>a1,<sp/>a2)</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/>*<sp/>registers<sp/>are<sp/>not<sp/>loaded<sp/>from<sp/>memory,<sp/>but<sp/>are<sp/>passed<sp/>as<sp/>they<sp/>are<sp/>to<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/>*<sp/>new<sp/>process,<sp/>while<sp/>$7<sp/>(a3)<sp/>is<sp/>loaded<sp/>with<sp/>CAUSE<sp/>value<sp/>from<sp/>processor</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/>*<sp/>state<sp/>in<sp/>memory.<sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/>*<sp/>Keep<sp/>in<sp/>mind<sp/>that<sp/>$2<sp/>(v0)<sp/>register<sp/>is<sp/>used<sp/>by<sp/>routine<sp/>itself<sp/>and<sp/>it<sp/>is</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/>*<sp/>not<sp/>loaded<sp/>from<sp/>memory<sp/>image<sp/>nor<sp/>have<sp/>a<sp/>meaningful<sp/>starting<sp/>value<sp/>for<sp/>the</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/>*<sp/>new<sp/>process<sp/>this<sp/>routine<sp/>starts.</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>NOT<sp/>an<sp/>atomic<sp/>operation:<sp/>the<sp/>processor<sp/>state<sp/>is<sp/>loaded<sp/>register</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/>*<sp/>by<sp/>register<sp/>from<sp/>memory,<sp/>and<sp/>at<sp/>the<sp/>end<sp/>a<sp/>BIOS<sp/>routine<sp/>will<sp/>be<sp/>called<sp/>to</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/>*<sp/>load<sp/>the<sp/>critical<sp/>CAUSE,<sp/>STATUS,<sp/>EntryHI<sp/>and<sp/>PC<sp/>registers<sp/>in<sp/>one<sp/>atomic</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/>*<sp/>operation:<sp/>so,<sp/>this<sp/>call<sp/>is<sp/>interruptible<sp/>(in<sp/>a<sp/>clean<sp/>way)<sp/>or<sp/>cause<sp/>a</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/>*<sp/>trap<sp/>(for<sp/>example,<sp/>a<sp/>memory<sp/>access<sp/>error<sp/>if<sp/>pointer<sp/>is<sp/>not<sp/>correctly</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/>*<sp/>set).<sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/>*<sp/>If<sp/>called<sp/>from<sp/>user<sp/>state,<sp/>it<sp/>will<sp/>trap<sp/>ONLY<sp/>at<sp/>BIOS<sp/>call,<sp/>loading<sp/>the</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/>*<sp/>general<sp/>registers<sp/>with<sp/>new/random<sp/>values<sp/>(if<sp/>no<sp/>other<sp/>errors<sp/>intervene);</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/>*<sp/>this<sp/>will<sp/>corrupt<sp/>the<sp/>calling<sp/>process<sp/>state,<sp/>but<sp/>it<sp/>does<sp/>not<sp/>harm<sp/>system<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/>*<sp/>security<sp/>a<sp/>bit<sp/>(I<sp/>thought<sp/>I<sp/>said<sp/>you<sp/>to<sp/>use<sp/>it<sp/>only<sp/>in<sp/>kernel<sp/>mode...)</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a879d9e1a8951fe104c50341ae06002ba" kindref="member">FORK</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>entryhi,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pc,<sp/><ref refid="libumps_8h_1a13ea8ec9785b25845f82f408e642b88f" kindref="member">STATE_PTR</ref><sp/>statep);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>may<sp/>be<sp/>called<sp/>from<sp/>kernel<sp/>or<sp/>from<sp/>user<sp/>mode<sp/>with<sp/>CPU<sp/>0</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/>*<sp/>STATUS<sp/>bit<sp/>_on_:<sp/>otherwise,<sp/>it<sp/>will<sp/>cause<sp/>a<sp/>trap</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>stores<sp/>processor<sp/>state<sp/>to<sp/>memory.<sp/>It<sp/>intentionally<sp/>leaves<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/>*<sp/>the<sp/>PC<sp/>field<sp/>set<sp/>to<sp/>0;<sp/>putting<sp/>a<sp/>meaningful<sp/>value<sp/>there<sp/>is<sp/>programmer&apos;s<sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/>*<sp/>task.<sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/>*<sp/>Return<sp/>value<sp/>is<sp/>PC<sp/>value<sp/>for<sp/>the<sp/>instruction<sp/>immediately<sp/>following</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/>*<sp/>the<sp/>call.</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*<sp/>This<sp/>too<sp/>is<sp/>NOT<sp/>an<sp/>atomic<sp/>operation:<sp/>the<sp/>processor<sp/>state<sp/>is<sp/>saved</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>*<sp/>register<sp/>by<sp/>register<sp/>to<sp/>memory.<sp/>So,<sp/>this<sp/>call<sp/>is<sp/>interruptible<sp/>(in<sp/>a</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/>*<sp/>clean<sp/>way)<sp/>or<sp/>cause<sp/>a<sp/>trap<sp/>(for<sp/>example,<sp/>an<sp/>memory<sp/>access<sp/>error<sp/>if</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/>*<sp/>pointer<sp/>is<sp/>not<sp/>correctly<sp/>set).<sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/>*<sp/>If<sp/>called<sp/>from<sp/>user<sp/>state,<sp/>it<sp/>will<sp/>trap<sp/>ONLY<sp/>if<sp/>CPU<sp/>0<sp/>bit<sp/>of<sp/>STATUS<sp/>CP0</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/>*<sp/>register<sp/>is<sp/>NOT<sp/>set,<sp/>and<sp/>only<sp/>when<sp/>access<sp/>to<sp/>CP0<sp/>register<sp/>(STATUS,<sp/>ENTRYHI,</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/>*<sp/>CAUSE)<sp/>is<sp/>requested<sp/>(if<sp/>no<sp/>other<sp/>errors<sp/>intervene).</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/>*<sp/>However,<sp/>trying<sp/>it<sp/>does<sp/>not<sp/>harm<sp/>system<sp/>security<sp/>a<sp/>bit.</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a239ae0005d74c1d77dcd531c0b1df141" kindref="member">STST</ref>(<ref refid="libumps_8h_1a13ea8ec9785b25845f82f408e642b88f" kindref="member">STATE_PTR</ref><sp/>statep);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>may<sp/>be<sp/>used<sp/>to<sp/>restart<sp/>an<sp/>interrupted/blocked<sp/>process,</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/>*<sp/>reloading<sp/>it<sp/>from<sp/>a<sp/>physical<sp/>address<sp/>passed<sp/>as<sp/>argument.<sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/>*<sp/>It<sp/>is<sp/>available<sp/>only<sp/>in<sp/>kernel<sp/>mode,<sp/>thru<sp/>a<sp/>BIOS<sp/>routine<sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/>*<sp/>(otherwise<sp/>it<sp/>causes<sp/>a<sp/>trap).</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/>*<sp/>It<sp/>updates<sp/>processor<sp/>status<sp/>_completely_,<sp/>in<sp/>one<sp/>atomic<sp/>operation.</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/>*<sp/>It<sp/>has<sp/>no<sp/>meaningful<sp/>return<sp/>value:<sp/>$2<sp/>(v0)<sp/>register<sp/>is<sp/>used<sp/>for</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/>*<sp/>BIOS<sp/>call,<sp/>but<sp/>it<sp/>is<sp/>reloaded<sp/>too.</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/>*<sp/>Remember<sp/>that<sp/>it<sp/>is<sp/>programmer&apos;s<sp/>task<sp/>to<sp/>increment<sp/>OLD<sp/>area<sp/>PC<sp/>where<sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/>*<sp/>needed<sp/><sp/>(e.g.<sp/>syscall<sp/>handling)<sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a6fcab51848f040ca4f81159bad95c3e0" kindref="member">LDST</ref>(<ref refid="libumps_8h_1a13ea8ec9785b25845f82f408e642b88f" kindref="member">STATE_PTR</ref><sp/>statep);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>stops<sp/>the<sp/>system<sp/>printing<sp/>a<sp/>warning<sp/>message<sp/>on<sp/>terminal<sp/>0</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1ab73738c7ca97cc8c51677dbcc0404190" kindref="member">PANIC</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>halts<sp/>the<sp/>system<sp/>printing<sp/>a<sp/>regular<sp/>shutdown<sp/>message<sp/>on</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/>*<sp/>terminal<sp/>0</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a5b49f43507869e85f0cd17ad7b2d4f2a" kindref="member">HALT</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a4f1807bd72adbecb22013887627fdca6" kindref="member">INITCPU</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cpuid,<sp/><ref refid="libumps_8h_1a13ea8ec9785b25845f82f408e642b88f" kindref="member">STATE_PTR</ref><sp/>start_state,<sp/><ref refid="libumps_8h_1a13ea8ec9785b25845f82f408e642b88f" kindref="member">STATE_PTR</ref><sp/>state_areas);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*atomic,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>oldval,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>newval);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!defined(UMPS_LIBUMPS_H)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/libumps.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="structdtpreg__t" kind="struct" prot="public">
+    <compoundname>dtpreg_t</compoundname>
+    <includes refid="u_m_p_stypes_8h" local="no">uMPStypes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdtpreg__t_1ae37efb991e613c0dc476ece5ed4ffa71" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="10" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdtpreg__t_1a8538fdce575b580097b18700c560a5a8" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 command</definition>
+        <argsstring></argsstring>
+        <name>command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="11" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdtpreg__t_1a8a0c321ffd2847534bfd0bc849a972b4" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 data0</definition>
+        <argsstring></argsstring>
+        <name>data0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="12" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdtpreg__t_1a6eef7e2e6f5e38b7d153e3f25d6fefb8" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 data1</definition>
+        <argsstring></argsstring>
+        <name>data1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="13" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="9" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="9" bodyend="14"/>
+    <listofallmembers>
+      <member refid="structdtpreg__t_1a8538fdce575b580097b18700c560a5a8" prot="public" virt="non-virtual"><scope>dtpreg_t</scope><name>command</name></member>
+      <member refid="structdtpreg__t_1a8a0c321ffd2847534bfd0bc849a972b4" prot="public" virt="non-virtual"><scope>dtpreg_t</scope><name>data0</name></member>
+      <member refid="structdtpreg__t_1a6eef7e2e6f5e38b7d153e3f25d6fefb8" prot="public" virt="non-virtual"><scope>dtpreg_t</scope><name>data1</name></member>
+      <member refid="structdtpreg__t_1ae37efb991e613c0dc476ece5ed4ffa71" prot="public" virt="non-virtual"><scope>dtpreg_t</scope><name>status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

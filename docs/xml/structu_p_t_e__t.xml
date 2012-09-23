@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="structu_p_t_e__t" kind="struct" prot="public">
+    <compoundname>uPTE_t</compoundname>
+    <includes refid="u_m_p_stypes_8h" local="no">uMPStypes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structu_p_t_e__t_1a45eed61436d7fec550ec1071e528d577" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 header</definition>
+        <argsstring></argsstring>
+        <name>header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="97" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structu_p_t_e__t_1ad46c1ca2251ccf015b88b42ed2965665" prot="public" static="no" mutable="no">
+        <type><ref refid="structpte__entry__t" kindref="compound">pte_entry_t</ref></type>
+        <definition>pte_entry_t pte[KUSEG_PAGES]</definition>
+        <argsstring>[KUSEG_PAGES]</argsstring>
+        <name>pte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="98" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="35">
+        <label>uPTE_t</label>
+        <link refid="structu_p_t_e__t"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>pte</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>pte_entry_t</label>
+        <link refid="structpte__entry__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="96" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="96" bodyend="99"/>
+    <listofallmembers>
+      <member refid="structu_p_t_e__t_1a45eed61436d7fec550ec1071e528d577" prot="public" virt="non-virtual"><scope>uPTE_t</scope><name>header</name></member>
+      <member refid="structu_p_t_e__t_1ad46c1ca2251ccf015b88b42ed2965665" prot="public" virt="non-virtual"><scope>uPTE_t</scope><name>pte</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

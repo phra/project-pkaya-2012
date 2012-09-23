@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="structsys5__vect__t" kind="struct" prot="public">
+    <compoundname>sys5_vect_t</compoundname>
+    <includes refid="u_m_p_stypes_8h" local="no">uMPStypes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsys5__vect__t_1a8ffa7d0bcd8995caca6fd5749002f759" prot="public" static="no" mutable="no">
+        <type><ref refid="structstate__t" kindref="compound">state_t</ref> *</type>
+        <definition>state_t* old_area</definition>
+        <argsstring></argsstring>
+        <name>old_area</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="79" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsys5__vect__t_1a59c403793690bd6978a6be755b598f44" prot="public" static="no" mutable="no">
+        <type><ref refid="structstate__t" kindref="compound">state_t</ref> *</type>
+        <definition>state_t* new_area</definition>
+        <argsstring></argsstring>
+        <name>new_area</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="80" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="30">
+        <label>sys5_vect_t</label>
+        <link refid="structsys5__vect__t"/>
+        <childnode refid="31" relation="usage">
+          <edgelabel>old_area</edgelabel>
+          <edgelabel>new_area</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>state_t</label>
+        <link refid="structstate__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="78" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="78" bodyend="81"/>
+    <listofallmembers>
+      <member refid="structsys5__vect__t_1a59c403793690bd6978a6be755b598f44" prot="public" virt="non-virtual"><scope>sys5_vect_t</scope><name>new_area</name></member>
+      <member refid="structsys5__vect__t_1a8ffa7d0bcd8995caca6fd5749002f759" prot="public" virt="non-virtual"><scope>sys5_vect_t</scope><name>old_area</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,771 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="lib_2u_m_p_stypes_8h" kind="file">
+    <compoundname>uMPStypes.h</compoundname>
+    <includes refid="lib_2const_8h" local="yes">const.h</includes>
+    <includes refid="lib_2base_8h" local="yes">base.h</includes>
+    <includedby refid="exception_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.c</includedby>
+    <includedby refid="lib_2types11_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/types11.h</includedby>
+    <includedby refid="lib_2pcb_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/pcb.h</includedby>
+    <includedby refid="lib_2asl_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/asl.h</includedby>
+    <includedby refid="init_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.h</includedby>
+    <includedby refid="scheduler_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.h</includedby>
+    <includedby refid="exception_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/exception.h</includedby>
+    <includedby refid="syscall_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.h</includedby>
+    <includedby refid="interrupt_8h" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.h</includedby>
+    <includedby refid="init_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/init.c</includedby>
+    <includedby refid="interrupt_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/interrupt.c</includedby>
+    <includedby refid="lib_2asl_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/asl.c</includedby>
+    <includedby refid="lib_2pcb_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c</includedby>
+    <includedby refid="scheduler_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/scheduler.c</includedby>
+    <includedby refid="syscall_8c" local="yes">C:/Users/phra/Desktop/progetto_so/src/syscall.c</includedby>
+    <incdepgraph>
+      <node id="346">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h</label>
+        <link refid="lib/uMPStypes.h"/>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="348" relation="include">
+        </childnode>
+      </node>
+      <node id="348">
+        <label>base.h</label>
+        <link refid="lib_2base_8h"/>
+      </node>
+      <node id="347">
+        <label>const.h</label>
+        <link refid="lib_2const_8h"/>
+        <childnode refid="348" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="363">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/asl.c</label>
+        <link refid="lib_2asl_8c"/>
+      </node>
+      <node id="362">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/asl.h</label>
+        <link refid="lib_2asl_8h"/>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+      <node id="351">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/types11.h</label>
+        <link refid="lib_2types11_8h"/>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="352" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="364" relation="include">
+        </childnode>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+      <node id="350">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.c</label>
+        <link refid="exception_8c"/>
+      </node>
+      <node id="355">
+        <label>C:/Users/phra/Desktop/progetto_so/src/exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+      <node id="359">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.c</label>
+        <link refid="scheduler_8c"/>
+      </node>
+      <node id="354">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="353" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+      <node id="360">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.c</label>
+        <link refid="interrupt_8c"/>
+      </node>
+      <node id="357">
+        <label>C:/Users/phra/Desktop/progetto_so/src/interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+      </node>
+      <node id="358">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="349">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h</label>
+        <link refid="lib/uMPStypes.h"/>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="351" relation="include">
+        </childnode>
+        <childnode refid="352" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="364" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+      <node id="353">
+        <label>C:/Users/phra/Desktop/progetto_so/src/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+      <node id="364">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c</label>
+        <link refid="lib_2pcb_8c"/>
+      </node>
+      <node id="352">
+        <label>C:/Users/phra/Desktop/progetto_so/src/lib/pcb.h</label>
+        <link refid="lib_2pcb_8h"/>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+      <node id="366">
+        <label>C:/Users/phra/Desktop/progetto_so/src/p2test2012_v1.0.c</label>
+        <link refid="p2test2012__v1_80_8c"/>
+      </node>
+      <node id="361">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.c</label>
+        <link refid="syscall_8c"/>
+      </node>
+      <node id="356">
+        <label>C:/Users/phra/Desktop/progetto_so/src/syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+      </node>
+      <node id="365">
+        <label>C:/Users/phra/Desktop/progetto_so/src/p2test2012_scalability_v1.0.c</label>
+        <link refid="p2test2012__scalability__v1_80_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structdtpreg__t" prot="public">dtpreg_t</innerclass>
+    <innerclass refid="structtermreg__t" prot="public">termreg_t</innerclass>
+    <innerclass refid="uniondevreg__t" prot="public">devreg_t</innerclass>
+    <innerclass refid="structstate__t" prot="public">state_t</innerclass>
+    <innerclass refid="structsys5__vect__t" prot="public">sys5_vect_t</innerclass>
+    <innerclass refid="structdisk__data__t" prot="public">disk_data_t</innerclass>
+    <innerclass refid="structpte__entry__t" prot="public">pte_entry_t</innerclass>
+    <innerclass refid="structu_p_t_e__t" prot="public">uPTE_t</innerclass>
+    <innerclass refid="structos_p_t_e__t" prot="public">osPTE_t</innerclass>
+    <innerclass refid="structsegtable__t" prot="public">segtable_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a10d0c36991b9e120c9047d9f12347569" prot="public" static="no">
+        <name>reg_at</name>
+        <initializer>gpr[0]  /* so we can use registers by name */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="44" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1acf5b9f61827162835dc72f4e2b85c260" prot="public" static="no">
+        <name>reg_v0</name>
+        <initializer>gpr[1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="45" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a6aa511f6a155b3bdd4fd788b98364a7f" prot="public" static="no">
+        <name>reg_v1</name>
+        <initializer>gpr[2]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="46" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1af5a1de2bc6096395e02a267506496f57" prot="public" static="no">
+        <name>reg_a0</name>
+        <initializer>gpr[3]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="47" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a9557d75055b147f87a5edd1f1a58379f" prot="public" static="no">
+        <name>reg_a1</name>
+        <initializer>gpr[4]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="48" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1ae08726992f79a28c9e83294ae80c29f6" prot="public" static="no">
+        <name>reg_a2</name>
+        <initializer>gpr[5]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="49" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1aa14c489d5b3388bda3bb0c46ee93356d" prot="public" static="no">
+        <name>reg_a3</name>
+        <initializer>gpr[6]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="50" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a5cc573ab812a946c94417604c32ad6e4" prot="public" static="no">
+        <name>reg_t0</name>
+        <initializer>gpr[7]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="51" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1abdd77b3baab674649e6b1aabcc6f96cd" prot="public" static="no">
+        <name>reg_t1</name>
+        <initializer>gpr[8]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="52" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a56b03bac0b24d21a08d6dcd870976250" prot="public" static="no">
+        <name>reg_t2</name>
+        <initializer>gpr[9]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="53" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a246a27ba0a836384da38ea57dae451b3" prot="public" static="no">
+        <name>reg_t3</name>
+        <initializer>gpr[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="54" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a11f3711c8e921bc3df8815bc74a90682" prot="public" static="no">
+        <name>reg_t4</name>
+        <initializer>gpr[11]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="55" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a285c42961bb6e0d2791fcd34b4b71a91" prot="public" static="no">
+        <name>reg_t5</name>
+        <initializer>gpr[12]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="56" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1abee7dd19be61df88a5333994eaca762f" prot="public" static="no">
+        <name>reg_t6</name>
+        <initializer>gpr[13]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="57" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a7f36de5cd8b455872c3a5a567ba845bf" prot="public" static="no">
+        <name>reg_t7</name>
+        <initializer>gpr[14]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="58" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a498b9c994c8fb9f497605bda5c3b3a63" prot="public" static="no">
+        <name>reg_s0</name>
+        <initializer>gpr[15]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="59" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a0ed7101eb42a6c731b19b893a91e3e95" prot="public" static="no">
+        <name>reg_s1</name>
+        <initializer>gpr[16]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="60" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1adba6df3efe5c33e83d3942adf7feb038" prot="public" static="no">
+        <name>reg_s2</name>
+        <initializer>gpr[17]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="61" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1aac7ae4ddfeed3e19308418a7919e9af7" prot="public" static="no">
+        <name>reg_s3</name>
+        <initializer>gpr[18]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="62" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a910a9a398f7876dc6b122d61ded91963" prot="public" static="no">
+        <name>reg_s4</name>
+        <initializer>gpr[19]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="63" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a2918877a84175a55089c9e5aba59bfe0" prot="public" static="no">
+        <name>reg_s5</name>
+        <initializer>gpr[20]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="64" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a2d662e8bbcee2bbf2a5514922fb80108" prot="public" static="no">
+        <name>reg_s6</name>
+        <initializer>gpr[21]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="65" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1abbc5e7131858347de3659d304fcd5086" prot="public" static="no">
+        <name>reg_s7</name>
+        <initializer>gpr[22]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="66" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a895023074c3994f12dace8d81b4c5728" prot="public" static="no">
+        <name>reg_t8</name>
+        <initializer>gpr[23]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="67" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1ac2713a414772de192fd4b7119d3cbca7" prot="public" static="no">
+        <name>reg_t9</name>
+        <initializer>gpr[24]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="68" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a3abcfeac523b8abf388c5a79556cb3b9" prot="public" static="no">
+        <name>reg_gp</name>
+        <initializer>gpr[25]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="69" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a908b1056f57615b3d510b367ef081308" prot="public" static="no">
+        <name>reg_sp</name>
+        <initializer>gpr[26]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="70" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a07d51549d93731ddb4c80f911d018268" prot="public" static="no">
+        <name>reg_fp</name>
+        <initializer>gpr[27]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="71" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a2d77d57d813bc660fd1748f23435a1cc" prot="public" static="no">
+        <name>reg_ra</name>
+        <initializer>gpr[28]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="72" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a59c575f462f1953ba031bb06c66cf6b8" prot="public" static="no">
+        <name>reg_HI</name>
+        <initializer>gpr[29]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="73" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lib_2u_m_p_stypes_8h_1a1ecb88384351531788fec8461e0d0615" prot="public" static="no">
+        <name>reg_LO</name>
+        <initializer>gpr[30]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="74" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_TYPES_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_TYPES_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lib_2const_8h" kindref="compound">const.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lib_2base_8h" kindref="compound">base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/**************************<sp/>Device<sp/>register<sp/>types<sp/>***************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Device<sp/>register<sp/>type<sp/>for<sp/>disks,<sp/>tapes<sp/>and<sp/>printers<sp/>(dtp)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="structdtpreg__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="structdtpreg__t_1ae37efb991e613c0dc476ece5ed4ffa71" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structdtpreg__t_1ae37efb991e613c0dc476ece5ed4ffa71" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="11" refid="structdtpreg__t_1a8538fdce575b580097b18700c560a5a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structdtpreg__t_1a8538fdce575b580097b18700c560a5a8" kindref="member">command</ref>;</highlight></codeline>
+<codeline lineno="12" refid="structdtpreg__t_1a8a0c321ffd2847534bfd0bc849a972b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structdtpreg__t_1a8a0c321ffd2847534bfd0bc849a972b4" kindref="member">data0</ref>;</highlight></codeline>
+<codeline lineno="13" refid="structdtpreg__t_1a6eef7e2e6f5e38b7d153e3f25d6fefb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structdtpreg__t_1a6eef7e2e6f5e38b7d153e3f25d6fefb8" kindref="member">data1</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}<sp/><ref refid="structdtpreg__t" kindref="compound">dtpreg_t</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Device<sp/>register<sp/>type<sp/>for<sp/>terminals;<sp/>fields<sp/>have<sp/>different<sp/>meanings<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="structtermreg__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18" refid="structtermreg__t_1adb515c26e4c6508ab1a44cc43a8a91ae" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structtermreg__t_1adb515c26e4c6508ab1a44cc43a8a91ae" kindref="member">recv_status</ref>;</highlight></codeline>
+<codeline lineno="19" refid="structtermreg__t_1aaee0ee8a649c4a4792f3ee83350db6ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structtermreg__t_1aaee0ee8a649c4a4792f3ee83350db6ea" kindref="member">recv_command</ref>;</highlight></codeline>
+<codeline lineno="20" refid="structtermreg__t_1ab3957b0f10a0e492e4e29b90167f513d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structtermreg__t_1ab3957b0f10a0e492e4e29b90167f513d" kindref="member">transm_status</ref>;</highlight></codeline>
+<codeline lineno="21" refid="structtermreg__t_1a2b198d43d6df5503425e365297cd5444" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structtermreg__t_1a2b198d43d6df5503425e365297cd5444" kindref="member">transm_command</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}<sp/><ref refid="structtermreg__t" kindref="compound">termreg_t</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>With<sp/>a<sp/>pointer<sp/>to<sp/>devreg_t<sp/>we<sp/>can<sp/>refer<sp/>to<sp/>a<sp/>&quot;generic&quot;<sp/>device<sp/>register,<sp/>and</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/>then<sp/>use<sp/>the<sp/>appropriate<sp/>union<sp/>member<sp/>to<sp/>access<sp/>the<sp/>fields<sp/>(not<sp/>strictly<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>necessary,<sp/>but<sp/>for<sp/>convenience<sp/>and<sp/>clarity)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="uniondevreg__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="uniondevreg__t_1a78e61f38ebbbb2b669e0cf6d6ea00d77" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structdtpreg__t" kindref="compound">dtpreg_t</ref><sp/><ref refid="uniondevreg__t_1a78e61f38ebbbb2b669e0cf6d6ea00d77" kindref="member">dtp</ref>;</highlight></codeline>
+<codeline lineno="29" refid="uniondevreg__t_1a98298db6115a0ce0138af4474b6b9ad9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtermreg__t" kindref="compound">termreg_t</ref><sp/><ref refid="uniondevreg__t_1a98298db6115a0ce0138af4474b6b9ad9" kindref="member">term</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/><ref refid="uniondevreg__t" kindref="compound">devreg_t</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*************************<sp/>CPU<sp/>state<sp/>type<sp/>***********************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structstate__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35" refid="structstate__t_1a867e8a3789b0868e6fe3cb734b8d7e34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structstate__t_1a867e8a3789b0868e6fe3cb734b8d7e34" kindref="member">entry_hi</ref>;</highlight></codeline>
+<codeline lineno="36" refid="structstate__t_1a977139f16407ef0c648e940dabe05318" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structstate__t_1a977139f16407ef0c648e940dabe05318" kindref="member">cause</ref>;</highlight></codeline>
+<codeline lineno="37" refid="structstate__t_1ae37efb991e613c0dc476ece5ed4ffa71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structstate__t_1ae37efb991e613c0dc476ece5ed4ffa71" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="38" refid="structstate__t_1ac0cfee10c7a13bb3749604cd15892217" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structstate__t_1ac0cfee10c7a13bb3749604cd15892217" kindref="member">pc_epc</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>pc<sp/>in<sp/>the<sp/>new<sp/>area,<sp/>epc<sp/>in<sp/>the<sp/>old<sp/>area<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structstate__t_1a42033ce9f27270ef281d89603922dcab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/>gpr[29];</highlight></codeline>
+<codeline lineno="40" refid="structstate__t_1a0e34aeb4eba44f3971bb1bf383435897" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structstate__t_1a0e34aeb4eba44f3971bb1bf383435897" kindref="member">hi</ref>;</highlight></codeline>
+<codeline lineno="41" refid="structstate__t_1a55f6b3c956fb70c8ef13c4a00ccd3a7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structstate__t_1a55f6b3c956fb70c8ef13c4a00ccd3a7b" kindref="member">lo</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}<sp/><ref refid="structstate__t" kindref="compound">state_t</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="lib_2u_m_p_stypes_8h_1a10d0c36991b9e120c9047d9f12347569" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>reg_at<sp/><sp/>gpr[0]<sp/><sp/></highlight><highlight class="comment">/*<sp/>so<sp/>we<sp/>can<sp/>use<sp/>registers<sp/>by<sp/>name<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="45" refid="lib_2u_m_p_stypes_8h_1acf5b9f61827162835dc72f4e2b85c260" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_v0<sp/><sp/>gpr[1]</highlight></codeline>
+<codeline lineno="46" refid="lib_2u_m_p_stypes_8h_1a6aa511f6a155b3bdd4fd788b98364a7f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_v1<sp/><sp/>gpr[2]</highlight></codeline>
+<codeline lineno="47" refid="lib_2u_m_p_stypes_8h_1af5a1de2bc6096395e02a267506496f57" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_a0<sp/><sp/>gpr[3]</highlight></codeline>
+<codeline lineno="48" refid="lib_2u_m_p_stypes_8h_1a9557d75055b147f87a5edd1f1a58379f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_a1<sp/><sp/>gpr[4]</highlight></codeline>
+<codeline lineno="49" refid="lib_2u_m_p_stypes_8h_1ae08726992f79a28c9e83294ae80c29f6" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_a2<sp/><sp/>gpr[5]</highlight></codeline>
+<codeline lineno="50" refid="lib_2u_m_p_stypes_8h_1aa14c489d5b3388bda3bb0c46ee93356d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_a3<sp/><sp/>gpr[6]</highlight></codeline>
+<codeline lineno="51" refid="lib_2u_m_p_stypes_8h_1a5cc573ab812a946c94417604c32ad6e4" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_t0<sp/><sp/>gpr[7]</highlight></codeline>
+<codeline lineno="52" refid="lib_2u_m_p_stypes_8h_1abdd77b3baab674649e6b1aabcc6f96cd" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_t1<sp/><sp/>gpr[8]</highlight></codeline>
+<codeline lineno="53" refid="lib_2u_m_p_stypes_8h_1a56b03bac0b24d21a08d6dcd870976250" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_t2<sp/><sp/>gpr[9]</highlight></codeline>
+<codeline lineno="54" refid="lib_2u_m_p_stypes_8h_1a246a27ba0a836384da38ea57dae451b3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_t3<sp/><sp/>gpr[10]</highlight></codeline>
+<codeline lineno="55" refid="lib_2u_m_p_stypes_8h_1a11f3711c8e921bc3df8815bc74a90682" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_t4<sp/><sp/>gpr[11]</highlight></codeline>
+<codeline lineno="56" refid="lib_2u_m_p_stypes_8h_1a285c42961bb6e0d2791fcd34b4b71a91" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_t5<sp/><sp/>gpr[12]</highlight></codeline>
+<codeline lineno="57" refid="lib_2u_m_p_stypes_8h_1abee7dd19be61df88a5333994eaca762f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_t6<sp/><sp/>gpr[13]</highlight></codeline>
+<codeline lineno="58" refid="lib_2u_m_p_stypes_8h_1a7f36de5cd8b455872c3a5a567ba845bf" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_t7<sp/><sp/>gpr[14]</highlight></codeline>
+<codeline lineno="59" refid="lib_2u_m_p_stypes_8h_1a498b9c994c8fb9f497605bda5c3b3a63" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_s0<sp/><sp/>gpr[15]</highlight></codeline>
+<codeline lineno="60" refid="lib_2u_m_p_stypes_8h_1a0ed7101eb42a6c731b19b893a91e3e95" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_s1<sp/><sp/>gpr[16]</highlight></codeline>
+<codeline lineno="61" refid="lib_2u_m_p_stypes_8h_1adba6df3efe5c33e83d3942adf7feb038" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_s2<sp/><sp/>gpr[17]</highlight></codeline>
+<codeline lineno="62" refid="lib_2u_m_p_stypes_8h_1aac7ae4ddfeed3e19308418a7919e9af7" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_s3<sp/><sp/>gpr[18]</highlight></codeline>
+<codeline lineno="63" refid="lib_2u_m_p_stypes_8h_1a910a9a398f7876dc6b122d61ded91963" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_s4<sp/><sp/>gpr[19]</highlight></codeline>
+<codeline lineno="64" refid="lib_2u_m_p_stypes_8h_1a2918877a84175a55089c9e5aba59bfe0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_s5<sp/><sp/>gpr[20]</highlight></codeline>
+<codeline lineno="65" refid="lib_2u_m_p_stypes_8h_1a2d662e8bbcee2bbf2a5514922fb80108" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_s6<sp/><sp/>gpr[21]</highlight></codeline>
+<codeline lineno="66" refid="lib_2u_m_p_stypes_8h_1abbc5e7131858347de3659d304fcd5086" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_s7<sp/><sp/>gpr[22]</highlight></codeline>
+<codeline lineno="67" refid="lib_2u_m_p_stypes_8h_1a895023074c3994f12dace8d81b4c5728" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_t8<sp/><sp/>gpr[23]</highlight></codeline>
+<codeline lineno="68" refid="lib_2u_m_p_stypes_8h_1ac2713a414772de192fd4b7119d3cbca7" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_t9<sp/><sp/>gpr[24]</highlight></codeline>
+<codeline lineno="69" refid="lib_2u_m_p_stypes_8h_1a3abcfeac523b8abf388c5a79556cb3b9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_gp<sp/><sp/>gpr[25]</highlight></codeline>
+<codeline lineno="70" refid="lib_2u_m_p_stypes_8h_1a908b1056f57615b3d510b367ef081308" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_sp<sp/><sp/>gpr[26]</highlight></codeline>
+<codeline lineno="71" refid="lib_2u_m_p_stypes_8h_1a07d51549d93731ddb4c80f911d018268" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_fp<sp/><sp/>gpr[27]</highlight></codeline>
+<codeline lineno="72" refid="lib_2u_m_p_stypes_8h_1a2d77d57d813bc660fd1748f23435a1cc" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_ra<sp/><sp/>gpr[28]</highlight></codeline>
+<codeline lineno="73" refid="lib_2u_m_p_stypes_8h_1a59c575f462f1953ba031bb06c66cf6b8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_HI<sp/><sp/>gpr[29]</highlight></codeline>
+<codeline lineno="74" refid="lib_2u_m_p_stypes_8h_1a1ecb88384351531788fec8461e0d0615" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>reg_LO<sp/><sp/>gpr[30]</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/**********************<sp/>process-supplied<sp/>trap<sp/>vectors<sp/>***********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structsys5__vect__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79" refid="structsys5__vect__t_1a1666828afe40c79669fb24589f693669" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref><sp/>*<ref refid="structsys5__vect__t_1a1666828afe40c79669fb24589f693669" kindref="member">old_area</ref>;</highlight></codeline>
+<codeline lineno="80" refid="structsys5__vect__t_1a9f82661633186f4f5f4c70a5844c00c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstate__t" kindref="compound">state_t</ref><sp/>*<ref refid="structsys5__vect__t_1a9f82661633186f4f5f4c70a5844c00c0" kindref="member">new_area</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}<sp/><ref refid="structsys5__vect__t" kindref="compound">sys5_vect_t</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="structdisk__data__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84" refid="structdisk__data__t_1aeb8030b3dd1287feefb6380f4c8e3611" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structdisk__data__t_1aeb8030b3dd1287feefb6380f4c8e3611" kindref="member">max_cyl</ref>;</highlight></codeline>
+<codeline lineno="85" refid="structdisk__data__t_1aa6c7020fb3ea2240307fe8cef518f4a0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structdisk__data__t_1aa6c7020fb3ea2240307fe8cef518f4a0" kindref="member">max_head</ref>;</highlight></codeline>
+<codeline lineno="86" refid="structdisk__data__t_1ab583dd23c9c85bbeacf54b11d8d59a28" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structdisk__data__t_1ab583dd23c9c85bbeacf54b11d8d59a28" kindref="member">max_sect</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}<sp/><ref refid="structdisk__data__t" kindref="compound">disk_data_t</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">/*******************<sp/>VM<sp/>data<sp/>structures<sp/>*************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="structpte__entry__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91" refid="structpte__entry__t_1a867e8a3789b0868e6fe3cb734b8d7e34" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structpte__entry__t_1a867e8a3789b0868e6fe3cb734b8d7e34" kindref="member">entry_hi</ref>;</highlight></codeline>
+<codeline lineno="92" refid="structpte__entry__t_1afe028ede8677834da78a88fb7257be4e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structpte__entry__t_1afe028ede8677834da78a88fb7257be4e" kindref="member">entry_lo</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}<sp/><ref refid="structpte__entry__t" kindref="compound">pte_entry_t</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PTE<sp/>for<sp/>kUseg2<sp/>and<sp/>kUseg3<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="structu_p_t_e__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97" refid="structu_p_t_e__t_1a45eed61436d7fec550ec1071e528d577" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structu_p_t_e__t_1a45eed61436d7fec550ec1071e528d577" kindref="member">header</ref>;</highlight></codeline>
+<codeline lineno="98" refid="structu_p_t_e__t_1a204ccbbb972125396c1c5d89cede3d4d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpte__entry__t" kindref="compound">pte_entry_t</ref><sp/>pte[<ref refid="lib_2const_8h_1a343972254f8fab5a6141ba018d1ed7a2" kindref="member">KUSEG_PAGES</ref>];<sp/></highlight><highlight class="comment">/*<sp/>kUseg2<sp/>and<sp/>kUseg3<sp/>PTEs<sp/>have<sp/>same<sp/>length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}<sp/><ref refid="structu_p_t_e__t" kindref="compound">uPTE_t</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PTE<sp/>for<sp/>ksegOS<sp/>(has<sp/>more<sp/>entries)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="structos_p_t_e__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103" refid="structos_p_t_e__t_1a45eed61436d7fec550ec1071e528d577" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="lib_2base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref><sp/><ref refid="structos_p_t_e__t_1a45eed61436d7fec550ec1071e528d577" kindref="member">header</ref>;</highlight></codeline>
+<codeline lineno="104" refid="structos_p_t_e__t_1a4b0494719d6e84b6e12eaa135cd54532" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpte__entry__t" kindref="compound">pte_entry_t</ref><sp/>pte[<ref refid="lib_2const_8h_1ab5c2c6e008c8304671037d897fe670e7" kindref="member">KSEGOS_PAGES</ref>];</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}<sp/><ref refid="structos_p_t_e__t" kindref="compound">osPTE_t</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>segment<sp/>table<sp/>type<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="structsegtable__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109" refid="structsegtable__t_1a1ad5abe16dc0227ef51afe8babaa2775" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structos_p_t_e__t" kindref="compound">osPTE_t</ref><sp/>*<ref refid="structsegtable__t_1a1ad5abe16dc0227ef51afe8babaa2775" kindref="member">ksegOS_pte</ref>;</highlight></codeline>
+<codeline lineno="110" refid="structsegtable__t_1add1f86d705fdc8ed1dafa2c2b21e30cc" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structu_p_t_e__t" kindref="compound">uPTE_t</ref><sp/>*<ref refid="structsegtable__t_1add1f86d705fdc8ed1dafa2c2b21e30cc" kindref="member">kUseg2_pte</ref>;</highlight></codeline>
+<codeline lineno="111" refid="structsegtable__t_1a98aea21d8709199bb3dfba4818260493" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structu_p_t_e__t" kindref="compound">uPTE_t</ref><sp/>*<ref refid="structsegtable__t_1a98aea21d8709199bb3dfba4818260493" kindref="member">kUseg3_pte</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}<sp/><ref refid="structsegtable__t" kindref="compound">segtable_t</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h"/>
+  </compounddef>
+</doxygen>

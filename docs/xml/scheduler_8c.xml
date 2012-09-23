@@ -1,0 +1,633 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="scheduler_8c" kind="file">
+    <compoundname>scheduler.c</compoundname>
+    <includes refid="const_8h" local="yes">lib/const.h</includes>
+    <includes refid="base_8h" local="yes">lib/base.h</includes>
+    <includes refid="u_m_p_stypes_8h" local="yes">lib/uMPStypes.h</includes>
+    <includes refid="libumps_8h" local="yes">lib/libumps.h</includes>
+    <includes refid="listx_8h" local="yes">lib/listx.h</includes>
+    <includes refid="types11_8h" local="yes">lib/types11.h</includes>
+    <includes refid="pcb_8h" local="yes">lib/pcb.h</includes>
+    <includes refid="asl_8h" local="yes">lib/asl.h</includes>
+    <includes refid="utils_8h" local="yes">lib/utils.h</includes>
+    <includes refid="init_8h" local="yes">init.h</includes>
+    <includes refid="interrupt_8h" local="yes">interrupt.h</includes>
+    <includes refid="exception_8h" local="yes">exception.h</includes>
+    <includes refid="syscall_8h" local="yes">syscall.h</includes>
+    <incdepgraph>
+      <node id="329">
+        <label>lib/listx.h</label>
+        <link refid="listx_8h"/>
+      </node>
+      <node id="332">
+        <label>lib/asl.h</label>
+        <link refid="asl_8h"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+      </node>
+      <node id="330">
+        <label>lib/types11.h</label>
+        <link refid="types11_8h"/>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+      </node>
+      <node id="336">
+        <label>exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+        <childnode refid="335" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+        <childnode refid="337" relation="include">
+        </childnode>
+        <childnode refid="338" relation="include">
+        </childnode>
+      </node>
+      <node id="328">
+        <label>lib/libumps.h</label>
+        <link refid="libumps_8h"/>
+      </node>
+      <node id="324">
+        <label>C:/Users/phra/Desktop/progetto_so/src/scheduler.c</label>
+        <link refid="scheduler.c"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+        <childnode refid="338" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="337" relation="include">
+        </childnode>
+      </node>
+      <node id="335">
+        <label>scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="337" relation="include">
+        </childnode>
+        <childnode refid="338" relation="include">
+        </childnode>
+      </node>
+      <node id="338">
+        <label>interrupt.h</label>
+        <link refid="interrupt_8h"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+        <childnode refid="335" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="337" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+      </node>
+      <node id="327">
+        <label>lib/uMPStypes.h</label>
+        <link refid="u_m_p_stypes_8h"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+      </node>
+      <node id="334">
+        <label>init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+        <childnode refid="335" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="337" relation="include">
+        </childnode>
+        <childnode refid="338" relation="include">
+        </childnode>
+      </node>
+      <node id="331">
+        <label>lib/pcb.h</label>
+        <link refid="pcb_8h"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+      </node>
+      <node id="337">
+        <label>syscall.h</label>
+        <link refid="syscall_8h"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+        <childnode refid="335" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+        <childnode refid="338" relation="include">
+        </childnode>
+      </node>
+      <node id="326">
+        <label>base.h</label>
+        <link refid="base_8h"/>
+      </node>
+      <node id="333">
+        <label>lib/utils.h</label>
+        <link refid="utils_8h"/>
+      </node>
+      <node id="325">
+        <label>lib/const.h</label>
+        <link refid="const_8h"/>
+        <childnode refid="326" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="scheduler_8c_1af02dc756f0d9e8f52a93c30d47528975" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref></type>
+        <definition>readyQueue</definition>
+        <argsstring></argsstring>
+        <name>readyQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sentinella della ready queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" line="21" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="scheduler_8c_1a6c1f2d38d1ac2f92bed49a7e6bbfc683" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref></type>
+        <definition>struct list_head expiredQueue</definition>
+        <argsstring></argsstring>
+        <name>expiredQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" line="27" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="scheduler_8c_1a8d081d17201033e370076493cb36fc77" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+        <definition>readyQ</definition>
+        <argsstring></argsstring>
+        <name>readyQ</name>
+        <initializer>= &amp;<ref refid="scheduler_8h_1a2ceefeb6a269e899c490237adb72e0a1" kindref="member">readyQueue</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>puntatore alla sentinella della ready queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" line="33" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="scheduler_8c_1a2cb62a5efc6bb08dd921a93b1042484e" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+        <definition>expiredQ</definition>
+        <argsstring></argsstring>
+        <name>expiredQ</name>
+        <initializer>= &amp;<ref refid="scheduler_8h_1a6c1f2d38d1ac2f92bed49a7e6bbfc683" kindref="member">expiredQueue</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>puntatore alla sentinella della expired queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" line="39" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="scheduler_8c_1ae3130408c0650504c0c59ce8ab55476d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pigliapid</definition>
+        <argsstring>(void)</argsstring>
+        <name>pigliapid</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>funzione per assegnare il pid <simplesect kind="return"><para>un intero che rappresenta il pid </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" line="45" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="45" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="scheduler_8c_1a484e394dee46178e86dbf6c082598629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void inserisciprocessoexpired</definition>
+        <argsstring>(pcb_t *pcb)</argsstring>
+        <name>inserisciprocessoexpired</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>pcb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>funzione per inserire un processo nella lista expired <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pcb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indirizzo del processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" line="57" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="57" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="scheduler_8c_1a36f350361c844b6f548e4e4579b87719" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void inserisciprocessoready</definition>
+        <argsstring>(pcb_t *pcb)</argsstring>
+        <name>inserisciprocessoready</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>pcb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>funzione per inserire un processo nella lista ready <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pcb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indirizzo del processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" line="67" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="scheduler_8c_1afe2502898946fda9e5ef2121db5e79ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kill</definition>
+        <argsstring>(pcb_t *target)</argsstring>
+        <name>kill</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>funzione per uccidere un processo e tutti i figli e li rimuove da eventuali semafori <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indirizzo del processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" line="77" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="77" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="scheduler_8c_1a0e21ba9f85390e60366d1152ce12eb6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* allocaPcb</definition>
+        <argsstring>(int priority)</argsstring>
+        <name>allocaPcb</name>
+        <param>
+          <type>int</type>
+          <declname>priority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>funzione per alloca Pcb ed assegna il pid e la priorita&apos; ai processi <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>priorità del processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>l&apos;indirizzo del pcb allocato oppure Null </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" line="117" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="117" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="scheduler_8c_1af3ef2ab05cf3d484a3847ea6c53efcb1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int inactivecpu</definition>
+        <argsstring>(void)</argsstring>
+        <name>inactivecpu</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>funzione per verificare se tutte le CPU sono inattive <simplesect kind="return"><para>0 se almeno una CPU è attiva, altrimenti 1. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" line="138" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="138" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="scheduler_8c_1a9fa00b0be5d3c4781048861e2506eb63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler</definition>
+        <argsstring>(void)</argsstring>
+        <name>scheduler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the scheduler </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" line="150" bodyfile="C:/Users/phra/Desktop/progetto_so/src/scheduler.c" bodystart="150" bodyend="190"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="const_8h" kindref="compound">lib/const.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base_8h" kindref="compound">lib/base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="u_m_p_stypes_8h" kindref="compound">lib/uMPStypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libumps_8h" kindref="compound">lib/libumps.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="listx_8h" kindref="compound">lib/listx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types11_8h" kindref="compound">lib/types11.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pcb_8h" kindref="compound">lib/pcb.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="asl_8h" kindref="compound">lib/asl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_8h" kindref="compound">lib/utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interrupt_8h" kindref="compound">interrupt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="exception_8h" kindref="compound">exception.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="syscall_8h" kindref="compound">syscall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><ref refid="scheduler_8c_1af02dc756f0d9e8f52a93c30d47528975" kindref="member">readyQueue</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><ref refid="scheduler_8c_1a6c1f2d38d1ac2f92bed49a7e6bbfc683" kindref="member">expiredQueue</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref>*<sp/><ref refid="scheduler_8c_1a8d081d17201033e370076493cb36fc77" kindref="member">readyQ</ref><sp/>=<sp/>&amp;<ref refid="scheduler_8c_1af02dc756f0d9e8f52a93c30d47528975" kindref="member">readyQueue</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref>*<sp/><ref refid="scheduler_8c_1a2cb62a5efc6bb08dd921a93b1042484e" kindref="member">expiredQ</ref><sp/>=<sp/>&amp;<ref refid="scheduler_8c_1a6c1f2d38d1ac2f92bed49a7e6bbfc683" kindref="member">expiredQueue</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1ae3130408c0650504c0c59ce8ab55476d" kindref="member">pigliapid</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="init_8c_1ad0b360b54c065def8f306dd38587add6" kindref="member" tooltip="Per tenere conto dei pid assegnati.">usedpid</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="init_8c_1ae30a58778136e047f76089ffa33a5108" kindref="member" tooltip="un array per tenere conto dei pid assegnati, null se è libero, altrimenti l&amp;#39;indirizzo del pcb...">PIDs</ref>[i]<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i++<sp/>==<sp/><ref refid="init_8h_1a9b896b5481b8e7b305a5ea99a0d3554c" kindref="member">MAXPID</ref>)<sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="init_8c_1ad0b360b54c065def8f306dd38587add6" kindref="member" tooltip="Per tenere conto dei pid assegnati.">usedpid</ref><sp/>=<sp/>i+1;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1a484e394dee46178e86dbf6c082598629" kindref="member">inserisciprocessoexpired</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>pcb){</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,0,1));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pcb_8c_1a9f83539fc894253a43a7a8e22ba6c3ba" kindref="member">insertProcQ</ref>(expiredQ,pcb);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,1,0);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1a36f350361c844b6f548e4e4579b87719" kindref="member">inserisciprocessoready</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>pcb){</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,0,1));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pcb_8c_1a9f83539fc894253a43a7a8e22ba6c3ba" kindref="member">insertProcQ</ref>(readyQ,pcb);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,1,0);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1afe2502898946fda9e5ef2121db5e79ce" kindref="member">kill</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>target){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>temp;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="init_8c_1ae30a58778136e047f76089ffa33a5108" kindref="member" tooltip="un array per tenere conto dei pid assegnati, null se è libero, altrimenti l&amp;#39;indirizzo del pcb...">PIDs</ref>[target-&gt;<ref refid="structpcb__t_1af500917c052066b40cf47f96b43c607b" kindref="member">pid</ref>]<sp/>=<sp/><ref refid="const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()]<sp/>=<sp/><ref refid="const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(temp<sp/>=<sp/><ref refid="pcb_8c_1a4d8a060bdeac7847a16e45ffe18d3389" kindref="member">removeChild</ref>(target)){</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1afe2502898946fda9e5ef2121db5e79ce" kindref="member">kill</ref>(temp);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>,0,1));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="init_8c_1a69b8d39be10ca914356df47dece51d4d" kindref="member" tooltip="contatore dei processi">processCounter</ref>--;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1adb069d27d0e8108916723b0efbfdd791" kindref="member" tooltip="mutex per accedere al softBlockCounter">mutex_wait_clock</ref>,1,0);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,0,1));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="init_8c_1a69b8d39be10ca914356df47dece51d4d" kindref="member" tooltip="contatore dei processi">processCounter</ref><sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,1,0);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scheduler_8c_1a9fa00b0be5d3c4781048861e2506eb63" kindref="member">scheduler</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pcb_8c_1a43c105746bbed6463dc347e023821efd" kindref="member">outProcQ</ref>(readyQ,target);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pcb_8c_1a43c105746bbed6463dc347e023821efd" kindref="member">outProcQ</ref>(expiredQ,target);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,1,0);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target-&gt;<ref refid="structpcb__t_1a831f803a73e91f4b1530e60bc24e92b4" kindref="member">p_semkey</ref><sp/>!=<sp/>-1){</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsemd__t" kindref="compound">semd_t</ref>*<sp/>block;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,0,1));<sp/></highlight><highlight class="comment">/*<sp/>critical<sp/>section<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(block<sp/>=<sp/><ref refid="asl_8c_1a7dd34e8ddc18c62f1253e9ddb657cb99" kindref="member">getSemd</ref>(target-&gt;<ref refid="structpcb__t_1a831f803a73e91f4b1530e60bc24e92b4" kindref="member">p_semkey</ref>)){</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>block-&gt;<ref refid="structsemd__t_1a104d7150b55e51644df16fdc9814191f" kindref="member">s_value</ref>++;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="asl_8c_1a0726c34768ec59b5bfcb118bc2bb09f8" kindref="member">outBlocked</ref>(target);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a8327c9ced3c94e6a4747295c57b5ca6e" kindref="member" tooltip="mutex per accedere ai semafori">mutex_semaphoreprova</ref>,1,0);<sp/></highlight><highlight class="comment">/*<sp/>release<sp/>mutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pcb_8c_1ab42d615bd7053b952a73dee6fd84c54d" kindref="member">freePcb</ref>(target);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/><ref refid="scheduler_8c_1a0e21ba9f85390e60366d1152ce12eb6e" kindref="member">allocaPcb</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>priority){</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,0,1));</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/>pcb<sp/>=<sp/><ref refid="pcb_8c_1a953a4918f234322fc93193f53d897d5d" kindref="member">allocPcb</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!pcb)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="init_8c_1a3dff7a7ddb7b31f1a3f84462906b78e3" kindref="member">myprint</ref>(</highlight><highlight class="stringliteral">&quot;finiti<sp/>i<sp/>pcb\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,1,0);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>pcb-&gt;<ref refid="structpcb__t_1acec9ce2df15222151ad66fcb1d74eb9f" kindref="member">priority</ref><sp/>=<sp/>priority;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,0,1));</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>pcb-&gt;<ref refid="structpcb__t_1af500917c052066b40cf47f96b43c607b" kindref="member">pid</ref><sp/>=<sp/><ref refid="scheduler_8c_1ae3130408c0650504c0c59ce8ab55476d" kindref="member">pigliapid</ref>();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="init_8c_1ae30a58778136e047f76089ffa33a5108" kindref="member" tooltip="un array per tenere conto dei pid assegnati, null se è libero, altrimenti l&amp;#39;indirizzo del pcb...">PIDs</ref>[pcb-&gt;<ref refid="structpcb__t_1af500917c052066b40cf47f96b43c607b" kindref="member">pid</ref>]<sp/>=<sp/>pcb;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="init_8c_1a69b8d39be10ca914356df47dece51d4d" kindref="member" tooltip="contatore dei processi">processCounter</ref><sp/>+=<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Incrementiamo<sp/>il<sp/>contatore<sp/>dei<sp/>processi*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,1,0);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pcb;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>inactivecpu(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(;i&lt;<ref refid="init_8h_1abc16f63a572f5b4de9617288fc7c9559" kindref="member">MAXCPUs</ref>;i++){</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[i]<sp/>!=<sp/><ref refid="const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1a9fa00b0be5d3c4781048861e2506eb63" kindref="member">scheduler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,0,1));</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()]<sp/>=<sp/><ref refid="const_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="init_8c_1a69b8d39be10ca914356df47dece51d4d" kindref="member" tooltip="contatore dei processi">processCounter</ref><sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a5b49f43507869e85f0cd17ad7b2d4f2a" kindref="member">HALT</ref>();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!list_empty(readyQ)){</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref>*<sp/><ref refid="structlist__head_1ad6116fd07816a828c3a9830f54871bd0" kindref="member">next</ref><sp/>=<sp/><ref refid="pcb_8c_1a90fa8ebc0a1c39c83e836bdf04275a17" kindref="member">removeProcQ</ref>(readyQ);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,1,0);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="init_8c_1ab13508b903f28c9e7d10840b2451367c" kindref="member" tooltip="Puntatori ai processi attualmente in esecuzione.">currentproc</ref>[<ref refid="libumps_8h_1a188e2193398285c46e37f217feef731c" kindref="member">getPRID</ref>()]<sp/>=<sp/><ref refid="structlist__head_1ad6116fd07816a828c3a9830f54871bd0" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next-&gt;<ref refid="structpcb__t_1aab19ac996ae189b600c68cb4e4e8b66b" kindref="member">last_sched_time</ref><sp/>=<sp/><ref refid="const_8h_1aad357e6c1a0d7a9c16c32be0e7d0f562" kindref="member">GET_TODLOW</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a140bb4e299adcb1007ca8e1cdd989b2a" kindref="member">setTIMER</ref>(<ref refid="const_8h_1a56ade63a97e9c466e4fb375350e57ec4" kindref="member">SCHED_TIME_SLICE</ref>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a6fcab51848f040ca4f81159bad95c3e0" kindref="member">LDST</ref>(&amp;next-&gt;<ref refid="structpcb__t_1ae1524fbfc37b7766b551477e48b3bf4d" kindref="member">p_s</ref>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!list_empty(expiredQ)){</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*scambio<sp/>le<sp/>due<sp/>liste<sp/>per<sp/>evitare<sp/>starvation*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref>*<sp/>temp<sp/>=<sp/><ref refid="scheduler_8c_1a2cb62a5efc6bb08dd921a93b1042484e" kindref="member">expiredQ</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expiredQ<sp/>=<sp/><ref refid="scheduler_8c_1a8d081d17201033e370076493cb36fc77" kindref="member">readyQ</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readyQ<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,1,0);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="scheduler_8c_1a9fa00b0be5d3c4781048861e2506eb63" kindref="member">scheduler</ref>();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="init_8c_1a69b8d39be10ca914356df47dece51d4d" kindref="member" tooltip="contatore dei processi">processCounter</ref><sp/>&gt;<sp/>0)<sp/>&amp;&amp;<sp/>(<ref refid="init_8c_1ad318e0d6e55bda844999a756a010d6ad" kindref="member" tooltip="Contatore processi bloccati per I/O.">softBlockCounter</ref><sp/>==<sp/>0)<sp/>&amp;&amp;<sp/>(inactivecpu()))<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1ab73738c7ca97cc8c51677dbcc0404190" kindref="member">PANIC</ref>();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a40a5e5a392d5798b8d72f5f6f5a5e97e" kindref="member">CAS</ref>(&amp;<ref refid="init_8c_1a5a26a9c5982056efa1de6e7e834a753b" kindref="member" tooltip="mutex per accedere allo scheduler, process counter e code dei processi">mutex_scheduler</ref>,1,0);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a140bb4e299adcb1007ca8e1cdd989b2a" kindref="member">setTIMER</ref>(10*<ref refid="const_8h_1a56ade63a97e9c466e4fb375350e57ec4" kindref="member">SCHED_TIME_SLICE</ref>);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="libumps_8h_1a9ee013f04d59d001ffe5d334a11e8db0" kindref="member">getSTATUS</ref>();</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>|=<sp/><ref refid="const_8h_1a8d0d0af423396f882ca23f2b8c47e4da" kindref="member">STATUS_IEc</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Interrupt<sp/>abilitati<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>|=<sp/><ref refid="const_8h_1ac7e4378f034ec46f403ba6c5b4336dc3" kindref="member">STATUS_IEp</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>also<sp/>previous<sp/>bit<sp/>for<sp/>LDST()<sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>|=<sp/><ref refid="const_8h_1a2fec7ab5c5b847bbcce98d5206040568" kindref="member">STATUS_IEo</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>|=<sp/><ref refid="const_8h_1ab01ef032dcd10746f9741e50d02cbebb" kindref="member">STATUS_INT_UNMASKED</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>|=<sp/><ref refid="const_8h_1ad4cd204cc4a604897e6bec80af274cf9" kindref="member">STATUS_PLT</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1aadbffb1be296a0e6faf9d4c8addbdb2e" kindref="member">setSTATUS</ref>(status);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libumps_8h_1a61d29d6b98f3a9837fb511e4296c1048" kindref="member">WAIT</ref>();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/scheduler.c"/>
+  </compounddef>
+</doxygen>

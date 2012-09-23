@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="structdisk__data__t" kind="struct" prot="public">
+    <compoundname>disk_data_t</compoundname>
+    <includes refid="u_m_p_stypes_8h" local="no">uMPStypes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdisk__data__t_1aeb8030b3dd1287feefb6380f4c8e3611" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 max_cyl</definition>
+        <argsstring></argsstring>
+        <name>max_cyl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="84" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdisk__data__t_1aa6c7020fb3ea2240307fe8cef518f4a0" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 max_head</definition>
+        <argsstring></argsstring>
+        <name>max_head</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="85" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdisk__data__t_1ab583dd23c9c85bbeacf54b11d8d59a28" prot="public" static="no" mutable="no">
+        <type><ref refid="base_8h_1ac3df7cf3c8cb172a588adec881447d68" kindref="member">U32</ref></type>
+        <definition>U32 max_sect</definition>
+        <argsstring></argsstring>
+        <name>max_sect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="86" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="83" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="83" bodyend="87"/>
+    <listofallmembers>
+      <member refid="structdisk__data__t_1aeb8030b3dd1287feefb6380f4c8e3611" prot="public" virt="non-virtual"><scope>disk_data_t</scope><name>max_cyl</name></member>
+      <member refid="structdisk__data__t_1aa6c7020fb3ea2240307fe8cef518f4a0" prot="public" virt="non-virtual"><scope>disk_data_t</scope><name>max_head</name></member>
+      <member refid="structdisk__data__t_1ab583dd23c9c85bbeacf54b11d8d59a28" prot="public" virt="non-virtual"><scope>disk_data_t</scope><name>max_sect</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

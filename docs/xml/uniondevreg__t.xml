@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="uniondevreg__t" kind="union" prot="public">
+    <compoundname>devreg_t</compoundname>
+    <includes refid="u_m_p_stypes_8h" local="no">uMPStypes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="uniondevreg__t_1a78e61f38ebbbb2b669e0cf6d6ea00d77" prot="public" static="no" mutable="no">
+        <type><ref refid="structdtpreg__t" kindref="compound">dtpreg_t</ref></type>
+        <definition>dtpreg_t dtp</definition>
+        <argsstring></argsstring>
+        <name>dtp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="28" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="uniondevreg__t_1a98298db6115a0ce0138af4474b6b9ad9" prot="public" static="no" mutable="no">
+        <type><ref refid="structtermreg__t" kindref="compound">termreg_t</ref></type>
+        <definition>termreg_t term</definition>
+        <argsstring></argsstring>
+        <name>term</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="29" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>dtpreg_t</label>
+        <link refid="structdtpreg__t"/>
+      </node>
+      <node id="2">
+        <label>termreg_t</label>
+        <link refid="structtermreg__t"/>
+      </node>
+      <node id="1">
+        <label>devreg_t</label>
+        <link refid="uniondevreg__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>term</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dtp</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" line="27" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/uMPStypes.h" bodystart="27" bodyend="30"/>
+    <listofallmembers>
+      <member refid="uniondevreg__t_1a78e61f38ebbbb2b669e0cf6d6ea00d77" prot="public" virt="non-virtual"><scope>devreg_t</scope><name>dtp</name></member>
+      <member refid="uniondevreg__t_1a98298db6115a0ce0138af4474b6b9ad9" prot="public" virt="non-virtual"><scope>devreg_t</scope><name>term</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

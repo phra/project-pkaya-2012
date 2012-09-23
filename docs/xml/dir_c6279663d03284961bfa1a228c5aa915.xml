@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="dir_c6279663d03284961bfa1a228c5aa915" kind="dir">
+    <compoundname>C:/Users/phra/Desktop/progetto_so/src/lib</compoundname>
+    <innerfile refid="asl_8c">asl.c</innerfile>
+    <innerfile refid="asl_8h">asl.h</innerfile>
+    <innerfile refid="base_8h">base.h</innerfile>
+    <innerfile refid="const_8h">const.h</innerfile>
+    <innerfile refid="libumps_8h">libumps.h</innerfile>
+    <innerfile refid="listx_8h">listx.h</innerfile>
+    <innerfile refid="pcb_8c">pcb.c</innerfile>
+    <innerfile refid="pcb_8h">pcb.h</innerfile>
+    <innerfile refid="types11_8h">types11.h</innerfile>
+    <innerfile refid="u_m_p_stypes_8h">uMPStypes.h</innerfile>
+    <innerfile refid="utils_8c">utils.c</innerfile>
+    <innerfile refid="utils_8h">utils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/lib/"/>
+  </compounddef>
+</doxygen>

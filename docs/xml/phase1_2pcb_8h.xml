@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="phase1_2pcb_8h" kind="file">
+    <compoundname>pcb.h</compoundname>
+    <includes local="yes">const11.h</includes>
+    <includes refid="phase1_2const_8h" local="yes">const.h</includes>
+    <includes refid="phase1_2base_8h" local="yes">base.h</includes>
+    <includes refid="phase1_2u_m_p_stypes_8h" local="yes">uMPStypes.h</includes>
+    <includes refid="libumps_8h" local="yes">libumps.h</includes>
+    <includes refid="phase1_2listx_8h" local="yes">listx.h</includes>
+    <includes refid="phase1_2types11_8h" local="yes">types11.h</includes>
+    <incdepgraph>
+      <node id="307">
+        <label>base.h</label>
+        <link refid="phase1_2base_8h"/>
+      </node>
+      <node id="305">
+        <label>const11.h</label>
+      </node>
+      <node id="309">
+        <label>libumps.h</label>
+        <link refid="libumps_8h"/>
+      </node>
+      <node id="306">
+        <label>const.h</label>
+        <link refid="phase1_2const_8h"/>
+        <childnode refid="307" relation="include">
+        </childnode>
+      </node>
+      <node id="304">
+        <label>C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h</label>
+        <link refid="phase1/pcb.h"/>
+        <childnode refid="305" relation="include">
+        </childnode>
+        <childnode refid="306" relation="include">
+        </childnode>
+        <childnode refid="307" relation="include">
+        </childnode>
+        <childnode refid="308" relation="include">
+        </childnode>
+        <childnode refid="309" relation="include">
+        </childnode>
+        <childnode refid="310" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+      </node>
+      <node id="310">
+        <label>listx.h</label>
+        <link refid="phase1_2listx_8h"/>
+      </node>
+      <node id="311">
+        <label>types11.h</label>
+        <link refid="phase1_2types11_8h"/>
+        <childnode refid="308" relation="include">
+        </childnode>
+        <childnode refid="310" relation="include">
+        </childnode>
+      </node>
+      <node id="308">
+        <label>uMPStypes.h</label>
+        <link refid="phase1_2u_m_p_stypes_8h"/>
+        <childnode refid="306" relation="include">
+        </childnode>
+        <childnode refid="307" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="phase1_2pcb_8h_1a27cb1ea9958e54c34990d835770fb6a7" prot="public" static="no" mutable="no">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref></type>
+        <definition>pcb_t pcbFree_table[MAXPROC]</definition>
+        <argsstring>[MAXPROC]</argsstring>
+        <name>pcbFree_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="25" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="phase1_2pcb_8h_1a4aff766f79d278b87192491c94425ee2" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref></type>
+        <definition>struct list_head pcbfree_h</definition>
+        <argsstring></argsstring>
+        <name>pcbfree_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="26" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="phase1_2pcb_8h_1ac842b91f7c9963383016a95ae09f903c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* outChild</definition>
+        <argsstring>(pcb_t *p)</argsstring>
+        <name>outChild</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore al processo) outChild(puntatore al processo):restituisce il processo puntato da p RIMUOVENDOLO dalla lista dei figli del padre. se il processo p non ha un padre, restituisce NULL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al processo da rimuovere </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>puntatore al processo rimosso </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="12" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="202" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2pcb_8h_1a4d8a060bdeac7847a16e45ffe18d3389" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* removeChild</definition>
+        <argsstring>(pcb_t *p)</argsstring>
+        <name>removeChild</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore al processo) removeChild(puntatore al processo): restituisce il primo figlio del processo puntato da p RIMUOVENDOLO. se p non ha figli, restituisce NULL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>indirizzo del figlio rimosso </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="13" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="189" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2pcb_8h_1acbb38484ab3807a24bf6513c05101a72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void insertChild</definition>
+        <argsstring>(pcb_t *prnt, pcb_t *p)</argsstring>
+        <name>insertChild</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>prnt</declname>
+        </param>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>insertChild(puntatore al processo, puntatore al processo): inserisce il processo p come figlio di prnt. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>prnt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al padre </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al figlio </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="14" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="178" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2pcb_8h_1a7d6e59469f944f132a41c390b606ab08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int emptyChild</definition>
+        <argsstring>(pcb_t *p)</argsstring>
+        <name>emptyChild</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(1 TRUE oppure 0 FALSE) emptyChild(puntatore al processo): restituisce 1 se il processo puntato da p non ha figli, altrimenti 0. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 se non ha figli, 0 altrimenti </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="15" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2pcb_8h_1a43c105746bbed6463dc347e023821efd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* outProcQ</definition>
+        <argsstring>(struct list_head *head, pcb_t *p)</argsstring>
+        <name>outProcQ</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="16" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="148" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2pcb_8h_1a90fa8ebc0a1c39c83e836bdf04275a17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* removeProcQ</definition>
+        <argsstring>(struct list_head *head)</argsstring>
+        <name>removeProcQ</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore al processo) removeProcQ(puntatore alla sentinella): restiuisce l&apos;elemento in testa della coda RIMUOVENDOLO. se la coda è vuota, restituisce NULL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla sentinella </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>puntatore al processo rimosso </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="17" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="136" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2pcb_8h_1a9b581f743cc1fe0dfbceecb8d529c451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* headProcQ</definition>
+        <argsstring>(struct list_head *head)</argsstring>
+        <name>headProcQ</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore al processo) headProcQ(puntatore alla sentinella):restituisce l&apos;elemento in testa della coda SENZA RIMUOVERLO. se la coda è vuota, restituisce NULL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla sentinella </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="18" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="124" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2pcb_8h_1a9f83539fc894253a43a7a8e22ba6c3ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void insertProcQ</definition>
+        <argsstring>(struct list_head *head, pcb_t *p)</argsstring>
+        <name>insertProcQ</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>insertProcQ(puntatore alla sentinella, puntatore ad un processo): inserisce il processo nella lista a cui punta la sentinella, tenendo conto della priorità dei processi. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla sentinella </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="19" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="94" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2pcb_8h_1a4b271dabd4c2d2897b71cccbe934bdac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int emptyProcQ</definition>
+        <argsstring>(struct list_head *head)</argsstring>
+        <name>emptyProcQ</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(1 TRUE oppure 0 FALSE) emptyProcQ(puntatore alla sentinella della lista): restituisce 1 se la lista è vuota altrimenti restituisce 0. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla sentinella </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 se la lista è vuota, 0 altrimenti </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="20" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2pcb_8h_1a7d7b6160ba5bee4b501ed07afb8caa93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mkEmptyProcQ</definition>
+        <argsstring>(struct list_head *head)</argsstring>
+        <name>mkEmptyProcQ</name>
+        <param>
+          <type>struct <ref refid="structlist__head" kindref="compound">list_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mkEmptyProcQ(puntatore a list_head): inizializza la sentinella. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla sentinella </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="21" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2pcb_8h_1a953a4918f234322fc93193f53d897d5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+        <definition>pcb_t* allocPcb</definition>
+        <argsstring>(void)</argsstring>
+        <name>allocPcb</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(puntatore a <ref refid="structpcb__t" kindref="compound">pcb_t</ref>) <ref refid="lib_2pcb_8c_1a953a4918f234322fc93193f53d897d5d" kindref="member">allocPcb()</ref>: rimuove il primo elemento dalla lista dei pcb liberi e inizializza tutti i campi a NULL e lo restituisce. in caso non ci siano pcb liberi, restituisce NULL. <simplesect kind="return"><para>indirizzo del pcb allocato, NULL altrimenti </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="22" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="50" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2pcb_8h_1ab42d615bd7053b952a73dee6fd84c54d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void freePcb</definition>
+        <argsstring>(pcb_t *p)</argsstring>
+        <name>freePcb</name>
+        <param>
+          <type><ref refid="structpcb__t" kindref="compound">pcb_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>freePcb(puntatore a pcb_t): inserisce il processo puntato da p nella lista dei pcb liberi. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al processo </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="23" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="phase1_2pcb_8h_1a44e85174fc260ea2383787113059a047" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initPcbs</definition>
+        <argsstring>(void)</argsstring>
+        <name>initPcbs</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>initPbcs(): inizializza la lista pcbFree in modo da contenere tutti gli elementi di pcbFree_table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h" line="24" bodyfile="C:/Users/phra/Desktop/progetto_so/src/lib/pcb.c" bodystart="32" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__PCB__</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__PCB__</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;const11.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="phase1_2const_8h" kindref="compound">const.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="phase1_2base_8h" kindref="compound">base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="phase1_2u_m_p_stypes_8h" kindref="compound">uMPStypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libumps_8h" kindref="compound">libumps.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="phase1_2listx_8h" kindref="compound">listx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="phase1_2types11_8h" kindref="compound">types11.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="lib_2pcb_8c_1ac842b91f7c9963383016a95ae09f903c" kindref="member">outChild</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="p1test__pkaya__v1_81_8c_1a3bec781e4e77d9931af780e1605d7d94" kindref="member">p</ref>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="lib_2pcb_8c_1a4d8a060bdeac7847a16e45ffe18d3389" kindref="member">removeChild</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="p1test__pkaya__v1_81_8c_1a3bec781e4e77d9931af780e1605d7d94" kindref="member">p</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lib_2pcb_8c_1acbb38484ab3807a24bf6513c05101a72" kindref="member">insertChild</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*prnt,<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="p1test__pkaya__v1_81_8c_1a3bec781e4e77d9931af780e1605d7d94" kindref="member">p</ref>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="lib_2pcb_8c_1a7d6e59469f944f132a41c390b606ab08" kindref="member">emptyChild</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="p1test__pkaya__v1_81_8c_1a3bec781e4e77d9931af780e1605d7d94" kindref="member">p</ref>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="lib_2pcb_8c_1a43c105746bbed6463dc347e023821efd" kindref="member">outProcQ</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*head,<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="p1test__pkaya__v1_81_8c_1a3bec781e4e77d9931af780e1605d7d94" kindref="member">p</ref>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="lib_2pcb_8c_1a90fa8ebc0a1c39c83e836bdf04275a17" kindref="member">removeProcQ</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*head);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="lib_2pcb_8c_1a9b581f743cc1fe0dfbceecb8d529c451" kindref="member">headProcQ</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*head);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lib_2pcb_8c_1a9f83539fc894253a43a7a8e22ba6c3ba" kindref="member">insertProcQ</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*head,<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="p1test__pkaya__v1_81_8c_1a3bec781e4e77d9931af780e1605d7d94" kindref="member">p</ref>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="lib_2pcb_8c_1a4b271dabd4c2d2897b71cccbe934bdac" kindref="member">emptyProcQ</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*head);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lib_2pcb_8c_1a7d7b6160ba5bee4b501ed07afb8caa93" kindref="member">mkEmptyProcQ</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlist__head" kindref="compound">list_head</ref><sp/>*head);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="lib_2pcb_8c_1a953a4918f234322fc93193f53d897d5d" kindref="member">allocPcb</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lib_2pcb_8c_1ab42d615bd7053b952a73dee6fd84c54d" kindref="member">freePcb</ref>(<ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/>*<ref refid="p1test__pkaya__v1_81_8c_1a3bec781e4e77d9931af780e1605d7d94" kindref="member">p</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lib_2pcb_8c_1a44e85174fc260ea2383787113059a047" kindref="member">initPcbs</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structpcb__t" kindref="compound">pcb_t</ref><sp/><ref refid="lib_2pcb_8c_1a27cb1ea9958e54c34990d835770fb6a7" kindref="member">pcbFree_table</ref>[<ref refid="lib_2const_8h_1abe4567498db286a3185a522c6dae3cbc" kindref="member">MAXPROC</ref>];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__head" kindref="compound">list_head</ref><sp/><ref refid="lib_2pcb_8c_1a4aff766f79d278b87192491c94425ee2" kindref="member">pcbfree_h</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/phra/Desktop/progetto_so/src/phase1/pcb.h"/>
+  </compounddef>
+</doxygen>
